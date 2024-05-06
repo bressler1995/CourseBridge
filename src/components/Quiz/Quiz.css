@@ -1,0 +1,7 @@
+.quizContainer .questionContainer p.correct {
+    color: green;
+}
+
+.quizContainer .questionContainer p.incorrect {
+    color: red;
+}
