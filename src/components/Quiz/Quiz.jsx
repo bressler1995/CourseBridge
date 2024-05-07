@@ -83,7 +83,7 @@ function Quiz({children, title='This is a Quiz'}) {
     {children}
     </UserContext.Provider>
     <br></br>
-    <button onClick={checkGrade}>Submit Quiz</button>
+    <button onClick={checkGrade}>Grade Quiz</button>
   </div>)
 }
 
