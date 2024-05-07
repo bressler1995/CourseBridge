@@ -1,7 +1,7 @@
-.quizContainer .questionContainer p.correct {
+.quizContainer .question p.correct {
     color: green;
 }
 
-.quizContainer .questionContainer p.incorrect {
+.quizContainer .question p.incorrect {
     color: red;
 }

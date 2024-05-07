@@ -1,26 +1,10 @@
-import { cloneElement } from 'react';
-import { useState } from 'react';
 import { Children } from 'react';
 import Choice from './Choice'
 
 
-function Question({children, title = 'This is a Question', answerIndex, handleAnswer}) {
+function Question({children, index = 0, title = 'This is a Question', answerIndex, radio, correct, handleAnswer}) {
 
-  const [isRadio, setIsRadio] = useState(0);
-  const [isCorrect, setIsCorrect] = useState(answerIndex == 0 ? 'correct' : 'incorrect');
-
-  const checkAnswer = (e) => {
-    let curValue = +e.currentTarget.value;
-    setIsRadio(curValue);
-
-    if(curValue == answerIndex) {
-      setIsCorrect('correct');
-    } else {
-      setIsCorrect('incorrect');
-    }
-};
-
-  const mappedChildren = Children.map(children, (child, index) => {
+  const mappedChildren = Children.map(children, (child, childIndex) => {
 
       let hasTitle = false;
 
@@ -30,19 +14,20 @@ function Question({children, title = 'This is a Question', answerIndex, handleAn
         }
       }
 
+      // console.log('Choice Index:' + index);
+
       if(hasTitle == true) {
-        return (<Choice index={index} title={child.props.title} checked={isRadio === index} handleAnswer={checkAnswer}/>);
+        return (<Choice index={childIndex} title={child.props.title} checked={radio === childIndex} questionId={index} radio={radio} handleAnswer={handleAnswer}/>);
       } else {
-        return (<Choice index={index} checked={isRadio === index} handleAnswer={checkAnswer}/>);
+        return (<Choice index={childIndex} checked={radio === childIndex} questionId={index} radio={radio} handleAnswer={handleAnswer}/>);
       }
       
   });
 
-  
   return (
-    <div className='questionContainer'>
+    <div className={'question question_' + index}>
         <h3>{title}</h3>
-        <p className={isCorrect}> You Selected {isRadio}.  This is {isCorrect}</p>
+        <p className={correct}> You Selected {radio}.  This is {correct}</p>
 
         <form className="choiceContainer">
           {mappedChildren}
