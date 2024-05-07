@@ -1,36 +1,26 @@
-import { Children } from 'react';
-import Choice from './Choice'
+import { Children, useContext, createContext } from 'react';
+import Choice from './Choice';
+import { UserContext } from './Quiz';
 
+export const QuestionContext = createContext();
 
-function Question({children, index = 0, title = 'This is a Question', answerIndex, radio, correct, handleAnswer}) {
+function Question({children, index = 0, title = 'This is a Question', answerIndex = 0}) {
 
-  const mappedChildren = Children.map(children, (child, childIndex) => {
-
-      let hasTitle = false;
-
-      if(child.props.title != null) {
-        if(child.props.title != '') {
-          hasTitle = true;
-        }
-      }
-
-      // console.log('Choice Index:' + index);
-
-      if(hasTitle == true) {
-        return (<Choice index={childIndex} title={child.props.title} checked={radio === childIndex} questionId={index} radio={radio} handleAnswer={handleAnswer}/>);
-      } else {
-        return (<Choice index={childIndex} checked={radio === childIndex} questionId={index} radio={radio} handleAnswer={handleAnswer}/>);
-      }
-      
-  });
+  const user = useContext(UserContext);
+  //console.log(user);
+  //console.log(index);
+  let radioState = user.questionStates[index].radio;
+  let correctState = user.questionStates[index].correct;
 
   return (
     <div className={'question question_' + index}>
         <h3>{title}</h3>
-        <p className={correct}> You Selected {radio}.  This is {correct}</p>
+        <p className={correctState}> You Selected {radioState}.  This is {correctState}</p>
 
         <form className="choiceContainer">
-          {mappedChildren}
+          <QuestionContext.Provider value={{ index, radioState }}>
+          {children}
+          </QuestionContext.Provider>
         </form>
     </div>
   )
