@@ -26,6 +26,9 @@
     box-sizing: border-box;
     box-shadow: none;
     cursor: pointer;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
 }
 
 .tabsContainer .tabsNavigation .tabButton:first-of-type {
