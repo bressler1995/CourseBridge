@@ -82,7 +82,7 @@ function Quiz({children, title='This is a Quiz'}) {
 
   return (<div className='quizContainer'>
     <h2>{title}</h2>
-    <p className={gradeState.pass}>Grade: {gradeState.grade}</p>
+    <p className={gradeState.pass}>Grade: {gradeState.grade} {gradeState.pass == 'pass' ? ', You Passed!' : '' }</p>
     <UserContext.Provider value={{ questionStates, setQuestionStates, checkAnswer }}>
     {children}
     </UserContext.Provider>
