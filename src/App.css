@@ -50,6 +50,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, ul, li, ol, div, label, form, input {
     border-radius: 5px;
     text-transform: uppercase;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .os101Content button.os101Button:hover, .os101Content button.os101Button:active, .os101Content button.os101Button:focus {
