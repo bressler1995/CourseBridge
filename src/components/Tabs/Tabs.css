@@ -4,7 +4,7 @@
     width: 100%;
     height: auto;
     max-width: 500px;
-    background-color: #000;
+    background-color: #0D425F;
     border: 2px solid #CCC;
 }
 
@@ -19,23 +19,29 @@
 .tabsContainer .tabsNavigation .tabButton {
     display: inline-block;
     border: none;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-top: none;
-    border-bottom: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
     padding: 15px;
     box-sizing: border-box;
     box-shadow: none;
     cursor: pointer;
 }
 
+.tabsContainer .tabsNavigation .tabButton:first-of-type {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .tabsContainer .tabsNavigation .tabButton.tabUnchecked {
-    background-color: #000;
+    background-color: transparent;
     color: #FFF;
 }
 
 .tabsContainer .tabsNavigation .tabButton.tabChecked {
-    background-color: blue;
+    background-color: #D83E00;
     color: #FFF;
+}
+
+.tabsContainer .tabsNavigation .tabButton.tabUnchecked:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .tabsContainer .tabsContent { 

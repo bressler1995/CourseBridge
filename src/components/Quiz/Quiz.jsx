@@ -28,7 +28,7 @@ function Quiz({children, title='This is a Quiz'}) {
   console.log(initialState);
 
   const [questionStates, setQuestionStates] = useState(initialState);
-  const [gradeState, setGrade] = useState('Not yet graded...');
+  const [gradeState, setGrade] = useState({grade: 'Not yet graded...', pass: ''});
   // const [isCorrect, setIsCorrect] = useState(answerIndex == 0 ? 'correct' : 'incorrect');
 
   const checkAnswer = (e) => {
@@ -62,6 +62,7 @@ function Quiz({children, title='This is a Quiz'}) {
   const checkGrade = () => {
     let correctCount = 0;
     let result = '';
+    let pass = 'nopass';
 
     for(let i = 0; i < questionStates.length; i++) {
       let currentState = questionStates[i];
@@ -71,18 +72,22 @@ function Quiz({children, title='This is a Quiz'}) {
       }
     }
 
-    result = correctCount + '/' + questionStates.length;
+    if(correctCount == questionStates.length) {
+      pass = 'pass';
+    }
+
+    result = {grade: correctCount + '/' + questionStates.length, pass: pass};
     setGrade(result);
   }
 
   return (<div className='quizContainer'>
     <h2>{title}</h2>
-    <p>Grade: {gradeState}</p>
+    <p className={gradeState.pass}>Grade: {gradeState.grade}</p>
     <UserContext.Provider value={{ questionStates, setQuestionStates, checkAnswer }}>
     {children}
     </UserContext.Provider>
     <br></br>
-    <button onClick={checkGrade}>Grade Quiz</button>
+    <button className='os101Button' onClick={checkGrade}>Grade Quiz</button>
   </div>)
 }
 

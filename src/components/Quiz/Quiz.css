@@ -1,3 +1,11 @@
+.quizContainer p.pass {
+    color: #34eb34;
+}
+
+.quizContainer p.nopass {
+    color: red;
+}
+
 .quizContainer .question p.correct {
     color: #34eb34;
 }
