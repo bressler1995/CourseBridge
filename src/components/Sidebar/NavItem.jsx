@@ -1,9 +1,7 @@
-import { useState } from 'react';
-
-function App({title = 'Nav Item'}) {
+function App({title = 'Nav Item', index = 0, handleNav}) {
 
   return (
-    <button className='navItem'>{title}</button>
+    <button className='navItem' onClick={handleNav} data-index={index}>{title}</button>
   )
 }
 
