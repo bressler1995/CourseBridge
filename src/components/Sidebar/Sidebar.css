@@ -12,7 +12,11 @@
     cursor: pointer;
 }
 
-.os101Sidebar .navItem:hover {
+.os101Sidebar .navItem.active {
+    background-color: #D83E00;
+}
+
+.os101Sidebar .navItem:not(.active):hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
 

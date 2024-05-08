@@ -18,8 +18,8 @@ function App() {
   return (
     <div className='os101App'>
       <Sidebar>
-        <NavItem title='Module 1' index={0} handleNav={checkNav} />
-        <NavItem title='Module 2' index={1} handleNav={checkNav} />
+        <NavItem title='Module 1' index={0} navState={navState} handleNav={checkNav} />
+        <NavItem title='Module 2' index={1} navState={navState} handleNav={checkNav} />
       </Sidebar>
       <div className="os101Content">
         {
