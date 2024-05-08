@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState, createContext } from 'react';
 import { Children } from 'react';
-import Question from './Question';
 import './Quiz.css';
 
 export const UserContext = createContext();

@@ -1,0 +1,48 @@
+.tabsContainer {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    background-color: #000;
+    border: 2px solid #CCC;
+}
+
+.tabsContainer .tabsNavigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.tabsContainer .tabsNavigation .tabButton {
+    display: inline-block;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: none;
+    border-bottom: none;
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.tabsContainer .tabsNavigation .tabButton.tabUnchecked {
+    background-color: #000;
+    color: #FFF;
+}
+
+.tabsContainer .tabsNavigation .tabButton.tabChecked {
+    background-color: blue;
+    color: #FFF;
+}
+
+.tabsContainer .tabsContent { 
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #FFF;
+    box-sizing: border-box;
+    border: none;
+}
