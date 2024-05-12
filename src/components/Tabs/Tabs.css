@@ -21,7 +21,7 @@
 .tabsContainer .tabsNavigation .tabButton {
     display: inline-block;
     border: none;
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
     padding: 15px;
     box-sizing: border-box;
     box-shadow: none;

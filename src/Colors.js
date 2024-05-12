@@ -1,4 +1,4 @@
 export const Backgrounds = {
-    defaultBg: "#FFF",
+    defaultBg: "#EEE",
     darkBg: "#000"
 }
