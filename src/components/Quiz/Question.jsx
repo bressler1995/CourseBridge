@@ -15,7 +15,6 @@ function Question({children, index = 0, title = 'This is a Question', answerInde
   return (
     <div className={'question question_' + index}>
         <h3>{title}</h3>
-        <p className={correctState}> You Selected {radioState}.  This is {correctState}</p>
 
         <form className="choiceContainer">
           <QuestionContext.Provider value={{ index, radioState }}>

@@ -1,10 +1,11 @@
 import { useState, Children, createContext } from 'react';
 import './App.css';
-import Module1 from './Module1.mdx';
-import Module2 from './Module2.mdx';
-import Sidebar from './components/Sidebar/Sidebar';
-import NavItem from './components/Sidebar/NavItem';
-import Content from './components/Content/Content';
+import { Backgrounds } from './Colors';
+import Module1 from './content/Module1.mdx';
+import Module2 from './content/Module2.mdx';
+import Sidebar from './components/UI/Sidebar/Sidebar';
+import NavItem from './components/UI/Sidebar/NavItem';
+import Content from './components/UI/Content/Content';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
   }
 
   return (
-    <div className='os101App'>
+    <div className='app'>
       <Sidebar>
         <NavItem title='Module 1' index={0} navState={navState} handleNav={checkNav} />
         <NavItem title='Module 2' index={1} navState={navState} handleNav={checkNav} />

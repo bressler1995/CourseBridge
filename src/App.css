@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, ul, li, ol, div, label, form, input {
     font-family: "Roboto", sans-serif;
 }
 
-.os101App {
+.app {
     display: fixed;
     top: 0;
     left: 0;
@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, ul, li, ol, div, label, form, input {
     z-index: 2;
 }
 
-.os101App .os101Sidebar {
+.app .os101Sidebar {
     display: block;
     position: absolute;
     height: 100%;
@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, ul, li, ol, div, label, form, input {
     padding-bottom: 30px;
 }
 
-.os101App .os101Content {
+.app .os101Content {
     display: block;
     position: absolute;
     height: 100%;
@@ -34,13 +34,11 @@ h1, h2, h3, h4, h5, h6, p, span, a, ul, li, ol, div, label, form, input {
     left: 250px;
     width: calc(100% - 250px);
     overflow-y: auto;
-    padding: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.os101App .os101Content h1 {
+.app .os101Content h1 {
     margin-top: 0;
 }
 
@@ -61,4 +59,14 @@ h1, h2, h3, h4, h5, h6, p, span, a, ul, li, ol, div, label, form, input {
 
 .os101Content button.os101Button:hover, .os101Content button.os101Button:active, .os101Content button.os101Button:focus {
     opacity: 0.7;
+}
+
+.slide {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }

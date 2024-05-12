@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import { useState, Children, createContext } from 'react';
 import './Quiz.css';
+import { Backgrounds } from '../../Colors';
 
 export const UserContext = createContext();
 
-function Quiz({children, title='This is a Quiz'}) {
+function Quiz({children, id, title='This is a Quiz'}) {
 
   const initialState = Children.map(children, (child, index) => {
     let answerIndex = 0;
@@ -79,7 +80,7 @@ function Quiz({children, title='This is a Quiz'}) {
     setGrade(result);
   }
 
-  return (<div className='quizContainer'>
+  return (<div style={{backgroundColor: Backgrounds.darkBg }} id={id} className='quizContainer slide'>
     <h2>{title}</h2>
     <p className={gradeState.pass}>Grade: {gradeState.grade} {gradeState.pass == 'pass' ? ', You Passed!' : '' }</p>
     <UserContext.Provider value={{ questionStates, setQuestionStates, checkAnswer }}>
