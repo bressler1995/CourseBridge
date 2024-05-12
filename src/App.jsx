@@ -4,6 +4,7 @@ import Module1 from './Module1.mdx';
 import Module2 from './Module2.mdx';
 import Sidebar from './components/Sidebar/Sidebar';
 import NavItem from './components/Sidebar/NavItem';
+import Content from './components/Content/Content';
 
 function App() {
 
@@ -21,11 +22,11 @@ function App() {
         <NavItem title='Module 1' index={0} navState={navState} handleNav={checkNav} />
         <NavItem title='Module 2' index={1} navState={navState} handleNav={checkNav} />
       </Sidebar>
-      <div className="os101Content">
+      <Content>
         {
           navState == 0 ? <Module1 /> : navState == 1 ? <Module2 /> : <Module1 />
         }
-      </div>
+      </Content>
     </div>
   )
 }
