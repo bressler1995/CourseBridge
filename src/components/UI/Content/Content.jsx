@@ -1,3 +1,4 @@
+import './Content.css';
 
 function Content({children}) {
   return (
