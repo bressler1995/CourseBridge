@@ -16,7 +16,7 @@ function Question({children, index = 0, title = 'This is a Question', answerInde
 
   return (
     <div style={{ display: pageState != index ? 'none' : 'initial' }} className={'question question_' + index}>
-        <h4 style={{color: TextColors.titleWhite }}>{title}</h4>
+        <h4 style={{color: TextColors.title }}>{title}</h4>
 
         <form className="choiceContainer">
           <QuestionContext.Provider value={{ index, radioState }}>

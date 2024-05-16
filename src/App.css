@@ -70,6 +70,7 @@ p, span, a, ul, li, ol, div, label, form, input {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: auto;
     min-height: 100vh;

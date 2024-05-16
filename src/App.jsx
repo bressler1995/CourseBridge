@@ -6,6 +6,7 @@ import Module2 from './content/Module2.mdx';
 import Sidebar from './components/UI/Sidebar/Sidebar';
 import NavItem from './components/UI/Sidebar/NavItem';
 import Content from './components/UI/Content/Content';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Sidebar>
         <NavItem title='Module 1' index={0} navState={navState} handleNav={checkNav} />
         <NavItem title='Module 2' index={1} navState={navState} handleNav={checkNav} />
+        <h3 className='pb-5'>Test</h3>
       </Sidebar>
       <Content>
         {

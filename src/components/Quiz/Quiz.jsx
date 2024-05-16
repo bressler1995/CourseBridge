@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import { useState, Children, createContext } from 'react';
-import './Quiz.css';
 import { BackgroundColors, TextColors } from '../../Colors';
+import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import './Quiz.css';
+
 
 export const UserContext = createContext();
 
@@ -96,7 +98,7 @@ function Quiz({children, id, title='This is a Quiz'}) {
 
   return (<div style={{backgroundColor: BackgroundColors.darkBg }} id={id} className='quizContainer slide'>
     <div className='slideContent'>
-      <h2 style={{color: TextColors.titleWhite }}>{title}</h2>
+      <h2 style={{color: TextColors.title }}>{title}</h2>
       <p style={{ color: gradeState.pass == 'pass' ? 'rgb(0, 255, 0)' : gradeState.pass == 'nopass' ? 'red' : TextColors.paragraphWhite }}>Grade: {gradeState.grade} {gradeState.pass == 'pass' ? ', You Passed!' : '' }</p>
       <div className='quizQuestions'>
         <UserContext.Provider value={{ questionStates, setQuestionStates, checkAnswer, pageState }}>
@@ -105,10 +107,10 @@ function Quiz({children, id, title='This is a Quiz'}) {
       </div>
       <br></br>
       <div className='quizButtons'>
-        <button style={{ display: pageState != children.length - 1 ? 'none' : 'inline-block'}} className='os101Button' onClick={checkGrade}>Grade Quiz</button>
-        <button style={{ display: pageState < children.length - 1 ? 'inline-block' : 'none' }} className='os101Button' onClick={nextPage}>Next</button>
-        <button style={{ display: pageState > 0 ? 'inline-block' : 'none' }} className='os101Button' onClick={prevPage}>Prev</button>
+        <button style={{ display: pageState != children.length - 1 ? 'none' : 'inline-block'}} className='os101Button btn-primary' onClick={checkGrade}>Grade Quiz</button>
       </div>
+      <button style={{ display: pageState > 0 ? 'inline-block' : 'none' }} className='os101Button btn' onClick={prevPage}><BiChevronLeft />Prev</button>
+      <button style={{ display: pageState < children.length - 1 ? 'inline-block' : 'none' }} className='os101Button btn-primary' onClick={nextPage}><BiChevronRight /></button>
     </div>
   </div>)
 }
