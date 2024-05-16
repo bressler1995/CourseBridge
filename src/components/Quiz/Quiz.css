@@ -1,15 +1,21 @@
-.quizContainer p.pass {
-    color: #34eb34;
+.quizContainer .slideContent h2 {
+    text-align: center;
 }
 
-.quizContainer p.nopass {
-    color: red;
+.quizContainer .slideContent p {
+    text-align: center;
 }
 
-.quizContainer .question p.correct {
-    color: #34eb34;
+.quizQuestions .question {
+    text-align: center;
 }
 
-.quizContainer .question p.incorrect {
-    color: red;
+.quizButtons {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.quizButtons button {
+    margin-right: 7px;
 }

@@ -1,6 +1,7 @@
 import { Children, useContext } from 'react';
 import { UserContext } from './Quiz';
 import { QuestionContext } from './Question';
+import { BackgroundColors, TextColors } from '../../Colors';
 
 function Choice({title='This is a Choice', index = 0 }) {
 
@@ -17,7 +18,7 @@ function Choice({title='This is a Choice', index = 0 }) {
   }
 
   return (
-    <div className={'choice_' + index}>
+    <div style={{ color: TextColors.paragraphWhite }} className={'choice_' + index}>
         <input type='radio' id={'radio_' + index} value={index} data-qid={questionindex} checked={radioState == index} onChange={checkAnswer}/>
         {title}
     </div>

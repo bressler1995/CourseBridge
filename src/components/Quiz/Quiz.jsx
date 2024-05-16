@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState, Children, createContext } from 'react';
 import './Quiz.css';
-import { Backgrounds } from '../../Colors';
+import { BackgroundColors, TextColors } from '../../Colors';
 
 export const UserContext = createContext();
 
@@ -29,6 +29,8 @@ function Quiz({children, id, title='This is a Quiz'}) {
 
   const [questionStates, setQuestionStates] = useState(initialState);
   const [gradeState, setGrade] = useState({grade: 'Not yet graded...', pass: ''});
+  const [pageState, setPage] = useState(0);
+
   // const [isCorrect, setIsCorrect] = useState(answerIndex == 0 ? 'correct' : 'incorrect');
 
   const checkAnswer = (e) => {
@@ -59,6 +61,18 @@ function Quiz({children, id, title='This is a Quiz'}) {
     setQuestionStates(newVals);
   };
 
+  const nextPage = (e) => {
+    if(pageState < children.length) {
+      setPage(pageState + 1);
+    }
+  };
+
+  const prevPage = (e) => {
+    if(pageState > 0) {
+      setPage(pageState - 1);
+    }
+  };
+
   const checkGrade = () => {
     let correctCount = 0;
     let result = '';
@@ -80,14 +94,22 @@ function Quiz({children, id, title='This is a Quiz'}) {
     setGrade(result);
   }
 
-  return (<div style={{backgroundColor: Backgrounds.darkBg }} id={id} className='quizContainer slide'>
-    <h2>{title}</h2>
-    <p className={gradeState.pass}>Grade: {gradeState.grade} {gradeState.pass == 'pass' ? ', You Passed!' : '' }</p>
-    <UserContext.Provider value={{ questionStates, setQuestionStates, checkAnswer }}>
-    {children}
-    </UserContext.Provider>
-    <br></br>
-    <button className='os101Button' onClick={checkGrade}>Grade Quiz</button>
+  return (<div style={{backgroundColor: BackgroundColors.darkBg }} id={id} className='quizContainer slide'>
+    <div className='slideContent'>
+      <h2 style={{color: TextColors.titleWhite }}>{title}</h2>
+      <p style={{ color: gradeState.pass == 'pass' ? 'rgb(0, 255, 0)' : gradeState.pass == 'nopass' ? 'red' : TextColors.paragraphWhite }}>Grade: {gradeState.grade} {gradeState.pass == 'pass' ? ', You Passed!' : '' }</p>
+      <div className='quizQuestions'>
+        <UserContext.Provider value={{ questionStates, setQuestionStates, checkAnswer, pageState }}>
+        {children}
+        </UserContext.Provider>
+      </div>
+      <br></br>
+      <div className='quizButtons'>
+        <button style={{ display: pageState != children.length - 1 ? 'none' : 'inline-block'}} className='os101Button' onClick={checkGrade}>Grade Quiz</button>
+        <button style={{ display: pageState < children.length - 1 ? 'inline-block' : 'none' }} className='os101Button' onClick={nextPage}>Next</button>
+        <button style={{ display: pageState > 0 ? 'inline-block' : 'none' }} className='os101Button' onClick={prevPage}>Prev</button>
+      </div>
+    </div>
   </div>)
 }
 
