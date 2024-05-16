@@ -18,7 +18,7 @@ function Choice({title='This is a Choice', index = 0 }) {
   }
 
   return (
-    <div style={{ color: TextColors.paragraphWhite }} className={'choice_' + index}>
+    <div style={{ color: TextColors.paragraph }} className={'choice_' + index}>
         <input type='radio' id={'radio_' + index} value={index} data-qid={questionindex} checked={radioState == index} onChange={checkAnswer}/>
         {title}
     </div>

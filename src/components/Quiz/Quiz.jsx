@@ -107,10 +107,10 @@ function Quiz({children, id, title='This is a Quiz'}) {
       </div>
       <br></br>
       <div className='quizButtons'>
-        <button style={{ display: pageState != children.length - 1 ? 'none' : 'inline-block'}} className='os101Button btn-primary' onClick={checkGrade}>Grade Quiz</button>
+        <button style={{ display: pageState != children.length - 1 ? 'none' : 'inline-block'}} className='btn btn-primary' onClick={checkGrade}>Grade Quiz</button>
       </div>
-      <button style={{ display: pageState > 0 ? 'inline-block' : 'none' }} className='os101Button btn' onClick={prevPage}><BiChevronLeft />Prev</button>
-      <button style={{ display: pageState < children.length - 1 ? 'inline-block' : 'none' }} className='os101Button btn-primary' onClick={nextPage}><BiChevronRight /></button>
+      <button type="button" style={{ display: pageState > 0 ? 'inline-block' : 'none' }} className='btn btn-outline-primary' onClick={prevPage}><BiChevronLeft />Prev</button>
+      <button type="button" style={{ display: pageState < children.length - 1 ? 'inline-block' : 'none' }} className='btn btn-primary' onClick={nextPage}>Next<BiChevronRight /></button>
     </div>
   </div>)
 }
