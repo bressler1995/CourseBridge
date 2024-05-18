@@ -1,6 +1,5 @@
 import { useState, Children, createContext } from 'react';
 import './App.css';
-import { BackgroundColors } from './Colors';
 import Module1 from './content/Module1.mdx';
 import Sidebar from './components/UI/Sidebar/Sidebar';
 import Content from './components/UI/Content/Content';

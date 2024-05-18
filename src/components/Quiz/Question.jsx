@@ -1,7 +1,6 @@
 import { Children, useContext, createContext } from 'react';
 import Choice from './Choice';
 import { UserContext } from './Quiz';
-import { BackgroundColors, TextColors } from '../../Colors';
 
 export const QuestionContext = createContext();
 
@@ -16,7 +15,7 @@ function Question({children, index = 0, title = 'This is a Question', answerInde
 
   return (
     <div style={{ display: pageState != index ? 'none' : 'initial' }} className={'question question_' + index}>
-        <h5 style={{color: TextColors.title }}>{title}</h5>
+        <h5>{title}</h5>
 
         <form className="choiceContainer">
           <QuestionContext.Provider value={{ index, radioState }}>

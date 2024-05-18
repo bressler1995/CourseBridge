@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { useState, Children, createContext } from 'react';
-import { BackgroundColors, TextColors } from '../../Colors';
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import './Quiz.css';
 
@@ -96,10 +95,10 @@ function Quiz({children, id, title='This is a Quiz'}) {
     setGrade(result);
   }
 
-  return (<div style={{backgroundColor: BackgroundColors.darkBg }} id={id} className='quizContainer slide'>
+  return (<div id={id} className='quizContainer slide'>
     <div className='slideContent'>
-      <h2 style={{color: TextColors.title }}>{title}</h2>
-      <p style={{ color: gradeState.pass == 'pass' ? 'rgb(0, 255, 0)' : gradeState.pass == 'nopass' ? 'red' : TextColors.paragraph }}>Grade: {gradeState.grade} {gradeState.pass == 'pass' ? ', You Passed!' : '' }</p>
+      <h2>{title}</h2>
+      <p style={{ color: gradeState.pass == 'pass' ? 'rgb(0, 255, 0)' : gradeState.pass == 'nopass' ? 'red' : 'black' }}>Grade: {gradeState.grade} {gradeState.pass == 'pass' ? ', You Passed!' : '' }</p>
       <div className='quizQuestions'>
         <UserContext.Provider value={{ questionStates, setQuestionStates, checkAnswer, pageState }}>
         {children}

@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+:root {
+    --bg-sidebar: #FFF;
+    --bg-dark: #0D425F;
+    --bg-light: #EFF2F1;
+  }
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto", sans-serif;
 }
@@ -28,6 +34,7 @@ p, span, a, ul, li, ol, div, label, form, input, button.btn {
     padding: 20px;
     padding-top: 30px;
     padding-bottom: 30px;
+    background-color: var(--bg-sidebar);
     border-right: 1px solid #DDD;
     z-index: 3;
 }
@@ -77,6 +84,7 @@ button.btn {
     height: auto;
     min-height: 100vh;
     box-sizing: border-box;
+    background-color: var(--bg-light);
 }
 
 .slide .slideContent {

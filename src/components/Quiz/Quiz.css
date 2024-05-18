@@ -1,3 +1,7 @@
+.slide.quizContainer {
+    background-color: var(--bg-dark);
+}
+
 .quizContainer .slideContent {
     position: relative;
     background-color: #FFF;
@@ -17,6 +21,8 @@
 
 .quizContainer .quizNavButton {
     position: absolute;
+    font-size: 18px;
+    line-height: 20px;
 }
 
 .quizContainer .quizNavButton:first-of-type {
