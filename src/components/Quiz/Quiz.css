@@ -21,6 +21,14 @@
     color: var(--text-paragraph);
 }
 
+.quizContainer .slideContent p.pass {
+    color: var(--status-success);
+}
+
+.quizContainer .slideContent p.nopass {
+    color: var(--status-error);
+}
+
 .quizContainer .quizNavButton {
     position: absolute;
     font-size: 20px;

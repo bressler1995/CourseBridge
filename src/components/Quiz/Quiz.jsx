@@ -29,8 +29,9 @@ function Quiz({children, id, title='This is a Quiz'}) {
   console.log(initialState);
 
   const [questionStates, setQuestionStates] = useState(initialState);
-  const [gradeState, setGrade] = useState({grade: 'Not yet graded...', pass: ''});
   const [pageState, setPage] = useState(0);
+  const [gradeState, setGrade] = useState({grade: '', pass: ''});
+  const [gradeMode, setGradeMode] = useState(false);
 
   // const [isCorrect, setIsCorrect] = useState(answerIndex == 0 ? 'correct' : 'incorrect');
 
@@ -71,6 +72,7 @@ function Quiz({children, id, title='This is a Quiz'}) {
   const prevPage = (e) => {
     if(pageState > 0) {
       setPage(pageState - 1);
+      setGradeMode(false);
     }
   };
 
@@ -91,14 +93,15 @@ function Quiz({children, id, title='This is a Quiz'}) {
       pass = 'pass';
     }
 
-    result = {grade: correctCount + '/' + questionStates.length, pass: pass};
+    result = {grade: 'Grade: ' + correctCount + '/' + questionStates.length, pass: pass};
     setGrade(result);
+    setGradeMode(true);
   }
 
   return (<div id={id} className='quizContainer slide'>
     <div className='slideContent'>
       <h2 className='d-block mt-0 mb-2'>{title}</h2>
-      <p className='mb-3'>Grade: {gradeState.grade} {gradeState.pass == 'pass' ? ', You Passed!' : '' }</p>
+      <p className={gradeMode == true ? 'mb-3 ' + gradeState.pass : 'mb-3'}>{gradeMode == true ? gradeState.grade : 'Question ' + (pageState + 1) + '/' + children.length}</p>
       <div className='quizQuestions'>
         <UserContext.Provider value={{ questionStates, setQuestionStates, checkAnswer, pageState }}>
         {children}
@@ -106,7 +109,7 @@ function Quiz({children, id, title='This is a Quiz'}) {
       </div>
       <br></br>
       <div className='quizButtons'>
-        <button disabled={ pageState != children.length - 1 ? true : false} className='btn btn-primary' onClick={checkGrade}>Grade Quiz</button>
+        <button disabled={ pageState != children.length - 1 ? true : false} className='btn btn-secondary' onClick={checkGrade}>Grade Quiz</button>
       </div>
       <button type="button" disabled={ pageState > 0 ? false : true } className='btn btn-primary quizNavButton' onClick={prevPage}><BiChevronLeft /></button>
       <button type="button" disabled={ pageState < children.length - 1 ? false : true } className='btn btn-primary quizNavButton' onClick={nextPage}><BiChevronRight /></button>
