@@ -148,10 +148,6 @@ button.btn:disabled {
     height: auto;
 }
 
-.slide .slideContent h1, .slide .slideContent h2, .slide .slideContent h3, .slide .slideContent h4, .slide .slideContent h5, .slide .slideContent h6 {
-    
-}
-
 .slide .slideContent h1 {
     font-size: 62px;
     line-height: 64px;

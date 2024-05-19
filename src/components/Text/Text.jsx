@@ -1,3 +1,4 @@
+import './Text.css';
 
 function Text({children, id}) {
   return (
