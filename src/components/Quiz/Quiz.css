@@ -19,14 +19,32 @@
 .quizContainer .slideContent p {
     text-align: center;
     color: var(--text-paragraph);
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.6em;
+}
+
+.quizContainer .slideContent p span {
+    display: inline-block;
+    font-weight: 600;
+    padding: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 5px;
 }
 
 .quizContainer .slideContent p.pass {
     color: var(--status-success);
 }
 
-.quizContainer .slideContent p.nopass {
-    color: var(--status-error);
+.quizContainer .slideContent p.pass span {
+    background-color: var(--status-success);
+    color:#FFF;
+}
+
+.quizContainer .slideContent p.nopass span {
+    background-color: var(--status-error);
+    color: #FFF;
 }
 
 .quizContainer .quizNavButton {

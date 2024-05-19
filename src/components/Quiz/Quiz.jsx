@@ -101,7 +101,7 @@ function Quiz({children, id, title='This is a Quiz'}) {
   return (<div id={id} className='quizContainer slide'>
     <div className='slideContent'>
       <h2 className='d-block mt-0 mb-2'>{title}</h2>
-      <p className={gradeMode == true ? 'mb-3 ' + gradeState.pass : 'mb-3'}>{gradeMode == true ? gradeState.grade : 'Question ' + (pageState + 1) + '/' + children.length}</p>
+      <p className={gradeMode == true ? 'd-block mb-3 ' + gradeState.pass : 'd-block mb-3'}>{gradeMode == true ? <span>{gradeState.grade}</span> : 'Question ' + (pageState + 1) + '/' + children.length}</p>
       <div className='quizQuestions'>
         <UserContext.Provider value={{ questionStates, setQuestionStates, checkAnswer, pageState }}>
         {children}
