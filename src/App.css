@@ -5,6 +5,10 @@
     --bg-sidebar: #FFF;
     --bg-dark: #0D425F;
     --bg-light: #EFF2F1;
+    --primary-button-bg: #D83E00;
+    --primary-button-text: #FFF;
+    --text-title: #222;
+    --text-paragraph: #777;
   }
 
 h1, h2, h3, h4, h5, h6 {
@@ -64,6 +68,11 @@ p, span, a, ul, li, ol, div, label, form, input, button.btn {
 }
 
 button.btn {
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
@@ -72,7 +81,35 @@ button.btn {
     text-transform: uppercase;
     font-weight: 700;
     border-width: 2px;
+    border-style: solid;
     border-radius: 5px;
+}
+
+button.btn.btn-primary {
+    background-color: var(--primary-button-bg);
+    border-color: var(--primary-button-bg);
+}
+
+button.btn.btn-primary:hover {
+    border-color: var(--primary-button-bg);
+    background-color: var(--primary-button-bg);
+    filter: brightness(120%);
+    
+}
+
+button.btn.btn-primary:active {
+    border-color: var(--primary-button-bg);
+    background-color: var(--primary-button-bg);
+    filter: brightness(85%);
+}
+
+
+
+button.btn:disabled {
+    opacity: 1;
+    background-color: #CCC;
+    border-color: #CCC;
+    color: #BBB;
 }
 
 .slide {

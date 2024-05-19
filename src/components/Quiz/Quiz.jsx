@@ -97,8 +97,8 @@ function Quiz({children, id, title='This is a Quiz'}) {
 
   return (<div id={id} className='quizContainer slide'>
     <div className='slideContent'>
-      <h2>{title}</h2>
-      <p style={{ color: gradeState.pass == 'pass' ? 'rgb(0, 255, 0)' : gradeState.pass == 'nopass' ? 'red' : 'black' }}>Grade: {gradeState.grade} {gradeState.pass == 'pass' ? ', You Passed!' : '' }</p>
+      <h2 className='d-block mt-0 mb-2'>{title}</h2>
+      <p className='mb-3'>Grade: {gradeState.grade} {gradeState.pass == 'pass' ? ', You Passed!' : '' }</p>
       <div className='quizQuestions'>
         <UserContext.Provider value={{ questionStates, setQuestionStates, checkAnswer, pageState }}>
         {children}
@@ -106,10 +106,10 @@ function Quiz({children, id, title='This is a Quiz'}) {
       </div>
       <br></br>
       <div className='quizButtons'>
-        <button style={{ display: pageState != children.length - 1 ? 'none' : 'inline-block'}} className='btn btn-primary' onClick={checkGrade}>Grade Quiz</button>
+        <button disabled={ pageState != children.length - 1 ? true : false} className='btn btn-primary' onClick={checkGrade}>Grade Quiz</button>
       </div>
-      <button type="button" style={{ display: pageState > 0 ? 'inline-block' : 'none' }} className='btn btn-primary quizNavButton' onClick={prevPage}><BiChevronLeft /></button>
-      <button type="button" style={{ display: pageState < children.length - 1 ? 'inline-block' : 'none' }} className='btn btn-primary quizNavButton' onClick={nextPage}><BiChevronRight /></button>
+      <button type="button" disabled={ pageState > 0 ? false : true } className='btn btn-primary quizNavButton' onClick={prevPage}><BiChevronLeft /></button>
+      <button type="button" disabled={ pageState < children.length - 1 ? false : true } className='btn btn-primary quizNavButton' onClick={nextPage}><BiChevronRight /></button>
     </div>
   </div>)
 }

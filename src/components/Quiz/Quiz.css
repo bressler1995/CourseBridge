@@ -4,7 +4,7 @@
 
 .quizContainer .slideContent {
     position: relative;
-    background-color: #FFF;
+    background-color: var(--bg-light);
     max-width: 768px;
     border-radius: 5px;
     box-sizing: border-box;
@@ -12,17 +12,21 @@
 }
 
 .quizContainer .slideContent h2 {
+    color: var(--text-title);
     text-align: center;
 }
 
 .quizContainer .slideContent p {
     text-align: center;
+    color: var(--text-paragraph);
 }
 
 .quizContainer .quizNavButton {
     position: absolute;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .quizContainer .quizNavButton:first-of-type {
