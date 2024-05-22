@@ -1,4 +1,5 @@
 import { useState, Children, createContext } from 'react';
+import { useSearchParams } from "react-router-dom";
 import './App.css';
 import Module1 from './content/Module1.mdx';
 import Sidebar from './components/UI/Sidebar/Sidebar';
@@ -16,9 +17,9 @@ function App() {
 
   return (
     
-      <HashRouter>
+      <HashRouter basename='/'>
         <Routes>
-            <Route exact path='/os101-dev-preview/' element={
+            <Route exact path='/' element={
                 <div className='app'>
                 <Sidebar></Sidebar>
                 <Content>
@@ -27,7 +28,7 @@ function App() {
                 </div>
             }>
             </Route>
-            <Route path='/os101-dev-preview/minimal' element={
+            <Route path='/minimal' element={
               <Content>
                   <Module1 />
               </Content>
