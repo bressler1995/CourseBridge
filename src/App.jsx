@@ -16,7 +16,7 @@ function App() {
 
   return (
     
-      <Router>
+      <HashRouter>
         <Routes>
             <Route exact path='/os101-dev-preview/' element={
                 <div className='app'>
@@ -34,7 +34,7 @@ function App() {
             }></Route>
           
         </Routes>
-      </Router>
+      </HashRouter>
   
   )
 }
