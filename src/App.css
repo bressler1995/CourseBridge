@@ -142,6 +142,11 @@ button.btn:disabled {
     background-color: var(--bg-light);
 }
 
+.os101Content.minimalContent .slide {
+    height: 800px;
+    min-height: auto;
+}
+
 .slide .slideContent {
     display: block;
     width: 100%;
