@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://bressler1995.github.io/os101-dev-preview/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
