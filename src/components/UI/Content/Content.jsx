@@ -1,8 +1,8 @@
 import './Content.css';
 
-function Content({children}) {
+function Content({children, isMinimal = false}) {
   return (
-    <div className="os101Content">
+    <div className={isMinimal == true ? 'os101Content minimalContent' : 'os101Content'}>
     {children}
     </div>
   )

@@ -29,7 +29,7 @@ function App() {
             }>
             </Route>
             <Route path='/minimal' element={
-              <Content>
+              <Content isMinimal={true}>
                   <Module1 />
               </Content>
             }></Route>
