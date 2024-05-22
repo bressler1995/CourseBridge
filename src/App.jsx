@@ -1,10 +1,9 @@
 import { useState, Children, createContext } from 'react';
-import { useSearchParams } from "react-router-dom";
 import './App.css';
 import Module1 from './content/Module1.mdx';
 import Sidebar from './components/UI/Sidebar/Sidebar';
 import Content from './components/UI/Content/Content';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, HashRouter, Route, Routes} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
