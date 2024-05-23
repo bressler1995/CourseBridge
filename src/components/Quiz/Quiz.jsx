@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState, Children, createContext } from 'react';
-import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import { GoChevronLeft, GoChevronRight } from "react-icons/go";
 import './Quiz.css';
 
 
@@ -111,8 +111,8 @@ function Quiz({children, id, title='This is a Quiz'}) {
       <div className='quizButtons'>
         <button disabled={ pageState != children.length - 1 ? true : false} className='btn btn-secondary' onClick={checkGrade}>Grade Quiz</button>
       </div>
-      <button type="button" disabled={ pageState > 0 ? false : true } className='btn btn-primary quizNavButton' onClick={prevPage}><BiChevronLeft /></button>
-      <button type="button" disabled={ pageState < children.length - 1 ? false : true } className='btn btn-primary quizNavButton' onClick={nextPage}><BiChevronRight /></button>
+      <button type="button" disabled={ pageState > 0 ? false : true } className='btn btn-primary quizNavButton' onClick={prevPage}><GoChevronLeft /></button>
+      <button type="button" disabled={ pageState < children.length - 1 ? false : true } className='btn btn-primary quizNavButton' onClick={nextPage}><GoChevronRight /></button>
     </div>
   </div>)
 }

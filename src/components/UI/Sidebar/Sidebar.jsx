@@ -1,9 +1,9 @@
 import './Sidebar.css';
-import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 function Sidebar({children}) {
   return (
     <div className='os101Sidebar'>
+      <div className='os101Logo p-2'><img src='./images/logo.png'/></div>
       {children}
     </div>
   )
