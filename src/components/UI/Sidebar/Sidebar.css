@@ -1,0 +1,15 @@
+.app .os101Sidebar {
+    display: block;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 300px;
+    box-sizing: border-box;
+    padding: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--bg-sidebar);
+    border-right: 1px solid #DDD;
+    z-index: 4;
+}
