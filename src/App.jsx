@@ -4,6 +4,7 @@ import './App.css';
 import Module1 from './content/Module1.mdx';
 import Sidebar from './components/UI/Sidebar/Sidebar';
 import Content from './components/UI/Content/Content';
+import TopBar from './components/UI/TopBar/TopBar';
 import {BrowserRouter as Router, HashRouter, Route, Routes} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -21,6 +22,7 @@ function App() {
         <Routes>
             <Route exact path='/' element={
                 <div className='app'>
+                <TopBar></TopBar>
                 <Sidebar></Sidebar>
                 <Content>
                   <Module1 />
