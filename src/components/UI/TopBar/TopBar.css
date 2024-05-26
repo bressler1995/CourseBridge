@@ -12,7 +12,7 @@
     top: 0;
     left: 0;
     box-sizing: border-box;
-    background-color: #222;
+    background-color: var(--bg-topbar);
     z-index: 3;
     padding-left: 350px;
 }
@@ -34,4 +34,13 @@
     line-height: 24px;
     text-align: center;
     padding: 0;
+}
+
+.os101TopBar .os101Toggle_container .os101Toggle:active svg {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    transform: scale(0.85);
 }
