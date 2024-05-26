@@ -41,10 +41,10 @@ p, span, a, ul, li, ol, div, label, form, input, button.btn {
     transition: all 0.5s ease;
     display: block;
     position: absolute;
-    height: calc(100% - 60px);
+    height: calc(100% - 65px);
     background-color: #FFF;
     left: 0;
-    top: 60px;
+    top: 64px;
     width: 100%;
     overflow-y: auto;
     padding: 0;
