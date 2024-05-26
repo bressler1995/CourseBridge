@@ -10,11 +10,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
-  const checkNav = (e) => {
-    let curIndex = +e.currentTarget.dataset.index;
+  const [sidebarShow, setSidebarShow] = useState(true);
 
-    setNavState(curIndex);
-  }
+  const toggleHide = () => {
+    if(sidebarShow == true) {
+      setSidebarShow(false);
+    } else if(sidebarShow == false) {
+      setSidebarShow(true);
+    }
+  };
 
   return (
     
@@ -22,9 +26,9 @@ function App() {
         <Routes>
             <Route exact path='/' element={
                 <div className='app'>
-                <TopBar></TopBar>
-                <Sidebar></Sidebar>
-                <Content>
+                <TopBar handleHide={toggleHide} show={sidebarShow}></TopBar>
+                <Sidebar show={sidebarShow}></Sidebar>
+                <Content show={sidebarShow}>
                   <Module1 />
                 </Content>
                 </div>

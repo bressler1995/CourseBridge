@@ -1,4 +1,9 @@
 .app .os101Sidebar {
+  -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
     display: flex;
     flex-flow: column wrap;
     position: absolute;
@@ -11,6 +16,10 @@
     background-color: var(--bg-sidebar);
     border-right: 1px solid #DDD;
     z-index: 4;
+}
+
+.app .os101Sidebar.hide {
+  left: -350px;
 }
 
 .app .os101Sidebar .os101Logo {

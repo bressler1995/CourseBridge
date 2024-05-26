@@ -33,6 +33,11 @@ p, span, a, ul, li, ol, div, label, form, input, button.btn {
 }
 
 .app .os101Content {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
     display: block;
     position: absolute;
     height: calc(100% - 60px);
@@ -199,5 +204,9 @@ button.btn:disabled {
 
     .app .os101Content {
         padding-left: 350px;
+    }
+
+    .app .os101Content.hide {
+        padding-left: 0;
     }
 }
