@@ -15,14 +15,16 @@
     --status-success: #1E8806;
     --status-error: #880606;
     --width-sidebar: 350px;
+    --font-title: "Roboto", sans-serif;
+    --font-other: "Nunito", sans-serif;
   }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-title);
 }
 
 p, span, a, ul, li, ol, div, label, form, input, button.btn {
-    font-family: "Nunito", sans-serif;
+    font-family: var(--font-other);
 }
 
 .app {
