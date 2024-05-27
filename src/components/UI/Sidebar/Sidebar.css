@@ -10,16 +10,11 @@
     height: 100%;
     left: 0;
     top: 0;
-    width: 350px;
     box-sizing: border-box;
     padding: 0;
     background-color: var(--bg-sidebar);
     border-right: 1px solid #AAA;
     z-index: 4;
-}
-
-.app .os101Sidebar.hide {
-  left: -350px;
 }
 
 .app .os101Sidebar .os101Logo {
@@ -36,4 +31,34 @@
     display: inline-block;
     width: auto;
     height: 100%;
+}
+
+@media(max-width: 767.9px) {
+  .app .os101Sidebar {
+    width: calc(100% - 65px);
+  }
+
+  .app .os101Sidebar.hide {
+    left: calc(0px - (100% - 65px));
+  }
+}
+
+@media(min-width: 768px) and (max-width: 991.9px) {
+  .app .os101Sidebar {
+    width: var(--width-sidebar);
+  }
+
+  .app .os101Sidebar.hide {
+    left: calc(0px - var(--width-sidebar));
+  }
+}
+
+@media(min-width: 992px) {
+  .app .os101Sidebar {
+    width: var(--width-sidebar);
+  }
+
+  .app .os101Sidebar.hide {
+    left: calc(0px - var(--width-sidebar));
+  }
 }
