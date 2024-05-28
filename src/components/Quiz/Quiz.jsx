@@ -98,7 +98,7 @@ function Quiz({children, id, title='This is a Quiz'}) {
     setGradeMode(true);
   }
 
-  return (<div id={id} className='quizContainer slide'>
+  return (<div id={id} className='quizContainer slide p-5 px-4 px-md-5'>
     <div className='slideContent'>
       <h2 className='d-block mt-0 mb-2'>{title}</h2>
       <p className={gradeMode == true ? 'd-block mb-4 ' + gradeState.pass : 'd-block mb-4'}>{gradeMode == true ? <span>{gradeState.grade}</span> : 'Question ' + (pageState + 1) + '/' + children.length}</p>

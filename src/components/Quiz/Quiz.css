@@ -5,6 +5,7 @@
 .quizContainer .slideContent {
     position: relative;
     background-color: var(--bg-light);
+    width: calc(100% - 48px);
     max-width: 768px;
     border-radius: 5px;
     box-sizing: border-box;
@@ -85,19 +86,9 @@
 }
 
 @media(max-width: 767.9px) {
-    .quizContainer .slideContent {
-        width: calc(100% - 54px);
-    }
+    
 }
 
-@media(min-width: 768px) and (max-width: 1024.9px) {
-    .quizContainer .slideContent {
-        width: calc(100% - 54px);
-    }
-}
-
-@media(min-width: 1025px) {
-    .quizContainer .slideContent {
-        width: calc(100% - 140px);
-    }
+@media(min-width: 768px) {
+    
 }

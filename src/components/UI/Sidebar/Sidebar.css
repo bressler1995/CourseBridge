@@ -17,6 +17,15 @@
     z-index: 4;
 }
 
+.app .os101Sidebar .os101Sidebar_content {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  height: calc(100% - 65px);
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
 .app .os101Sidebar .os101Logo {
   display: flex;
   flex-flow: row wrap;

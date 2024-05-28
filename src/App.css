@@ -178,19 +178,11 @@ button.btn:disabled {
 }
 
 @media(max-width: 767.9px) {
-    .slide {
-        padding: 30px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
+    
 }
 
 @media(min-width: 768px) and (max-width: 991.9px) {
-    .slide {
-        padding: 50px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
+
 }
 
 @media(max-width: 991.9px) {
@@ -200,11 +192,6 @@ button.btn:disabled {
 }
 
 @media(min-width: 992px) {
-    .slide {
-        padding: 70px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
 
     .app .os101Content {
         padding-left: var(--width-sidebar);

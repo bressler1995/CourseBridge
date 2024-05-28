@@ -10,7 +10,9 @@ function Sidebar({children, show}) {
           <span>Development Version</span>
         </div>
       </div>
-      {children}
+      <div className='os101Sidebar_content p-5 px-4'>
+        {children}
+      </div>
     </div>
   )
 }
