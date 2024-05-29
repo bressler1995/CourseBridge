@@ -1,5 +1,5 @@
 [
-    {"file": "Module1.mdx", "name":"Module 1", "link":"/Module/1"}, 
-    {"file": "Module2.mdx", "name":"Module 2", "link":"/Module/2"},
-    {"file": "Module3.mdx", "name":"Module 3", "link":"/Module/3"}
+    {"id": "1", "file": "Module1", "name":"Module 1"}, 
+    {"id": "2", "file": "Module2", "name":"Module 2"},
+    {"id": "3", "file": "Module3", "name":"Module 3"}
 ]

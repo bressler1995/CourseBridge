@@ -1,10 +1,10 @@
 import { useState, useEffect, Children, createContext, createElement } from 'react';
 import { useSearchParams } from "react-router-dom";
 import './App.css';
+import Module from './components/UI/Module/Module';
 import Sidebar from './components/UI/Sidebar/Sidebar';
 import Content from './components/UI/Content/Content';
 import TopBar from './components/UI/TopBar/TopBar';
-import Module from './components/UI/Module/Module';
 import {BrowserRouter as Router, HashRouter, Route, Routes, Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
@@ -58,7 +58,7 @@ function App() {
                   <ul>
                   {
                     toc.map((child, i) => {
-                      return <li><Link to={child.link}>{child.name}</Link></li>
+                      return <li><Link to={'/Module/' + child.id}>{child.name}</Link></li>
                     })
                   }  
                   </ul>
@@ -75,14 +75,14 @@ function App() {
                   <Sidebar show={sidebarShow}>
                   <ul>
                   {
-                    toc.map((child, i) => {
-                      return <li><Link to={child.link}>{child.name}</Link></li>
-                    })
+                   toc.map((child, i) => {
+                    return <li><Link to={'/Module/' + child.id}>{child.name}</Link></li>
+                  })
                   }  
                   </ul>
                   </Sidebar>
                   <Content show={sidebarShow}>
-                    <Module1/>
+                    <Module/>
                   </Content>
                 </div>
             }>
