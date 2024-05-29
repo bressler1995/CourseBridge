@@ -14,7 +14,7 @@ function Module() {
 
   toc.map((child, i) => {
     if(parseInt(child.id) == params.id) {
-      CurrentModule = lazy(() => import('../../../content/' + child.file + '.mdx'));
+      CurrentModule = lazy(() => import(/* @vite-ignore */'../../../content/' + child.file + '.mdx'));
     }
   });
   
