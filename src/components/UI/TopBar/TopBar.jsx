@@ -1,5 +1,6 @@
 import { BiArrowBack } from "react-icons/bi";
-import { GoSidebarExpand, GoSidebarCollapse, GoChevronLeft, GoChevronRight } from "react-icons/go";
+import { GoSidebarExpand, GoSidebarCollapse, GoScreenFull, GoChevronLeft, GoChevronRight } from "react-icons/go";
+import Button from 'react-bootstrap/Button';
 import './TopBar.css';
 
 function TopBar({handleHide, show}) {
@@ -12,7 +13,10 @@ function TopBar({handleHide, show}) {
 
   return (
     <div className={contentClasses}>
-      <div className='os101Toggle_container'><button onClick={handleHide} className='btn btn-primary os101Toggle'>{show == true ? <GoSidebarExpand /> : <GoSidebarCollapse />}</button></div>
+      <div className='os101Toggle_container'>
+        <Button onClick={handleHide} className='btn btn-primary'>{show == true ? <GoSidebarExpand /> : <GoSidebarCollapse />}</Button>
+        <Button className='btn btn-secondary'><GoScreenFull /></Button>
+      </div>
     </div>
   )
 }

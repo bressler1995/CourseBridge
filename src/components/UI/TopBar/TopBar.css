@@ -25,14 +25,25 @@
     width: 50%;
 }
 
-.os101TopBar .os101Toggle_container .os101Toggle {
-    border-radius: 0px;
+.os101TopBar .os101Toggle_container .btn {
     width: 65px;
     height: 65px;
     font-size: 20px;
     line-height: 24px;
+    border-radius: 0px;
     text-align: center;
     padding: 0;
+    border: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.os101TopBar .os101Toggle_container .btn.btn-secondary {
+    background-color: transparent;
+}
+
+.os101TopBar .os101Toggle_container .btn-secondary:hover, .os101TopBar .os101Toggle_container .btn-secondary:active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .os101TopBar .os101Toggle_container .os101Toggle:active svg {
@@ -47,6 +58,10 @@
 @media(max-width: 767.9px) {
     .app .os101TopBar {
         padding-left: calc(100% - 65px);
+    }
+
+    .os101TopBar:not(.hide) .os101Toggle_container .btn.btn-secondary {
+        display: none;
     }
   }
   
