@@ -1,5 +1,5 @@
 [
-    {"id": "1", "file": "Module1", "name":"Module 1"}, 
-    {"id": "2", "file": "Module2", "name":"Module 2"},
-    {"id": "3", "file": "Module3", "name":"Module 3"}
+    {"id": "1", "use": "<Module1/>", "name":"Module 1"}, 
+    {"id": "2", "use": "<Module2/>", "name":"Module 2"},
+    {"id": "3", "use": "<Module3/>", "name":"Module 3"}
 ]
