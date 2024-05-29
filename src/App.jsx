@@ -29,6 +29,9 @@ function App() {
   const handleFullScreen = () => {
     if(isFullScreen == false) {
       setIsFullScreen(true);
+      setTimeout(function(){
+        setSidebarShow(false)
+      }, 500);
       document.body.requestFullscreen();
     } else {
       setIsFullScreen(false);
