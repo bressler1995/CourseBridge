@@ -7,10 +7,6 @@ import Module1 from '../../../content/Module1.mdx';
 import Module2 from '../../../content/Module2.mdx';
 import Module3 from '../../../content/Module3.mdx';
 
-function renderLazyComponent(component) {
-  return lazy(() => import('../../../content/' + component));
-}
-
 function Module() {
 
   const params = useParams();
@@ -18,7 +14,7 @@ function Module() {
 
   toc.map((child, i) => {
     if(parseInt(child.id) == params.id) {
-      CurrentModule = renderLazyComponent(child.file + '.mdx');
+      CurrentModule = lazy(() => import('../../../content/' + child.file + '.mdx'));
     }
   });
   
