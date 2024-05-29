@@ -3,7 +3,7 @@ import { GoSidebarExpand, GoSidebarCollapse, GoScreenFull, GoChevronLeft, GoChev
 import Button from 'react-bootstrap/Button';
 import './TopBar.css';
 
-function TopBar({handleHide, show}) {
+function TopBar({handleHide, handleFullScreen, show}) {
 
   let contentClasses = 'os101TopBar';
 
@@ -15,7 +15,7 @@ function TopBar({handleHide, show}) {
     <div className={contentClasses}>
       <div className='os101Toggle_container'>
         <Button onClick={handleHide} className='btn btn-primary'>{show == true ? <GoSidebarExpand /> : <GoSidebarCollapse />}</Button>
-        <Button className='btn btn-secondary'><GoScreenFull /></Button>
+        <Button onClick={handleFullScreen} className='btn btn-secondary'><GoScreenFull /></Button>
       </div>
     </div>
   )

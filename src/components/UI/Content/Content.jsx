@@ -15,7 +15,7 @@ function Content({children, isMinimal = false, show}) {
   }
 
   return (
-    <div className={contentClasses}>
+    <div id='os101Content' className={contentClasses}>
     {children}
     </div>
   )

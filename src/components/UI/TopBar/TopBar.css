@@ -46,12 +46,15 @@
     border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.os101TopBar .os101Toggle_container .os101Toggle:active svg {
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+.os101TopBar .os101Toggle_container .btn svg {
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+}
+
+.os101TopBar .os101Toggle_container .btn:active svg {
     transform: scale(0.85);
 }
 

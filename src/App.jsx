@@ -1,4 +1,4 @@
-import { useState, Children, createContext, createElement } from 'react';
+import { useState, useEffect, Children, createContext, createElement } from 'react';
 import { useSearchParams } from "react-router-dom";
 import './App.css';
 import Sidebar from './components/UI/Sidebar/Sidebar';
@@ -14,8 +14,29 @@ import Module1 from './content/Module1.mdx';
 function App() {
 
   const [sidebarShow, setSidebarShow] = useState(true);
+  const [isFullScreen, setIsFullScreen] = useState(false);
 
-  const toggleHide = () => {
+  useEffect(() => {
+    function onFullscreenChange() {
+      setIsFullScreen(Boolean(document.fullscreenElement));
+    }
+          
+    document.addEventListener('fullscreenchange', onFullscreenChange);
+  
+    return () => document.removeEventListener('fullscreenchange', onFullscreenChange);
+  }, []);
+
+  const handleFullScreen = () => {
+    if(isFullScreen == false) {
+      setIsFullScreen(true);
+      document.body.requestFullscreen();
+    } else {
+      setIsFullScreen(false);
+      document.exitFullscreen();
+    }
+  };
+
+  const handleHide = () => {
     if(sidebarShow == true) {
       setSidebarShow(false);
     } else if(sidebarShow == false) {
@@ -29,7 +50,7 @@ function App() {
         <Routes>
             <Route exact path='/' element={
                 <div className='app'>
-                  <TopBar handleHide={toggleHide} show={sidebarShow}></TopBar>
+                  <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} show={sidebarShow}></TopBar>
                   <Sidebar show={sidebarShow}>
                   <ul>
                   {
@@ -47,7 +68,7 @@ function App() {
             </Route>
             <Route path='/Module/:id' element={
                 <div className='app'>
-                  <TopBar handleHide={toggleHide} show={sidebarShow}></TopBar>
+                  <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} show={sidebarShow}></TopBar>
                   <Sidebar show={sidebarShow}>
                   <ul>
                   {
@@ -58,7 +79,7 @@ function App() {
                   </ul>
                   </Sidebar>
                   <Content show={sidebarShow}>
-                      <Module file={'Module1'}/>
+                    <Module1/>
                   </Content>
                 </div>
             }>
