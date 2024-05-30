@@ -20,12 +20,22 @@
     padding-left: 0;
 }
 
-.os101TopBar .os101Toggle_container {
-    display: block;
+.os101TopBar .os101Toggle_container, .os101TopBar .os101TopNav_container {
+    display: flex;
+    flex-flow: row wrap;
     width: 50%;
+    box-sizing: border-box;
 }
 
-.os101TopBar .os101Toggle_container .btn {
+.os101TopBar .os101Toggle_container {
+    justify-content: flex-start;
+}
+
+.os101TopBar .os101TopNav_container {
+    justify-content: flex-end;
+}
+
+.os101TopBar div .btn {
     width: 65px;
     height: 65px;
     font-size: 20px;
@@ -37,11 +47,11 @@
     border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.os101TopBar .os101Toggle_container .btn.btn-secondary {
+.os101TopBar div .btn.btn-secondary {
     background-color: transparent;
 }
 
-.os101TopBar .os101Toggle_container .btn-secondary:hover, .os101TopBar .os101Toggle_container .btn-secondary:active {
+.os101TopBar div .btn-secondary:hover, .os101TopBar div .btn-secondary:active {
     background-color: rgba(255, 255, 255, 0.2);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
 }

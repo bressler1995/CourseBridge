@@ -1,3 +1,4 @@
+import Mode from '../components/UI/Mode/Mode.jsx';
 import Quiz from '../components/Quiz/Quiz.jsx';
 import Question from '../components/Quiz/Question.jsx';
 import Choice from '../components/Quiz/Choice.jsx';
@@ -8,15 +9,31 @@ import Text from '../components/Text/Text.jsx';
 <Text id='Text-1'>
 # Module 1
 
-## This is a Text Component
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus arcu bibendum at varius vel pharetra vel turpis. Elit at imperdiet dui accumsan sit amet nulla facilisi. Ut tellus elementum sagittis vitae et leo duis ut. A iaculis at erat pellentesque adipiscing commodo elit. Euismod lacinia at quis risus sed. Quis vel eros donec ac odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan. Quis ipsum suspendisse ultrices gravida dictum fusce. Ultrices sagittis orci a scelerisque purus semper. Nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Eros donec ac odio tempor orci dapibus. Sit amet dictum sit amet justo donec enim. Interdum velit euismod in pellentesque massa placerat duis. Lorem ipsum dolor sit amet consectetur adipiscing elit duis. Velit egestas dui id ornare arcu odio ut sem. Sed tempus urna et pharetra pharetra massa.
 
-- [Text 1](#Text-1)
-- [Quiz 1](#Quiz-1)
-- [Text 2](#Text-2)
+#### Here are the different modes:
 
-Justo laoreet sit amet cursus sit amet. Cursus risus at ultrices mi. Facilisis magna etiam tempor orci. Mauris ultrices eros in cursus turpis massa tincidunt. Amet justo donec enim diam vulputate ut pharetra sit amet. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Ut tellus elementum sagittis vitae et leo duis ut diam. Facilisis mauris sit amet massa vitae. In metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Fermentum leo vel orci porta non pulvinar. Massa id neque aliquam vestibulum morbi blandit. Mauris vitae ultricies leo integer malesuada nunc vel. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est. Venenatis a condimentum vitae sapien pellentesque. Lorem ipsum dolor sit amet consectetur adipiscing. Mauris vitae ultricies leo integer malesuada nunc. Odio euismod lacinia at quis risus sed vulputate.
+- Full
+- Teacher
+- Manager
+
+I am content that shows on all versions!
+
+<Mode full={true}>
+I am content that shows in the full version!
+</Mode>
+
+<Mode teacher={true}>
+I am content that shows on the Teacher version!
+</Mode>
+
+<Mode manager={true}>
+I am content that shows on the Manager version!
+</Mode>
+
+<Mode teacher={true} manager={true}>
+I am content that shows on the both the Teacher and Manager version!
+</Mode>
 
 </Text>
 

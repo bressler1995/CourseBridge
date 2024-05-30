@@ -53,6 +53,7 @@ p, span, a, ul, li, ol, div, label, form, input, button.btn {
     padding: 0;
     box-sizing: border-box;
     z-index: 2;
+    background-color: var(--bg-light);
 }
 
 .app .os101Content h1 {

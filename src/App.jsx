@@ -1,5 +1,4 @@
 import { useState, useEffect, Children, createContext, createElement } from 'react';
-import { useSearchParams } from "react-router-dom";
 import './App.css';
 import Module from './components/UI/Module/Module';
 import Sidebar from './components/UI/Sidebar/Sidebar';
@@ -7,14 +6,16 @@ import Content from './components/UI/Content/Content';
 import TopBar from './components/UI/TopBar/TopBar';
 import {BrowserRouter as Router, HashRouter, Route, Routes, Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
 import toc from './toc.json';
 import Module1 from './content/Module1.mdx';
+
+export const modeContext = createContext();
 
 function App() {
 
   const [sidebarShow, setSidebarShow] = useState(true);
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const [courseMode, setCourseMode] = useState('full');
 
   useEffect(() => {
     function onFullscreenChange() {
@@ -47,13 +48,18 @@ function App() {
     }
   };
 
+  const handleCourseMode = (e) => {
+    let curMode = e.currentTarget.dataset.mode;
+    setCourseMode(curMode);
+  }
+
   return (
     
       <HashRouter basename='/'>
         <Routes>
             <Route exact path='/' element={
                 <div className='app'>
-                  <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} show={sidebarShow}></TopBar>
+                  <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} sidebarShow={sidebarShow} isFullScreen={isFullScreen}></TopBar>
                   <Sidebar show={sidebarShow}>
                   <ul>
                   {
@@ -71,7 +77,7 @@ function App() {
             </Route>
             <Route path='/Module/:id' element={
                 <div className='app'>
-                  <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} show={sidebarShow}></TopBar>
+                  <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} handleCourseMode={handleCourseMode} sidebarShow={sidebarShow} isFullScreen={isFullScreen}></TopBar>
                   <Sidebar show={sidebarShow}>
                   <ul>
                   {
@@ -82,7 +88,9 @@ function App() {
                   </ul>
                   </Sidebar>
                   <Content show={sidebarShow}>
+                    <modeContext.Provider value={{ courseMode }}>
                     <Module/>
+                    </modeContext.Provider>
                   </Content>
                 </div>
             }>
