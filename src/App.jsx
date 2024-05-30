@@ -64,7 +64,7 @@ function App() {
                   </ul>
                   </Sidebar>
                   <Content show={sidebarShow}>
-                    <Module1 />
+                    
                   </Content>
                 </div>
             }>
