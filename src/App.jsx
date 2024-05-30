@@ -97,7 +97,9 @@ function App() {
             </Route>
             <Route path='/minimal' element={
               <Content isMinimal={true}>
+                  <modeContext.Provider value={{ courseMode }}>
                   <Module1/>
+                  </modeContext.Provider>
               </Content>
             }></Route>
           
