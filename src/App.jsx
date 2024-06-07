@@ -1,4 +1,5 @@
 import { useState, useEffect, Children, createContext, createElement } from 'react';
+import generatePDF, { Resolution, Margin } from 'react-to-pdf';
 import './App.css';
 import Module from './components/UI/Module/Module';
 import Sidebar from './components/UI/Sidebar/Sidebar';
@@ -11,6 +12,20 @@ import toc from './toc.json';
 import Module1 from './content/Module1.mdx';
 
 export const modeContext = createContext();
+
+const options = {
+  filename: 'currentModule.pdf',
+  page: {
+    // margin is in MM, default is Margin.NONE = 0
+    margin: Margin.NONE,
+    // default is 'A4'
+    format: 'letter',
+    // default is 'portrait'
+    orientation: 'landscape',
+ },
+};
+
+const getTargetElement = () => document.getElementById('Quiz-1');
 
 function App() {
 
@@ -60,6 +75,7 @@ function App() {
       setShowNotication([false, '', '', '']);
     } else if(showNotification[0] == false) {
       setShowNotication([true, e.currentTarget.dataset.title, e.currentTarget.dataset.status, e.currentTarget.dataset.body]);
+      generatePDF(getTargetElement, options);
     }
     
   };
