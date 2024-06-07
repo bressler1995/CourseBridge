@@ -25,7 +25,7 @@ const options = {
  },
 };
 
-const getTargetElement = () => document.getElementById('Quiz-1');
+const getTargetElement = () => document.getElementById('os101Content_container');
 
 function App() {
 
