@@ -60,6 +60,14 @@ p, span, a, ul, li, ol, div, label, form, input, button.btn {
     margin-top: 0;
 }
 
+.toast.show {
+    position: fixed;
+    z-index: 999;
+    top: calc(65px + 15px);
+    right: 48px;
+
+}
+
 button.btn {
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;

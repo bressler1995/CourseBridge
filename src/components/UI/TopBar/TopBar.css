@@ -23,7 +23,6 @@
 .os101TopBar .os101Toggle_container, .os101TopBar .os101TopNav_container {
     display: flex;
     flex-flow: row wrap;
-    width: 50%;
     box-sizing: border-box;
 }
 
@@ -73,8 +72,18 @@
         padding-left: calc(100% - 65px);
     }
 
-    .os101TopBar:not(.hide) .os101Toggle_container .btn.btn-secondary {
+    .os101TopBar:not(.hide) .btn.btn-secondary {
         display: none;
+    }
+
+    .os101TopBar .os101Toggle_container, .os101TopBar .os101TopNav_container {
+        width: 100%;
+    }
+  }
+
+  @media(min-width: 768px) {
+    .os101TopBar .os101Toggle_container, .os101TopBar .os101TopNav_container {
+        width: 50%;
     }
   }
   

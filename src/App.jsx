@@ -4,6 +4,7 @@ import Module from './components/UI/Module/Module';
 import Sidebar from './components/UI/Sidebar/Sidebar';
 import Content from './components/UI/Content/Content';
 import TopBar from './components/UI/TopBar/TopBar';
+import Notification from './components/UI/Notification/Notification';
 import {BrowserRouter as Router, HashRouter, Route, Routes, Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import toc from './toc.json';
@@ -16,6 +17,7 @@ function App() {
   const [sidebarShow, setSidebarShow] = useState(true);
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [courseMode, setCourseMode] = useState('full');
+  const [showNotification, setShowNotication] = useState([false, '', '', '']);
 
   useEffect(() => {
     function onFullscreenChange() {
@@ -51,7 +53,16 @@ function App() {
   const handleCourseMode = (e) => {
     let curMode = e.currentTarget.dataset.mode;
     setCourseMode(curMode);
-  }
+  };
+
+  const handleNotification = (e) => {
+    if(showNotification[0] == true) {
+      setShowNotication([false, '', '', '']);
+    } else if(showNotification[0] == false) {
+      setShowNotication([true, e.currentTarget.dataset.title, e.currentTarget.dataset.status, e.currentTarget.dataset.body]);
+    }
+    
+  };
 
   return (
     
@@ -59,7 +70,7 @@ function App() {
         <Routes>
             <Route exact path='/' element={
                 <div className='app'>
-                  <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} sidebarShow={sidebarShow} isFullScreen={isFullScreen}></TopBar>
+                  <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} handleNotification={handleNotification} sidebarShow={sidebarShow} isFullScreen={isFullScreen}></TopBar>
                   <Sidebar show={sidebarShow}>
                   <ul>
                   {
@@ -69,15 +80,14 @@ function App() {
                   }  
                   </ul>
                   </Sidebar>
-                  <Content show={sidebarShow}>
-                    
-                  </Content>
+                  <Content show={sidebarShow}/>
+                  <Notification handleNotification={handleNotification} showNotification={showNotification}/>
                 </div>
             }>
             </Route>
             <Route path='/Module/:id' element={
                 <div className='app'>
-                  <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} handleCourseMode={handleCourseMode} sidebarShow={sidebarShow} isFullScreen={isFullScreen}></TopBar>
+                  <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} handleCourseMode={handleCourseMode} handleNotification={handleNotification} sidebarShow={sidebarShow} isFullScreen={isFullScreen}></TopBar>
                   <Sidebar show={sidebarShow}>
                   <ul>
                   {
@@ -92,6 +102,7 @@ function App() {
                     <Module/>
                     </modeContext.Provider>
                   </Content>
+                  <Notification handleNotification={handleNotification} showNotification={showNotification}/>
                 </div>
             }>
             </Route>
