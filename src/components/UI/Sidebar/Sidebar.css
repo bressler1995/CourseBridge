@@ -21,9 +21,42 @@
   display: flex;
   flex-flow: column wrap;
   width: 100%;
-  height: calc(100% - 65px);
+  height: calc(100% - 15% - 65px);
   box-sizing: border-box;
   overflow-y: auto;
+}
+
+.app .os101Sidebar .os101Sidebar_bottom {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  width: 100%;
+  height: 15%;
+  background-color: transparent;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.app .os101Sidebar .os101Sidebar_bottom .btn-group {
+  display: flex;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  flex-flow: row wrap;
+  box-sizing: border-box;
+}
+
+.app .os101Sidebar .os101Sidebar_bottom .btn-group .btn {
+  font-weight: 700;
+  text-transform: capitalize;
+  border: none !important;
+  background-color: transparent;
+  color: #222;
+}
+
+.app .os101Sidebar .os101Sidebar_bottom .btn-check:checked+.btn {
+  background-color: var(--secondary-button-bg);
+  color: #FFF;
 }
 
 .app .os101Sidebar .os101Logo {
@@ -39,7 +72,7 @@
 .app .os101Sidebar .os101Logo .os101Logo_courseInfo {
   display: flex;
   flex-flow: column wrap;
-  width: calc(100% - 60px);
+  width: calc(100% - 40px);
   height: 100%;
   justify-content: center;
   color: #FFF;

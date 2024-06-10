@@ -87,7 +87,7 @@ function App() {
             <Route exact path='/' element={
                 <div className='app'>
                   <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} handleNotification={handleNotification} sidebarShow={sidebarShow} isFullScreen={isFullScreen}></TopBar>
-                  <Sidebar show={sidebarShow}>
+                  <Sidebar handleCourseMode={handleCourseMode} courseMode={courseMode} show={sidebarShow}>
                   <ul>
                   {
                     toc.map((child, i) => {
@@ -104,7 +104,7 @@ function App() {
             <Route path='/Module/:id' element={
                 <div className='app'>
                   <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} handleCourseMode={handleCourseMode} handleNotification={handleNotification} sidebarShow={sidebarShow} isFullScreen={isFullScreen}></TopBar>
-                  <Sidebar show={sidebarShow}>
+                  <Sidebar handleCourseMode={handleCourseMode} courseMode={courseMode} show={sidebarShow}>
                   <ul>
                   {
                    toc.map((child, i) => {

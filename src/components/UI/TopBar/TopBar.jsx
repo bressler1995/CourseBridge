@@ -4,7 +4,7 @@ import { PiGraduationCap } from "react-icons/pi";
 import Button from 'react-bootstrap/Button';
 import './TopBar.css';
 
-function TopBar({handleHide, handleFullScreen, handleCourseMode, handleNotification, sidebarShow, isFullScreen}) {
+function TopBar({handleHide, handleFullScreen, handleNotification, sidebarShow, isFullScreen}) {
 
   let contentClasses = 'os101TopBar';
 
@@ -20,9 +20,7 @@ function TopBar({handleHide, handleFullScreen, handleCourseMode, handleNotificat
         <Button onClick={handleNotification} variant="secondary" data-title='Downloading...' data-status='Current Content' data-body='Your content is being downloaded by your browser...'><GoDownload /></Button>
       </div>
       <div className='os101TopNav_container'>
-        <Button onClick={handleCourseMode} data-mode='full' variant="secondary"><GoRocket /></Button>
-        <Button onClick={handleCourseMode} data-mode='teacher' variant="secondary"><PiGraduationCap /></Button>
-        <Button onClick={handleCourseMode} data-mode='manager' variant="secondary"><GoBriefcase /></Button>
+        
       </div>
     </div>
   )

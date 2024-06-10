@@ -68,7 +68,11 @@ p, span, a, ul, li, ol, div, label, form, input, button.btn {
 
 }
 
-button.btn {
+/* .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    background-color: #d83e00 !important;
+} */
+
+button.btn, label.btn {
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     -ms-transition: all 0.25s ease-in-out;
@@ -86,12 +90,12 @@ button.btn {
     border-radius: 5px;
 }
 
-button.btn.btn-primary {
+button.btn.btn-primary, label.btn.btn-primary {
     background-color: var(--primary-button-bg);
     border-color: var(--primary-button-bg);
 }
 
-button.btn.btn-secondary {
+button.btn.btn-secondary, label.btn.btn-secondary {
     background-color: var(--secondary-button-bg);
     border-color: var(--secondary-button-bg);
 }
