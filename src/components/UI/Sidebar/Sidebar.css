@@ -13,7 +13,7 @@
     box-sizing: border-box;
     padding: 0;
     background-color: var(--bg-sidebar);
-    border-right: 1px solid #AAA;
+    border-right: 1px solid #CCC;
     z-index: 4;
 }
 
@@ -43,12 +43,12 @@
   width: 100%;
   flex-flow: row wrap;
   box-sizing: border-box;
-  background: var(--secondary-button-bg);
+  background: var(--bg-light);
   border-radius: 5px;
+  border: 1px solid #CCC;
 }
 
 .app .os101Sidebar .os101Sidebar_bottom .btn-group .btn {
-  display: inline-block;
   font-weight: 700;
   text-transform: capitalize;
   border: none !important;
@@ -60,21 +60,22 @@
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   margin: 2px;
+  background-color: transparent;
+  color: var(--text-title);
 }
 
 .app .os101Sidebar .os101Sidebar_bottom .btn-group .btn:hover, .app .os101Sidebar .os101Sidebar_bottom .btn-group .btn:active, .app .os101Sidebar .os101Sidebar_bottom .btn-group .btn:focus {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .app .os101Sidebar .os101Sidebar_bottom .btn-check:checked+.btn {
-  background-color: rgba(255, 255, 255, 0.85);
-  color: var(--text-title);
-
+  background-color: var(--secondary-button-bg);
+  color: #FFF;
 }
 
 .app .os101Sidebar .os101Sidebar_bottom .btn-check:checked+.btn:hover, .app .os101Sidebar .os101Sidebar_bottom .btn-check:checked+.btn:active, .app .os101Sidebar .os101Sidebar_bottom .btn-check:checked+.btn:focus {
-  background-color: rgba(255, 255, 255, 0.85);
-  color: var(--text-title);
+  background-color: var(--secondary-button-bg);
+  color: #FFF;
 }
 
 .app .os101Sidebar .os101Logo {
