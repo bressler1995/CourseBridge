@@ -51,7 +51,7 @@
   text-transform: capitalize;
   border: none !important;
   background-color: transparent;
-  color: #222;
+  color: var(--text-title);
 }
 
 .app .os101Sidebar .os101Sidebar_bottom .btn-check:checked+.btn {
