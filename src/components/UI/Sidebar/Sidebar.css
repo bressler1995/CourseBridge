@@ -50,12 +50,14 @@
   font-weight: 700;
   text-transform: capitalize;
   border: none !important;
-  background-color: transparent;
+  background: rgb(13,66,95);
+  background: linear-gradient(180deg, rgba(13,66,95,0.2) 0%, rgba(238,238,238,1) 50%);
   color: var(--text-title);
+  transition: none;
 }
 
-.app .os101Sidebar .os101Sidebar_bottom .btn-check:checked+.btn {
-  background-color: var(--secondary-button-bg);
+.app .os101Sidebar .os101Sidebar_bottom .btn-check:checked+.btn, .app .os101Sidebar .os101Sidebar_bottom .btn.active, .app .os101Sidebar .os101Sidebar_bottom .btn.show, .app .os101Sidebar .os101Sidebar_bottom .btn:first-child:active, .app .os101Sidebar .os101Sidebar_bottom :not(.btn-check)+.btn:active {
+  background: var(--sidebar-mode-toggle);;
   color: #FFF;
 }
 
