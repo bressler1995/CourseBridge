@@ -16,7 +16,7 @@ function Sidebar({children, show, handleCourseMode, courseMode}) {
         {children}
       </div>
       <div className='os101Sidebar_bottom p-4 px-4'>
-        <ToggleButtonGroup type="radio" name="options" defaultValue='full' value={courseMode}>
+        <ToggleButtonGroup className='p-1' type="radio" name="options" defaultValue='full' value={courseMode}>
           <ToggleButton variant='secondary' onClick={handleCourseMode} data-mode='full' id="tbg-radio-1" value='full'>
             Full
           </ToggleButton>

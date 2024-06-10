@@ -41,24 +41,40 @@
 .app .os101Sidebar .os101Sidebar_bottom .btn-group {
   display: flex;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.25);
   flex-flow: row wrap;
   box-sizing: border-box;
+  background: var(--secondary-button-bg);
+  border-radius: 5px;
 }
 
 .app .os101Sidebar .os101Sidebar_bottom .btn-group .btn {
+  display: inline-block;
   font-weight: 700;
   text-transform: capitalize;
   border: none !important;
-  background: rgb(13,66,95);
-  background: linear-gradient(180deg, rgba(13,66,95,0.2) 0%, rgba(238,238,238,1) 50%);
-  color: var(--text-title);
-  transition: none;
+  border-radius: 5px;
+  color: #FFF;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin: 2px;
 }
 
-.app .os101Sidebar .os101Sidebar_bottom .btn-check:checked+.btn, .app .os101Sidebar .os101Sidebar_bottom .btn.active, .app .os101Sidebar .os101Sidebar_bottom .btn.show, .app .os101Sidebar .os101Sidebar_bottom .btn:first-child:active, .app .os101Sidebar .os101Sidebar_bottom :not(.btn-check)+.btn:active {
-  background: var(--sidebar-mode-toggle);;
-  color: #FFF;
+.app .os101Sidebar .os101Sidebar_bottom .btn-group .btn:hover, .app .os101Sidebar .os101Sidebar_bottom .btn-group .btn:active, .app .os101Sidebar .os101Sidebar_bottom .btn-group .btn:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.app .os101Sidebar .os101Sidebar_bottom .btn-check:checked+.btn {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: var(--text-title);
+
+}
+
+.app .os101Sidebar .os101Sidebar_bottom .btn-check:checked+.btn:hover, .app .os101Sidebar .os101Sidebar_bottom .btn-check:checked+.btn:active, .app .os101Sidebar .os101Sidebar_bottom .btn-check:checked+.btn:focus {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: var(--text-title);
 }
 
 .app .os101Sidebar .os101Logo {
