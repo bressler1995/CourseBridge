@@ -2,6 +2,7 @@ import { useState, useEffect, Children, createContext, createElement } from 'rea
 import generatePDF, { Resolution, Margin } from 'react-to-pdf';
 import './App.css';
 import Module from './components/UI/Module/Module';
+import HorizontalContainer from './components/UI/Horizontal/HorizontalContainer';
 import Sidebar from './components/UI/Sidebar/Sidebar';
 import Content from './components/UI/Content/Content';
 import TopBar from './components/UI/TopBar/TopBar';
@@ -123,12 +124,12 @@ function App() {
             }>
             </Route>
             <Route path='/Horizontal/:id' element={
-                <Content isHorizontal={true}>
+              <Content isMinimal={true}>
                   <modeContext.Provider value={{ courseMode }}>
                     <Module/>
-                    </modeContext.Provider>
-                </Content>
-             }>
+                  </modeContext.Provider>
+              </Content>
+            }>
             </Route>
             <Route path='/minimal/:id' element={
               <Content isMinimal={true}>
