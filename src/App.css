@@ -148,6 +148,11 @@ button.btn:disabled {
     min-height: auto;
 }
 
+.os101Content.horizontalContent .slide {
+    height: 800px;
+    min-height: auto;
+}
+
 .slide .slideContent {
     display: block;
     width: 100%;

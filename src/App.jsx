@@ -122,10 +122,18 @@ function App() {
                 </div>
             }>
             </Route>
-            <Route path='/minimal' element={
+            <Route path='/Horizontal/:id' element={
+                <Content isHorizontal={true}>
+                  <modeContext.Provider value={{ courseMode }}>
+                    <Module/>
+                    </modeContext.Provider>
+                </Content>
+             }>
+            </Route>
+            <Route path='/minimal/:id' element={
               <Content isMinimal={true}>
                   <modeContext.Provider value={{ courseMode }}>
-                  <Module1/>
+                    <Module/>
                   </modeContext.Provider>
               </Content>
             }></Route>

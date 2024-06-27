@@ -1,6 +1,6 @@
 import './Content.css';
 
-function Content({children, isMinimal = false, show}) {
+function Content({children, isMinimal = false, isHorizontal = false, show}) {
   // if(isMinimal == true) {
   //   window.parent.document.getElementById('myframe').height = '1000px';
   // }
@@ -8,6 +8,10 @@ function Content({children, isMinimal = false, show}) {
 
   if(isMinimal == true) {
     contentClasses = contentClasses + ' ' + 'minimalContent';
+  }
+
+  if(isHorizontal == true) {
+    contentClasses = contentClasses + ' ' + 'horizontalContent';
   }
 
   if(show == false) {
