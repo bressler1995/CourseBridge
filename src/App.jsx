@@ -10,7 +10,6 @@ import Notification from './components/UI/Notification/Notification';
 import {BrowserRouter as Router, HashRouter, Route, Routes, Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import toc from './toc.json';
-import Module1 from './content/Module1.mdx';
 
 export const modeContext = createContext();
 
