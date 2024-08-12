@@ -114,14 +114,14 @@ function App() {
 
                     for (let key in child_lessons) {
                       if (child_lessons.hasOwnProperty(key)) {
-                        lesson_results.push(child_lessons[key].name);
+                        lesson_results.push([child_lessons[key].id, child_lessons[key].name]);
                       }
                     }
 
                     console.log(lesson_results);
 
                     return <li><Link to={'/Module/' + child.id}>{child.name}</Link><ul>{lesson_results.map((l_child) => {
-                      return <li>{l_child}</li>
+                      return <li>{l_child[1]}</li>
                     })}</ul></li>
                   })
                   }  
