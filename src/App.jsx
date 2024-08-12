@@ -108,7 +108,21 @@ function App() {
                   <ul>
                   {
                    toc.map((child, i) => {
-                    return <li><Link to={'/Module/' + child.id}>{child.name}</Link></li>
+                    const child_lessons = child.lessons;
+                    let lesson_results = [];
+                    // console.log(child_lessons);
+
+                    for (let key in child_lessons) {
+                      if (child_lessons.hasOwnProperty(key)) {
+                        lesson_results.push(child_lessons[key].name);
+                      }
+                    }
+
+                    console.log(lesson_results);
+
+                    return <li><Link to={'/Module/' + child.id}>{child.name}</Link><ul>{lesson_results.map((l_child) => {
+                      return <li>{l_child}</li>
+                    })}</ul></li>
                   })
                   }  
                   </ul>
@@ -130,7 +144,14 @@ function App() {
               </Content>
             }>
             </Route>
-            <Route path='/minimal/:id' element={
+            <Route path='/Minimal/:id' element={
+              <Content isMinimal={true}>
+                  <modeContext.Provider value={{ courseMode }}>
+                    <Module/>
+                  </modeContext.Provider>
+              </Content>
+            }></Route>
+            <Route path='/Simple/:id' element={
               <Content isMinimal={true}>
                   <modeContext.Provider value={{ courseMode }}>
                     <Module/>
