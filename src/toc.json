@@ -1,37 +1,37 @@
 [
     {"id": "1", "use": "<Module1/>", "name":"Module 1", "lessons": {
-        "l1": {"id": "1", "use": "<Lesson1/>", "name":"Lesson 1"},
-        "l2": {"id": "2", "use": "<Lesson2/>", "name":"Lesson 2"},
-        "l3": {"id": "3", "use": "<Lesson3/>", "name":"Lesson 3"},
-        "l4": {"id": "4", "use": "<Lesson4/>", "name":"Lesson 4"},
-        "l5": {"id": "5", "use": "<Lesson5/>", "name":"Lesson 5"}
+        "l1": {"id": "1", "use": "<M1Lesson1/>", "name":"Lesson 1"},
+        "l2": {"id": "2", "use": "<M1Lesson2/>", "name":"Lesson 2"},
+        "l3": {"id": "3", "use": "<M1Lesson3/>", "name":"Lesson 3"},
+        "l4": {"id": "4", "use": "<M1Lesson4/>", "name":"Lesson 4"},
+        "l5": {"id": "5", "use": "<M1Lesson5/>", "name":"Lesson 5"}
     }}, 
     {"id": "2", "use": "<Module2/>", "name":"Module 2", "lessons": {
-        "l1": {"id": "1", "use": "<Lesson1/>", "name":"Lesson 1"},
-        "l2": {"id": "2", "use": "<Lesson2/>", "name":"Lesson 2"},
-        "l3": {"id": "3", "use": "<Lesson3/>", "name":"Lesson 3"},
-        "l4": {"id": "4", "use": "<Lesson4/>", "name":"Lesson 4"},
-        "l5": {"id": "5", "use": "<Lesson5/>", "name":"Lesson 5"}
+        "l1": {"id": "1", "use": "<M2Lesson1/>", "name":"Lesson 1"},
+        "l2": {"id": "2", "use": "<M2Lesson2/>", "name":"Lesson 2"},
+        "l3": {"id": "3", "use": "<M2Lesson3/>", "name":"Lesson 3"},
+        "l4": {"id": "4", "use": "<M2Lesson4/>", "name":"Lesson 4"},
+        "l5": {"id": "5", "use": "<M2Lesson5/>", "name":"Lesson 5"}
     }},
     {"id": "3", "use": "<Module3/>", "name":"Module 3", "lessons": {
-        "l1": {"id": "1", "use": "<Lesson1/>", "name":"Lesson 1"},
-        "l2": {"id": "2", "use": "<Lesson2/>", "name":"Lesson 2"},
-        "l3": {"id": "3", "use": "<Lesson3/>", "name":"Lesson 3"},
-        "l4": {"id": "4", "use": "<Lesson4/>", "name":"Lesson 4"},
-        "l5": {"id": "5", "use": "<Lesson5/>", "name":"Lesson 5"}
+        "l1": {"id": "1", "use": "<M3Lesson1/>", "name":"Lesson 1"},
+        "l2": {"id": "2", "use": "<M3Lesson2/>", "name":"Lesson 2"},
+        "l3": {"id": "3", "use": "<M3Lesson3/>", "name":"Lesson 3"},
+        "l4": {"id": "4", "use": "<M3Lesson4/>", "name":"Lesson 4"},
+        "l5": {"id": "5", "use": "<M3Lesson5/>", "name":"Lesson 5"}
     }},
     {"id": "4", "use": "<Module4/>", "name":"Module 4", "lessons": {
-        "l1": {"id": "1", "use": "<Lesson1/>", "name":"Lesson 1"},
-        "l2": {"id": "2", "use": "<Lesson2/>", "name":"Lesson 2"},
-        "l3": {"id": "3", "use": "<Lesson3/>", "name":"Lesson 3"},
-        "l4": {"id": "4", "use": "<Lesson4/>", "name":"Lesson 4"},
-        "l5": {"id": "5", "use": "<Lesson5/>", "name":"Lesson 5"}
+        "l1": {"id": "1", "use": "<M4Lesson1/>", "name":"Lesson 1"},
+        "l2": {"id": "2", "use": "<M4Lesson2/>", "name":"Lesson 2"},
+        "l3": {"id": "3", "use": "<M4Lesson3/>", "name":"Lesson 3"},
+        "l4": {"id": "4", "use": "<M4Lesson4/>", "name":"Lesson 4"},
+        "l5": {"id": "5", "use": "<M4Lesson5/>", "name":"Lesson 5"}
     }},
     {"id": "5", "use": "<Module5/>", "name":"Module 5", "lessons": {
-        "l1": {"id": "1", "use": "<Lesson1/>", "name":"Lesson 1"},
-        "l2": {"id": "2", "use": "<Lesson2/>", "name":"Lesson 2"},
-        "l3": {"id": "3", "use": "<Lesson3/>", "name":"Lesson 3"},
-        "l4": {"id": "4", "use": "<Lesson4/>", "name":"Lesson 4"},
-        "l5": {"id": "5", "use": "<Lesson5/>", "name":"Lesson 5"}
+        "l1": {"id": "1", "use": "<M5Lesson1/>", "name":"Lesson 1"},
+        "l2": {"id": "2", "use": "<M5Lesson2/>", "name":"Lesson 2"},
+        "l3": {"id": "3", "use": "<M5Lesson3/>", "name":"Lesson 3"},
+        "l4": {"id": "4", "use": "<M5Lesson4/>", "name":"Lesson 4"},
+        "l5": {"id": "5", "use": "<M5Lesson5/>", "name":"Lesson 5"}
     }}
 ]
