@@ -140,14 +140,14 @@ function App() {
               </Content>
             }></Route>
             <Route path='/Simple/:id' element={
-              <Content isMinimal={true}>
+              <Content isSimple={true}>
                   <modeContext.Provider value={{ courseMode }}>
                     <SimpleModule/>
                   </modeContext.Provider>
               </Content>
             }></Route>
             <Route path='/Simple/:id/:lid' element={
-              <Content isMinimal={true}>
+              <Content isSimple={true}>
                   <modeContext.Provider value={{ courseMode }}>
                     <SimpleLesson/>
                   </modeContext.Provider>

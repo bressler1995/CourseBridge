@@ -153,6 +153,27 @@ button.btn:disabled {
     min-height: auto;
 }
 
+.os101Content.simpleContent {
+    display: flex;
+    padding-left: 70px;
+    padding-right: 70px;
+    width: 100%;
+    flex-flow: column wrap;
+    align-items: center;
+    box-sizing: border-box;
+   background-color: var(--bg-light);
+}
+
+.os101Content.simpleContent .os101Content_container {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    text-align: left;
+}
+
 .slide .slideContent {
     display: block;
     width: 100%;
