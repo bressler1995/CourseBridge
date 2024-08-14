@@ -9,7 +9,9 @@ This is a test repository intended to demonstrate advanced markdown formats.
 - Simple Route [Module]
   - Format: https://bressler1995.github.io/os101-dev-preview/#/Simple/x (x is an integer, 1-5)
   - Example: [https://bressler1995.github.io/os101-dev-preview/#/Simple/3](https://bressler1995.github.io/os101-dev-preview/#/Simple/3)
+  - Very simple UI, just enough to be able to navigate the Module
 
 - Simple Route [Lesson]
   - Format: https://bressler1995.github.io/os101-dev-preview/#/Simple/x/y (x and y are an integer, 1-5)
   - Example: [https://bressler1995.github.io/os101-dev-preview/#/Simple/3/2](https://bressler1995.github.io/os101-dev-preview/#/Simple/3/2)
+  - Very simple UI, just enough to be able to navigate the Module
