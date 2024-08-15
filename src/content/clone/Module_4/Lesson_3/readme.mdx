@@ -43,7 +43,7 @@ Even if a solution already exists, there might be good reasons to develop your o
 - The license is not open enough to adopt it.
 - To try new techniques or to develop a deeper understanding of the problem.
 
-<img src="../images/media/image333.jpg" style={{width: 350, height: 'auto'}} />
+<img src="./images/clone/Module_4/image333.jpg" style={{width: 350, height: 'auto'}} />
 
 
 It might take more time to start a new project, or it might take more time to integrate someone else’s code than writing your own. You will have to make that call.
@@ -64,7 +64,7 @@ Who will be working on the project? What are some of the development best practi
 
 ### Organizing a Project
 
-<img src="../images/media/image353.png" style={{width: 250, height: 'auto'}} />
+<img src="./images/clone/Module_4/image353.png" style={{width: 250, height: 'auto'}} />
 
 
 Source: https://xkcd.com/1459/
@@ -213,7 +213,7 @@ There are a variety of sample code structures that can be used to get started. F
 
 ### Licensing Considerations when Using Open Software
 
-<img src="../images/media/image130.png" style={{width: 350, height: 'auto'}} />
+<img src="./images/clone/Module_4/image130.png" style={{width: 350, height: 'auto'}} />
 
 
 Open-source software licenses are the basis for how scientists use, make, and share code and software. Understanding some of the nuances of these licenses is important because it will affect how your project can license and share code.
@@ -235,7 +235,7 @@ Licenses take various forms in order to outline:
 
 *Click '+' to travel more information.*
 
-<img style={{width: '100%', height: 'auto'}} src="../images/media/commonsoftwarelicenses.png" />
+<img style={{width: '100%', height: 'auto'}} src="./images/clone/Module_4/commonsoftwarelicenses.png" />
 
 **Public Domain**
 
@@ -282,7 +282,7 @@ There are two main types of open-source licenses. Permissive and protective (som
   </thead>
   <tbody>
     <tr>
-        <td colspan="2">
+        <td colSpan={2}>
             <p>The Open Source Initiative defines a permissive software license as a license that guarantees the freedoms to use, modify, redistribute, and create derivative works. An example of this type of license is the Apache 2.0 license by the Apache Software Foundation. It is the most popular and widely used permissive license.</p>
             <p>Users have wide latitude for reuse under this license. They are generally free to incorporate the code into their project or use it how they wish. A user of permissive-license open source in a product could redeploy the open source software with a wide range of licenses, including proprietary closed source software.</p>
         </td>
@@ -299,7 +299,7 @@ There are two main types of open-source licenses. Permissive and protective (som
   </thead>
   <tbody>
     <tr>
-        <td colspan="2">
+        <td colSpan={2}>
             <p>Protective (copyleft) licenses are a legal technique of granting certain freedoms over copies of copyrighted works with the requirement that the same rights be preserved in derivative works. This allows users to reuse, but also requires users to share their changes with the community using the same license. An example of a protective license is the General Public License (GPL) that ensures users have the freedom and responsibility to share their changes with the community. It is the most widely used protective license. These types of licenses can result in less re-use by users who may prefer or be required to only use permissive licenses.</p>
         </td>
     </tr>
@@ -319,7 +319,7 @@ Some of the most popular licenses used in open software are:
   </thead>
   <tbody>
     <tr>
-        <td colspan="2">
+        <td colSpan={2}>
             <ul>
               <li><a href="https://opensource.org/license/apache-2-0/">Apache License</a></li>
               <li><a href="https://opensource.org/license/mit/">MIT license</a></li>
@@ -339,7 +339,7 @@ Some of the most popular licenses used in open software are:
   </thead>
   <tbody>
     <tr>
-        <td colspan="2">
+        <td colSpan={2}>
             <ul>
               <li>GNU General Public License (<a href="https://opensource.org/license/gpl-2-0/">GPL</a>)</li>
               <li><a href="https://opensource.org/license/mpl-2-0/">Mozilla</a> Public License</li>
@@ -415,7 +415,7 @@ The main objective of code testing is to evaluate if a code does what its author
   </thead>
   <tbody>
     <tr>
-        <td colspan="4">
+        <td colSpan={4}>
             <p>Whether producing a script or an entire data processing pipeline, the validation of software is critical to ensuring the quality and trustworthiness of the scientific results. This could mean manually calculating the results to check the output of the code or comparing to previously produced results or having another team member test it.</p>
         </td>
     </tr>
@@ -433,7 +433,7 @@ The main objective of code testing is to evaluate if a code does what its author
   </thead>
   <tbody>
     <tr>
-        <td colspan="4">
+        <td colSpan={4}>
             <p>Given the same inputs and parameters, can the same results be produced? Making the configuration files, input data, etc. openly available so users can easily run and produce the same published results is a critical way to increase trust in your code.</p>
         </td>
     </tr>
@@ -451,7 +451,7 @@ The main objective of code testing is to evaluate if a code does what its author
   </thead>
   <tbody>
     <tr>
-        <td colspan="4">
+        <td colSpan={4}>
             <p>Unit tests enable software developers to bolster their confidence in their code’s ability to perform as expected. Unit tests are small functions that sit outside the code base that test a specific function or run a specific test. For example, if a function takes an image and flips it horizontally, one test might check that the resulting image is the same size. Another compares the output using a known image with the expected result. Another checks that a new image is returned.</p>
         </td>
     </tr>
@@ -469,7 +469,7 @@ The main objective of code testing is to evaluate if a code does what its author
   </thead>
   <tbody>
     <tr>
-        <td colspan="4">
+        <td colSpan={4}>
             <p>Built-in tests can usually be run both manually and automatically. Most version control platforms offer services for running tests automatically. When run this way, code can be checked to see if changes raise any problems. This process of checking the code automatically as it is developed is called continuous development or continuous integration (CI/CD). If a small change made in one part of the code results in an unexpected change in another part, running the tests will uncover this immediately.</p>
         </td>
     </tr>
@@ -495,7 +495,7 @@ Whether using open source, closed source, or commercial software, it is importan
   </thead>
   <tbody>
     <tr>
-        <td colspan="2">
+        <td colSpan={2}>
             <p>Commercial and open-source tools have been developed to address the challenge of identifying the security vulnerabilities in different source components. If you do not have any technology to secure your open source usage, you can consider using the Dependabot or <a href="https://owasp.org/">OWASP</a> dependency check tools.</p>
             <p>The Open Web Application Security Project (OWASP), is an online community that produces free tools and technologies in the field of web application security. OWASP dependency check is a utility created for developers, which identifies project dependencies and checks if they contain any known, publicly disclosed, open-source vulnerabilities.</p>
         </td>
@@ -512,7 +512,7 @@ Whether using open source, closed source, or commercial software, it is importan
   </thead>
   <tbody>
     <tr>
-        <td colspan="2">
+        <td colSpan={2}>
             <p>Testing the security of the open-source components you are using is the best way to ensure the safety of your applications and your organization. Your commitment to timely and frequent analysis of open-source components should be the same as to your proprietary code.</p>
             <p>This is especially true as the component in question may have unknown security vulnerabilities or dependencies that differ with each use case. It is possible for a component to be secure in a particular application but vulnerable in another.</p>
         </td>
@@ -533,7 +533,7 @@ Whether using open source, closed source, or commercial software, it is importan
   </thead>
   <tbody>
     <tr>
-        <td colspan="4">
+        <td colSpan={4}>
             <p>Software includes a persistent and unique identifier and rich metadata, so it is easy for humans and machines to find.</p>
         </td>
     </tr>
@@ -551,7 +551,7 @@ Whether using open source, closed source, or commercial software, it is importan
   </thead>
   <tbody>
     <tr>
-        <td colspan="4">
+        <td colSpan={4}>
             <p>Software is retrievable from its identifier via standard communication protocols.</p>
         </td>
     </tr>
@@ -569,7 +569,7 @@ Whether using open source, closed source, or commercial software, it is importan
   </thead>
   <tbody>
     <tr>
-        <td colspan="4">
+        <td colSpan={4}>
             <p>Software interoperates with other software; it exchanges data and/or metadata via community standards.</p>
         </td>
     </tr>
@@ -587,7 +587,7 @@ Whether using open source, closed source, or commercial software, it is importan
   </thead>
   <tbody>
     <tr>
-        <td colspan="4">
+        <td colSpan={4}>
             <p>Fully described metadata with provenance, meeting community standards. License permits reuse.</p>
         </td>
     </tr>
