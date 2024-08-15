@@ -1,7 +1,7 @@
-import { lazy, Suspense, createElement } from 'react';
+import { createElement } from 'react';
 import {useParams} from 'react-router-dom';
-import parse from 'html-react-parser';
 import toc from '../../../../toc.json';
+import './Simple.css';
 
 import Module1 from '../../../../content/clone/Module_1/readme.mdx';
 import Module2 from '../../../../content/clone/Module_2/readme.mdx';
@@ -25,8 +25,6 @@ function SimpleModule() {
   return (
     toc.map((child) => {
       if(child.id === idParam) {
-        let componentString = child.use;
-        componentString = parse(componentString)
 
         return createElement(
           modules[child.id],

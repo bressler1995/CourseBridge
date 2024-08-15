@@ -1,12 +1,5 @@
 # Lesson 1: What is Open Science?
 
-## Navigation
-* [Motivation for Open Science](#motivation-for-open-science)
-* [What is Open Science?](#what-is-open-science)
-* [Who Does Open Science?](#who-does-open-science)
-* [Lesson 1: Summary](#lesson-1-summary)
-* [Lesson 1: Knowledge Check](#lesson-1-knowledge-check)
-
 ## Overview
 
 In this lesson, you take a closer look at what open science means, including the intended goals and outcomes of adopting open science as an individual and as part of a larger community. You then review examples of open science in action. Finally, you wrap up the lesson by taking a closer look at why adopting open science is needed.

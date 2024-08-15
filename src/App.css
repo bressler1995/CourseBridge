@@ -155,23 +155,14 @@ button.btn:disabled {
 
 .os101Content.simpleContent {
     display: flex;
-    padding-left: 70px;
-    padding-right: 70px;
+    position: fixed;
     width: 100%;
-    flex-flow: column wrap;
-    align-items: center;
+    height: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
     box-sizing: border-box;
-   background-color: var(--bg-light);
-}
-
-.os101Content.simpleContent .os101Content_container {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 1200px;
-    padding-top: 90px;
-    padding-bottom: 90px;
-    text-align: left;
+    top: 0;
+    left: 0;
 }
 
 .slide .slideContent {

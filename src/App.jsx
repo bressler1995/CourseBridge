@@ -1,10 +1,9 @@
-import { useState, useEffect, Children, createContext, createElement } from 'react';
+import { useState, useEffect, Children, createContext } from 'react';
 import generatePDF, { Resolution, Margin } from 'react-to-pdf';
 import './App.css';
 import Module from './components/UI/Module/Module';
 import SimpleModule from './components/UI/Module/Simple/SimpleModule';
 import SimpleLesson from './components/UI/Module/Simple/SimpleLesson';
-import HorizontalContainer from './components/UI/Horizontal/HorizontalContainer';
 import Sidebar from './components/UI/Sidebar/Sidebar';
 import Content from './components/UI/Content/Content';
 import TopBar from './components/UI/TopBar/TopBar';

@@ -1,7 +1,7 @@
-import { lazy, Suspense, createElement } from 'react';
+import { createElement } from 'react';
 import {useParams} from 'react-router-dom';
-import parse from 'html-react-parser';
 import toc from '../../../../toc.json';
+import './Simple.css';
 
 import Module1 from '../../../../content/Module1.mdx';
 import Module2 from '../../../../content/Module2.mdx';
@@ -105,7 +105,6 @@ function SimpleLesson() {
               let lesson_use = child_lessons[key].use;
               
               if(lesson_id === lidParam) {
-                let lessonComponentString = parse(lesson_use);
                 let lessontouse;
 
                 if(idParam == 1) {
@@ -127,9 +126,6 @@ function SimpleLesson() {
               }
             }
         }
-
-        let componentString = child.use;
-        componentString = parse(componentString);
 
         return createElement(
           modules[child.id],

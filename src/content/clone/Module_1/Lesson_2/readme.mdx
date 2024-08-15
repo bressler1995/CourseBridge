@@ -1,13 +1,5 @@
 # Lesson 2: Why is Open Science Important?
 
-## Navigation
-* [Open Science Breaks Down Stovepipes and Increases Innovation](#open-science-breaks-down-stovepipes-and-increases-innovation)
-* [Benefits to You](#benefits-to-you)
-* [Benefits to Science](#benefits-to-science)
-* [Benefits to Society](#benefits-to-society)
-* [Lesson 2: Summary](#lesson-2-summary)
-* [Lesson 2: Knowledge Check](#lesson-2-knowledge-check)
-
 ## Overview
 
 In this lesson, you learn how adopting open science benefits you as a researcher and society. You also learn about some of the challenges and hurdles with using open science principles and how to navigate them.

@@ -1,4 +1,5 @@
 import './Content.css';
+import SimpleSidebar from '../Module/Simple/SimpleSidebar';
 
 function Content({children, isMinimal = false, isHorizontal = false, isSimple = false, show}) {
   // if(isMinimal == true) {
@@ -25,7 +26,7 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
 
   return (
     <div id='os101Content' className={contentClasses}>
-      <div id='os101Content_container' className='os101Content_container'>{children}</div>
+      { isSimple == true ? <><SimpleSidebar/><div className='simpleContent_wrapper'><div id='os101Content_container' className='os101Content_container'>{children}</div></div></> : <div id='os101Content_container' className='os101Content_container'>{children}</div> }
     </div>
   )
 }
