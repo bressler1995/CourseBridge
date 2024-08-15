@@ -8,7 +8,7 @@ import Sidebar from './components/UI/Sidebar/Sidebar';
 import Content from './components/UI/Content/Content';
 import TopBar from './components/UI/TopBar/TopBar';
 import Notification from './components/UI/Notification/Notification';
-import {BrowserRouter as Router, HashRouter, Route, Routes, Link} from 'react-router-dom';
+import {HashRouter, Route, Routes, Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import toc from './toc.json';
 
