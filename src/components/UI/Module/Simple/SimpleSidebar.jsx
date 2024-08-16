@@ -6,7 +6,7 @@ function SimpleSidebar() {
 
   const params = useParams();
   let idParam = params.id;
-
+  let lidParam = params.lid;
   let lesson_data = [];
 
   let searchModules = toc.filter((child, i) => {
@@ -27,19 +27,41 @@ function SimpleSidebar() {
     }
   }
 
-  console.log(lesson_data);
-  
-  return (<div className='simpleSideBar'>
-    <h2>Navigation</h2>
-    <ul>
-        <li><Link to={'/Simple/' + idParam}>Welcome</Link></li>
-        {
-          lesson_data.map((child) => {
-            return <li><Link to={'/Simple/' + idParam + '/' + child[0]}>{child[1]}</Link></li>
-          })
-        }
-    </ul>
-  </div>);
+  // console.log(lidParam);
+
+  if(lesson_data.length <= 0) {
+    return '';
+  } else {
+    
+    if(lidParam != null) {
+
+      return (<div className='simpleSideBar'>
+        <h2>Lessons</h2>
+        <ul>
+            <li><Link to={'/Simple/' + idParam}>Welcome</Link></li>
+            {
+              lesson_data.map((child) => {
+                return <li><Link to={'/Simple/' + idParam + '/' + child[0]}>{child[1]}</Link></li>
+              })
+            }
+        </ul>
+        <h2>Navigation</h2>
+      </div>);
+    } else {
+      return (<div className='simpleSideBar'>
+        <h2>Lessons</h2>
+        <ul>
+            <li><Link to={'/Simple/' + idParam}>Welcome</Link></li>
+            {
+              lesson_data.map((child) => {
+                return <li><Link to={'/Simple/' + idParam + '/' + child[0]}>{child[1]}</Link></li>
+              })
+            }
+        </ul>
+      </div>);
+    }
+    
+  }
   
 }
 

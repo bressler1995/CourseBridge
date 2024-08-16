@@ -3,12 +3,6 @@ import {useParams} from 'react-router-dom';
 import toc from '../../../../toc.json';
 import './Simple.css';
 
-import Module1 from '../../../../content/Module1.mdx';
-import Module2 from '../../../../content/Module2.mdx';
-import Module3 from '../../../../content/Module3.mdx';
-import Module4 from '../../../../content/Module4.mdx';
-import Module5 from '../../../../content/Module5.mdx';
-
 import M1Lesson1 from '../../../../content/clone/Module_1/Lesson_1/readme.mdx';
 import M2Lesson1 from '../../../../content/clone/Module_2/Lesson_1/readme.mdx';
 import M3Lesson1 from '../../../../content/clone/Module_3/Lesson_1/readme.mdx';
@@ -38,14 +32,6 @@ import M2Lesson5 from '../../../../content/clone/Module_2/Lesson_5/readme.mdx';
 import M3Lesson5 from '../../../../content/clone/Module_3/Lesson_5/readme.mdx';
 import M4Lesson5 from '../../../../content/clone/Module_4/Lesson_5/readme.mdx';
 import M5Lesson5 from '../../../../content/clone/Module_5/Lesson_5/readme.mdx';
-
-const modules = {
-  1: Module1,
-  2: Module2,
-  3: Module3,
-  4: Module4,
-  5: Module5
-}
 
 const m1lessons = {
   1: M1Lesson1,
@@ -99,38 +85,36 @@ function SimpleLesson() {
       if(child.id === idParam) {
         const child_lessons = child.lessons;
 
-        for (let key in child_lessons) {
-            if (child_lessons.hasOwnProperty(key)) {
-              let lesson_id = child_lessons[key].id;
-              let lesson_use = child_lessons[key].use;
-              
-              if(lesson_id === lidParam) {
-                let lessontouse;
+        // console.log(child_lessons);
 
-                if(idParam == 1) {
-                  lessontouse = m1lessons;
-                } else if(idParam == 2) {
-                  lessontouse = m2lessons;
-                } else if(idParam == 3) {
-                  lessontouse = m3lessons;
-                } else if(idParam == 4) {
-                  lessontouse = m4lessons;
-                } else if(idParam == 5) {
-                  lessontouse = m5lessons;
-                }
+        for (let lesson in child_lessons) {
+          if (child_lessons.hasOwnProperty(lesson)) {
+            let lesson_id = child_lessons[lesson].id;
+            
+            if(lesson_id === lidParam) {
+              let lessontouse;
 
-                return createElement(
-                  lessontouse[lesson_id],
-                    { className: '' }
-                  );
+              if(idParam == 1) {
+                lessontouse = m1lessons;
+              } else if(idParam == 2) {
+                lessontouse = m2lessons;
+              } else if(idParam == 3) {
+                lessontouse = m3lessons;
+              } else if(idParam == 4) {
+                lessontouse = m4lessons;
+              } else if(idParam == 5) {
+                lessontouse = m5lessons;
               }
+
+              return createElement(
+                lessontouse[lesson_id],
+                  { className: '' }
+                );
             }
+          }
         }
 
-        return createElement(
-          modules[child.id],
-          { className: '' }
-        );
+        return 'No Lesson Found';
       }
     })
   )
