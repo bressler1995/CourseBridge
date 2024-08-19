@@ -1,16 +1,5 @@
 # Lesson 3: Making Open Code
 
-## Navigation
-* [Overview](#overview)
-* [Learning Objectives](#learning-objectives)
-* [How do We Plan for Making Code?](#how-do-we-plan-for-making-code)
-* [Importance of Version Control](#importance-of-version-control)
-* [Describing Our Code to Others](#describing-our-code-to-others)
-* [What License Should We Choose for Our Code?](#what-license-should-we-choose-for-our-code)
-* [Programming Best Practices](#programming-best-practices)
-* [Lesson 3: Summary](#lesson-3-summary)
-* [Lesson 3: Knowledge Check](#lesson-3-knowledge-check)
-
 ## Overview
 
 In this lesson, you will learn about the practical steps to make code openly accessible. Large volume and well-established software have different needs than an incipient project. For example, a script written to create a simple plot has different requirements than a software package that models the Earth’s climate. The size of a research team can also determine the steps required to make code open access. This lesson covers the process to make code usable to other researchers through documentation, considerations around licenses, and software development best practices.

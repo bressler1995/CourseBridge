@@ -1,17 +1,5 @@
 # Lesson 4: Sharing Open Code
 
-## Navigation
-* [Overview](#overview)
-* [Learning Objectives](#learning-objectives)
-* [Planning to Share Your Code](#planning-to-share-your-code)
-* [Legal and Security Concerns](#legal-and-security-concerns)
-* [When: The Schedule for Code Archiving and Sharing](#when-the-schedule-for-code-archiving-and-sharing)
-* [Where: Where To Share Open Code](#where-to-share-open-code)
-* [How: How to Enable Reuse of Code](#how-how-to-enable-reuse-of-code)
-* [Who: Roles and Responsibilities of the Team Members in Implementing the SMP](#who-roles-and-responsibilities-of-the-team-members-in-implementing-the-smp)
-* [Lesson 4: Summary](#lesson-4-summary)
-* [Lesson 4: Knowledge Check](#lesson-4-knowledge-check)
-
 ## Overview
 
 In this lesson you learn the steps for sharing the software that you developed. These steps include determining if, when, and where software should be shared, which roles are needed, and how to enable others to use the code.

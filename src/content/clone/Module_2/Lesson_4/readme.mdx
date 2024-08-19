@@ -1,13 +1,5 @@
 # Lesson 4: Tools for Open Code
 
-## Navigation
-* [Introduction to Open Code](#introduction-to-open-code)
-* [Tools for Version Control](#tools-for-version-control)
-* [Tools for Editing Code](#tools-for-editing-code)
-* [Additional Tools](#additional-tools)
-* [Lesson 4: Summary](#lesson-4-summary)
-* [Lesson 4: Knowledge Check](#lesson-4-knowledge-check)
-
 ## Overview
 
 This lesson introduces you to some useful tools for working with open code. You will learn the various tools available to develop, store, and share open code, from version control to code editing software to containers.

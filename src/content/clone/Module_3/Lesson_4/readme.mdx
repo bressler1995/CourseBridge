@@ -1,15 +1,5 @@
 # Lesson 4: Sharing Open Data
 
-## Navigation
-* [Overview](#overview)
-* [Learning Objectives](#learning-objectives)
-* [When and If to Share Data](#when-and-if-to-share-data)
-* [Where to Share Data](#where-to-share-data)
-* [How to Enable Reuse of Data](#how-to-enable-reuse-of-data)
-* [Who is Responsible for Sharing Data](#who-is-responsible-for-sharing-data)
-* [Lesson 4: Summary](#lesson-4-summary)
-* [Lesson 4: Knowledge Check](#lesson-4-knowledge-check)
-
 ## Overview
 
 In this lesson, you learn about the practice of sharing your data. The discussion starts with a review of the sharing process and how to evaluate if your data are sharable. Next, you take a look at ensuring your data is accessible with a closer look at repositories and the lifecycle of data accessibility from the selecting a repository to maintaining and archiving your data. The lesson then discusses some steps to make the data as reusable as possible, and concludes with a section about considering who will help with the data sharing process.

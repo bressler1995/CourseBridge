@@ -1,15 +1,5 @@
 # Lesson 2: Using Open Code
 
-## Navigation
-* [Overview](#overview)
-* [Learning Objectives](#learning-objectives)
-* [Discovering Open Code and Software](#discovering-open-code-and-software)
-* [Assessing Open Code and Software](#assessing-open-code-and-software)
-* [Reusing Open Code](#reusing-open-code)
-* [Citing and Acknowledging Open Code Use](#citing-and-acknowledging-open-code-use)
-* [Lesson 2: Summary](#lesson-2-summary)
-* [Lesson 2: Knowledge Check](#lesson-2-knowledge-check)
-
 ## Overview
 
 In this lesson, you learn the steps for using existing open code in your work. These steps include discovering, assessing, reusing, citing, and acknowledging.

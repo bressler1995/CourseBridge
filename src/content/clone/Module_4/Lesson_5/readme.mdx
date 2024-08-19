@@ -1,17 +1,5 @@
 # Lesson 5: From Theory to Practice
 
-## Navigation
-* [Overview](#overview)
-* [Learning Objectives](#learning-objectives)
-* [Open Science and Data Management Plans](#open-science-and-data-management-plans)
-* [How Do We Plan for Making our Code Open?](#how-do-we-plan-for-making-our-code-open)
-* [Engage and Build Communities](#engage-and-build-communities)
-* [Contribute to Open-Source Software](#contribute-to-open-source-software)
-* [Additional Resources](#additional-resources)
-* [Lesson 5: Summary](#lesson-5-summary)
-* [Lesson 5: Knowledge Check](#lesson-5-knowledge-check)
-* [Open Code Summary](#open-code-summary)
-
 ## Overview
 
 This lesson ties the concepts of open access software development to the operation of a software management plan. The lesson also introduces you to the community aspect of open software. It begins with a discussion on writing software management plans, then continues with information on how to connect with open software communities. This information is contextualized with an introduction to the benefits of a software community and the roles involved in these groups. A list of communities is also presented, and you are asked to explore and engage with some of them. The lesson wraps up with helpful suggestions to contribute to open software and additional resources.

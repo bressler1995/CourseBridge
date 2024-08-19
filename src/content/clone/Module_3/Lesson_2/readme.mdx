@@ -1,15 +1,5 @@
 # Lesson 2: Using Open Data
 
-## Navigation
-* [Overview](#overview)
-* [Learning Objectives](#learning-objectives)
-* [Introduction](#introduction)
-* [Discovering Open Data](#discovering-open-data)
-* [Assessing Open Data](#assessing-open-data)
-* [Using Open Data](#using-open-data)
-* [Lesson 2: Summary](#lesson-2-summary)
-* [Lesson 2: Knowledge Check](#lesson-2-knowledge-check)
-
 ## Overview
 
 In this lesson you learn how to discover, assess, and cite an open data set. You start by exploring repositories and learning about the issues and considerations for searching datasets. You then learn how to determine if the dataset is suitable for your use by learning what to review in documentation, licenses, and file formats. The lesson wraps up with a discussion about the importance of citing the datasets and how to read and follow citation instructions.

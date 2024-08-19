@@ -1,13 +1,5 @@
 # Lesson 4: When Not to be Open
 
-## Navigation
-* [Common Fears Around Openness](#common-fears-around-openness)
-* [Misaligned Incentives](#misaligned-incentives)
-* [Social Barriers](#social-barriers)
-* [Institutional and Infrastructure Barriers](#institutional-and-infrastructure-barriers)
-* [Lesson 4: Summary](#lesson-4-summary)
-* [Lesson 4: Knowledge Check](#lesson-4-knowledge-check)
-
 ## Overview
 
 In this lesson, you will consider potential barriers to adopting open science practices. Barriers can come in the form of personal fears, as a result of misaligned social challenges, or institutional/infrastructure barriers. We begin with an exercise to identify your own concerns or fears around adopting open science. This leads into a discussion about common barriers and mitigation strategies.

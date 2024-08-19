@@ -1,17 +1,5 @@
 # Lesson 1: Introduction to Open Data
 
-## Navigation
-* [Overview](#overview)
-* [Learning Objectives](#learning-objectives)
-* [Introduction](#introduction)
-* [Definition and Considerations of Open Data](#definition-and-considerations-of-open-data)
-* [Benefits of Open Data](#benefits-of-open-data)
-* [Challenges of Open Data](#challenges-of-open-data)
-* [Applying FAIR Principles](#applying-fair-principles)
-* [Planning for Openness: Using the Use, Make, Share Framework for Open Data](#planning-for-openness-using-the-use-make-share-framework-for-open-data)
-* [Lesson 1: Summary](#lesson-1-summary)
-* [Lesson 1: Knowledge Check](#lesson-1-knowledge-check)
-
 ## Overview
 
 This lesson defines open data, its benefits, and the practices that enable data to be open. In addition, the lesson takes a closer look at how FAIR applies to open data as well as at the critical role of metadata. It wraps up with a brief discussion on how to plan for open data in the scientific workflow and tasks guided by the use, make, share framework.

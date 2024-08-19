@@ -1,13 +1,5 @@
 # Lesson 2: General Tools for Open Science
 
-## Navigation
-* [Introduction to Open Science Tools](#introduction-to-open-science-tools)
-* [Persistent Identifiers](#persistent-identifiers)
-* [Useful Open Science Tools](#useful-open-science-tools)
-* [Open Science and Data Management Plans](#open-science-and-data-management-plans)
-* [Lesson 2: Summary](#lesson-2-summary)
-* [Lesson 2: Knowledge Check](#lesson-2-knowledge-check)
-
 ## Overview
 
 This lesson introduces you to the commonly used tools in open science. It starts out by providing a brief introduction to open science tools and describes persistent identifiers - one of the most common open science tools in use that ensures reproducibility, accessibility, and recognition of scientific products. This is followed by descriptions of other common open science tools that are applicable regardless of your field of study. The lesson wraps up with a description of open science and data management plans that is a key component to sharing your science throughout the research process.

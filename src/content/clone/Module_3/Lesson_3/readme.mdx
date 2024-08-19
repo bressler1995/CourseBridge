@@ -1,15 +1,5 @@
 # Lesson 3: Making Open Data
 
-## Navigation
-* [Overview](#overview)
-* [Learning Objectives](#learning-objectives)
-* [Planning for Open Data](#planning-for-open-data)
-* [Selecting Data Formats and Tools for Interoperability](#selecting-data-formats-and-tools-for-interoperability)
-* [Making the Data Reusable Through Documentation](#making-the-data-reusable-through-documentation)
-* [Making the Data Reusable Through Licensing](#making-the-data-reusable-through-licensing)
-* [Lesson 3: Summary](#lesson-3-summary)
-* [Lesson 3: Knowledge Check](#lesson-3-knowledge-check)
-
 ## Overview
 
 In this lesson, you learn the criteria and tasks needed to ensure that the datasets you make are open and reusable. The lesson starts with a discussion on creating a data management plan and then continues with topics on selecting open data formats and how to include metadata, README files, and version control for your data. It wraps up with a discussion on open licenses for data.

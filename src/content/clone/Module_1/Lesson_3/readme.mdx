@@ -1,12 +1,5 @@
 # Lesson 3: How to do Open Science
 
-## Navigation
-* [Maintaining Security and Protecting Privacy](#maintaining-security-and-protecting-privacy)
-* [Intellectual Property](#intellectual-property)
-* [Policies and Practices around Open Science](#policies-and-practices-around-open-science)
-* [Lesson 3: Summary](#lesson-3-summary)
-* [Lesson 3: Knowledge Check](#lesson-3-knowledge-check)
-
 ## Overview
 
 The ability to discern when and how to share information in an appropriate manner is an essential skill of open science. Practitioners of open science must balance their pursuit to maximize openness while respecting diverse cultures, maintaining security and privacy, and following institutional policies and practices.

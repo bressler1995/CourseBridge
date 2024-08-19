@@ -1,15 +1,5 @@
 # Lesson 5: From Theory to Practice
 
-## Navigation
-* [Overview](#overview)
-* [Learning Objectives](#learning-objectives)
-* [Writing an Open Science and Data Management Plan](#writing-an-open-science-and-data-management-plan)
-* [Open Data Communities and You](#open-data-communities-and-you)
-* [Additional Resources](#additional-resources)
-* [Lesson 5: Summary](#lesson-5-summary)
-* [Lesson 5: Knowledge Check](#lesson-5-knowledge-check)
-* [Open Data Summary](#open-data-summary)
-
 ## Overview
 
 In this lesson, you will get some practice writing a data management plan. You will then learn how you can get involved in open data communities. You will also learn about resources you can start to use and training you can take to start your journey with open data.

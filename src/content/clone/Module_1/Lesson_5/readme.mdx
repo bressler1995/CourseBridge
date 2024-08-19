@@ -1,14 +1,5 @@
 # Lesson 5: Planning for Open Science: From Theory to Practice
 
-## Navigation
-* [Planning for Open Science](#planning-for-open-science)
-* [Designing for Openness](#designing-for-openness)
-* [Case Study: The Outcomes of an Open Plan](#case-study-the-outcomes-of-an-open-plan)
-* [Steps to Continue Your Open Science Journey](#steps-to-continue-your-open-science-journey)
-* [Lesson 5: Summary](#lesson-5-summary)
-* [Lesson 5: Knowledge Check](#lesson-5-knowledge-check)
-* [The Ethos of the Open Science Summary](#the-ethos-of-the-open-science-summary)
-
 ## Overview
 
 This module is nearly over, but there's so much more information available about open science – so our last lesson is for everyone who wants to learn more. In this lesson, you review ways to start your journey with open science including a list of resources that you can use now.

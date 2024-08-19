@@ -1,13 +1,5 @@
 # Lesson 5: Tools for Open Results
 
-## Navigation
-* [Tools for Open Publications](#tools-for-open-publications)
-* [Tools for Reproducibility](#tools-for-reproducibility)
-* [Additional Tools for Open Results](#additional-tools-for-open-results)
-* [Lesson 5: Summary](#lesson-5-summary)
-* [Lesson 5: Knowledge Check](#lesson-5-knowledge-check)
-* [Open Tools and Resources Summary](#open-tools-and-resources-summary)
-
 ## Overview
 
 This lesson focuses on the tools available for sharing research products. It begins with a discussion of the tools for management of research projects. Then it introduced the tools for open publications and how to find them. Next, this lesson discusses the tools for open results. Lastly, this lesson discusses the concept of reproducibility. Journals are a tool for sharing your results and these are discussed in more detail in Module 5 - Open Results.

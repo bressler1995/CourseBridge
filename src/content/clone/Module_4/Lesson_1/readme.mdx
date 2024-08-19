@@ -1,16 +1,5 @@
 # Lesson 1: Introduction to Open Code
 
-## Navigation
-* [Overview](#overview)
-* [Learning Objectives](#learning-objectives)
-* [Success Stories](#success-stories)
-* [Definitions and Considerations of Open Code](#definitions-and-considerations-of-open-code)
-* [Principles, Benefits, and Challenges](#principles-benefits-and-challenges)
-* [When Not to Share](#when-not-to-share)
-* [Software Management Plans (SMP)](#software-management-plans-smp)
-* [Lesson 1: Summary](#lesson-1-summary)
-* [Lesson 1: Knowledge Check](#lesson-1-knowledge-check)
-
 ## Overview
 
 This lesson defines the key terms, core principles, benefits, and challenges of open code. The practice of making code openly available to the public occurs within a spectrum from more to less protected. Ethical and legal conditions can limit the degree of openness that researchers can permit. This lesson will introduce the critical questions to consider when determining the appropriate accessibility of code to external users along with best practices to overcome common constraints to maximize availability. The lesson concludes with a discussion on the software lifecycle and how it fits with the "Use, Make, Share" framework and its relationship to a management plan.

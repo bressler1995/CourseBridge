@@ -1,13 +1,5 @@
 # Lesson 1: Introduction to Open Results
 
-## Navigation
-
-* [What Research Objects are Created Throughout the Research Cycle?](#what-research-objects-are-created-throughout-the-research-cycle)
-* [Examples of Open Results](#examples-of-open-results)
-* [What is the Reproducibility Crisis?](#what-is-the-reproducibility-crisis)
-* [Lesson 1: Summary](#lesson-1-summary)
-* [Lesson 1: Knowledge Check](#lesson-1-knowledge-check)
-
 ## Overview
 
 This lesson aims to broaden your perspective regarding what shareable research outputs are produced throughout the research lifecycle. We will first consider what constitutes an open result. To do so, we will read an example of a forward-thinking research project that utilizes open result best practices. The perspectives gained from this example will ultimately get us thinking about how we can work towards creating reproducible research.

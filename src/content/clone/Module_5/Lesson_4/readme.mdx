@@ -1,13 +1,5 @@
 # Lesson 4: Sharing Open Results
 
-## Navigation
-
-* [When to Share](#when-to-share)
-* [How to Share](#how-to-share)
-* [Other Considerations When Sharing](#other-considerations-when-sharing)
-* [Lesson 4: Summary](#lesson-4-summary)
-* [Lesson 4: Knowledge Check](#lesson-4-knowledge-check)
-
 ## Overview
 
 In lesson 3 you learned about how to make reproducible results. Now, we can finally think about how to best share those results. In this lesson we will place emphasis on publishing manuscripts as open access. You will learn what subtleties to consider when determining what journal to publish in, including how to make sense of a journal's policies on self-archiving. Finally, we discuss some commonly held concerns about sharing open access publications, and how to overcome them. Ultimately, we want to ensure that you have confidence in your decision to publish as open access.

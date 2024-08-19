@@ -35,8 +35,9 @@ function SimpleSidebar() {
     
     if(lidParam != null) {
 
-      return (<div className='simpleSideBar'>
-        <h2>Lessons</h2>
+      return (<div className='os101SimpleSideBar'>
+        <div className='os101SimpleLogo'><img src='./images/logo.png'/></div>
+        <h2>All Content</h2>
         <ul>
             <li><Link to={'/Simple/' + idParam}>Welcome</Link></li>
             {
@@ -45,11 +46,12 @@ function SimpleSidebar() {
               })
             }
         </ul>
-        <h2>Navigation</h2>
+        <h2>Navigate Lesson</h2>
       </div>);
     } else {
-      return (<div className='simpleSideBar'>
-        <h2>Lessons</h2>
+      return (<div className='os101SimpleSideBar'>
+        <div className='os101SimpleLogo'><img src='./images/logo.png'/></div>
+        <h2>All Content</h2>
         <ul>
             <li><Link to={'/Simple/' + idParam}>Welcome</Link></li>
             {

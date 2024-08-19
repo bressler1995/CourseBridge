@@ -1,11 +1,5 @@
 # Lesson 1: Introduction to the Process of Open Science
 
-## Navigation
-* [Definition of Open Science and Research Products](#definition-of-open-science-and-research-products)
-* [Using Tools for Open Science in Practice](#using-tools-for-open-science-in-practice)
-* [Lesson 1: Summary](#lesson-1-summary)
-* [Lesson 1: Knowledge Check](#lesson-1-knowledge-check)
-
 ## Overview
 
 In this lesson you review the definition of open science and several other common terms including research products, data, software, and results. In addition, you will read examples that demonstrate how these open science tools are used in practice. The lesson wraps up with an example of how one group openly shared their data, results, software, and paper.
