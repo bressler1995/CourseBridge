@@ -68,6 +68,10 @@ body {
     overflow-y: auto;
 }
 
+.os101Content.simpleContent a {
+    color: var(--primary-button-bg);
+}
+
 .os101Content.simpleContent .os101Content_container img {
     max-width: 100%;
     background-color: #FFF;
