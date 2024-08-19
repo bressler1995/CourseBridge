@@ -70,4 +70,46 @@ body {
 
 .os101Content.simpleContent .os101Content_container img {
     max-width: 100%;
+    background-color: #FFF;
+    border-radius: 5px;
+}
+
+.os101Content.simpleContent .simpleContent_wrapper h1, .os101Content.simpleContent .simpleContent_wrapper h2, .os101Content.simpleContent .simpleContent_wrapper h3, .os101Content.simpleContent .simpleContent_wrapper h4, .os101Content.simpleContent .simpleContent_wrapper h5, .os101Content.simpleContent .simpleContent_wrapper h6 {
+    color: #333;
+}
+
+.os101Content.simpleContent .simpleContent_wrapper h1 {
+    font-size: 44px;
+    line-height: 58px;
+    font-weight: 800;
+}
+
+.os101Content.simpleContent .simpleContent_wrapper h2 {
+    font-size: 34px;
+    line-height: 38px;
+    font-weight: 700;
+}
+
+.os101Content.simpleContent .simpleContent_wrapper h3 {
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+.os101Content.simpleContent .simpleContent_wrapper h4 {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+.os101Content.simpleContent .simpleContent_wrapper h5 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.os101Content.simpleContent .simpleContent_wrapper h6 {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
 }
