@@ -1,13 +1,18 @@
+import { createElement } from 'react';
 import {Link, useParams} from 'react-router-dom';
 import toc from '../../../../toc.json';
 import './Simple.css';
 
-function SimpleSidebar() {
+function SimpleSidebar(content) {
 
   const params = useParams();
   let idParam = params.id;
   let lidParam = params.lid;
+  let contentElement = content.content.current;
+  let contentTitles = contentElement.getElementsByTagName('h2');
   let lesson_data = [];
+
+  console.log(contentTitles);
 
   let searchModules = toc.filter((child, i) => {
     return child.id == params.id;

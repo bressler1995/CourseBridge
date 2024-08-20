@@ -78,7 +78,6 @@ function SimpleLesson() {
   const params = useParams();
   let idParam = params.id;
   let lidParam = params.lid;
-  let lessons;
   
   return (
     toc.map((child) => {

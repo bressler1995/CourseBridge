@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import './Content.css';
 import SimpleSidebar from '../Module/Simple/SimpleSidebar';
 
@@ -6,6 +7,8 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
   //   window.parent.document.getElementById('myframe').height = '1000px';
   // }
   let contentClasses = 'os101Content';
+  const containerRef = useRef(null);
+
 
   if(isMinimal == true) {
     contentClasses = contentClasses + ' ' + 'minimalContent';
@@ -26,7 +29,7 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
 
   return (
     <div id='os101Content' className={contentClasses}>
-      { isSimple == true ? <><SimpleSidebar/><div className='simpleContent_wrapper'><div id='os101Content_container' className='os101Content_container'>{children}</div></div></> : <div id='os101Content_container' className='os101Content_container'>{children}</div> }
+      { isSimple == true ? <><SimpleSidebar content={containerRef}/><div className='simpleContent_wrapper'><div ref={containerRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></> : <div ref={containerRef} id='os101Content_container' className='os101Content_container'>{children}</div> }
     </div>
   )
 }
