@@ -3,21 +3,22 @@ import {Link, useParams} from 'react-router-dom';
 import toc from '../../../../toc.json';
 import './Simple.css';
 
-function SimpleSidebar(content) {
+function SimpleSidebar({content}) {
 
-  let contentElement, contentHeadings;
-
-  if(content) {
-    if(content.content.current) {
-      console.log(content.content.current);
-    }
-    
-  }
+  console.log(content)
 
   const params = useParams();
   let idParam = params.id;
   let lidParam = params.lid;
   let lesson_data = [];
+
+  let contentList = [];
+
+  if(content != null && content != 0) {
+      contentList = content.map((child, index) => {
+        return <li key={index}><a href="#">{child}</a></li>
+      });
+  }
 
   let searchModules = toc.filter((child, i) => {
     return child.id == params.id;
@@ -57,6 +58,9 @@ function SimpleSidebar(content) {
             }
         </ul>
         <h2>Navigate Lesson</h2>
+        <ul>
+        {contentList}
+        </ul>
       </div>);
     } else {
       return (<div className='os101SimpleSideBar'>
