@@ -1,18 +1,23 @@
-import { createElement } from 'react';
+import { createElement, cloneElement } from 'react';
 import {Link, useParams} from 'react-router-dom';
 import toc from '../../../../toc.json';
 import './Simple.css';
 
 function SimpleSidebar(content) {
 
+  let contentElement, contentHeadings;
+
+  if(content) {
+    if(content.content.current) {
+      console.log(content.content.current);
+    }
+    
+  }
+
   const params = useParams();
   let idParam = params.id;
   let lidParam = params.lid;
-  let contentElement = content.content.current;
-  let contentTitles = contentElement.getElementsByTagName('h2');
   let lesson_data = [];
-
-  console.log(contentTitles);
 
   let searchModules = toc.filter((child, i) => {
     return child.id == params.id;
@@ -46,8 +51,8 @@ function SimpleSidebar(content) {
         <ul>
             <li><Link to={'/Simple/' + idParam}>Welcome</Link></li>
             {
-              lesson_data.map((child) => {
-                return <li><Link to={'/Simple/' + idParam + '/' + child[0]}>{child[1]}</Link></li>
+              lesson_data.map((child, index) => {
+                return <li key={index}><Link to={'/Simple/' + idParam + '/' + child[0]}>{child[1]}</Link></li>
               })
             }
         </ul>
@@ -60,8 +65,8 @@ function SimpleSidebar(content) {
         <ul>
             <li><Link to={'/Simple/' + idParam}>Welcome</Link></li>
             {
-              lesson_data.map((child) => {
-                return <li><Link to={'/Simple/' + idParam + '/' + child[0]}>{child[1]}</Link></li>
+              lesson_data.map((child, index) => {
+                return <li key={index}><Link to={'/Simple/' + idParam + '/' + child[0]}>{child[1]}</Link></li>
               })
             }
         </ul>
