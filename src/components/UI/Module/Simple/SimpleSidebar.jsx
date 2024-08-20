@@ -16,7 +16,7 @@ function SimpleSidebar({content}) {
 
   if(content != null && content != 0) {
       contentList = content.map((child, index) => {
-        return <li key={index}><a href="#">{child}</a></li>
+        return <li key={index}><Link to={'/Simple/' + idParam + '/' + lidParam + '/#' + child[1]}>{child[0]}</Link></li>
       });
   }
 

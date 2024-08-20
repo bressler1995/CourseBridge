@@ -24,7 +24,9 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
     if(titles != null) {
       for(let i = 0; i < titles.length; i++) {
         let current_title = titles[i].innerHTML;
-        result.push(current_title);
+        let current_slug = slugify(current_title);
+        titles[i].className = current_slug;
+        result.push([current_title, current_slug]);
       }
   
       console.log(result);
@@ -56,6 +58,15 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
       {isSimple == true ? <><SimpleSidebar content={contentElements}/><div className='simpleContent_wrapper'><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></> : <div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div>}
     </div>
   )
+}
+
+function slugify(str) {
+  str = str.replace(/^\s+|\s+$/g, ''); // trim leading/trailing white space
+  str = str.toLowerCase(); // convert string to lowercase
+  str = str.replace(/[^a-z0-9 -]/g, '') // remove any non-alphanumeric characters
+           .replace(/\s+/g, '-') // replace spaces with hyphens
+           .replace(/-+/g, '-'); // remove consecutive hyphens
+  return str;
 }
 
 export default Content
