@@ -1,6 +1,7 @@
 import Accordion from 'react-bootstrap/Accordion';
 import Banner from '../../../components/Simple/Banner.jsx';
-import Definitions from '../../../components/Simple/Definitions.jsx';
+import Definitions from '../../../components/Simple/Definitions/Definitions.jsx';
+import Definition from '../../../components/Simple/Definitions/Definition.jsx';
 
 <Banner title='OS101 Module 1: The Ethos of Open Science' subTitle='Welcome to The Ethos of Open Science' bgImage='./images/banners/Module1.png' bgColor='#d31e60' opacity='0.4'/>
 
@@ -119,14 +120,17 @@ Select the term to see the description.
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          culpa qui officia deserunt mollit anim id est laborum. [Here](https://google.com)
         </Accordion.Body>
       </Accordion.Item>
       
 </Accordion>
 
 <Definitions>
-**Open Science** - The principle and practice of making research products and processes available to all, while respecting diverse cultures, maintaining security and privacy, and fostering collaborations, reproducibility and equity.
+  <Definition title='Open Science'>
+    The principle and practice of making research products and processes available to all, while respecting diverse cultures, maintaining security and privacy, and fostering collaborations, reproducibility and equity.
+  </Definition>
+</Definitions>
 
 **Open Data** - Data that can be freely used, re-used and redistributed by anyone. Learn more [here](https://opendatahandbook.org/guide/en/what-is-open-data/).
 
@@ -162,4 +166,3 @@ Learn more [here.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3792863/)
 **Rigor** - Widely used by educators to describe instruction, schoolwork, learning experience, and educational expectations that are academically, intellectually, and personally challenging.
 
 **Computational Provenance** - Seeks to develop systematic, computationally-based processes and standards for capturing, and making available for us, information about who created an object, when it was created or modified, and the process or procedure that modified the object.
-</Definitions>
