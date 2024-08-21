@@ -25,7 +25,7 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
       for(let i = 0; i < titles.length; i++) {
         let current_title = titles[i].innerHTML;
         let current_slug = slugify(current_title);
-        titles[i].className = current_slug;
+        titles[i].id = current_slug;
         result.push([current_title, current_slug]);
       }
   

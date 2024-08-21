@@ -8,6 +8,7 @@ import Sidebar from './components/UI/Sidebar/Sidebar';
 import Content from './components/UI/Content/Content';
 import TopBar from './components/UI/TopBar/TopBar';
 import Notification from './components/UI/Notification/Notification';
+import ScrollToAnchor from './components/UI/ScrollToAnchor/ScrollToAnchor.jsx';
 import {HashRouter, Route, Routes, Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import toc from './toc.json';
@@ -84,6 +85,7 @@ function App() {
   return (
     
       <HashRouter basename='/'>
+        <ScrollToAnchor/>
         <Routes>
             <Route exact path='/' element={
                 <div className='app'>
