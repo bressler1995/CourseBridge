@@ -25,11 +25,16 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
       for(let i = 0; i < titles.length; i++) {
         let current_title = titles[i].innerHTML;
         let current_slug = slugify(current_title);
-        titles[i].id = current_slug;
-        result.push([current_title, current_slug]);
+        let current_class = titles[i].className;
+
+        if(current_class != 'accordion-header') {
+          titles[i].id = current_slug;
+          result.push([current_title, current_slug, current_class]);
+        }
+        
       }
   
-      console.log(result);
+      // console.log(result);
   
       setContentElements(result);
     }

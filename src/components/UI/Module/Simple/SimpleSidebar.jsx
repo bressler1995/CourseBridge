@@ -1,11 +1,10 @@
-import { createElement, cloneElement } from 'react';
 import {Link, useParams} from 'react-router-dom';
 import toc from '../../../../toc.json';
 import './Simple.css';
 
 function SimpleSidebar({content}) {
 
-  console.log(content)
+  //console.log(content)
 
   const params = useParams();
   let idParam = params.id;
