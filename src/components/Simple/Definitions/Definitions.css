@@ -1,0 +1,44 @@
+.os101_simpleDefinitions {
+    margin-bottom: 25px;
+    width: 100%;
+    border: 1px solid #BBB;
+    border-radius: 5px;
+}
+
+.os101_simpleDefinitions .accordion-item {
+    border: none;
+}
+
+.os101_simpleDefinitions .accordion-button {
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 700;
+    padding: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.os101_simpleDefinitions .accordion-body {
+    padding: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.os101_simpleDefinitions .accordion-button:after {
+    filter: invert(96%) sepia(100%) saturate(0%) hue-rotate(97deg) brightness(111%) contrast(101%);
+}
+
+.os101_simpleDefinitions .accordion-button:not(.collapsed) {
+    background-color: var(--primary-button-bg);
+    color: #FFF;
+}
+
+.os101_simpleDefinitions .accordion-button.collapsed {
+    background-color: var(--bg-dark);
+    color: #FFF;
+    border-bottom: 1px solid #BBB;
+}
+
+.os101_simpleDefinitions .accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom: none;
+}

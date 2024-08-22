@@ -1,15 +1,18 @@
-import { Children, cloneElement } from 'react';
+import { Children } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
+import './Definitions.css';
 
 function Definitions({children}) {
-  Children.map(children, (child, idx) => {
-    console.log(child);
-    return '';
+  let accordion_items = Children.map(children, (child, index) => {
+
+    return (<Accordion.Item eventKey={index.toString()}>
+      {child}
+    </Accordion.Item>);
   });
 
   return (
-    <Accordion defaultActiveKey="0">
-
+    <Accordion className='os101_simpleDefinitions' defaultActiveKey="0">
+      { accordion_items }
     </Accordion>
   );
   
