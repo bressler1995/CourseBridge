@@ -2,7 +2,15 @@ body {
     background-color: var(--bg-light) !important;
 }
 
-.os101Content.simpleContent a {
+.os101Content.simpleContent .os101Content_container p, .os101Content.simpleContent .os101Content_container li, .os101Content.simpleContent .os101Content_container table td, .os101Content.simpleContent .os101Content_container table th {
+    color: #666;
+}
+
+.os101Content.simpleContent .os101Content_container p strong {
+    color: #222;
+}
+
+.os101Content.simpleContent a, .os101Content.simpleContent .os101Content_container p a, .os101Content.simpleContent .os101Content_container li a, .os101Content.simpleContent .os101Content_container table a {
     color: var(--primary-button-bg);
 }
 
@@ -104,42 +112,43 @@ body {
     border-radius: 5px;
 }
 
-.os101Content.simpleContent .os101Content_container h1, .os101Content.simpleContent .os101Content_container h2, .os101Content.simpleContent .os101Content_container h3, .os101Content.simpleContent .os101Content_container h4, .os101Content.simpleContent .os101Content_container h5, .os101Content.simpleContent .os101Content_container h6 {
-    color: #333;
+.os101Content.simpleContent .os101Content_container h1, .os101Content.simpleContent .os101Content_container h2:not(.accordion-header), .os101Content.simpleContent .os101Content_container h3, .os101Content.simpleContent .os101Content_container h4, .os101Content.simpleContent .os101Content_container h5, .os101Content.simpleContent .os101Content_container h6 {
+    color: #222;
+    margin-bottom: 12px;
 }
 
 .os101Content.simpleContent .os101Content_container h1 {
-    font-size: 44px;
-    line-height: 48px;
+    font-size: 46px;
+    line-height: 50px;
     font-weight: 800;
 }
 
 .os101Content.simpleContent .os101Content_container h2 {
     font-size: 34px;
     line-height: 38px;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .os101Content.simpleContent .os101Content_container h3 {
-    font-size: 28px;
-    line-height: 32px;
-    font-weight: 500;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 700;
 }
 
 .os101Content.simpleContent .os101Content_container h4 {
-    font-size: 22px;
-    line-height: 26px;
-    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
 }
 
 .os101Content.simpleContent .os101Content_container h5 {
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
 }
 
 .os101Content.simpleContent .os101Content_container h6 {
     font-size: 14px;
     line-height: 18px;
-    font-weight: 500;
+    font-weight: 700;
 }
