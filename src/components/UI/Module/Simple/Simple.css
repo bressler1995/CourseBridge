@@ -2,6 +2,14 @@ body {
     background-color: var(--bg-light) !important;
 }
 
+.os101Content.simpleContent a {
+    color: var(--primary-button-bg);
+}
+
+.os101Content.simpleContent a:hover, .os101Content.simpleContent a:active, .os101Content.simpleContent a:focus {
+    opacity: 0.65;
+}
+
 .os101Content.simpleContent .os101Content_container {
     display: block;
     width: 100%;
@@ -14,17 +22,18 @@ body {
 }
 
 .os101Content.simpleContent .os101SimpleSideBar {
-    display: flex;
-    flex-flow: column wrap;
+    display: block;
     width: 300px;
     height: 100%;
     background-color: #FFF;
-    border-right: 1px solid #DDD;
+    border-right: 1px solid #CCC;
     box-sizing: border-box;
     padding: 30px;
     padding-top: 70px;
     padding-bottom: 70px;
     text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .os101Content.simpleContent .os101SimpleSideBar h2 {
@@ -32,18 +41,39 @@ body {
     width: 100%;
     margin-bottom: 12px;
     margin-top: 24px;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 20px;
     font-weight: 700;
     padding: 0;
 }
 
 .os101Content.simpleContent .os101SimpleSideBar ul {
-    display: block;
+    display: flex;
+    flex-flow: column wrap;
     width: 100%;
     padding: 0;
     margin: 0;
     list-style-type: none;
+}
+
+.os101Content.simpleContent .os101SimpleSideBar ul li {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.os101Content.simpleContent .os101SimpleSideBar ul li:last-of-type {
+    border-bottom: none;
+}
+
+.os101Content.simpleContent .os101SimpleSideBar ul li a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 .os101Content.simpleContent .os101SimpleSideBar .os101SimpleLogo {
@@ -54,7 +84,7 @@ body {
 
 .os101Content.simpleContent .os101SimpleSideBar .os101SimpleLogo img {
     display: inline-block;
-    height: 155px;
+    height: 135px;
     width: auto;
 }
 
@@ -66,10 +96,6 @@ body {
     padding-left: 70px;
     padding-right: 70px;
     overflow-y: auto;
-}
-
-.os101Content.simpleContent a {
-    color: var(--primary-button-bg);
 }
 
 .os101Content.simpleContent .os101Content_container img {
