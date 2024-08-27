@@ -49,8 +49,12 @@ body {
     line-height: 1.6rem;
 }
 
-.os101Content.simpleContent .os101Content_container p strong, .os101Content.simpleContent .os101Content_container li strong {
+.os101Content.simpleContent .os101Content_container p strong, .os101Content.simpleContent .os101Content_container li strong, .os101Content.simpleContent .os101Content_container table td strong, .os101Content.simpleContent .os101Content_container table th strong {
     color: #222;
+}
+
+.os101Content.simpleContent .os101Content_container a strong {
+    color: var(--primary-button-bg);
 }
 
 .os101Content.simpleContent .os101Content_container hr {
