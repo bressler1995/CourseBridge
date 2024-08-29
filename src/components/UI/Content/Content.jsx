@@ -19,6 +19,7 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
   useEffect(() => {
     let result = [];
     const elements = contentRef.current;
+    let tables = elements.getElementsByTagName("table");
     let titles = elements.getElementsByTagName("h2");
 
     if(titles != null) {
@@ -38,6 +39,30 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
   
       setContentElements(result);
     }
+
+    // if(tables != null) {
+    //   for(let i = 0; i < tables.length; i++) {
+    //     let current_table = tables[i];
+    //     let current_html = current_table.innerHTML;
+    //     let current_head = current_table.getElementsByTagName('thead');
+    //     let current_tr = current_table.getElementsByTagName('tr');
+    //     let current_th = current_table.getElementsByTagName('th');
+    //     let has_two = false;
+
+    //     if(current_tr != null & current_tr.length > 0) {
+    //       let current_td = current_tr[0].getElementsByTagName('td');
+
+    //       if(current_td != null && current_td.length == 2) {
+    //         has_two = true;
+    //       }
+    //     }
+
+    //     if(current_head == null) {
+    //       current_table.innerHTML = '<thead><th>Title</th><th>Description</th></thead>' + current_html;
+    //     }
+        
+    //   }
+    // }
   }, [idParam, lidParam]);
 
 

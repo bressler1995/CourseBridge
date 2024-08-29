@@ -66,7 +66,11 @@ body {
 .os101Content.simpleContent .os101Content_container table {
     margin-bottom: 30px;
     background-color: #FFF;
-    border: 1px solid #CCC !important;
+    border: 1px solid #CCC;
+}
+
+.os101Content.simpleContent .os101Content_container table tr:nth-child(even) td {
+    background-color: #E1E1E1;
 }
 
 .os101Content.simpleContent .os101Content_container table th, .os101Content.simpleContent .os101Content_container table td {
