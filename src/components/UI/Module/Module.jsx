@@ -1,6 +1,5 @@
 import { lazy, Suspense, createElement } from 'react';
 import {useParams} from 'react-router-dom';
-import parse from 'html-react-parser';
 import toc from '../../../toc.json';
 
 import Module1 from '../../../content/Module1.mdx';
@@ -26,8 +25,6 @@ function Module() {
   return (
     toc.map((child) => {
       if(child.id === idParam) {
-        let componentString = child.use;
-        componentString = parse(componentString)
 
         return createElement(
           modules[child.id],

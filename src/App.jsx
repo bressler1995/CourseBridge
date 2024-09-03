@@ -31,10 +31,25 @@ const getTargetElement = () => document.getElementById('os101Content_container')
 
 function App() {
 
+  const initialCompletion = toc.map((child) => {
+    const lessons = child.lessons;
+    const lessonCompletion = lessons.map((child_two) => {
+      return false;
+    });
+
+    return lessonCompletion;
+
+  });
+
+  // console.log('START COMPLETION');
+  // console.log(initialCompletion);
+  // console.log('END COMPLETION');
+
   const [sidebarShow, setSidebarShow] = useState(true);
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [courseMode, setCourseMode] = useState('full');
   const [showNotification, setShowNotication] = useState([false, '', '', '']);
+  const [completion, setCompletion] = useState(initialCompletion);
 
   useEffect(() => {
     function onFullscreenChange() {
@@ -81,6 +96,14 @@ function App() {
     }
     
   };
+
+  const handleCompletion = (module, lesson) => {
+    let changedCompletion = completion;
+    changedCompletion[module - 1][lesson - 1] = true;
+
+    console.log(changedCompletion);
+    setCompletion(changedCompletion);
+  }
 
   return (
     
@@ -141,14 +164,14 @@ function App() {
               </Content>
             }></Route>
             <Route path='/Simple/:id' element={
-              <Content isSimple={true}>
+              <Content isSimple={true} handleCompletion={handleCompletion}>
                   <modeContext.Provider value={{ courseMode }}>
                     <SimpleModule/>
                   </modeContext.Provider>
               </Content>
             }></Route>
             <Route path='/Simple/:id/:lid' element={
-              <Content isSimple={true}>
+              <Content isSimple={true} handleCompletion={handleCompletion}>
                   <modeContext.Provider value={{ courseMode }}>
                     <SimpleLesson/>
                   </modeContext.Provider>

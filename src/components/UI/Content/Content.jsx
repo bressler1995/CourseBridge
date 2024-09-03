@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom';
 import './Content.css';
 import SimpleSidebar from '../Module/Simple/SimpleSidebar';
 
-function Content({children, isMinimal = false, isHorizontal = false, isSimple = false, show}) {
+function Content({children, isMinimal = false, isHorizontal = false, isSimple = false, show, handleCompletion}) {
   // if(isMinimal == true) {
   //   window.parent.document.getElementById('myframe').height = '1000px';
   // }
@@ -15,6 +15,20 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
   let contentClasses = 'os101Content';
   const contentRef = useRef(null);
   const [contentElements, setContentElements] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = (e) => {
+        const { scrollTop, scrollHeight, clientHeight } = e.target;
+        const position = Math.ceil(
+            (scrollTop / (scrollHeight - clientHeight)) * 100
+        );
+        console.log(position);
+
+        if(idParam != null && lidParam != null && position >= 98) {
+          console.log('Handling completion');
+          handleCompletion(idParam, lidParam)
+        }
+  };
 
   useEffect(() => {
     let result = [];
@@ -62,7 +76,7 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
 
   return (
     <div id='os101Content' className={contentClasses}>
-      {isSimple == true ? <><SimpleSidebar content={contentElements}/><div className='simpleContent_wrapper'><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></> : <div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div>}
+      {isSimple == true ? <><SimpleSidebar content={contentElements}/><div onScroll={handleScroll} className='simpleContent_wrapper'><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></> : <div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div>}
     </div>
   )
 }
