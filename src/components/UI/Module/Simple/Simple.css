@@ -76,6 +76,8 @@ body {
 .os101Content.simpleContent .os101Content_container table th, .os101Content.simpleContent .os101Content_container table td {
     border: none;
     padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .os101Content.simpleContent .os101Content_container table tr th {
@@ -205,4 +207,8 @@ body {
 
 .os101Content.simpleContent .os101Content_container table img {
     margin-bottom: 0;
+}
+
+.os101_simpleTabs {
+    margin-bottom: 30px;
 }

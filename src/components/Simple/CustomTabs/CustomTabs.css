@@ -1,0 +1,52 @@
+.os101_simpleTabs {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #CCC;
+}
+
+.os101_simpleTabs .nav.nav-tabs {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--bg-dark);
+    justify-content: center;
+    border: none;
+}
+
+.os101_simpleTabs .nav.nav-tabs .nav-item {
+    display: inline-block;
+    background-color: transparent;
+    width: auto;
+    max-width: 300px;
+    height: 100%;
+    border: none;
+    border-radius: none;
+    border-right: 1px solid #CCC;
+}
+
+.os101_simpleTabs .nav.nav-tabs .nav-item:last-of-type {
+    border-right: none;
+}
+
+.os101_simpleTabs .nav.nav-tabs .nav-item .nav-link {
+    display: inline-block;
+    background-color: transparent;
+    color: #FFF;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.6rem;
+    font-weight: 700;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.os101_simpleTabs .nav.nav-tabs .nav-item .nav-link.active {
+    background-color: var(--primary-button-bg);
+    border: none;
+}
