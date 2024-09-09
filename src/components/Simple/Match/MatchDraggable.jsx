@@ -2,7 +2,7 @@ import React from 'react';
 import {useDraggable} from '@dnd-kit/core';
 import {CSS} from '@dnd-kit/utilities';
 
-function Draggable(props) {
+function MatchDraggable(props) {
   const {attributes, listeners, setNodeRef, transform} = useDraggable({
     id: props.id,
   });
@@ -13,9 +13,9 @@ function Draggable(props) {
 
   return (
     <button ref={setNodeRef} style={style} {...listeners} {...attributes}>
-      {props.children}
+      {props.title}
     </button>
   );
 }
 
-export default Draggable
+export default MatchDraggable

@@ -1,7 +1,7 @@
 import React from 'react';
 import {useDroppable} from '@dnd-kit/core';
 
-function Droppable(props) {
+function MatchDroppable(props) {
   const {isOver, setNodeRef} = useDroppable({
     id: props.id,
   });
@@ -11,9 +11,10 @@ function Droppable(props) {
 
   return (
     <div ref={setNodeRef} style={style}>
+      {props.title}
       {props.children}
     </div>
   );
 }
 
-export default Droppable
+export default MatchDroppable
