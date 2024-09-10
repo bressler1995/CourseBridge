@@ -1,3 +1,6 @@
+import Tab from 'react-bootstrap/Tab';
+import CustomTabs from '../../../../components/Simple/CustomTabs/CustomTabs.jsx';
+
 # Lesson 3: How to do Open Science
 
 ## Overview
@@ -145,56 +148,17 @@ If you don't license your work, others can't/shouldn't re-use it – even if you
 
 Licenses can be applied to data, code, and reports, or publications, and almost any other "creative" output. There are also several different types of licenses and also the case where no license need to apply:
 
-<table>
-  <thead>
-    <tr>
-        <th>PERMISSIVE LICENSES &#9745;</th>
-        <th>PROTECTIVE LICENSES</th>
-        <th>PUBLIC DOMAIN</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <p>Permissive Licenses allow users a wide range of rights including the ability to use, modify, and distribute the work with no restrictions or very few. Examples of permissive license would be open source software license such as Apache 2.0 or MIT license or the Creative Commons licenses such as <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution (CC-BY)</a>.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-        <th>PERMISSIVE LICENSES</th>
-        <th>PROTECTIVE LICENSES &#9745;</th>
-        <th>PUBLIC DOMAIN</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <p>Protective Licenses are a legal technique of granting certain freedoms over copies of copyrighted works while including some limitations. This may include copyleft licenses, commercial licenses, or other restrictions.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-        <th>PERMISSIVE LICENSES</th>
-        <th>PROTECTIVE LICENSES</th>
-        <th>PUBLIC DOMAIN &#9745;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <p>Public Domain is not a license, but it is an indication that there are no reuse restrictions on the work. <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Common Zero</a> is a worldwide public domain mark that indicates that the material is free to use without any restrictions.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
+<CustomTabs>
+    <Tab eventKey="one" title="Permissive Licenses">
+      Permissive Licenses allow users a wide range of rights including the ability to use, modify, and distribute the work with no restrictions or very few. Examples of permissive license would be open source software license such as Apache 2.0 or MIT license or the Creative Commons licenses such as [Creative Commons Attribution (CC-BY)](https://creativecommons.org/licenses/by/4.0/).
+    </Tab>
+    <Tab eventKey="two" title="Protective Licenses">
+      Protective Licenses are a legal technique of granting certain freedoms over copies of copyrighted works while including some limitations. This may include copyleft licenses, commercial licenses, or other restrictions.
+    </Tab>
+    <Tab eventKey="three" title="Public Domain">
+      Public Domain is not a license, but it is an indication that there are no reuse restrictions on the work. [Creative Common Zero](https://creativecommons.org/publicdomain/zero/1.0/) is a worldwide public domain mark that indicates that the material is free to use without any restrictions.
+    </Tab>
+</CustomTabs>
 
 <img src="./images/clone/Module_1/image294.png" style={{width: 350, height: 'auto'}} />
 
@@ -239,6 +203,18 @@ So far we've discussed situations where sharing may not be appropriate or may ne
 It is important to plan for the release of your data and results from the very beginning of your research project. Investigate and obtain all permits, approvals, and/or certifications needed to ensure you can share your research products.
 
 **Remember:** Reputable journals and repositories will reject submissions if compliance can’t be documented!
+
+<CustomTabs>
+    <Tab eventKey="one" title="Materials - Sharing and Commercial Product Agreement">
+      Permissive Licenses allow users a wide range of rights including the ability to use, modify, and distribute the work with no restrictions or very few. Examples of permissive license would be open source software license such as Apache 2.0 or MIT license or the Creative Commons licenses such as [Creative Commons Attribution (CC-BY)](https://creativecommons.org/licenses/by/4.0/).
+    </Tab>
+    <Tab eventKey="two" title="Human or Animal Subject Insitutional Review Boards">
+      Protective Licenses are a legal technique of granting certain freedoms over copies of copyrighted works while including some limitations. This may include copyleft licenses, commercial licenses, or other restrictions.
+    </Tab>
+    <Tab eventKey="three" title="Collecting Permits">
+      Public Domain is not a license, but it is an indication that there are no reuse restrictions on the work. [Creative Common Zero](https://creativecommons.org/publicdomain/zero/1.0/) is a worldwide public domain mark that indicates that the material is free to use without any restrictions.
+    </Tab>
+</CustomTabs>
 
 <table>
   <thead>
