@@ -16,6 +16,21 @@
     border: none;
 }
 
+.os101_simpleTabs .tab-content {
+    padding: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.os101_simpleTabs .tab-content p:last-child {
+    margin: 0;
+}
+
+.os101_simpleTabs .tab-content p:last-child img:last-child {
+    margin-bottom: 0;
+}
+
 .os101_simpleTabs .nav.nav-tabs .nav-item {
     display: inline-block;
     background-color: transparent;
@@ -24,11 +39,11 @@
     height: 100%;
     border: none;
     border-radius: none;
-    border-right: 1px solid #CCC;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.os101_simpleTabs .nav.nav-tabs .nav-item:last-of-type {
-    border-right: none;
+.os101_simpleTabs .nav.nav-tabs .nav-item:first-of-type {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .os101_simpleTabs .nav.nav-tabs .nav-item .nav-link {
