@@ -58,11 +58,9 @@ function SimpleSidebar({content}) {
               return <li key={index}><Link to={'/Simple/' + idParam + '/' + child[0]}>{child[1]}</Link></li>
             })
           }
+          { idParam == 5 ? <li><Link to={'/Simple/' + idParam + '/Finish'}>Complete Course!</Link></li> : null }
       </ul>
-      <h2>Navigation</h2>
-      <ul>
-      {contentList}
-      </ul>
+      {contentList.length > 0 ? <><h2>Navigation</h2><ul>{contentList}</ul></> : <><h2>Navigation</h2><p>Nothing to navigate :)</p></>}
     </div>);
     
   }

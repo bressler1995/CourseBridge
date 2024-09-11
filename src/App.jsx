@@ -4,6 +4,7 @@ import './App.css';
 import Module from './components/UI/Module/Module';
 import SimpleModule from './components/UI/Module/Simple/SimpleModule';
 import SimpleLesson from './components/UI/Module/Simple/SimpleLesson';
+import SimpleFinish from './components/UI/Module/Simple/SimpleFinish';
 import Sidebar from './components/UI/Sidebar/Sidebar';
 import Content from './components/UI/Content/Content';
 import TopBar from './components/UI/TopBar/TopBar';
@@ -174,6 +175,13 @@ function App() {
               <Content isSimple={true} handleCompletion={handleCompletion}>
                   <modeContext.Provider value={{ courseMode }}>
                     <SimpleLesson/>
+                  </modeContext.Provider>
+              </Content>
+            }></Route>
+            <Route path='/Simple/:id/Finish' element={
+              <Content isSimple={true} handleCompletion={handleCompletion}>
+                  <modeContext.Provider value={{ courseMode }}>
+                    <SimpleFinish/>
                   </modeContext.Provider>
               </Content>
             }></Route>
