@@ -34,16 +34,14 @@ function App() {
   const initialCompletion = toc.map((child) => {
     const lessons = child.lessons;
     const lessonCompletion = lessons.map((child_two) => {
-      return false;
+      return {id: child_two.id, status: false};
     });
 
     return lessonCompletion;
 
   });
 
-  // console.log('START COMPLETION');
-  // console.log(initialCompletion);
-  // console.log('END COMPLETION');
+  console.log(initialCompletion);
 
   const [sidebarShow, setSidebarShow] = useState(true);
   const [isFullScreen, setIsFullScreen] = useState(false);
@@ -99,7 +97,24 @@ function App() {
 
   const handleCompletion = (module, lesson) => {
     let changedCompletion = completion;
-    changedCompletion[module - 1][lesson - 1] = true;
+
+    if(changedCompletion != null && changedCompletion.length > 0) {
+      for(let x = 0; x < completion.length; x++) {
+        let current_completion_line = completion[x];
+
+        if(current_completion_line != null && current_completion_line.length > 0) {
+          for(let y = 0; y < current_completion_line.length; y++) {
+            let current_completion = current_completion_line[y];
+            let current_completion_id = current_completion.id;
+
+            if(x == (module - 1) && current_completion_id == lesson) {
+              changedCompletion[x][y] = {id: current_completion_id, status: true}
+            }
+          }
+        } 
+        
+      }
+    }
 
     console.log(changedCompletion);
     setCompletion(changedCompletion);

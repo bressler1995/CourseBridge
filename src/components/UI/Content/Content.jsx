@@ -24,9 +24,14 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
         );
         console.log(position);
 
-        if(idParam != null && lidParam != null && position >= 98) {
+        if(position >= 98) {
           console.log('Handling completion');
-          handleCompletion(idParam, lidParam)
+
+          if(idParam != null && lidParam != null) {
+            handleCompletion(idParam, lidParam);
+          } else if(idParam != null && lidParam == null) {
+            handleCompletion(idParam, 'welcome');
+          }
         }
   };
 
@@ -76,7 +81,7 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
 
   return (
     <div id='os101Content' className={contentClasses}>
-      {isSimple == true ? <><SimpleSidebar content={contentElements}/><div onScroll={handleScroll} className='simpleContent_wrapper'><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></> : <div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div>}
+      {isSimple == true ? <><SimpleSidebar content={contentElements}/><div onResize={handleScroll} onScroll={handleScroll} className='simpleContent_wrapper'><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></> : <div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div>}
     </div>
   )
 }

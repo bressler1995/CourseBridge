@@ -62,9 +62,9 @@ function SimpleSidebar({content}) {
           {
             lesson_data.map((child, index) => {
               if(child[0] == 'welcome') {
-                return <li key={index}><Link to={'/Simple/' + idParam}>{child[1]}</Link></li>
+                return <li className={idParam != null && lidParam == null ? 'active' : null} key={index}><Link to={'/Simple/' + idParam}><span className="os101Simple_ProgressIndicator"></span>{child[1]}</Link></li>
               } else {
-                return <li key={index}><Link to={'/Simple/' + idParam + '/' + child[0]}>{child[1]}</Link></li>
+                return <li className={idParam != null && lidParam != null && lidParam == child[0] ? 'active' : null} key={index}><Link to={'/Simple/' + idParam + '/' + child[0]}><span className="os101Simple_ProgressIndicator"></span>{child[1]}</Link></li>
               }
               
             })
