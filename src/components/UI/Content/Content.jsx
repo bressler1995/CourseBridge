@@ -49,9 +49,9 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
         
       }
   
-      // console.log(result);
-  
       setContentElements(result);
+    } else {
+      setContentElements(0);
     }
 
   }, [idParam, lidParam]);

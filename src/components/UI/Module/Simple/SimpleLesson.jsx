@@ -33,6 +33,8 @@ import M3Lesson5 from '../../../../content/clone/Module_3/Lesson_5/readme.mdx';
 import M4Lesson5 from '../../../../content/clone/Module_4/Lesson_5/readme.mdx';
 import M5Lesson5 from '../../../../content/clone/Module_5/Lesson_5/readme.mdx';
 
+import SimpleFinish from './SimpleFinish';
+
 const m1lessons = {
   1: M1Lesson1,
   2: M1Lesson2,
@@ -91,24 +93,28 @@ function SimpleLesson() {
             let lesson_id = child_lessons[lesson].id;
             
             if(lesson_id === lidParam) {
-              let lessontouse;
+              if(lidParam == "Complete") {
+                return <SimpleFinish/>;
+              } else {
+                let lessontouse;
 
-              if(idParam == 1) {
-                lessontouse = m1lessons;
-              } else if(idParam == 2) {
-                lessontouse = m2lessons;
-              } else if(idParam == 3) {
-                lessontouse = m3lessons;
-              } else if(idParam == 4) {
-                lessontouse = m4lessons;
-              } else if(idParam == 5) {
-                lessontouse = m5lessons;
+                if(idParam == 1) {
+                  lessontouse = m1lessons;
+                } else if(idParam == 2) {
+                  lessontouse = m2lessons;
+                } else if(idParam == 3) {
+                  lessontouse = m3lessons;
+                } else if(idParam == 4) {
+                  lessontouse = m4lessons;
+                } else if(idParam == 5) {
+                  lessontouse = m5lessons;
+                }
+
+                return createElement(
+                  lessontouse[lesson_id],
+                    { className: '' }
+                  );
               }
-
-              return createElement(
-                lessontouse[lesson_id],
-                  { className: '' }
-                );
             }
           }
         }

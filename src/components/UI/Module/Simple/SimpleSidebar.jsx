@@ -22,6 +22,8 @@ function SimpleSidebar({content}) {
         }
         
       });
+
+      console.log("Content List:" + contentList);
   }
 
   let searchModules = toc.filter((child, i) => {
@@ -33,6 +35,8 @@ function SimpleSidebar({content}) {
   
 
   if(searchModules != null && searchModules.length == 1) {
+    lesson_data.push(['welcome', 'Welcome']);
+
     for (let key in searchModules[0]) {
       if (searchModules[0].hasOwnProperty(key)) {
         let lesson_id = searchModules[0][key].id;
@@ -40,7 +44,10 @@ function SimpleSidebar({content}) {
         lesson_data.push([lesson_id, lesson_name]);
       }
     }
+
   }
+
+  // console.log(lesson_data);
 
   // console.log(lidParam);
 
@@ -52,15 +59,20 @@ function SimpleSidebar({content}) {
       <div className='os101SimpleLogo'><img src='./images/logo.png'/></div>
       <h2>All Content</h2>
       <ul>
-          <li><Link to={'/Simple/' + idParam}>Welcome</Link></li>
           {
             lesson_data.map((child, index) => {
-              return <li key={index}><Link to={'/Simple/' + idParam + '/' + child[0]}>{child[1]}</Link></li>
+              if(child[0] == 'welcome') {
+                return <li key={index}><Link to={'/Simple/' + idParam}>{child[1]}</Link></li>
+              } else {
+                return <li key={index}><Link to={'/Simple/' + idParam + '/' + child[0]}>{child[1]}</Link></li>
+              }
+              
             })
           }
-          { idParam == 5 ? <li><Link to={'/Simple/' + idParam + '/Finish'}>Complete Course!</Link></li> : null }
+
       </ul>
-      {contentList.length > 0 ? <><h2>Navigation</h2><ul>{contentList}</ul></> : <><h2>Navigation</h2><p>Nothing to navigate :)</p></>}
+      <h2>Navigation</h2>
+      {contentList != null && contentList.length > 0 ? <ul>{contentList}</ul> : <p>Nothing to navigate :)</p>}
     </div>);
     
   }

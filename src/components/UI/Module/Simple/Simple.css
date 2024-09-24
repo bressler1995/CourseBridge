@@ -3,25 +3,25 @@ body {
 }
 
 .os101Content.simpleContent .os101Content_container h1, .os101Content.simpleContent .os101Content_container h2:not(.accordion-header), .os101Content.simpleContent .os101Content_container h3, .os101Content.simpleContent .os101Content_container h4, .os101Content.simpleContent .os101Content_container h5, .os101Content.simpleContent .os101Content_container h6 {
-    color: #222;
+    color: #333;
     margin-bottom: 12px;
 }
 
 .os101Content.simpleContent .os101Content_container h1 {
-    font-size: 46px;
-    line-height: 50px;
+    font-size: 48px;
+    line-height: 52px;
     font-weight: 800;
 }
 
 .os101Content.simpleContent .os101Content_container h2 {
-    font-size: 34px;
-    line-height: 38px;
-    font-weight: 800;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
 }
 
 .os101Content.simpleContent .os101Content_container h3 {
-    font-size: 26px;
-    line-height: 30px;
+    font-size: 24px;
+    line-height: 28px;
     font-weight: 700;
 }
 
@@ -155,10 +155,12 @@ body {
     width: 100%;
     margin-bottom: 12px;
     margin-top: 24px;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 16px;
     font-weight: 700;
     padding: 0;
+    text-align: left;
+    text-transform: uppercase;
 }
 
 .os101Content.simpleContent .os101SimpleSideBar ul {
@@ -186,8 +188,10 @@ body {
     display: block;
     width: 100%;
     box-sizing: border-box;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: left;
+    color: #222;
 }
 
 .os101Content.simpleContent .os101SimpleSideBar .os101SimpleLogo {
@@ -207,8 +211,8 @@ body {
     width: calc(100% - 300px);
     height: 100%;
     box-sizing: border-box;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
     overflow-y: auto;
 }
 
