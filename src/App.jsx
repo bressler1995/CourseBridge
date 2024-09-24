@@ -179,18 +179,18 @@ function App() {
               </Content>
             }></Route>
             <Route path='/Simple/:id' element={
-              <Content isSimple={true} handleCompletion={handleCompletion}>
-                  <modeContext.Provider value={{ courseMode }}>
-                    <SimpleModule/>
-                  </modeContext.Provider>
-              </Content>
+              <modeContext.Provider value={{ courseMode, handleCompletion, completion }}>
+                <Content isSimple={true}>
+                      <SimpleModule/>
+                </Content>
+              </modeContext.Provider>
             }></Route>
             <Route path='/Simple/:id/:lid' element={
-              <Content isSimple={true} handleCompletion={handleCompletion}>
-                  <modeContext.Provider value={{ courseMode }}>
-                    <SimpleLesson/>
-                  </modeContext.Provider>
-              </Content>
+              <modeContext.Provider value={{ courseMode, handleCompletion, completion }}>
+                <Content isSimple={true}>
+                      <SimpleLesson/>
+                </Content>
+              </modeContext.Provider>
             }></Route>
           
         </Routes>

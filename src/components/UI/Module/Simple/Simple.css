@@ -211,13 +211,12 @@ body {
     color:#FFF;
 }
 
-.os101Content.simpleContent .os101SimpleSideBar ul li.active a:hover, .os101Content.simpleContent .os101SimpleSideBar ul li.active a:active, .os101Content.simpleContent .os101SimpleSideBar ul li.active a:focus {
+.os101Content.simpleContent .os101SimpleSideBar ul li a:hover, .os101Content.simpleContent .os101SimpleSideBar ul li a:active, .os101Content.simpleContent .os101SimpleSideBar ul li a:focus {
     opacity: 1;
 }
 
-.os101Content.simpleContent .os101SimpleSideBar ul li:not(.active) a:hover, .os101Content.simpleContent .os101SimpleSideBar ul li:not(.active) a:active, .os101Content.simpleContent .os101SimpleSideBar ul li:not(.active) a:focus {
+.os101Content.simpleContent .os101SimpleSideBar ul li:not(.active) a:hover, .os101Content.simpleContent .os101SimpleSideBar ul li:not(.active) a:active {
     background-color: rgba(0, 0, 0, 0.2);
-    opacity: 1;
 }
 
 .os101Content.simpleContent .os101SimpleSideBar .os101SimpleLogo {
