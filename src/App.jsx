@@ -41,7 +41,7 @@ function App() {
 
   });
 
-  console.log(initialCompletion);
+  //console.log(initialCompletion);
 
   const [sidebarShow, setSidebarShow] = useState(true);
   const [isFullScreen, setIsFullScreen] = useState(false);
@@ -96,28 +96,28 @@ function App() {
   };
 
   const handleCompletion = (module, lesson) => {
-    let changedCompletion = completion;
+    
+    const changed = completion.map((child, index) => {
 
-    if(changedCompletion != null && changedCompletion.length > 0) {
-      for(let x = 0; x < completion.length; x++) {
-        let current_completion_line = completion[x];
+      const current_lesson = child.map((child_two, index_two) => {
+        let lesson_id = child_two.id;
+        let status = child_two.status;
 
-        if(current_completion_line != null && current_completion_line.length > 0) {
-          for(let y = 0; y < current_completion_line.length; y++) {
-            let current_completion = current_completion_line[y];
-            let current_completion_id = current_completion.id;
+        if((module - 1) == index && lesson == lesson_id) {
+          status = true;
+        }
 
-            if(x == (module - 1) && current_completion_id == lesson) {
-              changedCompletion[x][y] = {id: current_completion_id, status: true}
-            }
-          }
-        } 
-        
-      }
-    }
+        console.log(lesson)
 
-    console.log(changedCompletion);
-    setCompletion(changedCompletion);
+        return {id: child_two.id, status: status};
+      });
+  
+      return current_lesson;
+  
+    });
+
+    console.log(changed);
+    setCompletion(changed);
   }
 
   return (
@@ -179,14 +179,14 @@ function App() {
               </Content>
             }></Route>
             <Route path='/Simple/:id' element={
-              <modeContext.Provider value={{ courseMode, handleCompletion, completion }}>
+              <modeContext.Provider value={[courseMode, handleCompletion, completion]}>
                 <Content isSimple={true}>
                       <SimpleModule/>
                 </Content>
               </modeContext.Provider>
             }></Route>
             <Route path='/Simple/:id/:lid' element={
-              <modeContext.Provider value={{ courseMode, handleCompletion, completion }}>
+              <modeContext.Provider value={[courseMode, handleCompletion, completion]}>
                 <Content isSimple={true}>
                       <SimpleLesson/>
                 </Content>

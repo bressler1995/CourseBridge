@@ -1,5 +1,6 @@
 [
     {"id": "1", "name":"Module 1", "lessons":[
+        {"id": "welcome", "name":"Welcome"},
         {"id": "1", "name":"Lesson 1"},
         {"id": "2", "name":"Lesson 2"},
         {"id": "3", "name":"Lesson 3"},
@@ -7,6 +8,7 @@
         {"id": "5", "name":"Lesson 5"}
     ]}, 
     {"id": "2", "name":"Module 2", "lessons":[
+        {"id": "welcome", "name":"Welcome"},
         {"id": "1", "name":"Lesson 1"},
         {"id": "2", "name":"Lesson 2"},
         {"id": "3", "name":"Lesson 3"},
@@ -14,6 +16,7 @@
         {"id": "5", "name":"Lesson 5"}
     ]},
     {"id": "3", "name":"Module 3", "lessons":[
+        {"id": "welcome", "name":"Welcome"},
         {"id": "1", "name":"Lesson 1"},
         {"id": "2", "name":"Lesson 2"},
         {"id": "3", "name":"Lesson 3"},
@@ -21,6 +24,7 @@
         {"id": "5", "name":"Lesson 5"}
     ]},
     {"id": "4", "name":"Module 4", "lessons":[
+        {"id": "welcome", "name":"Welcome"},
         {"id": "1", "name":"Lesson 1"},
         {"id": "2", "name":"Lesson 2"},
         {"id": "3", "name":"Lesson 3"},
@@ -28,6 +32,7 @@
         {"id": "5", "name":"Lesson 5"}
     ]},
     {"id": "5", "name":"Module 5", "lessons":[
+        {"id": "welcome", "name":"Welcome"},
         {"id": "1", "name":"Lesson 1"},
         {"id": "2", "name":"Lesson 2"},
         {"id": "3", "name":"Lesson 3"},

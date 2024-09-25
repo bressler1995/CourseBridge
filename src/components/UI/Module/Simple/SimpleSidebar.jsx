@@ -1,29 +1,31 @@
 import {Link, useParams} from 'react-router-dom';
 import toc from '../../../../toc.json';
+import { useContext } from 'react';
+import { modeContext } from '../../../../App';
 import './Simple.css';
 
 function SimpleSidebar({content}) {
 
   //console.log(content)
+  const [courseMode, handleCompletion, completion] = useContext(modeContext);
 
   const params = useParams();
   let idParam = params.id;
   let lidParam = params.lid;
   let lesson_data = [];
-
   let contentList = [];
 
   if(content != null && content != 0) {
       contentList = content.map((child, index) => {
         if(lidParam != null) {
-          return <li key={index}><Link to={'/Simple/' + idParam + '/' + lidParam + '/#' + child[1]}>{child[0]}</Link></li>
+          return <li key={index}><Link to={'/Simple/' + idParam + '/' + lidParam + '/#' + child[1]}>{truncateString(child[0], 28)}</Link></li>
         } else {
-          return <li key={index}><Link to={'/Simple/' + idParam + '/#' + child[1]}>{child[0]}</Link></li>
+          return <li key={index}><Link to={'/Simple/' + idParam + '/#' + child[1]}>{truncateString(child[0], 28)}</Link></li>
         }
         
       });
 
-      console.log("Content List:" + contentList);
+      // console.log("Content List:" + contentList);
   }
 
   let searchModules = toc.filter((child, i) => {
@@ -35,7 +37,6 @@ function SimpleSidebar({content}) {
   
 
   if(searchModules != null && searchModules.length == 1) {
-    lesson_data.push(['welcome', 'Welcome']);
 
     for (let key in searchModules[0]) {
       if (searchModules[0].hasOwnProperty(key)) {
@@ -61,10 +62,31 @@ function SimpleSidebar({content}) {
       <ul>
           {
             lesson_data.map((child, index) => {
+              let complete_class = '';
+
+              if(completion != null) {
+                if(completion[idParam - 1] != null & completion[idParam - 1].length > 0) {
+                  let module_progress = completion[idParam - 1];
+
+                  for(let i = 0; i < module_progress.length; i++) {
+                    let current_lesson = module_progress[i];
+                    let current_lesson_id = current_lesson.id;
+                    let current_lesson_status = current_lesson.status;
+
+                    if(child[0] == current_lesson_id && current_lesson_status == true) {
+                      complete_class = ' complete';
+                      console.log(child[0] + ', ' + current_lesson_id);
+                    }
+
+                  }
+                }
+                
+              }
+
               if(child[0] == 'welcome') {
-                return <li className={idParam != null && lidParam == null ? 'active' : null} key={index}><Link to={'/Simple/' + idParam}><span className="os101Simple_ProgressIndicator"></span>{child[1]}</Link></li>
+                return <li className={idParam != null && lidParam == null ? 'active' + complete_class : complete_class.replace(' ', '')} key={index}><Link to={'/Simple/' + idParam}><span className="os101Simple_ProgressIndicator"></span>{child[1]}</Link></li>
               } else {
-                return <li className={idParam != null && lidParam != null && lidParam == child[0] ? 'active' : null} key={index}><Link to={'/Simple/' + idParam + '/' + child[0]}><span className="os101Simple_ProgressIndicator"></span>{child[1]}</Link></li>
+                return <li className={idParam != null && lidParam != null && lidParam == child[0] ? 'active' + complete_class : complete_class.replace(' ', '')} key={index}><Link to={'/Simple/' + idParam + '/' + child[0]}><span className="os101Simple_ProgressIndicator"></span>{child[1]}</Link></li>
               }
               
             })
@@ -77,6 +99,14 @@ function SimpleSidebar({content}) {
     
   }
   
+}
+
+function truncateString(str, num) {
+  if (str.length > num) {
+    return str.slice(0, num) + "...";
+  } else {
+    return str;
+  }
 }
 
 export default SimpleSidebar

@@ -39,15 +39,19 @@
     display: block;
     color: #FFF !important;
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 12px !important;
+    padding-bottom: 0 !important;
     text-shadow: 7px 7px 15px rgba(0,0,0,0.6);
+    border: none !important;
 }
 
 .os101_simpleBanner .os101_simpleBanner_container p {
     display: block;
     color: #FFF !important;
-    opacity: 0.75;
+    opacity: 0.8;
     width: 100%;
     margin: 0;
     text-shadow: 3px 3px 6px rgba(0,0,0,0.35);
+    font-size: 18px !important;
+    line-height: 22px !important;
 }

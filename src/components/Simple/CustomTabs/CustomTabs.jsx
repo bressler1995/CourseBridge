@@ -11,7 +11,7 @@ function CustomTabs({children}) {
 
   if(extractedChildren != null && extractedChildren.length > 0) {
     defKey = extractedChildren[0];
-    console.log('Default Key: ' + defKey);
+    //console.log('Default Key: ' + defKey);
   }
 
   return (
