@@ -53,8 +53,8 @@
     border: none;
     border-radius: 0;
     margin-bottom: 0;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 15px;
+    line-height: 19px;
     font-weight: 700;
     padding: 15px;
     padding-left: 25px;
@@ -63,6 +63,10 @@
     min-height: 100%;
     justify-content: stretch;
 
+}
+
+.os101_simpleTabs .nav.nav-tabs .nav-item .nav-link:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .os101_simpleTabs .nav.nav-tabs .nav-item .nav-link.active {
