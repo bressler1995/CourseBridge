@@ -276,12 +276,14 @@ body {
     background: var(--logo-shiny);
     box-sizing: border-box;
     padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     box-sizing: border-box;
 }
 
 .os101Content.simpleContent .os101SimpleSideBar .os101SimpleLogo img {
     display: inline-block;
-    height: 100px;
+    height: 90px;
     width: auto;
 }
 
