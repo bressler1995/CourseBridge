@@ -9,6 +9,10 @@ body {
     margin-bottom: 12px;
 }
 
+.os101Content.simpleContent .os101Content_container h1, .os101Content.simpleContent .os101Content_container h2:not(.accordion-header), .os101Content.simpleContent .os101Content_container h3, .os101Content.simpleContent .os101Content_container h4, .os101Content.simpleContent .os101Content_container h5, .os101Content.simpleContent .os101Content_container h6 {
+    margin-bottom: 24px;
+}
+
 .os101Content.simpleContent .os101Content_container h2:not(.accordion-header):after, .os101Content.simpleContent .os101Content_container h3:after, .os101Content.simpleContent .os101Content_container h4:after, .os101Content.simpleContent .os101Content_container h5:after, .os101Content.simpleContent .os101Content_container h6:after {
     content: '';
     display: block;
@@ -24,7 +28,6 @@ body {
     font-weight: 800;
     text-transform: uppercase;
     box-sizing: border-box;
-    margin-bottom: 24px;
     padding-bottom: 12px;
     border-bottom: 1px solid #CCC;
 }
