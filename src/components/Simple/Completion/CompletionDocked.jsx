@@ -2,6 +2,7 @@ import './Completion.css';
 import { useContext } from 'react';
 import { modeContext } from '../../../App';
 import {useParams} from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 function CompletionDocked() {
   const [courseMode, handleCompletion, completion] = useContext(modeContext);
@@ -23,7 +24,7 @@ function CompletionDocked() {
 
   return (
     <div className="os101_CompletionDocked">
-        <button onClick={() => {doit == true ? handleCompletion(idParam, newLid) : null}}>Complete Lesson</button>
+        <Button onClick={() => {doit == true ? handleCompletion(idParam, newLid) : null}} variant="primary">Complete Lesson</Button>
     </div>
   );
   
