@@ -18,9 +18,9 @@ function SimpleSidebar({content}) {
   if(content != null && content != 0) {
       contentList = content.map((child, index) => {
         if(lidParam != null) {
-          return <li key={index}><Link to={'/Simple/' + idParam + '/' + lidParam + '/#' + child[1]}>{truncateString(child[0], 28)}</Link></li>
+          return <li key={index}><Link to={'/Simple/' + idParam + '/' + lidParam + '/#' + child[1]}><span className="os101Simple_ProgressIndicator"></span>{truncateString(child[0], 50)}</Link></li>
         } else {
-          return <li key={index}><Link to={'/Simple/' + idParam + '/#' + child[1]}>{truncateString(child[0], 28)}</Link></li>
+          return <li key={index}><Link to={'/Simple/' + idParam + '/#' + child[1]}><span className="os101Simple_ProgressIndicator"></span>{truncateString(child[0], 50)}</Link></li>
         }
         
       });
