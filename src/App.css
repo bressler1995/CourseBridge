@@ -18,6 +18,7 @@
     --width-sidebar: 350px;
     --font-title: "Roboto", sans-serif;
     --font-other: "Nunito", sans-serif;
+    --logo-shiny: linear-gradient(132deg, #D83E00 0%, #0D425F 49.95%);
   }
 
 h1, h2, h3, h4, h5, h6 {

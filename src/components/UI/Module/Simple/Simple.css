@@ -158,12 +158,20 @@ body {
     background-color: #FFF;
     border-right: 1px solid #CCC;
     box-sizing: border-box;
-    padding: 30px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 0px;
     text-align: center;
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+.os101Content.simpleContent .os101SimpleSideBar .os101SimpleSideBar_navigation {
+    display: block;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 45px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
 }
 
 .os101Content.simpleContent .os101SimpleSideBar h2 {
@@ -185,6 +193,7 @@ body {
 }
 
 .os101Content.simpleContent .os101SimpleSideBar h2:first-of-type {
+    margin-top: 0;
     padding-top: 0;
     border: none;
 }
@@ -264,11 +273,15 @@ body {
     display: block;
     width: 100%;
     text-align: center;
+    background: var(--logo-shiny);
+    box-sizing: border-box;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
 .os101Content.simpleContent .os101SimpleSideBar .os101SimpleLogo img {
     display: inline-block;
-    height: 135px;
+    height: 100px;
     width: auto;
 }
 

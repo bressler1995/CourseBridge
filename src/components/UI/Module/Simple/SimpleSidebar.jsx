@@ -58,6 +58,7 @@ function SimpleSidebar({content}) {
     
     return (<div className='os101SimpleSideBar'>
       <div className='os101SimpleLogo'><img src='./images/logo.png'/></div>
+      <div className="os101SimpleSideBar_navigation">
       <h2>All Content</h2>
       <ul>
           {
@@ -95,6 +96,7 @@ function SimpleSidebar({content}) {
       </ul>
       <h2>Navigation</h2>
       {contentList != null && contentList.length > 0 ? <ul>{contentList}</ul> : <p>Nothing to navigate :)</p>}
+      </div>
     </div>);
     
   }
