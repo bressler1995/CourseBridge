@@ -19,6 +19,11 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
     const elements = contentRef.current;
     let tables = elements.getElementsByTagName("table");
     let titles = elements.getElementsByTagName("h2");
+    let simpleContent_wrapper = document.getElementById("simpleContent_wrapper");
+
+    if(simpleContent_wrapper != null) {
+      simpleContent_wrapper.scrollTop = 0;
+    }
 
     if(titles != null) {
       for(let i = 0; i < titles.length; i++) {
@@ -60,7 +65,7 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
 
   return (
     <div id='os101Content' className={contentClasses}>
-      {isSimple == true ? <><SimpleSidebar content={contentElements}/><div className='simpleContent_wrapper'><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></> : <div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div>}
+      {isSimple == true ? <><SimpleSidebar content={contentElements}/><div id="simpleContent_wrapper" className='simpleContent_wrapper'><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></> : <div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div>}
     </div>
   )
 }
