@@ -1,7 +1,8 @@
-import { useRef, useState, useLayoutEffect, useEffect } from 'react';
+import { useRef, useState, useLayoutEffect, useEffect, useContext } from 'react';
 import {useParams} from 'react-router-dom';
 import './Content.css';
 import SimpleSidebar from '../Module/Simple/SimpleSidebar';
+import { modeContext } from '../../../App';
 
 function Content({children, isMinimal = false, isHorizontal = false, isSimple = false, show}) {
 
@@ -9,10 +10,46 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
   let idParam = params.id;
   let lidParam = params.lid;
 
+  const [courseMode, handleCompletion, completion, handleLessonCompletion] = useContext(modeContext);
+
   let contentClasses = 'os101Content';
   const contentRef = useRef(null);
   const [contentElements, setContentElements] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = (e) => {
+      let scrolledH2 = e.target.getElementsByTagName("h2");
+      // console.log(scrolledH2);
+      // const { scrollTop, scrollHeight, clientHeight } = e.target;
+      // const position = Math.ceil(
+      //     (scrollTop / (scrollHeight - clientHeight)) * 100
+      // );
+      // console.log("Scrolling Content: " + position);
+
+      for(let i = 0; i < scrolledH2.length; i++) {
+        if(scrolledH2[i].classList.contains('accordion-header') == false) {
+          applyObserver(scrolledH2[i]);
+        }
+      }
+      
+  };
+
+  const applyObserver = (el) => {
+
+    const observer = new window.IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        // console.log('Element Viewed: ' + el.innerHTML + ", Element ID: " + el.id);
+        handleLessonCompletion(idParam, lidParam, el.id);
+        return
+      }
+      // console.log('LEAVE ' + el.innerHTML);
+    }, {
+      root: null,
+      threshold: 0.1, // set offset 0.1 means trigger if atleast 10% of element in viewport
+    })
+  
+    observer.observe(el);
+  };
 
   useEffect(() => {
     let result = [];
@@ -65,7 +102,7 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
 
   return (
     <div id='os101Content' className={contentClasses}>
-      {isSimple == true ? <><SimpleSidebar content={contentElements}/><div id="simpleContent_wrapper" className='simpleContent_wrapper'><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></> : <div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div>}
+      {isSimple == true ? <><SimpleSidebar content={contentElements}/><div id="simpleContent_wrapper" className='simpleContent_wrapper' onScroll={handleScroll} onResize={handleScroll}><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></> : <div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div>}
     </div>
   )
 }

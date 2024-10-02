@@ -5,7 +5,7 @@ import {useParams} from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
 function CompletionDocked() {
-  const [courseMode, handleCompletion, completion] = useContext(modeContext);
+  const [courseMode, handleCompletion, completion, handleLessonCompletion] = useContext(modeContext);
 
   const params = useParams();
   let idParam = params.id;

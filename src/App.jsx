@@ -48,6 +48,7 @@ function App() {
   const [courseMode, setCourseMode] = useState('full');
   const [showNotification, setShowNotication] = useState([false, '', '', '']);
   const [completion, setCompletion] = useState(initialCompletion);
+  const [lessonCompletion, setLessonCompletion] = useState([]);
 
   useEffect(() => {
     function onFullscreenChange() {
@@ -118,7 +119,29 @@ function App() {
 
     console.log(changed);
     setCompletion(changed);
-  }
+  };
+
+  const handleLessonCompletion = (module, lesson, hid) => {
+    let result = {module: module, lesson: lesson, hid: hid};
+    let match = false;
+    let cloneCompletion = lessonCompletion.slice();
+    
+    for(let i = 0; i < lessonCompletion.length; i++) {
+      let current_lcompletion = lessonCompletion[i];
+
+      if(current_lcompletion.module == module && current_lcompletion.lesson == lesson && current_lcompletion.hid == hid) {
+        match = true;
+      }
+    }
+
+    if(match == false) {
+      cloneCompletion.push(result);
+    }
+
+    setLessonCompletion(cloneCompletion);
+    console.log(cloneCompletion);
+    
+  };
 
   return (
     
@@ -179,14 +202,14 @@ function App() {
               </Content>
             }></Route>
             <Route path='/Simple/:id' element={
-              <modeContext.Provider value={[courseMode, handleCompletion, completion]}>
+              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion]}>
                 <Content isSimple={true}>
                       <SimpleModule/>
                 </Content>
               </modeContext.Provider>
             }></Route>
             <Route path='/Simple/:id/:lid' element={
-              <modeContext.Provider value={[courseMode, handleCompletion, completion]}>
+              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion]}>
                 <Content isSimple={true}>
                       <SimpleLesson/>
                 </Content>
