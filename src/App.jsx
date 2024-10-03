@@ -160,7 +160,9 @@ function App() {
                   }  
                   </ul>
                   </Sidebar>
+                  <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion]}>
                   <Content show={sidebarShow}/>
+                  </modeContext.Provider>
                   <Notification handleNotification={handleNotification} showNotification={showNotification}/>
                 </div>
             }>
@@ -177,29 +179,29 @@ function App() {
                   }  
                   </ul>
                   </Sidebar>
+                  <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion]}>
                   <Content show={sidebarShow}>
-                    <modeContext.Provider value={{ courseMode }}>
                     <Module/>
-                    </modeContext.Provider>
                   </Content>
+                  </modeContext.Provider>
                   <Notification handleNotification={handleNotification} showNotification={showNotification}/>
                 </div>
             }>
             </Route>
             <Route path='/Horizontal/:id' element={
+              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion]}>
               <Content isMinimal={true}>
-                  <modeContext.Provider value={{ courseMode }}>
                     <Module/>
-                  </modeContext.Provider>
               </Content>
+              </modeContext.Provider>
             }>
             </Route>
             <Route path='/Minimal/:id' element={
+              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion]}>
               <Content isMinimal={true}>
-                  <modeContext.Provider value={{ courseMode }}>
                     <Module/>
-                  </modeContext.Provider>
               </Content>
+              </modeContext.Provider>
             }></Route>
             <Route path='/Simple/:id' element={
               <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion]}>
