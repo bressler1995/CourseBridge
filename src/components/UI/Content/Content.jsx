@@ -9,10 +9,9 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
   const params = useParams();
   let idParam = params.id;
   let lidParam = params.lid;
+  let contentClasses = 'os101Content';
 
   const [courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion] = useContext(modeContext);
-
-  let contentClasses = 'os101Content';
   const contentRef = useRef(null);
   const [contentElements, setContentElements] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -25,7 +24,6 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
       //     (scrollTop / (scrollHeight - clientHeight)) * 100
       // );
       // console.log("Scrolling Content: " + position);
-      
   };
 
   const applyObserver = (el) => {
@@ -39,7 +37,7 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
       // console.log('LEAVE ' + el.innerHTML);
     }, {
       root: null,
-      threshold: 0.1, // set offset 0.1 means trigger if atleast 10% of element in viewport
+      threshold: 0.5, // set offset 0.1 means trigger if atleast 10% of element in viewport
     })
   
     observer.observe(el);
