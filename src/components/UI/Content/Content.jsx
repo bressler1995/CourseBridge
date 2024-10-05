@@ -10,7 +10,7 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
   let idParam = params.id;
   let lidParam = params.lid;
 
-  const [courseMode, handleCompletion, completion, handleLessonCompletion] = useContext(modeContext);
+  const [courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion] = useContext(modeContext);
 
   let contentClasses = 'os101Content';
   const contentRef = useRef(null);
@@ -18,19 +18,13 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = (e) => {
-      let scrolledH2 = e.target.getElementsByTagName("h2");
+      // let scrolledH2 = e.target.getElementsByTagName("h2");
       // console.log(scrolledH2);
       // const { scrollTop, scrollHeight, clientHeight } = e.target;
       // const position = Math.ceil(
       //     (scrollTop / (scrollHeight - clientHeight)) * 100
       // );
       // console.log("Scrolling Content: " + position);
-
-      for(let i = 0; i < scrolledH2.length; i++) {
-        if(scrolledH2[i].classList.contains('accordion-header') == false) {
-          applyObserver(scrolledH2[i]);
-        }
-      }
       
   };
 
@@ -56,7 +50,7 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
     const elements = contentRef.current;
     let tables = elements.getElementsByTagName("table");
     let titles = elements.getElementsByTagName("h2");
-    let simpleContent_wrapper = document.getElementById("simpleContent_wrapper");
+    let simpleContent_wrapper = document.getElementById("simpleContent_wrapper");;
 
     if(simpleContent_wrapper != null) {
       simpleContent_wrapper.scrollTop = 0;
@@ -71,6 +65,7 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
         if(current_class != 'accordion-header') {
           titles[i].id = current_slug;
           result.push([current_title, current_slug, current_class]);
+          applyObserver(titles[i]);
         }
         
       }

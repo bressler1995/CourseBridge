@@ -7,7 +7,7 @@ import './Simple.css';
 function SimpleSidebar({content}) {
 
   //console.log(content)
-  const [courseMode, handleCompletion, completion] = useContext(modeContext);
+  const [courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion] = useContext(modeContext);
 
   const params = useParams();
   let idParam = params.id;
@@ -18,9 +18,29 @@ function SimpleSidebar({content}) {
   if(content != null && content != 0) {
       contentList = content.map((child, index) => {
         if(lidParam != null) {
-          return <li key={index}><Link to={'/Simple/' + idParam + '/' + lidParam + '/#' + child[1]}><span className="os101Simple_ProgressIndicator"></span>{truncateString(child[0], 50)}</Link></li>
+          let lesson_complete_class = '';
+
+          for(let i = 0; i < lessonCompletion.length; i++) {
+            let current_lCompletion = lessonCompletion[i];
+
+            if(current_lCompletion.module == idParam && current_lCompletion.lesson == lidParam && current_lCompletion.hid == child[1]) {
+              lesson_complete_class = 'complete';
+            }
+          }
+
+          return <li className={lesson_complete_class} key={index}><Link to={'/Simple/' + idParam + '/' + lidParam + '/#' + child[1]}><span className="os101Simple_ProgressIndicator"></span>{truncateString(child[0], 50)}</Link></li>
         } else {
-          return <li key={index}><Link to={'/Simple/' + idParam + '/#' + child[1]}><span className="os101Simple_ProgressIndicator"></span>{truncateString(child[0], 50)}</Link></li>
+          let lesson_complete_class = '';
+          
+          for(let i = 0; i < lessonCompletion.length; i++) {
+            let current_lCompletion = lessonCompletion[i];
+
+            if(current_lCompletion.module == idParam && current_lCompletion.hid == child[1]) {
+              lesson_complete_class = 'complete';
+            }
+          }
+          
+          return <li className={lesson_complete_class} key={index}><Link to={'/Simple/' + idParam + '/#' + child[1]}><span className="os101Simple_ProgressIndicator"></span>{truncateString(child[0], 50)}</Link></li>
         }
         
       });

@@ -124,22 +124,9 @@ function App() {
   const handleLessonCompletion = (module, lesson, hid) => {
     let result = {module: module, lesson: lesson, hid: hid};
     let match = false;
-    let cloneCompletion = lessonCompletion.slice();
-    
-    for(let i = 0; i < lessonCompletion.length; i++) {
-      let current_lcompletion = lessonCompletion[i];
+    console.log(result);
 
-      if(current_lcompletion.module == module && current_lcompletion.lesson == lesson && current_lcompletion.hid == hid) {
-        match = true;
-      }
-    }
-
-    if(match == false) {
-      cloneCompletion.push(result);
-    }
-
-    setLessonCompletion(cloneCompletion);
-    console.log(cloneCompletion);
+    setLessonCompletion(lessonCompletion => [...lessonCompletion, result]);
     
   };
 
@@ -160,7 +147,7 @@ function App() {
                   }  
                   </ul>
                   </Sidebar>
-                  <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion]}>
+                  <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
                   <Content show={sidebarShow}/>
                   </modeContext.Provider>
                   <Notification handleNotification={handleNotification} showNotification={showNotification}/>
@@ -179,7 +166,7 @@ function App() {
                   }  
                   </ul>
                   </Sidebar>
-                  <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion]}>
+                  <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
                   <Content show={sidebarShow}>
                     <Module/>
                   </Content>
@@ -189,7 +176,7 @@ function App() {
             }>
             </Route>
             <Route path='/Horizontal/:id' element={
-              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion]}>
+              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
               <Content isMinimal={true}>
                     <Module/>
               </Content>
@@ -197,21 +184,21 @@ function App() {
             }>
             </Route>
             <Route path='/Minimal/:id' element={
-              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion]}>
+              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
               <Content isMinimal={true}>
                     <Module/>
               </Content>
               </modeContext.Provider>
             }></Route>
             <Route path='/Simple/:id' element={
-              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion]}>
+              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
                 <Content isSimple={true}>
                       <SimpleModule/>
                 </Content>
               </modeContext.Provider>
             }></Route>
             <Route path='/Simple/:id/:lid' element={
-              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion]}>
+              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
                 <Content isSimple={true}>
                       <SimpleLesson/>
                 </Content>
