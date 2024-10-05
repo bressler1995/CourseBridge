@@ -124,7 +124,7 @@ function App() {
   const handleLessonCompletion = (module, lesson, hid) => {
     let result = {module: module, lesson: lesson, hid: hid};
     let match = false;
-    console.log(result);
+    // console.log(result);
 
     setLessonCompletion(lessonCompletion => [...lessonCompletion, result]);
     

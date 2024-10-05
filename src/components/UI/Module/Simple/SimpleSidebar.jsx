@@ -20,11 +20,13 @@ function SimpleSidebar({content}) {
         if(lidParam != null) {
           let lesson_complete_class = '';
 
-          for(let i = 0; i < lessonCompletion.length; i++) {
-            let current_lCompletion = lessonCompletion[i];
-
-            if(current_lCompletion.module == idParam && current_lCompletion.lesson == lidParam && current_lCompletion.hid == child[1]) {
-              lesson_complete_class = 'complete';
+          if(lessonCompletion != null) {
+            for(let i = 0; i < lessonCompletion.length; i++) {
+              let current_lCompletion = lessonCompletion[i];
+  
+              if(current_lCompletion.module == idParam && current_lCompletion.lesson == lidParam && current_lCompletion.hid == child[1]) {
+                lesson_complete_class = 'complete';
+              }
             }
           }
 
@@ -32,11 +34,13 @@ function SimpleSidebar({content}) {
         } else {
           let lesson_complete_class = '';
           
-          for(let i = 0; i < lessonCompletion.length; i++) {
-            let current_lCompletion = lessonCompletion[i];
-
-            if(current_lCompletion.module == idParam && current_lCompletion.hid == child[1]) {
-              lesson_complete_class = 'complete';
+          if(lessonCompletion != null) {
+            for(let i = 0; i < lessonCompletion.length; i++) {
+              let current_lCompletion = lessonCompletion[i];
+  
+              if(current_lCompletion.module == idParam && current_lCompletion.hid == child[1]) {
+                lesson_complete_class = 'complete';
+              }
             }
           }
           
