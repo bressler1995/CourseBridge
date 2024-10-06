@@ -165,6 +165,9 @@ body {
     text-align: center;
     overflow-y: auto;
     overflow-x: hidden;
+    -webkit-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.07);
+    -moz-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.07);
+    box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.07);
 }
 
 .os101Content.simpleContent .os101SimpleSideBar .os101SimpleSideBar_navigation {
