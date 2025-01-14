@@ -1,5 +1,3 @@
-import CompletionDocked from '../../../../components/Simple/Completion/CompletionDocked.jsx';
-
 # Lesson 5: Planning for Open Science: From Theory to Practice
 
 ## Overview
@@ -18,7 +16,7 @@ After completing this lesson, you should be able to:
 
 ## Planning for Open Science
 
-<img src="./images/clone/Module_1/image329.png" style={{width: '100%', height: 'auto'}} />
+<SingleFigure size='large' src="./images/clone/Module_1/image329.png"/>
 
 It is important to think about, discuss, and plan for desired outcomes and processes when you begin your research. Learn about where the best repositories are for your materials; discuss credit and authorship for each separate open science output, and start using open science tools to organize your work. Reach out to repositories in your discipline and institution (usually library) for help. Including this information in your plans will make you more likely to receive funding.
 
@@ -42,34 +40,23 @@ Federal agencies and funders consider data management crucial for open science b
 
 Open science and data management plans are essential because they enhance the credibility and reproducibility of research by ensuring that data is well-documented, organized, and preserved over time. Effective OSDMPs can have the following benefits:
 
-<table>
-<colgroup>
-    <col style={{width: "33%"}} />
-    <col style={{width: "66%"}} />
-</colgroup>
-<tbody>
-    <tr>
-        <td>Transparency</td>
-        <td>Not only builds trust in scientific findings but also allows other researchers to validate and build upon them, fostering a culture of openness and cooperation.</td>
-    </tr>
-    <tr>
-        <td>Effective</td>
-        <td>Data management can lead to more efficient and cost-effective research processes. By reducing the time spent searching for and organizing data, researchers can dedicate more time to analysis and interpretation, potentially accelerating the pace of discovery and innovation.</td>
-    </tr>
-    <tr>
-        <td>Reproducibility</td>
-        <td>A key tenet of the scientific method is reproducibility and a well developed OSDMP helps ensure that others are able to validate your results.</td>
-    </tr>
-    <tr>
-        <td>Preservation</td>
-        <td>The research produced by federal funding represents a significant investment and it is important that research is saved for future generations to access and understand.</td>
-    </tr>
-    <tr>
-        <td>Inclusive</td>
-        <td>OSDMPs can include research tools and processes that can significantly improve research outcomes through collaboration and consultation.</td>
-    </tr>
-</tbody>
-</table>
+<Definitions>
+  <Definition title='Transparency'>
+    Not only builds trust in scientific findings but also allows other researchers to validate and build upon them, fostering a culture of openness and cooperation.
+  </Definition>
+  <Definition title='Effective'>
+    Data management can lead to more efficient and cost-effective research processes. By reducing the time spent searching for and organizing data, researchers can dedicate more time to analysis and interpretation, potentially accelerating the pace of discovery and innovation.
+  </Definition>
+  <Definition title='Reproducibility'>
+    A key tenet of the scientific method is reproducibility and a well developed OSDMP helps ensure that others are able to validate your results.
+  </Definition>
+  <Definition title='Preservation'>
+    The research produced by federal funding represents a significant investment and it is important that research is saved for future generations to access and understand.
+  </Definition>
+  <Definition title='Inclusive'>
+    OSDMPs can include research tools and processes that can significantly improve research outcomes through collaboration and consultation.
+  </Definition>
+</Definitions>
 
 Learn more about OSDMPs in Module 2.
 
@@ -77,47 +64,68 @@ Learn more about OSDMPs in Module 2.
 
 In today's world, many foundations and agencies that award research grants increasingly expect proposals to include an open science strategy. By including an open science strategy document in your scientific plan, you ensure accessibility and openness in each step of your workflow. Conclude your comprehensive plan with clearly defined steps to make research outputs easily accessible and openly available. The steps identified in your strategy should be integrated into your everyday scientific processes and practices.
 
-#### Requirements
-
-Every major research foundation and federal government agency now requires scientists to file a data management plan (DMP) along with their proposed scientific research plan. Some ask for additional details on software/code and publications.
-
-#### Include Entire Data Workﬂow Details in the Plan
-
-Describe your management workflow for data and related research. Other elements, such as code or a publication, have their own lifecycle and workflow which needs to be in the plan.
-
-#### Include Open Terminology and Concepts
-
-Plans that are successful typically include clear terminology about how information is made findable, accessible, interoperable, and reusable. This can include licenses, repositories, formats, and governance of the project.
-
-#### Preservation
-
-Research materials are valuable and reusable long after the project's financial support ends. Reuse can extend beyond our own lifetimes. Therefore, researchers must arrange steps for preservation and accessibility to ensure work is not lost after a research interaction ends.
+<Table>
+<colgroup>
+    <col style={{width: "33%"}} />
+    <col style={{width: "66%"}} />
+</colgroup>
+<thead>
+    <tr>
+        <th>Term</th>
+        <th>Definition</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Requirements</td>
+        <td>
+            Every major research foundation and federal government agency now requires scientists to file a data management plan (DMP) along with their proposed scientific research plan. Some ask for additional details on software/code and publications.
+        </td>
+    </tr>
+    <tr>
+        <td>
+          Include Entire Data Workﬂow Details in the Plan
+        </td>
+        <td>
+            Describe your management workflow for data and related research. Other elements, such as code or a publication, have their own lifecycle and workflow which needs to be in the plan.
+        </td>
+    </tr>
+    <tr>
+        <td>
+          Include Open Terminology and Concepts
+        </td>
+        <td>
+            Plans that are successful typically include clear terminology about how information is made findable, accessible, interoperable, and reusable. This can include licenses, repositories, formats, and governance of the project.
+        </td>
+    </tr>
+    <tr>
+        <td>
+          Preservation
+        </td>
+        <td>
+           Research materials are valuable and reusable long after the project's financial support ends. Reuse can extend beyond our own lifetimes. Therefore, researchers must arrange steps for preservation and accessibility to ensure work is not lost after a research interaction ends.
+        </td>
+    </tr>
+</tbody>
+</Table>
 
 ## Designing for Openness
 
 ### Open Science Applies to the Entire Workﬂow
 
-<img src="./images/clone/Module_1/image402.jpg" style={{width: '100%', height: 'auto'}} />
-
-Open Science Workflow Phases Source: Opensciency
-
----
+<SingleFigure size='full' src="./images/clone/Module_1/image402.jpg" caption="Open Science Workflow Phases Source: Opensciency"/>
 
 Regardless of your science discipline or the methodology that you use, the workflow remains relatively the same. It has a planning phase, an implementation phase and a release phase. Within these phases, there are milestones that vary depending on the workflow you follow. For the purpose of our discussion in this lesson, and the other modules in the curriculum, we have adopted the scientific workflow with general milestones described in the [Opensciency](https://opensciency.github.io/sprint-content/) curriculum. The details in your workflow may vary, but the overall concepts are the same. What is relevant here is that when adopting open science, it permeates all phases of the workflow. You prepare for it in the planning phase but then continue to integrate the principles of it throughout the implementation and release phases.
 
 Products created throughout the scientific process are needed to enable others to reproduce the findings. Researchers who wish to make their results reproducible must make key elements of their study openly available for others to test.
 
-<img src="./images/clone/Module_1/image130.jpg" style={{width: '100%', height: 'auto'}} />
-
-Open Science Workflow Products Source: Opensciency
-
----
+<SingleFigure size='full' src="./images/clone/Module_1/image130.jpg" caption="Open Science Workflow Products Source: Opensciency"/>
 
 Continuing through the workflow, this updated diagram now shows the types of scientific products that are created at each milestone. The specialized products that you create may vary or be completely different, but the focus on discovery for the public remains the same. Any type of products you create can be modified to support the principles and concepts of open science. Where and how to integrate open science concepts into your products is the purpose of this Open Science 101 curriculum.
 
 ### Use, Make, Share
 
-<img src="./images/clone/Module_1/image165.png" style={{width: '100%', height: 'auto'}} />
+<SingleFigure size='full' src="./images/clone/Module_1/image165.png"/>
 
 The idea that open science can impact your entire scientific workflow may seem overwhelming and unachievable, but remember, open science occurs across a spectrum – even small steps towards openness lead to more accessible, inclusive, and reproducible science. And the Open Science 101 curriculum is here to help lead through this process.
 
@@ -139,9 +147,7 @@ Modules 3, 4, and 5 will discuss how to make your data, code, and results open.
 
 ### How Will You Share?
 
-<img src="./images/clone/Module_1/image257.png" style={{width: '100%', height: 'auto'}} />
-
-Image Credit: Freepik.com
+<SingleFigure size='full' src="./images/clone/Module_1/image257.png" caption="Image Credit: Freepik.com"/>
 
 Where you choose to share your research materials and results will have a large influence on its impact – how easy it is for others to find it, how long it is available, and how easy it is to reuse.
 
@@ -153,7 +159,7 @@ For results, open access publications and preprint servers are common locations 
 
 ### Activity 5.1: Use, Make, Share
 
-<img style={{width: 350, height: 'auto'}} src="./images/clone/Module_1/lightbulb.png" />
+<SingleFigure size='small' src="./images/clone/Module_1/lightbulb.png"/>
 
 Take a moment, to answer the following questions on your current research or on research that you would like to do:
 
@@ -163,27 +169,12 @@ Take a moment, to answer the following questions on your current research or on 
 
 ## Case Study: The Outcomes of an Open Plan
 
-<img style={{width: '100%', height: 'auto'}} src="./images/clone/Module_1/natashaquote.jpg" />
+<QuoteImage quote="NASA's open science guiding principles are centered in our Early Release Science work, supporting an inclusive, transparent, and collaborative scientific process." byWho="Co-author Dr. Natasha Batalha" bgImage="./images/clone/Module_1/natashaquote.jpg" />
 
+One of the first [discoveries from the James Webb Space Telescope was the first detection of Carbon Dioxide in the atmosphere of a planet orbiting another star](https://www.nasa.gov/feature/goddard/2022/nasa-s-webb-detects-carbon-dioxide-in-exoplanet-atmosphere). This discovery was enabled through the open science principles adopted both by the project and the team.
 
-"NASA's open science guiding principles are centered in our Early Release Science work, supporting an inclusive, transparent, and collaborative scientific process."
-
-**Co-author Dr. Natasha Batalha**
-
----
-
-One of the first [discoveries from the James Webb Space Telescope
-was the first detection of Carbon Dioxide in the atmosphere of a planet orbiting another star](https://www.nasa.gov/feature/goddard/2022/nasa-s-webb-detects-carbon-dioxide-in-exoplanet-atmosphere). This discovery was enabled through the open science principles adopted both by the project and the team.
-
-<img src="./images/clone/Module_1/image255.jpg" style={{width: '100%', height: 'auto'}} />
-
-Image Credit: @AdobeStock 2023, dimazel
-
-<img src="./images/clone/Module_1/atmocomp.jpg" style={{width: '100%', height: 'auto'}} />
-
-Figure Credit: NASA, ESA, CSA, Joseph Olmsted (STScI)
-
----
+<SingleFigure size='medium' src="./images/clone/Module_1/image255.jpg" caption="Image Credit: @AdobeStock 2023, dimazel"/>
+<SingleFigure size='medium' src="./images/clone/Module_1/atmocomp.jpg" caption="Figure Credit: NASA, ESA, CSA, Joseph Olmsted (STScI)"/>
 
 This was conducted as part of the JWST’s Early Release Science (ERS) Program as part of the JWST ERS Exoplanet Transiting Community program (ERS-TRANSIT). This is some of the earliest science data taken with the facility that was made openly available. The team, though, began their work years before the observations and included open science into every step of the process. The team worked in an open format from ideation, to analysis, through to publication and communication.
 
@@ -191,36 +182,42 @@ Let's walk through and see what open results were in fact produced. While doing 
 
 ### Planning for Open Science
 
-<img src="./images/clone/Module_1/image193.png" style={{width: '100%', height: 'auto'}} />
+<SingleFigure size='full' src="./images/clone/Module_1/image193.png"/>
 
-<table>
-    <colgroup>
-        <col style={{width: "50%"}} />
-        <col style={{width: "50%"}} />
-    </colgroup>
-    <tbody>
+<Table>
+      <colgroup>
+        <col style={{width: "33%"}} />
+        <col style={{width: "66%"}} />
+      </colgroup>
+      <thead>
         <tr>
-            <td>Opportunity</td>
-            <td>Create a Governance Plan: An open code of conduct and publication policy highlights the rules of engagement of the final result.</td>
+          <th>Term</th>
+          <th>Definition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Opportunity</td>
+          <td>Create a Governance Plan: An open code of conduct and publication policy highlights the rules of engagement of the final result.</td>
         </tr>
         <tr>
-            <td>Benefit</td>
-            <td>Onboarding of new members and facilitated collaboration.</td>
+          <td>Benefit</td>
+          <td>Onboarding of new members and facilitated collaboration.</td>
         </tr>
         <tr>
-            <td>Result</td>
-            <td>Code of Conduct and Publication Policy.</td>
+          <td>Result</td>
+          <td>Code of Conduct and Publication Policy.</td>
         </tr>
         <tr>
-            <td>Availability</td>
-            <td>
-                <p>On team webpage and GitHub.</p>
-                <p><img src="./images/clone/Module_1/image219.jpg" style={{width: '100%', height: 'auto'}} />
-</p>
-            </td>
+          <td>Availability</td>
+          <td>
+          On team webpage and GitHub.
+          
+          <img src="./images/clone/Module_1/image219.jpg" style={{width: '100%', height: 'auto'}} />
+          </td>
         </tr>
-    </tbody>
-</table>
+      </tbody>
+</Table>
 
 One of the most important parts of starting a project is thinking about who is going to be working on it and how they will work together. Before samples are collected, before data is downloaded, before code is written – how will you all work together, what are the roles and responsibilities, and how and when will you share any materials. That was a key part that this JWST project got right.
 
@@ -236,39 +233,48 @@ The team grew to almost 400 people, all working together, all knowing what to ex
 
 [CLICK TO LEARN](https://opensciency.github.io/sprint-content/open-results/lesson4-opportunities-and-credits.html)
 
-### Open-Source Software**
+### Open-Source Software
 
-<img src="./images/clone/Module_1/image6.jpg" style={{width: '100%', height: 'auto'}} />
+<SingleFigure size='full' src="./images/clone/Module_1/image6.jpg"/>
 
-
-<table>
-    <colgroup>
-        <col style={{width: "50%"}} />
-        <col style={{width: "50%"}} />
-    </colgroup>
-    <tbody>
+<Table>
+      <colgroup>
+        <col style={{width: "33%"}} />
+        <col style={{width: "66%"}} />
+      </colgroup>
+      <thead>
         <tr>
-            <td>Opportunity</td>
-            <td>Collaboration on an open software data-processing pipeline</td>
+          <th>Term</th>
+          <th>Definition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Opportunity</td>
+          <td>
+            Collaboration on an open software data-processing pipeline
+          </td>
         </tr>
         <tr>
-            <td>Benefit</td>
-            <td>Decreased duplicative efforts, contributors get credit for their work, and accelerated the data wrangling process</td>
+          <td>Benefit</td>
+          <td>
+            Decreased duplicative efforts, contributors get credit for their work, and accelerated the data wrangling process
+          </td>
         </tr>
         <tr>
-            <td>Result</td>
-            <td>Data processing pipeline</td>
+          <td>Result</td>
+          <td>Data processing pipeline</td>
         </tr>
         <tr>
-            <td>Availability</td>
-            <td>
-                <p>Code on <i>GitHub</i>, released on <i>Zenodo</i>, documents released in <i>Journal of Open Source Software</i> (an open access journal)</p>
-                <p><img src="./images/clone/Module_1/image221.jpg" style={{width: '100%', height: 'auto'}} />
-</p>
-            </td>
+          <td>Availability</td>
+          <td>
+          Code on _GitHub_, released on _Zenodo_, documents released in _Journal of Open Source Software_ (an open access journal)
+          
+          <img src="./images/clone/Module_1/image221.jpg" style={{width: '100%', height: 'auto'}} />
+          </td>
         </tr>
-    </tbody>
-</table>
+      </tbody>
+</Table>
 
 Like most data, JWST is complicated and it needs processing and data pipelines. The precision needed to achieve this type of detection requires detailed analysis of the observations and a wide range of expertise.
 
@@ -279,37 +285,48 @@ But they didn’t have to start from scratch! The ERS-TRANSIT team was able to b
 
 ### Open Access to Results
 
-<img src="./images/clone/Module_1/image244.jpg" style={{width: '100%', height: 'auto'}} />
+<SingleFigure size='full' src="./images/clone/Module_1/image244.jpg"/>
 
-
-<table>
-    <colgroup>
-        <col style={{width: "50%"}} />
-        <col style={{width: "50%"}} />
-    </colgroup>
-    <tbody>
+<Table>
+      <colgroup>
+        <col style={{width: "33%"}} />
+        <col style={{width: "66%"}} />
+      </colgroup>
+      <thead>
         <tr>
-            <td>Opportunity</td>
-            <td>Research products recorded in public archives and made openly available</td>
+          <th>Term</th>
+          <th>Definition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Opportunity</td>
+          <td>
+            Research products recorded in public archives and made openly available
+          </td>
         </tr>
         <tr>
-            <td>Benefit</td>
-            <td>Allows collaborators to receive individual credit for their contributions, which provided greater incentive for participation</td>
+          <td>Benefit</td>
+          <td>
+            Allows collaborators to receive individual credit for their contributions, which provided greater incentive for participation
+          </td>
         </tr>
         <tr>
-            <td>Result</td>
-            <td>Intermediate products, models, and final data</td>
+          <td>Result</td>
+          <td>
+            Intermediate products, models, and final data
+          </td>
         </tr>
         <tr>
-            <td>Availability</td>
-            <td>
-                <p>All aggregated into <a href="https://zenodo.org/communities/ers-transit">Zenodo Community</a> with individual contributing authors and DOIs</p>
-                <p><img src="./images/clone/Module_1/zenodojwst.jpg" style={{width: '100%', height: 'auto'}} />
-</p>
-            </td>
+          <td>Availability</td>
+          <td>
+            All aggregated into [Zenodo Community](https://zenodo.org/communities/ers-transit) with individual contributing authors and DOIs
+          
+            <img src="./images/clone/Module_1/zenodojwst.jpg" style={{width: '100%', height: 'auto'}} />
+          </td>
         </tr>
-    </tbody>
-</table>
+      </tbody>
+</Table>
 
 During the release phase, the team labeled research products adequately for reuse and reproducibility and published in public forums/repositories. The outcome and benefits included collaborators receiving credit for data, software, and other digital research products that benefit the scientific community. Data and software were archived openly on the general data repository [Zenodo](https://zenodo.org/communities/ers-transit) and the publication was made available as a [preprint](https://arxiv.org/abs/2208.11692) and an [open access publication](https://www.nature.com/articles/s41586-022-05269-w).
 
@@ -335,7 +352,7 @@ Here we will explore the next steps to open science that everybody can take. The
 Here are the steps you can take to find your own science community:
 
 - Talk with your colleagues.
-- Read your field’s literature.
+- Read your field's literature.
 - Run searches, in general and discipline-specific areas.
 - Investigate online communities encouraging open science, such as:
   - The EU's '[Foster Open Science](https://www.fosteropenscience.eu/)' program 
@@ -363,34 +380,18 @@ There are many repositories that host open data, software, and results. We share
 
 ### Continue Taking TOPS Open Science 101
 
-<img src="./images/clone/Module_1/image368.png" style={{width: '100%', height: 'auto'}} />
+<SingleFigure size='medium' src="./images/clone/Module_1/image368.png"/>
 
 
 The TOPS Open Science 101 curriculum is a good place to go for a more in-depth introduction to the various elements of Open Science – each of the next 4 modules provides details and practical exercises to help participants develop a better understanding of that specific topic.
 
 But, if you want to also do an in-person or virtual workshop, we got you!
 
-<table>
-    <colgroup>
-        <col style={{width: "33%"}} />
-        <col style={{width: "33%"}} />
-    </colgroup>
-    <tbody>
-        <tr>
-            <td><img src="./images/clone/Module_1/image403.jpg" style={{width: '98%', height: 'auto'}} />
-</td>
-            <td><img src="./images/clone/Module_1/image253.jpg" style={{width: '98%', height: 'auto'}} />
-</td>
-            <td><img src="./images/clone/Module_1/image34.jpg" style={{width: '98%', height: 'auto'}} />
-</td>
-        </tr>
-         <tr>
-            <td>Self-Paced Online Course</td>
-            <td>Online Workshops</td>
-            <td>In-person Workshops</td>
-        </tr>
-    </tbody>
-</table>
+<TripleFigure>
+  <SingleFigure src='./images/clone/Module_1/image403.jpg' caption='Self-Paced Online Course'/>
+  <SingleFigure src='./images/clone/Module_1/image253.jpg' caption='Online Workshops'/>
+  <SingleFigure src='./images/clone/Module_1/image34.jpg' caption='In-person Workshops'/>
+</TripleFigure>
 
 Images Credit: freepik.com
 
@@ -422,64 +423,37 @@ There is no one way of doing open science, and any steps you take to make your s
 - Open Science and Data Management Plans (OSDMP) provide a plan for how open science is integrated into a project including the sharing of data, software, and results.
 - Designing for openness is a critical aspect of making sure that open science is integrated into the entire scientific workflow from start to finish. This includes resources that can be used, products that will be made, and how the science will be shared.
 - Open Science is already happening - there are already teams conducting their research openly and many resources that can be used to make your research more open.
-- There are more opportunities to participate and learn about Open Science – this is just the start!
+- There are more opportunities to participate and learn about Open Science - this is just the start!
 
 
 ## Lesson 5: Knowledge Check
 
 Answer the following questions to test what you have learned so far.
 
-*Question*
-
-**01/04**
-
-Applying reproducibility practices separately on different parts of the project allows other researchers to do what?
-
-Select all that apply.
-
-- Expand research focus
-- Consider opportunities for more collaborative advantage
-- Test and reuse your work in their research
-- Cite your research more often to bring fair recognition to your work
-- Understand new discoveries
-
-*Question*
-
-**02/04**
-
-Read the statement and decide whether it's true or false.
-
-*The Open Science and Data Management Plan (OSDMP) describes how the scientific information that will be produced from scientific activities will be managed and made openly available.*
-
-- True
-- False
-
-*Question*
-
-**03/04**
-
-Read the statement and decide whether it's true or false.
-
-*Before starting a project, it is important for researchers to consider how they will collaborate with other researchers, what are the roles and responsibilities, and how and when they will share any materials.*
-
-- True
-- False
-
-*Question*
-
-**04/04**
-
-Which item is NOT one of the four steps to open science that anyone can take?
-
-Select all that apply.
-
-- Engage with underrepresented communities to ensure science encourages a more equitable, impactful, and
-positive future.
-- Ask colleagues about open science activities, and award credit for them in evaluations.
-- Think about all the different types of reviews you are involved with, and how to improve them with a goal of openness.
-- Create a new journal that requires an expensive subscription to read.
-- Keep seeking best practices for open science, and develop plans to be more open in your science or research.
-
+<SimpleQuiz>
+  <MultipleChoice question='Applying reproducibility practices separately on different parts of the project allows other researchers to do what?'>
+    <MultipleAnswer text='Expand research focus' id='answer-1' isAnswer='false'/>
+    <MultipleAnswer text='Consider opportunities for more collaborative advantage' id='answer-2' isAnswer='false'/>
+    <MultipleAnswer text='Test and reuse your work in their research' id='answer-3' isAnswer='true'/>
+    <MultipleAnswer text='Cite your research more often to bring fair recognition to your work' id='answer-4' isAnswer='true'/>
+    <MultipleAnswer text='Understand new discoveries' id='answer-5' isAnswer='false'/>
+  </MultipleChoice>
+  <SingleChoice question='The Open Science and Data Management Plan (OSDMP) describes how the scientific information that will be produced from scientific activities will be managed and made openly available.' answer='answer-1' isBool='true'>
+    <SingleAnswer text='True' id='answer-1'/>
+    <SingleAnswer text='False' id='answer-2'/>
+  </SingleChoice>
+  <SingleChoice question='Before starting a project, it is important for researchers to consider how they will collaborate with other researchers, what are the roles and responsibilities, and how and when they will share any materials.' answer='answer-1' isBool='true'>
+    <SingleAnswer text='True' id='answer-1'/>
+    <SingleAnswer text='False' id='answer-2'/>
+  </SingleChoice>
+  <SingleChoice question='Which item is NOT one of the four steps to open science that anyone can take?' answer='answer-4'>
+    <SingleAnswer text='Engage with underrepresented communities to ensure science encourages a more equitable, impactful, and positive future.' id='answer-1'/>
+    <SingleAnswer text='Ask colleagues about open science activities, and award credit for them in evaluations.' id='answer-2'/>
+    <SingleAnswer text='Think about all the different types of reviews you are involved with, and how to improve them with a goal of openness.' id='answer-3'/>
+    <SingleAnswer text='Create a new journal that requires an expensive subscription to read.' id='answer-4'/>
+    <SingleAnswer text='Keep seeking best practices for open science, and develop plans to be more open in your science or research.' id='answer-5'/>
+  </SingleChoice>
+</SimpleQuiz>
 
 ## The Ethos of the Open Science Summary
 
@@ -492,28 +466,13 @@ Congratulations! Now you should be able to:
 
 ### Further Resources
 
-**Masuzzo and Martens (2017). Do you speak Open Science? Resources and tips to learn the language**
-
-[CLICK TO LEARN](https://peerj.com/preprints/2689v1/)
-
-**Guiding Principles for Findable, Accessible, Interoperable and Re-usable Data. Publishing version B1.0, Force 11**
-
-[CLICK TO LEARN](https://www.force11.org/fairprinciples)
-
-**Fecher and Friesike (2014). Open Science: One Term, Five Schools of Thought**
-
-[CLICK TO LEARN](http://doi.org/10.1007/978-3-319-00026-8_2)
-
-**EC Working Group on Education and Skills under Open Science (2017). Providing researchers with the skills and competencies they need to practice Open Science**
-
-[CLICK TO LEARN](http://ec.europa.eu/)
-
-**"What is Open Science"**
-
-[CLICK TO LEARN](https://blog.f1000.com/2014/11/11/what-is-open-science/)
-
-**Resources for Earth Science**
-
-[CLICK TO LEARN](https://www.earthdatascience.org/)
+<Resources>
+  <Resource title="Masuzzo and Martens (2017). Do you speak Open Science? Resources and tips to learn the language" buttonTitle="Click to Learn" link="https://peerj.com/preprints/2689v1/"/>
+  <Resource title="Guiding Principles for Findable, Accessible, Interoperable and Re-usable Data. Publishing version B1.0, Force 11" buttonTitle="Click to Learn" link="https://www.force11.org/fairprinciples"/>
+  <Resource title="Fecher and Friesike (2014). Open Science: One Term, Five Schools of Thought" buttonTitle="Click to Learn" link="http://doi.org/10.1007/978-3-319-00026-8_2"/>
+  <Resource title="EC Working Group on Education and Skills under Open Science (2017). Providing researchers with the skills and competencies they need to practice Open Science" buttonTitle="Click to Learn" link="http://ec.europa.eu/"/>
+  <Resource title='"What is Open Science"' buttonTitle="Click to Learn" link="https://blog.f1000.com/2014/11/11/what-is-open-science/"/>
+  <Resource title="Resources for Earth Science" buttonTitle="Click to Learn" link="https://www.earthdatascience.org/"/>
+</Resources>
 
 <CompletionDocked/>

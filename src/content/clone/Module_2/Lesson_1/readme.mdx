@@ -1,4 +1,5 @@
 import CompletionDocked from '../../../../components/Simple/Completion/CompletionDocked.jsx';
+import QuoteImage from '../../../../components/Simple/Images/QuoteImage.jsx';
 
 # Lesson 1: Introduction to the Process of Open Science
 
@@ -13,32 +14,23 @@ After completing this lesson, you should be able to:
 - Define common types of research products including data, software, and results.
 - List common ways to share data, code, and results while practicing open science.
 
-
-
 ## Definition of Open Science and Research Products
 
 ### What is Open Science?
 
-<img style={{width: '100%', height: 'auto'}} src="./images/clone/Module_2/ostpquote.jpg" />
-
-"Open Science is the principle and practice of making research products and processes available to all, while respecting diverse cultures, maintaining security and privacy, and fostering collaborations, reproducibility, and equity."
-
-**The White House Ofﬁce of Science and Technology Policy (OSTP) and the National Science and Technology Council (NSTC)**
-
----
+<QuoteImage quote="Open Science is the principle and practice of making research products and processes available to all, while respecting diverse cultures, maintaining security and privacy, and fostering collaborations, reproducibility, and equity." byWho="The White House Ofﬁce of Science and Technology Policy (OSTP) and the National Science and Technology Council (NSTC)" bgImage="./images/clone/Module_2/ostpquote.jpg" />
 
 ### Open Research Products
 
 Scientific knowledge, or research products, take the form of:
 
-<img src="./images/clone/Module_2/image5.png" style={{width: 350, height: 'auto'}} />
-
+<SingleFigure size='small' src="./images/clone/Module_2/image5.png"/>
 
 Within these research products are additional types of products, such as methodologies, algorithms, and physical artifacts.
 
 ### What is Data?
 
-<img src="./images/clone/Module_2/image6.png" style={{width: 350, height: 'auto'}} />
+<SingleFigure size='small' src="./images/clone/Module_2/image6.png"/>
 
 
 In general, data are pieces of information about a subject, including theoretical truths, raw measurements, or highly processed values.
@@ -54,18 +46,26 @@ Open data can have many characteristics, including rich and robust metadata and 
 
 Many scientists write source code to produce software to analyze data or model observations. Code is a language that humans can type and understand. Software is often a collection of programs, data, and other information that a computer system uses to perform specific tasks. Scientists write and use many different types of software as part of their research.
 
-**General Purpose Software** – Software produced for widespread use, not specialized scientific purposes. This encompasses both commercial software and open-source software.
-
-**Operational and Infrastructure Software** – Software used by data centers and large information technology facilities to provide data services.
-
-**Libraries** – Generic tools that implement well-known algorithms, provide statistical analysis or visualization, etc., which are incorporated in other software categories.
-
-**Modeling and Simulation Software** – Software that either implements solutions to mathematical equations given input data and boundary conditions, or infers models from data.
-
-**Analysis Software** – Software developed to manipulate measurements or model results to visualize or gain understanding.
-
-**Single-use Software** – Software written for use in unique instances, such as making a plot for a paper, or manipulating data in a specific way.
-
+<Definitions>
+  <Definition title='General Purpose Software'>
+    Software produced for widespread use, not specialized scientific purposes. This encompasses both commercial software and open-source software.
+  </Definition>
+  <Definition title='Operational and Infrastructure Software'>
+    Software used by data centers and large information technology facilities to provide data services.
+  </Definition>
+  <Definition title='Libraries'>
+    Generic tools that implement well-known algorithms, provide statistical analysis or visualization, etc., which are incorporated in other software categories.
+  </Definition>
+  <Definition title='Modeling and Simulation Software'>
+    Software that either implements solutions to mathematical equations given input data and boundary conditions, or infers models from data.
+  </Definition>
+  <Definition title='Analysis Software'>
+    Software developed to manipulate measurements or model results to visualize or gain understanding.
+  </Definition>
+  <Definition title='Single-use Software'>
+    Software written for use in unique instances, such as making a plot for a paper, or manipulating data in a specific way.
+  </Definition>
+</Definitions>
 
 Some of the tools that you can use to develop software are introduced in Lesson 4. Understanding how to find and use others' code, create your own, and share it are an important part of advancing science and covered in the module on Open Code.
 
@@ -90,8 +90,7 @@ The following lessons in this module explore different tools and resources avail
 
 ### The Components of Open Science
 
-<img src="./images/clone/Module_2/image7.png" style={{width: '100%', height: 'auto'}} />
-
+<SingleFigure size='large' src="./images/clone/Module_2/image7.png"/>
 
 The four principal components of open science can be organized in a pyramid of openly-shared research products.
 
@@ -103,15 +102,13 @@ The practice of sharing these components can occur at varying degrees of complet
 
 Data can be easily shared through many different services - the best way for scientific data to be shared is often through a long term data repository that will both preserve your data and make it discoverable. The image provides some of the considerations when sharing the data through [Zenodo](https://zenodo.org/), a generalist data repository. These considerations would be similar for other data repositories. See Module 3 - Open Data for more details on sharing open data.
 
-<img src="./images/clone/Module_2/image8.png" style={{width: '100%', height: 'auto'}} />
-
+<SingleFigure size='full' src="./images/clone/Module_2/image8.png"/>
 
 ### Sharing Open Code
 
 When sharing open code, it is often through an online version controlled platform that allows others to contribute to the software and provides a history of changes to the software. For example, many researchers choose to post code files on [GitHub](https://github.com/) with a BSD 3-Clause license. This permits others to contribute and reuse the software. Steps to preserve code and make it discoverable are discussed in Module 4 - Open Code.
 
-<img src="./images/clone/Module_2/image9.png" style={{width: '100%', height: 'auto'}} />
-
+<SingleFigure size='full' src="./images/clone/Module_2/image9.png"/>
 
 ### Sharing an Open Paper
 
@@ -125,36 +122,38 @@ When sharing results, include your methodology that was used to produce results 
 
 Here is an example of how one group openly shared their data, results, software, and paper; all with their own unique identifiers. Note that data and software can each have multiple identifiers, enabling others to cite all versions or one unique version.
 
-<img src="./images/clone/Module_2/image10.jpeg" style={{width: '100%', height: 'auto'}} />
-
+<SingleFigure size='full' src="./images/clone/Module_2/image10.jpeg"/>
 
  Here, you can review the separate elements of the image above. Select "\<" and "\>" buttons to navigate.
 
-<img src="./images/clone/Module_2/image11.jpeg" style={{width: '100%', height: 'auto'}} />
+<SimpleSlider>
+  <SliderItem>
+    <img src="./images/clone/Module_2/image11.jpeg" style={{width: '100%', height: 'auto'}} />
+
+    **Data**
+
+    This version: [https://doi.org/10.5281/zenodo.3688691](https://doi.org/10.5281/zenodo.3688691)
+
+    All versions: [https://doi.org/10.5281/zenodo.3688690](https://doi.org/10.5281/zenodo.3688690)
+  </SliderItem>
+  <SliderItem>
+    <img src="./images/clone/Module_2/image12.jpeg" style={{width: '100%', height: 'auto'}} />
 
 
- **Data**
+    **Results**
 
- This version: [https://doi.org/10.5281/zenodo.3688691](https://doi.org/10.5281/zenodo.3688691)
+    [https://doi.org/10.1175/JHM-D-19-0084.1](https://doi.org/10.1175/JHM-D-19-0084.1)
+  </SliderItem>
+  <SliderItem>
+    <img src="./images/clone/Module_2/image13.jpeg" style={{width: '100%', height: 'auto'}} />
 
-All versions: [https://doi.org/10.5281/zenodo.3688690](https://doi.org/10.5281/zenodo.3688690)
+    Software
 
-<img src="./images/clone/Module_2/image12.jpeg" style={{width: '100%', height: 'auto'}} />
+    This version: [https://github.com/c-h-david/rapid](https://github.com/c-h-david/rapid) 
 
-
-**Results**
-
-  [https://doi.org/10.1175/JHM-D-19-0084.1](https://doi.org/10.1175/JHM-D-19-0084.1)
-
-<img src="./images/clone/Module_2/image13.jpeg" style={{width: '100%', height: 'auto'}} />
-
-
-Software
-
-This version: [https://github.com/c-h-david/rapid](https://github.com/c-h-david/rapid) 
-
-All versions: [https://zenodo.org/records/10161527](https://zenodo.org/records/10161527)
-
+    All versions: [https://zenodo.org/records/10161527](https://zenodo.org/records/10161527)
+  </SliderItem>
+</SimpleSlider>
 
 ## Lesson 1: Summary
 
@@ -168,40 +167,26 @@ In this lesson, you learned:
 
 Answer the following questions to test what you have learned so far.
 
-*Question*
-
-**01/03** 
-
-Read the statement below and decide whether it's true or false:
-
-*Open Science is the principle and practice of making research products and processes available to all, while respecting diverse cultures, maintaining security and privacy, and fostering collaborations, reproducibility, and equity.*
-
-- True
-- False
-
-*Question*
-
-**02/03** 
-
-What are the four principal outputs of open science? Select all that apply.
-
-- Budgets
-- Results
-- Inclusion
-- Data
-- Code
-- Paper
-
-*Question*
-
-**03/03** 
-
-Which of the following is a type of software? Select all that apply.
-
-- General purpose
-- Operational and Infrastructure
-- Modeling and Simulation
-- Analysis
-- Material
+<SimpleQuiz>
+  <SingleChoice question='Open Science is the principle and practice of making research products and processes available to all, while respecting diverse cultures, maintaining security and privacy, and fostering collaborations, reproducibility, and equity.' answer='answer-1' isBool='true'>
+    <SingleAnswer text='True' id='answer-1'/>
+    <SingleAnswer text='False' id='answer-2'/>
+  </SingleChoice>
+  <MultipleChoice question='What are the four principal outputs of open science?'>
+    <MultipleAnswer text='Budgets' id='answer-1' isAnswer='false'/>
+    <MultipleAnswer text='Results' id='answer-2' isAnswer='true'/>
+    <MultipleAnswer text='Inclusion' id='answer-3' isAnswer='false'/>
+    <MultipleAnswer text='Data' id='answer-4' isAnswer='true'/>
+    <MultipleAnswer text='Code' id='answer-5' isAnswer='true'/>
+    <MultipleAnswer text='Paper' id='answer-6' isAnswer='true'/>
+  </MultipleChoice>
+  <MultipleChoice question='Which of the following is a type of software?'>
+    <MultipleAnswer text='General purpose' id='answer-1' isAnswer='true'/>
+    <MultipleAnswer text='Operational and Infrastructure' id='answer-2' isAnswer='true'/>
+    <MultipleAnswer text='Modeling and Simulation' id='answer-3' isAnswer='true'/>
+    <MultipleAnswer text='Analysis' id='answer-4' isAnswer='true'/>
+    <MultipleAnswer text='Material' id='answer-5' isAnswer='false'/>
+  </MultipleChoice>
+</SimpleQuiz>
 
 <CompletionDocked/>

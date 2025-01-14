@@ -9,6 +9,37 @@ import Module3 from '../../../../content/clone/Module_3/readme.mdx';
 import Module4 from '../../../../content/clone/Module_4/readme.mdx';
 import Module5 from '../../../../content/clone/Module_5/readme.mdx';
 
+import Banner from '../../../../components/Simple/Banner.jsx';
+import Definitions from '../../../../components/Simple/Definitions/Definitions.jsx';
+import Definition from '../../../../components/Simple/Definitions/Definition.jsx';
+import SimpleFinish from './SimpleFinish';
+import Table from 'react-bootstrap/Table';
+import SimpleQuiz from '../../../Simple/Quiz/SimpleQuiz.jsx';
+import SingleChoice from '../../../Simple/Quiz/SingleChoice/SingleChoice.jsx';
+import SingleAnswer from '../../../Simple/Quiz/SingleChoice/SingleAnswer.jsx';
+import MultipleChoice from '../../../Simple/Quiz/MultipleChoice/MultipleChoice.jsx';
+import MultipleAnswer from '../../../Simple/Quiz/MultipleChoice/MultipleAnswer.jsx';
+import Match from '../../../Simple/Quiz/Match/Match.jsx';
+import Matchable from '../../../Simple/Quiz/Match/Matchable.jsx';
+import MultipleMatch from '../../../Simple/Quiz/MultipleMatch/MultipleMatch.jsx';
+import MultipleMatchable from '../../../Simple/Quiz/MultipleMatch/MultipleMatchable.jsx';
+import FillBlank from '../../../Simple/Quiz/FillBlank/FillBlank.jsx';
+import Blank from '../../../Simple/Quiz/FillBlank/Blank.jsx';
+import Tab from 'react-bootstrap/Tab';
+import CustomTabs from '../../../../components/Simple/CustomTabs/CustomTabs.jsx';
+import CompletionDocked from '../../../../components/Simple/Completion/CompletionDocked.jsx';
+import QuoteImage from '../../../../components/Simple/Images/QuoteImage.jsx';
+import SingleFigure from '../../../../components/Simple/Images/SingleFigure.jsx';
+import DoubleFigure from '../../../../components/Simple/Images/DoubleFigure.jsx';
+import TripleFigure from '../../../../components/Simple/Images/TripleFigure.jsx';
+import SimpleSlider from '../../../../components/Simple/Slider/SimpleSlider.jsx';
+import MultiSlider from '../../../../components/Simple/Slider/MultiSlider.jsx';
+import SliderItem from '../../../../components/Simple/Slider/SliderItem.jsx';
+import Youtube from '../../../../components/Simple/Video/Youtube.jsx';
+import InfoBox from '../../../../components/Simple/InfoBox/InfoBox.jsx';
+import Resources from '../../../../components/Simple/Resources/Resources.jsx';
+import Resource from '../../../../components/Simple/Resources/Resource.jsx';
+
 const modules = {
   1: Module1,
   2: Module2,
@@ -28,7 +59,7 @@ function SimpleModule() {
 
         return createElement(
           modules[child.id],
-          { className: '' }
+          { className: '', components: {Banner, Definitions, Definition, Table, SimpleQuiz, SingleChoice, SingleAnswer, MultipleChoice, MultipleAnswer, Match, Matchable, MultipleMatch, MultipleMatchable, FillBlank, Blank, Tab, CustomTabs, CompletionDocked, QuoteImage, SingleFigure, DoubleFigure, TripleFigure, SimpleSlider, MultiSlider, SliderItem, Youtube, InfoBox, Resources, Resource } }
         );
       }
     })

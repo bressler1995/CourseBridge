@@ -1,4 +1,6 @@
 import CompletionDocked from '../../../../components/Simple/Completion/CompletionDocked.jsx';
+import Tab from 'react-bootstrap/Tab';
+import CustomTabs from '../../../../components/Simple/CustomTabs/CustomTabs.jsx';
 
 # Lesson 2: General Tools for Open Science
 
@@ -38,7 +40,7 @@ A digital persistent identifier (or "PID") is a "long-lasting reference to a dig
 
 ### ORCID
 
-<img style={{width: 350, height: 'auto'}} src="./images/clone/Module_2/m2orcidlogo.jpg" />
+<SingleFigure size='small' src="./images/clone/Module_2/m2orcidlogo.jpg"/>
 
  An "Open Researcher and Contributor Identifier" (ORCID) provides valid information about a person. Following are some key details about ORCIDs. 
  
@@ -61,15 +63,13 @@ Making a DOI for your product ensures its longevity! This means, if you cite a D
 
 For example, the DOI: [10.5067/TERRA-AQUA/CERES/EBAF-TOA_L3B004.1](https://doi.org/10.5067/TERRA-AQUA/CERES/EBAF-TOA_L3B004.1) will always resolve to a web page that explains what the CERES_EBAF-TOA_Edition4.1 data set is and how to download it. (See the screenshot below if you’re curious what this dataset actually is!)
 
-DOIs are provided and maintained by the International Organization for Standardization ([I SO](https://www.iso.org/home.html)): [https://www.doi.org/](https://www.doi.org/).
+DOIs are provided and maintained by the International Organization for Standardization ([ISO](https://www.iso.org/home.html)): [https://www.doi.org/](https://www.doi.org/).
 
-<img src="./images/clone/Module_2/image18.png" style={{width: 350, height: 'auto'}} />
-
+<SingleFigure size='small' src="./images/clone/Module_2/image18.png"/>
 
 ### Citations Using DOIs
 
-<img src="./images/clone/Module_2/image19.jpeg" style={{width: '100%', height: 'auto'}} />
-
+<SingleFigure size='large' src="./images/clone/Module_2/image19.jpeg"/>
 
 DOIs make citing research products easier and more useful.
 
@@ -100,59 +100,19 @@ This is how easy it should be for your readers to find and use your citation inf
 
 ### Examples of PIDs in Action
 
-<img src="./images/clone/Module_2/image22.png" style={{width: '100%', height: 'auto'}} />
+<SingleFigure size='full' src="./images/clone/Module_2/image22.png"/>
 
-
-<table>
-  <thead>
-    <tr>
-        <th>Example 1 &#9745;</th>
-        <th>Example 2</th>
-        <th>Example 3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <p>The necessity for a persistent identifier (PID) begins when a researcher writes code. To make the code searchable, the researcher uploads their code to a repository and registers a DOI for their script. Now others can review and use the code, and cite it properly.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-        <th>Example 1</th>
-        <th>Example 2 &#9745;</th>
-        <th>Example 3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <p>A workshop planning committee collaboratively authors a paper that summarizes the results of a workshop. They collect the ORCIDs of everyone who participated in the workshop, and include them in the paper. Finally, they publish in an academic journal that automatically assigns the paper a DOI.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-        <th>Example 1</th>
-        <th>Example 2</th>
-        <th>Example 3 &#9745;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <p>A community scientist attends an online conference and gives a short talk. They deposit their slides in an online repository, then create a DOI to enable easy sharing with colleagues and straightforward citation.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
+<CustomTabs>
+    <Tab eventKey="one" title="Example 1">
+      The necessity for a persistent identifier (PID) begins when a researcher writes code. To make the code searchable, the researcher uploads their code to a repository and registers a DOI for their script. Now others can review and use the code, and cite it properly.
+    </Tab>
+    <Tab eventKey="two" title="Example 2">
+      A workshop planning committee collaboratively authors a paper that summarizes the results of a workshop. They collect the ORCIDs of everyone who participated in the workshop, and include them in the paper. Finally, they publish in an academic journal that automatically assigns the paper a DOI.
+    </Tab>
+    <Tab eventKey="three" title="Example 3">
+      A community scientist attends an online conference and gives a short talk. They deposit their slides in an online repository, then create a DOI to enable easy sharing with colleagues and straightforward citation.
+    </Tab>
+</CustomTabs>
 
 ## Useful Open Science Tools
 
@@ -191,56 +151,17 @@ Many standards exist for metadata fields and structures to describe general data
 
 There are different types/categories of metadata addressing different purposes:
 
- <table>
-  <thead>
-    <tr>
-        <th>Descriptive Metadata &#9745;</th>
-        <th>Structural Metadata</th>
-        <th>Administrative Metadata</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <p>Descriptive metadata can contain information about the context and content of your data, such as variable definition, data limitation, measurement/ sampling description, abstract, title, and subject keywords.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
- <table>
-  <thead>
-    <tr>
-        <th>Descriptive Metadata</th>
-        <th>Structural Metadata &#9745;</th>
-        <th>Administrative Metadata</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <p>Structural metadata are used to describe the structure of the data (e.g., file format, the dataset hierarchy, and dimensions).</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
- <table>
-  <thead>
-    <tr>
-        <th>Descriptive Metadata</th>
-        <th>Structural Metadata</th>
-        <th>Administrative Metadata &#9745;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <p>Administrative metadata explains the information used to manage the data (e.g., when and how it was created, which software and the version of the software used in data creation).</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
+<CustomTabs>
+    <Tab eventKey="one" title="Descriptive Metadata">
+      Descriptive metadata can contain information about the context and content of your data, such as variable definition, data limitation, measurement/ sampling description, abstract, title, and subject keywords.
+    </Tab>
+    <Tab eventKey="two" title="Structural Metadata">
+      Structural metadata are used to describe the structure of the data (e.g., file format, the dataset hierarchy, and dimensions).
+    </Tab>
+    <Tab eventKey="three" title="Administrative Metadata">
+      Administrative metadata explains the information used to manage the data (e.g., when and how it was created, which software and the version of the software used in data creation).
+    </Tab>
+</CustomTabs>
 
 ### Documentation
 
@@ -248,67 +169,27 @@ Documenting the production and management of your science benefits both you and 
 
 Types of documentation include (many of which will be expanded upon later in this curriculum):
 
- <table>
-  <thead>
-    <tr>
-        <th>Data &#9745;</th>
-        <th>Software</th>
-        <th>Results</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-        <p>Summary of the data (e.g., as a README file or user guide) that answers questions such as:</p>
+<CustomTabs>
+    <Tab eventKey="one" title="Data">
+      <p>Summary of the data (e.g., as a README file or user guide) that answers questions such as:</p>
         <ul>
             <li>What are known errors for these data?</li>
             <li>How can this data be used?</li>
             <li>How were the data collected?</li>
         </ul>
-        <p>Associated publications – how did others use these data?</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-        <th>Data</th>
-        <th>Software &#9745;</th>
-        <th>Results</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <p>README files: Basic installation and usage instructions.</p>
-            <p>Inline comments in code: Annotations on code components.</p>
-            <p>Release notes: What is new in this version?</p>
-            <p>Associated publications: How did others use this software?</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-        <th>Data</th>
-        <th>Software</th>
-        <th>Results &#9745;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <p>Associated publications: What was the research process?</p>
-            <p>Packages of data and software for regenerating results.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
+        <p>Associated publications - how did others use these data?</p>
+    </Tab>
+    <Tab eventKey="two" title="Software">
+      <p>README files: Basic installation and usage instructions.</p>
+      <p>Inline comments in code: Annotations on code components.</p>
+      <p>Release notes: What is new in this version?</p>
+      <p>Associated publications: How did others use this software?</p>
+    </Tab>
+    <Tab eventKey="three" title="Results">
+      <p>Associated publications: What was the research process?</p>
+      <p>Packages of data and software for regenerating results.</p>
+    </Tab>
+</CustomTabs>
 
 ### Repositories
 
@@ -329,77 +210,20 @@ Pre-registration is the process by which a researcher documents their research p
 
 Types of Pre-Registration Include:
 
-<table>
-  <thead>
-    <tr>
-        <th>Standard Pre-registration &#9745;</th>
-        <th>Registered Reports</th>
-        <th>Registered Replication Report</th>
-        <th>Sharing Grant Proposals</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={4}>
-            <p>An investigator documents their plans in writing and submits them to a pre-registration service. This documents the researcher’s plans prior to undertaking the research, and provides investigators and reviewers with a way to distinguish a priori hypotheses from post-hoc exploratory analyses. The document may be kept private for some period of time, but is usually made public upon submission of the manuscript for publication.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-        <th>Standard Pre-registration</th>
-        <th>Registered Reports &#9745;</th>
-        <th>Registered Replication Report</th>
-        <th>Sharing Grant Proposals</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={4}>
-            <p>An investigator writes a manuscript describing the motivation for a study and a detailed description of the methods, and submits it to a journal for peer review prior to undertaking the research. The manuscript is reviewed based on the importance of the research question and the quality of the methods. If accepted, the journal agrees to publish the paper regardless of the results, assuming that there are no problems with the implementation of the methods.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-        <th>Standard Pre-registration</th>
-        <th>Registered Reports</th>
-        <th>Registered Replication Report &#9745;</th>
-        <th>Sharing Grant Proposals</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={4}>
-            <p>A type of registered report in which the investigators wish to attempt to replicate a particular published finding, usually involving multiple research sites.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-        <th>Standard Pre-registration</th>
-        <th>Registered Reports</th>
-        <th>Registered Replication Report</th>
-        <th>Sharing Grant Proposals &#9745;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={4}>
-            <p>Another way to document and timestamp research plans and concepts is to share funded grant proposals publicly. This has the added benefit of making the funding process more transparent, and providing examples of successful grant proposals for other researchers, particularly those in their early career stage.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
+<CustomTabs>
+    <Tab eventKey="one" title="Standard Pre-registration">
+      An investigator documents their plans in writing and submits them to a pre-registration service. This documents the researcher's plans prior to undertaking the research, and provides investigators and reviewers with a way to distinguish a priori hypotheses from post-hoc exploratory analyses. The document may be kept private for some period of time, but is usually made public upon submission of the manuscript for publication.
+    </Tab>
+    <Tab eventKey="two" title="Registered Reports">
+      An investigator writes a manuscript describing the motivation for a study and a detailed description of the methods, and submits it to a journal for peer review prior to undertaking the research. The manuscript is reviewed based on the importance of the research question and the quality of the methods. If accepted, the journal agrees to publish the paper regardless of the results, assuming that there are no problems with the implementation of the methods.
+    </Tab>
+    <Tab eventKey="three" title="Registered Replication Report">
+      A type of registered report in which the investigators wish to attempt to replicate a particular published finding, usually involving multiple research sites.
+    </Tab>
+    <Tab eventKey="four" title="Sharing Grant Proposals">
+      Another way to document and timestamp research plans and concepts is to share funded grant proposals publicly. This has the added benefit of making the funding process more transparent, and providing examples of successful grant proposals for other researchers, particularly those in their early career stage.
+    </Tab>
+</CustomTabs>
 
 ### Why is Pre-Registration Important?
 
@@ -440,8 +264,7 @@ The OSDMP describes how the scientific information that will be produced from sc
 
 A well written OSDMP can help you win funding because it demonstrates your skills at doing open science!
 
- <img src="./images/clone/Module_2/image24.png" style={{width: '100%', height: 'auto'}} />
-
+<SingleFigure size='large' src="./images/clone/Module_2/image24.png"/>
 
 Example sections to include in an OSDMP:
 
@@ -453,20 +276,33 @@ Example sections to include in an OSDMP:
 
 The steps for each of these sections should include:
 
-- What?
-  - Description of types of materials that will be
-produced
-- When?
-  - The schedule for archiving and sharing
-- Where?
-  - The repository(ies) and archives that will be
-used to share materials
-- How?
-  - The details of how to enable reuse of
-materials (e.g., licensing, documentation,
-metadata)
-- Who?
-  - Roles and responsibilities of the team members
+<MultiSlider>
+  <SliderItem type="multi">
+    ### What?
+    
+    Description of types of materials that will be produced
+  </SliderItem>
+  <SliderItem type="multi">
+    ### When?
+    
+    The schedule for archiving and sharing
+  </SliderItem>
+  <SliderItem type="multi">
+    ### Where?
+    
+    The repository(ies) and archives that will be used to share materials
+  </SliderItem>
+  <SliderItem type="multi">
+    ### How?
+    
+    The details of how to enable reuse of materials (e.g., licensing, documentation, metadata)
+  </SliderItem>
+  <SliderItem type="multi">
+    ### Who?
+    
+    Roles and responsibilities of the team members
+  </SliderItem>
+</MultiSlider>
 
 ### Data Management Plan
 
@@ -573,44 +409,28 @@ In this lesson, we learned:
 
 Answer the following questions to test what you have learned so far.
 
- *Question*
-
-**01/03** 
-
- What can open science tools help with?
-
-- Discovery
-- Writing
-- Outreach 
-- All of above
-
-*Question*
-
-**02/03** 
-
-Complete the statement:
-
-*Good, clear Metadata _____.* 
-
-Select all that apply.
-
-- Improves findability
-- Improves accessibility
-- Improves interoperability
-- Improves reusability
-- Is a waste of time
-
-*Question*
-
-**03/03** 
- 
- Which are the components of a Software Management Plan? Select all that apply.
-
--  Description of the software
-- Repository(ies) in which software will be archived
-- Sharing guidelines
-- Personnel roles and responsibilities
-- Any community-specific information of note
-- Creating a logo
+<SimpleQuiz>
+  <SingleChoice question=' What can open science tools help with?' answer='answer-4'>
+    <SingleAnswer text='Discovery' id='answer-1'/>
+    <SingleAnswer text='Writing' id='answer-2'/>
+    <SingleAnswer text='Outreach' id='answer-3'/>
+    <SingleAnswer text='All of above' id='answer-4'/>
+  </SingleChoice>
+  <MultipleChoice question='Complete the statement: Good, clear Metadata _____.'>
+    <MultipleAnswer text='Improves findability' id='answer-1' isAnswer='true'/>
+    <MultipleAnswer text='Improves accessibility' id='answer-2' isAnswer='true'/>
+    <MultipleAnswer text='Improves interoperability' id='answer-3' isAnswer='true'/>
+    <MultipleAnswer text='Improves reusability' id='answer-4' isAnswer='true'/>
+    <MultipleAnswer text='Is a waste of time' id='answer-5' isAnswer='false'/>
+  </MultipleChoice>
+  <MultipleChoice question='Which are the components of a Software Management Plan?'>
+    <MultipleAnswer text='Description of the software' id='answer-1' isAnswer='true'/>
+    <MultipleAnswer text='Repository(ies) in which software will be archived' id='answer-2' isAnswer='true'/>
+    <MultipleAnswer text='Sharing guidelines' id='answer-3' isAnswer='true'/>
+    <MultipleAnswer text='Personnel roles and responsibilities' id='answer-4' isAnswer='true'/>
+    <MultipleAnswer text='Any community-specific information of note' id='answer-5' isAnswer='true'/>
+    <MultipleAnswer text='Creating a logo' id='answer-6' isAnswer='false'/>
+  </MultipleChoice>
+</SimpleQuiz>
 
 <CompletionDocked/>

@@ -10,10 +10,15 @@
 
 .os101_simpleTabs .nav.nav-tabs {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     background-color: var(--bg-dark);
-    justify-content: center;
     border: none;
+    white-space: nowrap;
+    list-style-type: none;
+    overflow-x: auto;
+    height: auto;
+    flex-wrap: initial;
+    width: 100%;
 }
 
 .os101_simpleTabs .tab-content {
@@ -27,15 +32,10 @@
     margin: 0;
 }
 
-.os101_simpleTabs .tab-content p:last-child img:last-child {
-    margin-bottom: 0;
-}
-
 .os101_simpleTabs .nav.nav-tabs .nav-item {
-    display: inline-block;
+    display: inline;
     background-color: transparent;
-    width: auto;
-    max-width: 300px;
+    width: 200px;
     height: auto;
     border: none;
     border-radius: 0px;
@@ -44,6 +44,11 @@
 
 .os101_simpleTabs .nav.nav-tabs .nav-item:first-of-type {
     border-left: 1px solid rgba(255, 255, 255, 0.2);
+    margin-left: auto;
+}
+
+.os101_simpleTabs .nav.nav-tabs .nav-item:last-of-type {
+    margin-right: auto;
 }
 
 .os101_simpleTabs .nav.nav-tabs .nav-item .nav-link {
@@ -53,16 +58,15 @@
     border: none;
     border-radius: 0;
     margin-bottom: 0;
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 13.5px;
+    line-height: 17.5px;
     font-weight: 700;
     padding: 15px;
     padding-left: 25px;
     padding-right: 25px;
-    width: auto;
+    width: 200px;
     min-height: 100%;
-    justify-content: stretch;
-
+    white-space: normal;
 }
 
 .os101_simpleTabs .nav.nav-tabs .nav-item .nav-link:not(.active):hover {

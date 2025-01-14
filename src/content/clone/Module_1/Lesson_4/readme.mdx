@@ -1,5 +1,3 @@
-import CompletionDocked from '../../../../components/Simple/Completion/CompletionDocked.jsx';
-
 # Lesson 4: When Not to be Open
 
 ## Overview
@@ -19,7 +17,7 @@ After completing this lesson, you should be able to:
 
 ### Activity 4.1: Self Reflection on Open Science Concerns
 
-<img style={{width: 350, height: 'auto'}} src="./images/clone/Module_1/lightbulb.png" />
+<SingleFigure size='small' src="./images/clone/Module_1/lightbulb.png"/>
 
 Take a moment to think about what fears or concerns you have around adopting open science. These could be concerns you have experienced in your work, or fears you have for being more open moving forward. There are no wrong answers here – this is a time for you to reflect on what might be keeping you back from doing open science.
 
@@ -29,7 +27,7 @@ Now that you've reflected on some of your concerns or fears around open science,
 
 **Table:** Common Fears About Open Science
 
-<table>
+<Table>
 <colgroup>
     <col style={{width: "33%"}} />
     <col style={{width: "66%"}} />
@@ -88,7 +86,7 @@ Now that you've reflected on some of your concerns or fears around open science,
         </td>
     </tr>
 </tbody>
-</table>
+</Table>
 
 Partially drawn from [Malvika Sharan's "Ten Lessons Against Open Science You Can Win"](https://www.software.ac.uk/blog/2020-12-17-ten-arguments-against-open-science-you-can-win)
 
@@ -110,7 +108,7 @@ Incentives can come in many forms, but most in science involve proposal funding 
 
 #### Challenge: Overvaluing Novelty
 
-<img src="./images/clone/Module_1/image330.jpg" style={{width: '100%', height: 'auto'}} />
+<SingleFigure size='medium' src="./images/clone/Module_1/image330.jpg"/>
 
 Awards (for example prizes or funding) are often given to those who make a big, new scientific discoveries or who create a new, exciting tool. This practice overlooks the community that wrote code, curated datasets, maintained fundamental existing tools, and many other important steps that enabled these novelties.
 
@@ -126,15 +124,11 @@ Updated metrics of success can help to incentivize individuals to do their work 
 
 In this activity, reflect on your answers to the questions and then compare your thoughts to the key takeaways.
 
-<img style={{width: 350, height: 'auto'}} src="./images/clone/Module_1/tobeopen.jpg" />
-
-Image credit: NASA 2023 @ Stennis Space Center.
-
----
+<SingleFigure size='small' src="./images/clone/Module_1/tobeopen.jpg" caption='Image credit: NASA 2023 @ Stennis Space Center.'/>
 
 Conferences are open places – most of the time. Think about who can attend a conference. How open/closed is it?
 
-<img style={{width: 350, height: 'auto'}} src="./images/clone/Module_1/subscribetojournal.jpg" />
+<SingleFigure size='small' src="./images/clone/Module_1/subscribetojournal.jpg"/>
 
 Publications can have both open and closed elements. How is it open?
 
@@ -142,7 +136,7 @@ Publications can have both open and closed elements. How is it open?
 
 ### Challenge: Collaboration & Community - Open community members don’t always agree with one other
 
-<img src="./images/clone/Module_1/image252.png" style={{width: 350, height: 'auto'}} />
+<SingleFigure size='small' src="./images/clone/Module_1/image252.png"/>
 
 Meaningful collaborations across diverse communities can require additional time and effort to coordinate across groups and to address conflicts. While interacting with the community can be one of the most fulfilling things about Open Science, it might also be a source of disagreements about the direction of the project or how it should be used. That’s where licenses and codes of conduct come into play. Clear rules for community- and colleague- interactions and use of resources provide a framework to make decisions in a fair and agreed-upon manner. This can all take additional time, especially at the beginning of a research project, but can save time and headaches down the road.
 
@@ -197,76 +191,37 @@ The following are the key takeaways from this lesson:
 
 Answer the following questions to test what you have learned so far.
 
-*Question*
-
-**01/05**
-
-Match the open science concern with a potential mitigation strategy.
-
-<table>
-  <tbody><tr>
-      <td>Share your work early and make it easily citable</td>
-      <td>Someone might reuse my work and get the credit</td>
-    </tr>
-    <tr>
-      <td>Add clear licensing, documentation, and contributing guidelines</td>
-      <td>Someone might misinterpret my work</td>
-    </tr>
-    <tr>
-      <td>Provide appropriate documentation for your research products</td>
-      <td>I don't want to maintain my work</td>
-    </tr>
-  </tbody></table>
-
-
-*Question*
-
-**02/05**
-
-Read the statement below and decide whether it's true or false.
-
-*Open science can take more time and resources.*
-
-- True
-- False
-
-*Question*
-
-**03/05**
-
-Which of the following are strategies to encourage openness in your discussions?
-
-Select all that apply.
-
-- Attempt collaboration before conflict.
-- Speak loudly.
-- Listen carefully and actively.
-- Presume that everyone you work with is doing the best they can.
-- Use jargon specific to your discipline.
-
-*Question*
-
-**04/05**
-
-Read the statement below and decide whether it's true or false.
-
-*All the needed infrastructure is in place to support open science across all disciplines.*
-
-- True
-- False
-
-*Question*
-
-**05/05**
-
-There are times when open science can be a source of disagreements about the direction of the project or how it should be used. What factors should project creators consider to overcome those obstacles?
-
-Select all that apply.
-
-- Governance
-- Planning
-- Licenses
-- Codes of Conduct
-- Setting expectations for community interactions
+<SimpleQuiz>
+  <Match question='Match the open science concern with a potential mitigation strategy.'>
+    <Matchable id="draggable_1" type="draggable" text="Add clear licensing, documentation, and contributing guidelines"/>
+    <Matchable id="draggable_2" type="draggable" text="Share your work early and make it easily citable"/>
+    <Matchable id="draggable_3" type="draggable" text="Provide appropriate documentation for your research products"/> 
+    <Matchable id="droppable_1" type="droppable" text="Someone might reuse my work and get the credit" answer="draggable_2"/>
+    <Matchable id="droppable_2" type="droppable" text="Someone might misinterpret my work" answer="draggable_3"/>
+    <Matchable id="droppable_3" type="droppable" text="I don't want to maintain my work" answer="draggable_1"/>
+  </Match>
+  <SingleChoice question='Open science can take more time and resources.' answer='answer-1' isBool='true'>
+    <SingleAnswer text='True' id='answer-1'/>
+    <SingleAnswer text='False' id='answer-2'/>
+  </SingleChoice>
+  <MultipleChoice question='Which of the following are strategies to encourage openness in your discussions?'>
+    <MultipleAnswer text='Attempt collaboration before conflict.' id='answer-1' isAnswer='true'/>
+    <MultipleAnswer text='Speak loudly.' id='answer-2' isAnswer='false'/>
+    <MultipleAnswer text='Listen carefully and actively.' id='answer-3' isAnswer='true'/>
+    <MultipleAnswer text='Presume that everyone you work with is doing the best they can.' id='answer-4' isAnswer='true'/>
+    <MultipleAnswer text='Use jargon specific to your discipline.' id='answer-5' isAnswer='false'/>
+  </MultipleChoice>
+  <SingleChoice question='All the needed infrastructure is in place to support open science across all disciplines.' answer='answer-2' isBool='true'>
+    <SingleAnswer text='True' id='answer-1'/>
+    <SingleAnswer text='False' id='answer-2'/>
+  </SingleChoice>
+  <MultipleChoice question='There are times when open science can be a source of disagreements about the direction of the project or how it should be used. What factors should project creators consider to overcome those obstacles?'>
+    <MultipleAnswer text='Governance' id='answer-1' isAnswer='true'/>
+    <MultipleAnswer text='Planning' id='answer-2' isAnswer='true'/>
+    <MultipleAnswer text='Licenses' id='answer-3' isAnswer='true'/>
+    <MultipleAnswer text='Codes of Conduct' id='answer-4' isAnswer='true'/>
+    <MultipleAnswer text='Setting expectations for community interactions' id='answer-5' isAnswer='true'/>
+  </MultipleChoice>
+</SimpleQuiz>
 
 <CompletionDocked/>

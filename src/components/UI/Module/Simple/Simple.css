@@ -72,7 +72,7 @@ body {
     margin-bottom: 15px;
 }
 
-.os101Content.simpleContent .os101Content_container p strong, .os101Content.simpleContent .os101Content_container li strong, .os101Content.simpleContent .os101Content_container table td strong, .os101Content.simpleContent .os101Content_container table th strong {
+.os101Content.simpleContent .os101Content_container p strong, .os101Content.simpleContent .os101Content_container div strong, .os101Content.simpleContent .os101Content_container li strong, .os101Content.simpleContent .os101Content_container table td strong, .os101Content.simpleContent .os101Content_container table th strong {
     color: #222;
 }
 
@@ -135,12 +135,16 @@ body {
     background-color: var(--primary-button-bg);
 }
 
-.os101Content.simpleContent a, .os101Content.simpleContent .os101Content_container p a, .os101Content.simpleContent .os101Content_container div a, .os101Content.simpleContent .os101Content_container li a, .os101Content.simpleContent .os101Content_container table a {
+.os101Content.simpleContent a:not(.btn), .os101Content.simpleContent .os101Content_container p a:not(.btn), .os101Content.simpleContent .os101Content_container div a:not(.btn), .os101Content.simpleContent .os101Content_container li a:not(.btn), .os101Content.simpleContent .os101Content_container table a:not(.btn) {
     color: var(--primary-button-bg);
 }
 
-.os101Content.simpleContent a:hover, .os101Content.simpleContent a:active, .os101Content.simpleContent a:focus {
+.os101Content.simpleContent a:not(.btn):hover, .os101Content.simpleContent a:not(.btn):active, .os101Content.simpleContent a:not(.btn):focus {
     opacity: 0.65;
+}
+
+.os101Content.simpleContent a:not(.btn) {
+    word-break: break-all;
 }
 
 .os101Content.simpleContent .os101Content_container {
@@ -168,6 +172,7 @@ body {
     -webkit-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.07);
     -moz-box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.07);
     box-shadow: 5px 0px 5px 0px rgba(0,0,0,0.07);
+    z-index: 6;
 }
 
 .os101Content.simpleContent .os101SimpleSideBar .os101SimpleSideBar_navigation {
@@ -295,12 +300,12 @@ body {
 
 .os101Content.simpleContent .simpleContent_wrapper {
     display: block;
-    width: calc(100% - 300px);
     height: 100%;
     box-sizing: border-box;
     padding-left: 30px;
     padding-right: 30px;
     overflow-y: auto;
+    z-index: 5;
 }
 
 .os101Content.simpleContent .os101Content_container img {
@@ -320,4 +325,26 @@ body {
 
 .os101_copycode {
     max-width: 450px;
+}
+
+@media(max-width: 991.9px) {
+    .os101Content.simpleContent .os101SimpleSideBar {
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+
+    .os101Content.simpleContent .simpleContent_wrapper {
+        width: 100%;
+    }
+}
+
+@media(min-width: 992px) {
+    .os101Content.simpleContent .os101SimpleSideBar {
+        position: relative;
+    }
+
+    .os101Content.simpleContent .simpleContent_wrapper {
+        width: calc(100% - 300px);
+    }
 }

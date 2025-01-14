@@ -24,13 +24,33 @@ Data sharing should typically be done through a long-term data center or reposit
 
 Once you have decided to share your data, there are a number of questions you will have to answer to help you plan and that should be included in your data management plan (DMP):
 
-|  |  |
-|---|---|
-| What? | Data formats and (where relevant) standards |
-| When? | When and if to share data |
-| Where? | The intended repositories for archived data |
-| How? | How the plan enables reuse of the data |
-| Who? | Roles and responsibilities of the team members in implementing the DMP |
+<MultiSlider>
+  <SliderItem type="multi">
+    ### What?
+    
+    Data formats and (where relevant) standards
+  </SliderItem>
+  <SliderItem type="multi">
+    ### When?
+    
+    When and if to share data
+  </SliderItem>
+  <SliderItem type="multi">
+    ### Where?
+    
+    The intended repositories for archived data
+  </SliderItem>
+  <SliderItem type="multi">
+    ### How?
+    
+    How the plan enables reuse of the data
+  </SliderItem>
+  <SliderItem type="multi">
+    ### Who?
+    
+    Roles and responsibilities of the team members in implementing the DMP
+  </SliderItem>
+</MultiSlider>
 
 In this lesson, we will be covering some steps toward making data. Specifically, we will focus on the "when", "where", "how", and "who" sections of a DMP.
 
@@ -96,9 +116,11 @@ Relevant laws and regulations that may prevent the release of data include but a
 - [International Traffic in Arms Regulation](https://www.pmddtc.state.gov/?id=ddtc_public_portal_itar_landing) (ITAR), which regulates the manufacture, sale, distribution, and export of defense-related articles and services.
 - [Export Administration Regulations](https://www.bis.gov/regulations/ear-overview) (EAR), which regulates the manufacture, sale, distribution, and export of commercial and dual- use items, technology, and information not already covered by ITAR.
 
-**Example: NASA Space System Protection Standard**
-
-NASA STD 1006.1 [Space System Protection Standard](https://standards.nasa.gov/standard/NASA/NASA-STD-1006), which establishes protection requirements to ensure NASA missions are resilient to purposeful threats.
+<Definitions>
+  <Definition title='Example: NASA Space System Protection Standard'>
+    NASA STD 1006.1 [Space System Protection Standard](https://standards.nasa.gov/standard/NASA/NASA-STD-1006), which establishes protection requirements to ensure NASA missions are resilient to purposeful threats.
+  </Definition>
+</Definitions>
 
 ### Controlled Information Considerations
 
@@ -112,11 +134,11 @@ Some regulations and policies that may prevent the sharing of data include but a
 
 Data may be subject to intellectual property, copyright, and licensing concerns. A few of the relevant regulations and policies include patent or intellectual property laws including the [Bayh-Dole Act](https://www.govinfo.gov/content/pkg/USCODE-2011-title35/html/USCODE-2011-title35-partII-chap18.htm), which enables universities, nonprofit research institutions, and small businesses to own, patent, and commercialize inventions developed under federally funded research programs.
 
-**Example: NASA FAR Supplement 1852.227**
-
-[NASA FAR Supplement 1852.227](https://prod.nais.nasa.gov/far/far0595-nfs012617/5227.htm), which outlines patent and data rights for government contracts.
-
----
+<Definitions>
+  <Definition title='Example: NASA FAR Supplement 1852.227'>
+    [NASA FAR Supplement 1852.227](https://prod.nais.nasa.gov/far/far0595-nfs012617/5227.htm), which outlines patent and data rights for government contracts.
+  </Definition>
+</Definitions>
 
 Many research institutions have resident experts in intellectual property, copyright, and patent law. They can be a great resource if you have any questions or concerns.
 
@@ -154,68 +176,29 @@ Additionally, repositories can require authorization and authentication (e.g., l
 
 ### Working with a Repository
 
-<table>
-  <thead>
-    <tr>
-        <th>START WORKING WITH A REPOSITORY &#9745;</th>
-        <th>MAINTAINING DATA AT A REPOSITORY</th>
-        <th>ARCHIVING DATA AT A REPOSITORY</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <p>Repository requirements can vary widely. Always review a repository’s requirements to see what actions you need to take once you’re ready to start working with them. Also note that some repositories have staff that will help with the process of sharing data, while others rely on the user to know how to share their own data.</p>
-            <p>If you use a repository that has staff to help you with the process, they may want to review and comment on your data management plan.</p>
-            <p>The repository may request that you produce some test of sample data in order to assess:</p>
-            <ul>
-            <li>That the data format you intend to use is supported.</li>
-            <li>That data variables are named as expected.</li>
-            <li>That metadata vocabulary is correct.</li>
-            <li>That repository-specific requirements are met.</li>
-            </ul>
-            <p>This conformity check can identify misunderstandings early and result in a smooth final submission of your data to the repository.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-        <th>START WORKING WITH A REPOSITORY</th>
-        <th>MAINTAINING DATA AT A REPOSITORY &#9745;</th>
-        <th>ARCHIVING DATA AT A REPOSITORY</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <p>As you progress through your project lifecycle, utilize your repository's update, revision and resubmission processes to keep the archived data products up to date. Any new versions of the data you want to share through the repository will need to go through a similar process as your initial data set.</p>
-            <p>Any new versions of the data you want to share through the repository should go through the same DMP review, compliance check, and upload procedure as your initial data set.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-        <th>START WORKING WITH A REPOSITORY</th>
-        <th>MAINTAINING DATA AT A REPOSITORY</th>
-        <th>ARCHIVING DATA AT A REPOSITORY &#9745;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <p>When your project ends, ensure you’ve updated and uploaded any companion documentation (discussed in the previous lesson "Making Open Data") with your final version (even if only a single version of the data was made).</p>
-            <p>Make sure the repository will keep your data (or at least your metadata) on- line for a reasonable period of time after your project ends.</p>
-            <p>If any data issues are found after the conclusion of your project, make sure the repository will still accept data revisions, if they are needed.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
+<CustomTabs>
+    <Tab eventKey="one" title="START WORKING WITH A REPOSITORY">
+      <p>Repository requirements can vary widely. Always review a repository's requirements to see what actions you need to take once you're ready to start working with them. Also note that some repositories have staff that will help with the process of sharing data, while others rely on the user to know how to share their own data.</p>
+      <p>If you use a repository that has staff to help you with the process, they may want to review and comment on your data management plan.</p>
+      <p>The repository may request that you produce some test of sample data in order to assess:</p>
+      <ul>
+        <li>That the data format you intend to use is supported.</li>
+        <li>That data variables are named as expected.</li>
+        <li>That metadata vocabulary is correct.</li>
+        <li>That repository-specific requirements are met.</li>
+      </ul>
+      <p>This conformity check can identify misunderstandings early and result in a smooth final submission of your data to the repository.</p>
+    </Tab>
+    <Tab eventKey="two" title="MAINTAINING DATA AT A REPOSITORY">
+      <p>As you progress through your project lifecycle, utilize your repository's update, revision and resubmission processes to keep the archived data products up to date. Any new versions of the data you want to share through the repository will need to go through a similar process as your initial data set.</p>
+      <p>Any new versions of the data you want to share through the repository should go through the same DMP review, compliance check, and upload procedure as your initial data set.</p>
+    </Tab>
+    <Tab eventKey="three" title="ARCHIVING DATA AT A REPOSITORY">
+      <p>When your project ends, ensure you've updated and uploaded any companion documentation (discussed in the previous lesson "Making Open Data") with your final version (even if only a single version of the data was made).</p>
+      <p>Make sure the repository will keep your data (or at least your metadata) on- line for a reasonable period of time after your project ends.</p>
+      <p>If any data issues are found after the conclusion of your project, make sure the repository will still accept data revisions, if they are needed.</p>
+    </Tab>
+</CustomTabs>
 
 ## How to Enable Reuse of Data
 
@@ -307,50 +290,31 @@ The following are the key takeaways from this lesson:
 
 Answer the following questions to test what you have learned so far.
 
-*Question*
-
-**01/04**
-
-Data cannot be shared if it is:
-
-- ITAR controlled
-- Controlled Unclassified Information
-- Subject to intellectual property, copyright, and licensing concerns
-- All of the above
-
-*Question*
-
-**02/04**
-
-Select the option you think is correct to complete the sentence.
-
-It is best practice to start working with a repository _____.
-
-- As early as possible
-- When you have test data ready
-- After you obtain a DOI
-- When you are ready to release your data
-
-*Question*
-
-**03/04**
-
-Which one of the following might be able to help you get a DOI for your data:
-
-- The repository you are working with
-- Your home organization
-- A journal you are submitting a manuscript and data to
-- All of the above
-
-*Question*
-
-**04/04**
-
-Which of the following are roles to consider when sharing data? Select all that apply.
-
-- Develop guidance on privacy and cultural sensitivity of the data
-- Develop the data documentation and metadata
-- Assign the data a DOI
-- Verify the integrity of the data, metadata, and documentation transfer
+<SimpleQuiz>
+  <SingleChoice question='Data cannot be shared if it is:' answer='answer-4'>
+    <SingleAnswer text='ITAR controlled' id='answer-1'/>
+    <SingleAnswer text='Controlled Unclassified Information' id='answer-2'/>
+    <SingleAnswer text='Subject to intellectual property, copyright, and licensing concerns' id='answer-3'/>
+    <SingleAnswer text='All of the above' id='answer-4'/>
+  </SingleChoice>
+  <SingleChoice question='It is best practice to start working with a repository _____.' answer='answer-1'>
+    <SingleAnswer text='As early as possible' id='answer-1'/>
+    <SingleAnswer text='When you have test data ready' id='answer-2'/>
+    <SingleAnswer text='After you obtain a DOI' id='answer-3'/>
+    <SingleAnswer text='When you are ready to release your data' id='answer-4'/>
+  </SingleChoice>
+  <SingleChoice question='Which one of the following might be able to help you get a DOI for your data:' answer='answer-4'>
+    <SingleAnswer text='The repository you are working with' id='answer-1'/>
+    <SingleAnswer text='Your home organization' id='answer-2'/>
+    <SingleAnswer text='A journal you are submitting a manuscript and data to' id='answer-3'/>
+    <SingleAnswer text='All of the above' id='answer-4'/>
+  </SingleChoice>
+  <MultipleChoice question='Which of the following are roles to consider when sharing data?'>
+    <MultipleAnswer text='Develop guidance on privacy and cultural sensitivity of the data' id='answer-1' isAnswer='true'/>
+    <MultipleAnswer text='Develop the data documentation and metadata' id='answer-2' isAnswer='true'/>
+    <MultipleAnswer text='Assign the data a DOI' id='answer-3' isAnswer='false'/>
+    <MultipleAnswer text='Verify the integrity of the data, metadata, and documentation transfer' id='answer-4' isAnswer='true'/>
+  </MultipleChoice>
+</SimpleQuiz>
 
 <CompletionDocked/>

@@ -1,7 +1,3 @@
-import Tab from 'react-bootstrap/Tab';
-import CustomTabs from '../../../../components/Simple/CustomTabs/CustomTabs.jsx';
-import CompletionDocked from '../../../../components/Simple/Completion/CompletionDocked.jsx';
-
 # Lesson 3: How to do Open Science
 
 ## Overview
@@ -32,7 +28,9 @@ When the release of data or research can lead to national security concerns, the
 
 *NASA has collected human spaceflight biomedical data since the start of Apollo...*
 
-<img src="./images/clone/Module_1/image259.jpg" style={{width: '100%', height: 'auto'}} />
+<img src="" style={{width: '100%', height: 'auto'}} />
+
+<SingleFigure size='large' src="./images/clone/Module_1/image259.jpg"/>
 
 *... but the only human data in the Life Sciences Data Archive are from astronauts who signed releases for their data to be public.*
 
@@ -52,8 +50,10 @@ When considering the impacts of data sharing, it is important to recognize if th
 
 Another [example](https://www.theguardian.com/us-news/2023/feb/23/lidar-technology-archeology-radical-thinking) of how data can inadvertently impact vulnerable communities is the use of LiDAR by archaeologists to study remote areas. This type of data has the potential to reveal unprotected vulnerable indigenous sites in need of protection.
 
-<img src="./images/clone/Module_1/image352.png" style={{width: '49%', height: 'auto'}} />
-<img src="./images/clone/Module_1/image347.png" style={{width: '49%', height: 'auto'}} />
+<DoubleFigure>
+  <SingleFigure src='./images/clone/Module_1/image352.png'/>
+  <SingleFigure src='./images/clone/Module_1/image347.png'/>
+</DoubleFigure>
 
 **CARE Principles**
 
@@ -82,28 +82,26 @@ This section provides an introduction to some of the common issues faced by rese
 
 ### Most Common Types of Intellectual Property Protection
 
+<Definitions>
+  <Definition title='Copyright'>
+    A copyright protects original works of authorship. This could be artistic or literary works, and also applies to software. In general and if applicable, copyright is automatically applied at the moment of creation with no further registration needed.
 
-**Copyright**
+    Most open licenses depend on copyright. The person(s) who owns the copyright has the right to apply for a license.
 
-A copyright protects original works of authorship. This could be artistic or literary works, and also applies to software. In general and if applicable, copyright is automatically applied at the moment of creation with no further registration needed.
+    Example: An image in a scientific journal or something from the web. Generally speaking, using copyrighted images for teaching and education is considered fair use. However, if that includes posting images to a website, that could be considered a publication and therefore copyright infringement.
+  </Definition>
+  <Definition title='Trademark'>
+    A trademark can be applied to any content including words, phrases, symbols, designs, or a combination of these things that identifies your product. Trademarks in general are not relevant for scientific purposes.
+  </Definition>
+  <Definition title='Patents'>
+    A patent is an exclusive right granted for an invention, which is a product or a process that provides, in general, a new way of doing something, or offers a new technical solution to a problem. Patents are another way to make your work open while protecting your intellectual property.
 
-Most open licenses depend on copyright. The person(s) who owns the copyright has the right to apply for a license.
-
-Example: An image in a scientific journal or something from the web. Generally speaking, using copyrighted images for teaching and education is considered fair use. However, if that includes posting images to a website, that could be considered a publication and therefore copyright infringement.
-
-**Trademark**
-
-A trademark can be applied to any content including words, phrases, symbols, designs, or a combination of these things that identifies your product. Trademarks in general are not relevant for scientific purposes.
-
-**Patents**
-
-A patent is an exclusive right granted for an invention, which is a product or a process that provides, in general, a new way of doing something, or offers a new technical solution to a problem. Patents are another way to make your work open while protecting your intellectual property.
-
-Many organizations have groups that will support the development and commercialization of inventions. [NASA's Tech Transfer](https://technology.nasa.gov/) office is an example of one of these making much of NASA's inventions available for licensing as part of the [NASA Patent Portfolio](https://technology.nasa.gov/patents).
-
-**Public Domain**
-
-In some cases, intellectual property is not protected at all. Public domain is when a creative work has no intellectual property rights associated with it. Some types of intellectual property expires after a certain time scale. Some types of work, such as those created by civil servants in the United States, are not covered by copyright and can appear immediately in the public domain. For others, the creator donates the work to the public domain or intellectual property rights are not applicable.
+    Many organizations have groups that will support the development and commercialization of inventions. [NASA's Tech Transfer](https://technology.nasa.gov/) office is an example of one of these making much of NASA's inventions available for licensing as part of the [NASA Patent Portfolio](https://technology.nasa.gov/patents).
+  </Definition>
+  <Definition title='Public Domain'>
+    In some cases, intellectual property is not protected at all. Public domain is when a creative work has no intellectual property rights associated with it. Some types of intellectual property expires after a certain time scale. Some types of work, such as those created by civil servants in the United States, are not covered by copyright and can appear immediately in the public domain. For others, the creator donates the work to the public domain or intellectual property rights are not applicable.
+  </Definition>
+</Definitions>
 
 ### Why Should You Care About Intellectual Property Policies?
 
@@ -115,7 +113,7 @@ Why should I, as a scientist, care about this? Well, consider what happens to th
 
 Understanding these questions is important to practicing open science and ensuring that your intellectual property is able to be shared widely. Review the image on the right as an example.
 
-<img src="./images/clone/Module_1/image348.png" style={{width: 350, height: 'auto'}} />
+<SingleFigure size='small' src="./images/clone/Module_1/image348.png"/>
 
 Worrying about intellectual property and copyright can seem like an unnecessary detail early on. However, anticipating changes to your situation by ensuring permanent ownership of your work in the planning phase of your research can help you avoid legal and institutional issues later on.
 
@@ -123,27 +121,19 @@ If you submit your manuscript to a publisher that requires that they own the cop
 
 Example: In scenarios where seeking consent before sharing (or changing sharing conditions), it can be complex to implement the changes. Biopython, an open source biology toolkit, started re- licensing their code in 2016, and [are still working on it in 2023, individual contributor by individual contributor.](https://github.com/biopython/biopython/issues/898)
 
-<img src="./images/clone/Module_1/image106.jpg" style={{width: '100%', height: 'auto'}} />
+<SingleFigure size='large' src="./images/clone/Module_1/image106.jpg"/>
 
 ### Licensing
 
 Licensing is a way to help to allow others to reuse your work legally. It is a way to specify under what conditions, if any, others can use, build upon, or distribute your work. It is also a method to ensure that your work is appropriately credited. It is generally illegal and may be a form of academic misconduct to reuse content without a license, even if the content can be found on the internet. This law protects content creators, just as it protects your work from being used by others without clear permission. Thankfully, it’s easy to allow others to re-use your work.
 
-<img style={{width: '100%', height: 'auto'}} src="./images/clone/Module_1/knowledgebasequote.jpg" />
-
-"By applying a license to your work, you make clear what others can do with the things you're sharing, and also establish the conditions under which you're providing them (such as cite you)."
-
-**Open Science Knowledge Base**
+<QuoteImage quote="By applying a license to your work, you make clear what others can do with the things you're sharing, and also establish the conditions under which you're providing them (such as cite you)." byWho="Open Science Knowledge Base" bgImage="./images/clone/Module_1/knowledgebasequote.jpg" />
 
 ---
 
-<img src="./images/clone/Module_1/image328.jpg" style={{width: 350, height: 'auto'}} />
+<img src="" style={{width: 350, height: 'auto'}} />
 
-Image credit: XKCD: CC BY-NC 2.5 DEEX 
-
-[https://xkcd.com/14/](https://xkcd.com/14/)
-
----
+<SingleFigure size='medium' src="./images/clone/Module_1/image328.jpg" caption="Image credit: XKCD: CC BY-NC 2.5 DEEX" link="https://xkcd.com/14/"/>
 
 If you don't license your work, others can't/shouldn't re-use it – even if you want them to.
 
@@ -161,39 +151,24 @@ Licenses can be applied to data, code, and reports, or publications, and almost 
     </Tab>
 </CustomTabs>
 
-<img src="./images/clone/Module_1/image294.png" style={{width: 350, height: 'auto'}} />
+<SingleFigure size='small' src="./images/clone/Module_1/image294.png"/>
 
  More detail about licensing for each of these types of products can be found in later modules including different types of licenses, when to apply a license, and tools for applying licenses. Creative Commons and the Open Source Initiative are two resources with more information on open licenses.
 
 ### Activity 3.1: To Share or Not to Share
 
-Place the following activities into the Share or Not Share boxes:
-
-<table style={{width: '100%'}}>
-  <tbody>
-    <tr>
-      <th colSpan={23}>Share</th>
-    </tr>
-    <tr>
-      <td>Plant genome data from experiments on the International Space Station.</td>
-      <td>Software that identifies solar flares.</td>
-      <td>Artificial Intelligence model trained on Mars observations.</td>
-    </tr>
-  </tbody></table>
-
-
-<table style={{width: '100%'}}>
-  <tbody>
-    <tr>
-      <th colSpan={23}>Not Share</th>
-    </tr>
-    <tr>
-      <td>Export controlled design documentation for a high resolution camera.</td>
-      <td>Non-anonymized astronaut health data.</td>
-      <td>Software containing login keys to high performance computers.</td>
-    </tr>
-  </tbody></table>
-
+<SimpleQuiz>
+  <MultipleMatch question='Place the following activities into the Share or Not Share boxes'>
+    <MultipleMatchable id="draggable_1" type="draggable" text="Plant genome data from experiments on the International Space Station."/>
+    <MultipleMatchable id="draggable_2" type="draggable" text="Software that identifies solar flares."/>
+    <MultipleMatchable id="draggable_3" type="draggable" text="Artificial Intelligence model trained on Mars observations."/>
+    <MultipleMatchable id="draggable_4" type="draggable" text="Export controlled design documentation for a high resolution camera."/>
+    <MultipleMatchable id="draggable_5" type="draggable" text="Non-anonymized astronaut health data."/>
+    <MultipleMatchable id="draggable_6" type="draggable" text="Software containing login keys to high performance computers."/>
+    <MultipleMatchable id="droppable_1" type="droppable" text="Share" answers="draggable_1,draggable_2,draggable_3"/>
+    <MultipleMatchable id="droppable_2" type="droppable" text="Not Share" answers="draggable_4,draggable_5,draggable_6"/>
+  </MultipleMatch>
+</SimpleQuiz>
 
 ## Policies and Practices around Open Science
 
@@ -207,140 +182,50 @@ It is important to plan for the release of your data and results from the very b
 
 <CustomTabs>
     <Tab eventKey="one" title="Materials - Sharing and Commercial Product Agreement">
-      Permissive Licenses allow users a wide range of rights including the ability to use, modify, and distribute the work with no restrictions or very few. Examples of permissive license would be open source software license such as Apache 2.0 or MIT license or the Creative Commons licenses such as [Creative Commons Attribution (CC-BY)](https://creativecommons.org/licenses/by/4.0/).
-    </Tab>
-    <Tab eventKey="two" title="Human or Animal Subject Insitutional Review Boards">
-      Protective Licenses are a legal technique of granting certain freedoms over copies of copyrighted works while including some limitations. This may include copyleft licenses, commercial licenses, or other restrictions.
-    </Tab>
-    <Tab eventKey="three" title="Collecting Permits">
-      Public Domain is not a license, but it is an indication that there are no reuse restrictions on the work. [Creative Common Zero](https://creativecommons.org/publicdomain/zero/1.0/) is a worldwide public domain mark that indicates that the material is free to use without any restrictions.
-    </Tab>
-</CustomTabs>
-
-<table>
-  <thead>
-    <tr>
-        <th>MATERIALS - SHARING AND COMMERCIAL PRODUCT AGREEMENT &#9745;</th>
-        <th>HUMAN OR ANIMAL SUBJECT INSTITUTIONAL REVIEW BOARDS</th>
-        <th>COLLECTING PERMITS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <ul>
+      <ul>
             <li>Can be permissive or restrictive.</li>
             <li>Many versions available.</li>
-            </ul>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-        <th>MATERIALS - SHARING AND COMMERCIAL PRODUCT AGREEMENT</th>
-        <th>HUMAN OR ANIMAL SUBJECT INSTITUTIONAL REVIEW BOARDS &#9745;</th>
-        <th>COLLECTING PERMITS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <ul>
-            <li>Check experiment-specific requirements early.</li>
-            <li>Be sure to comply with all aspects of ongoing review.</li>
-            </ul>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-        <th>MATERIALS - SHARING AND COMMERCIAL PRODUCT AGREEMENT</th>
-        <th>HUMAN OR ANIMAL SUBJECT INSTITUTIONAL REVIEW BOARDS</th>
-        <th>COLLECTING PERMITS &#9745;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <ul>
-            <li>Don't assume collection is allowed just because a sampling location seems unmanaged.</li>
-            <li>Engage and consult with local communities to ensure their concerns are addressed.</li>
-            </ul>
-        </td>
-    </tr>
-  </tbody>
-</table>
+      </ul>
+    </Tab>
+    <Tab eventKey="two" title="Human or Animal Subject Insitutional Review Boards">
+      <ul>
+        <li>Check experiment-specific requirements early.</li>
+        <li>Be sure to comply with all aspects of ongoing review.</li>
+      </ul>
+    </Tab>
+    <Tab eventKey="three" title="Collecting Permits">
+      <ul>
+        <li>Don't assume collection is allowed just because a sampling location seems unmanaged.</li>
+        <li>Engage and consult with local communities to ensure their concerns are addressed.</li>
+      </ul>
+    </Tab>
+</CustomTabs>
 
 ### Sharing Controlled Research
 
 As we've previously shown, different kinds of intellectual property are released using different formal structures. It is important to understand these structures and to check with specialist communities when preparing your research plan. Methods for sharing results may follow different standards of practice or may require a special data format for distribution or submission to common repositories.
 
-<table>
-  <thead>
-    <tr>
-        <th>CREATIVE COMMONS VS. OPEN SOURCE VS. PUBLIC DOMAIN LICENSES &#9745;</th>
-        <th>REPOSITORIES</th>
-        <th>GUID ELEMENTS FOR SELECTING BETWEEN OPTIONS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <ul>
-            <li>Can be permissive or restrictive.</li>
-            <li>Many versions available.</li>
-            </ul>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-        <th>CREATIVE COMMONS VS. OPEN SOURCE VS. PUBLIC DOMAIN LICENSES</th>
-        <th>REPOSITORIES &#9745;</th>
-        <th>GUID ELEMENTS FOR SELECTING BETWEEN OPTIONS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <ul>
-            <li>General and discipline-specific options.</li>
-            <li>Check submission requirements early.</li>
-            <li>Often have user communities willing to help.</li>
-            </ul>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-        <th>CREATIVE COMMONS VS. OPEN SOURCE VS. PUBLIC DOMAIN LICENSES</th>
-        <th>REPOSITORIES</th>
-        <th>GUID ELEMENTS FOR SELECTING BETWEEN OPTIONS &#9745;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={3}>
-            <ul>
-            <li>Choose 'supported' versions with active and friendly communities.</li>
-            <li>Take precautions to reduce security risk.</li>
-            </ul>
-        </td>
-    </tr>
-  </tbody>
-</table>
+<CustomTabs>
+    <Tab eventKey="one" title="Creative Commons Vs. Open Source Vs. Public Domain Licenses">
+      <ul>
+          <li>Can be permissive or restrictive.</li>
+          <li>Many versions available.</li>
+      </ul>
+    </Tab>
+    <Tab eventKey="two" title="Repositories">
+      <ul>
+          <li>General and discipline-specific options.</li>
+          <li>Check submission requirements early.</li>
+          <li>Often have user communities willing to help.</li>
+      </ul>
+    </Tab>
+    <Tab eventKey="three" title="GUID Elements For Selecting Between Options">
+      <ul>
+          <li>Choose 'supported' versions with active and friendly communities.</li>
+          <li>Take precautions to reduce security risk.</li>
+      </ul>
+    </Tab>
+</CustomTabs>
 
 What are the rules for science? Before sharing, check you have the right to do so:
 
@@ -375,13 +260,7 @@ Remember when reusing science:
 - Consider citing all resources used: datasets, software, infrastructure, etc.
 - Hopefully, others will reciprocate when reusing your work. (Scientific ethics dictate they should).
 
-<img src="./images/clone/Module_1/image332.jpg" style={{width: 350, height: 'auto'}} />
-
-Standing on the shoulders of giants (Public Domain) 
-
-Image credit: [Library of Congress](https://commons.wikimedia.org/wiki/File:Library_of_Congress,_Rosenwald_4,_Bl._5r_cropped.jpg), Rosenwald. CC-BY
-
----
+<SingleFigure size='small' src="./images/clone/Module_1/image332.jpg" caption="Standing on the shoulders of giants (Public Domain). Image credit: Library of Congress, Rosenwald. CC-BY" link="https://commons.wikimedia.org/wiki/File:Library_of_Congress,_Rosenwald_4,_Bl._5r_cropped.jpg"/>
 
 In addition to documenting your own research, giving credit to all contributors strengthens the practice and community of Open Science. As researchers gain confidence in the benefits of cooperative research, they will in turn give credit to contributors that might otherwise have gone unacknowledged.
 
@@ -395,7 +274,7 @@ In order to practice responsible open science, careful attention should be given
 
 In this activity reflect on your answers to the following questions:
 
-<img style={{width: 350, height: 'auto'}} src="./images/clone/Module_1/lightbulb.png" />
+<SingleFigure size='small' src="./images/clone/Module_1/lightbulb.png"/>
 
 - What are some reasons you would NOT want your research to be open?
 - How would you balance openness with privacy/security/control?
@@ -414,35 +293,23 @@ In this lesson, you learned:
 
 Answer the following questions to test what you have learned so far.
 
-*Question*
-
-**01/03**
-
-What type of Intellectual Property protection would you need for an image you generated from your own data to display your results?
-
-- Patent
-- Trademark
-- Copyright
-
-*Question*
-
-**02/03**
-
-Which of the following is NOT a common type of license:
-
-- Copyright
-- Permissive
-- Creative Commons
-
-*Question*
-
-**03/03**
-
-Which of the following should be considered when sharing information?
-
-- What does your funding agency say?
-- What does your organization say?
-- How are affected communities impacted by the release of the information?
-- All of the above.
+<SimpleQuiz>
+  <SingleChoice question='What type of Intellectual Property protection would you need for an image you generated from your own data to display your results?' answer='answer-3'>
+    <SingleAnswer text='Patent' id='answer-1'/>
+    <SingleAnswer text='Trademark' id='answer-2'/>
+    <SingleAnswer text='Copyright' id='answer-3'/>
+  </SingleChoice>
+  <SingleChoice question='Which of the following is NOT a common type of license:' answer='answer-1'>
+    <SingleAnswer text='Copyright' id='answer-1'/>
+    <SingleAnswer text='Permissive' id='answer-2'/>
+    <SingleAnswer text='Creative Commons' id='answer-3'/>
+  </SingleChoice>
+  <SingleChoice question='Which of the following should be considered when sharing information?' answer='answer-4'>
+    <SingleAnswer text='What does your funding agency say?' id='answer-1'/>
+    <SingleAnswer text='What does your organization say?' id='answer-2'/>
+    <SingleAnswer text='How are affected communities impacted by the release of the information?' id='answer-3'/>
+    <SingleAnswer text='All of the above.' id='answer-4'/>
+  </SingleChoice>
+</SimpleQuiz>
 
 <CompletionDocked/>

@@ -39,75 +39,73 @@ The following sections discuss ways to ensure that data is fully utilized and ac
 
 ## FAIR Principles
 
-<img src="./images/clone/Module_2/image28.png" style={{width: '100%', height: 'auto'}} />
-
+<SingleFigure size='full' src="./images/clone/Module_2/image28.png"/>
 
 Just like driving on a road, if everyone follows agreed upon rules, everything goes much smoother. The rules don’t need to be exactly the same for every region, but share common practices based on insights about safety and efficiency.
 
 For example, maybe you drive on the left side of the road or the right side. Either is fine, those sort of details are for different communities to decide on. However, there are overarching guidelines shared by communities across the globe, such as the rule to drive on the road not the sidewalk, use a turn signal when appropriate, adhere to lights at intersections that direct traffic, and follow speed limits. Some communities may implement stricter rules than others, or practice them differently, but these guidelines help everyone move around safely through a common understanding of how to drive on roads. For scientific data, these guidelines are called the Findable, Accessible, Interoperable, Reusable or “FAIR” principles. They do to data what their title suggests. That is, these principles make it possible for others (and yourself) to find, get, understand, and use data correctly.
 
-**Findable**:
+<CustomTabs>
+    <Tab eventKey="one" title="FINDABLE">
+      To be [Findable:](https://www.go-fair.org/fair-principles/f1-meta-data-assigned-globally-unique-persistent-identifiers/)
 
-To be [Findable:](https://www.go-fair.org/fair-principles/f1-meta-data-assigned-globally-unique-persistent-identifiers/)
+      - Data and results are assigned a globally unique and persistent identifier.
+      - Data are described with rich metadata.
+      - Metadata clearly and explicitly include the identifier of the data it describes.
+      - Data and results are registered or indexed in a searchable resource.
 
- - Data and results are assigned a globally unique and persistent identifier.
- - Data are described with rich metadata.
-- Metadata clearly and explicitly include the identifier of the data it describes.
-- Data and results are registered or indexed in a searchable resource.
+      Current Enabling Tech:
+      - [DataCite's Metadata Schema](https://schema.datacite.org/)
+      - PIDs: Persistent IDentifiers (additional details in the following sections)
+        - [Digital Object Identifier](https://www.doi.org/) (DOI): A top-level and a mandatory field in the metadata of each record - for data, code, publications.
+        - [Open Research and Contributor ID](https://orcid.org/) (ORCID) - A code that uniquely identifies authors and contributors of research products and scholarly communication.
+    </Tab>
+    <Tab eventKey="two" title="ACCESSIBLE">
+      To be [Accessible:](https://www.go-fair.org/fair-principles/metadata-retrievable-identifier-standardised-communication-protocol/)
 
-Current Enabling Tech:
-- [DataCite's Metadata Schema](https://schema.datacite.org/)
-- PIDs: Persistent IDentifiers (additional details in the following sections)
-  - [Digital Object Identifier](https://www.doi.org/) (DOI): A top-level and a mandatory field in the metadata of each record - for data, code, publications.
-  - [Open Research and Contributor ID](https://orcid.org/) (ORCID) - A code that uniquely identifies authors and contributors of research products and scholarly communication.
+      - Data and results are retrievable by their identifiers using a standardized communication protocol.
+      - The protocol is open, free, and universally implementable.
+      - The protocol allows for an authentication and authorization procedure, where necessary. Data and results are publicly accessible and licensed under the public domain.
+        - Metadata are accessible, even when the data are no longer available. Data and metadata will be retained for the lifetime of the repository.
+        - Metadata are stored in high-availability database servers.
 
-**Accessible**
+      Current Enabling Tech:
+      - [File Transfer Protocol (FTP)](https://www.w3.org/Protocols/rfc959/), File Transfer Protocol Secure (FTPS)
+      - [Hypertext Transfer Protocol (HTTP)](https://www.w3.org/Protocols/), Hypertext Transfer Protocol Secure (HTTPS)
 
-To be [Accessible:](https://www.go-fair.org/fair-principles/metadata-retrievable-identifier-standardised-communication-protocol/)
+      Note that Microsoft Exchange Server and Skype are examples of proprietary protocols. As always, it is necessary to balance accessibility with security concerns, which may impact the chosen protocol.
+    </Tab>
+    <Tab eventKey="three" title="INTEROPERABLE">
+      To be [Interoperable:](https://www.go-fair.org/fair-principles/i1-metadata-use-formal-accessible-shared-broadly-applicable-language-knowledge-representation/)
 
-- Data and results are retrievable by their identifiers using a standardized communication protocol.
-- The protocol is open, free, and universally implementable.
-- The protocol allows for an authentication and authorization procedure, where necessary. Data and results are publicly accessible and licensed under the public domain.
-  - Metadata are accessible, even when the data are no longer available. Data and metadata will be retained for the lifetime of the repository.
-  - Metadata are stored in high-availability database servers.
+      - Data uses a formal, accessible, shared, and broadly applicable language for knowledge representation.
+      - Data uses a known, standardized data format.
+      - Data use vocabularies that follow FAIR principles.
+      - Data include qualified references to other (meta)data.
 
-Current Enabling Tech:
-- [File Transfer Protocol (FTP)](https://www.w3.org/Protocols/rfc959/), File Transfer Protocol Secure (FTPS)
-- [Hypertext Transfer Protocol (HTTP)](https://www.w3.org/Protocols/), Hypertext Transfer Protocol Secure (HTTPS)
+      Current Enabling Tech:
 
-Note that Microsoft Exchange Server and Skype are examples of proprietary protocols. As always, it is necessary to balance accessibility with security concerns, which may impact the chosen protocol.
+      - [Zenodo](https://zenodo.org/) uses [JSON Schema](https://json-schema.org/) as internal representation of metadata and offers export to other popular formats such as [Dublin Core](https://www.dublincore.org/) or [MARCXML](https://www.loc.gov/marc/marcxml.html).
+      - For certain terms we refer to open, external vocabularies, e.g.: license ([Open Definition](https://opendefinition.org/)), funders ([FundRef](https://www.crossref.org/services/funder-registry/)) and grants ([OpenAIRE](https://api.openaire.eu/)).
+      - Each referenced external piece of data is qualified by a resolvable URL.
+    </Tab>
+    <Tab eventKey="four" title="REUSABLE">
+      To be [Reusable:](https://www.go-fair.org/fair-principles/r1-metadata-richly-described-plurality-accurate-relevant-attributes/)
 
-**Interoperable**
-
-To be [Interoperable:](https://www.go-fair.org/fair-principles/i1-metadata-use-formal-accessible-shared-broadly-applicable-language-knowledge-representation/)
-
-- Data uses a formal, accessible, shared, and broadly applicable language for knowledge representation.
-- Data uses a known, standardized data format.
-- Data use vocabularies that follow FAIR principles.
-- Data include qualified references to other (meta)data.
-
-Current Enabling Tech:
-
-- [Zenodo](https://zenodo.org/) uses [JSON Schema](https://json-schema.org/) as internal representation of metadata and offers export to other popular formats such as [Dublin Core](https://www.dublincore.org/) or [MARCXML](https://www.loc.gov/marc/marcxml.html).
-- For certain terms we refer to open, external vocabularies, e.g.: license ([Open Definition](https://opendefinition.org/)), funders ([FundRef](https://www.crossref.org/services/funder-registry/)) and grants ([OpenAIRE](https://api.openaire.eu/)).
-- Each referenced external piece of data is qualified by a resolvable URL.
-
-**Reusable**
-
-To be [Reusable:](https://www.go-fair.org/fair-principles/r1-metadata-richly-described-plurality-accurate-relevant-attributes/)
-
-  - Data are richly described with a plurality of accurate and relevant attributes.
-  - Data are released with a clear and accessible data usage license.
-  - Data are associated with detailed provenance.
-  - Data meet domain-relevant community standards.
-  
-Current Enabling Tech:
-- The metadata record contains a minimum of [DataCite's](https://schema.datacite.org/) mandatory terms, with optionally additional DataCite recommended terms and Zenodo's enrichments.
-- [Zenodo](https://zenodo.org/) is not a domain-specific repository, yet through compliance with DataCite's Metadata Schema, metadata meets one of the broadest cross-domain standards available.
+      - Data are richly described with a plurality of accurate and relevant attributes.
+      - Data are released with a clear and accessible data usage license.
+      - Data are associated with detailed provenance.
+      - Data meet domain-relevant community standards.
+      
+      Current Enabling Tech:
+      - The metadata record contains a minimum of [DataCite's](https://schema.datacite.org/) mandatory terms, with optionally additional DataCite recommended terms and Zenodo's enrichments.
+      - [Zenodo](https://zenodo.org/) is not a domain-specific repository, yet through compliance with DataCite's Metadata Schema, metadata meets one of the broadest cross-domain standards available.
+    </Tab>
+</CustomTabs>
 
 Wilkinson, M. D. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci.Data 3:160018, doi: [1 0 .1038/sdata.2016.18](https://doi.org/10.1038/sdata.2016.18) (2016)
 
-These are high-level guidelines, and much like open science, implementation is nuanced. Sometimes it takes a group effort and/or a long production process/funding to make data and results FAIR. For other datasets, it could be more straightforward. A well-coordinated data management plan is needed for full compliance with FAIR, and the details of this will be discussed further in Module 3 – Open Data.
+These are high-level guidelines, and much like open science, implementation is nuanced. Sometimes it takes a group effort and/or a long production process/funding to make data and results FAIR. For other datasets, it could be more straightforward. A well-coordinated data management plan is needed for full compliance with FAIR, and the details of this will be discussed further in Module 3 - Open Data.
 
 ## Tools to Help with Planning For Open Data Creation
 
@@ -115,13 +113,14 @@ These are high-level guidelines, and much like open science, implementation is n
 
 The previous lesson describes the requirements of a data management plan (DMP). Below are two open science resources to get you started on creating a data management plan:
 
-**DMPTool**
-
-The [DMPTool](https://dmptool.org/) in the US helps researchers by featuring a template that lists a funder's requirements for specific directorate requests for proposals (RFP). The DMPTool also publishes other open DMPs from funded projects that can be referenced to improve your own. The Research Data Management Organizer (RDMO) enables German institutions as well as researchers to plan and carry out their management of research data.
-
-**ARGOS**
-
-[ARGOS](https://argos.openaire.eu/home) is used to plan Research Data Management activities of European and nationally funded projects (e.g. Horizon Europe, CHIST-ERA, the Portuguese Foundation for Science and Technology - FCT). ARGOS produces and publishes FAIR and machine actionable DMPs that contain links to other outputs, e.g. publications-data-software, and minimizes the effort to create DMPs from scratch by introducing automations in the writing process. OpenAIRE provides a guide on how to create DMP.
+<CustomTabs>
+    <Tab eventKey="one" title="DMPTool">
+      The [DMPTool](https://dmptool.org/) in the US helps researchers by featuring a template that lists a funder's requirements for specific directorate requests for proposals (RFP). The DMPTool also publishes other open DMPs from funded projects that can be referenced to improve your own. The Research Data Management Organizer (RDMO) enables German institutions as well as researchers to plan and carry out their management of research data.
+    </Tab>
+    <Tab eventKey="two" title="ARGOS">
+      [ARGOS](https://argos.openaire.eu/home) is used to plan Research Data Management activities of European and nationally funded projects (e.g. Horizon Europe, CHIST-ERA, the Portuguese Foundation for Science and Technology - FCT). ARGOS produces and publishes FAIR and machine actionable DMPs that contain links to other outputs, e.g. publications-data-software, and minimizes the effort to create DMPs from scratch by introducing automations in the writing process. OpenAIRE provides a guide on how to create DMP.
+    </Tab>
+</CustomTabs>
 
 ### Data Repositories
 
@@ -137,27 +136,23 @@ Open science tools such as data repositories should implement FAIR principles, e
 
 Additional examples of data repositories and other open science tools include but are not limited to:
 
-**ZENODO**
-
-[Zenodo](https://zenodo.org/) is an example of a data repository that allows the upload of research data and creates DOIs. Its popularity among the research community is due to its simplified interface, support of community curation, and feature that enables researchers to deposit diverse types of research outputs; from datasets and reports to publications, software, multimedia content.
-
-**DATAVERSE**
-
-[The Dataverse Project](https://dataverse.org/) is an open source online application to share, preserve, cite, explore, and analyze research data, available to researchers of all disciplines worldwide for free.
-
-**DRYAD**
-
-[The Dryad Digital Repository](https://datadryad.org/) is a curated online resource that makes research data discoverable, freely reusable, and citable. Unlike previously mentioned tools, it operates on a membership scheme for organizations such as research institutions and publishers.
-
-**DATACITE**
-
-[Datacite](https://datacite.org/) is a global non-profit organization that provides DOIs for research data and other research outputs, on a membership basis.
-
-**OSF**
-
-[The Open Science Framework](https://osf.io/) is an open source platform for sharing, managing, and collaborating research.
-
----
+<Definitions>
+  <Definition title='ZENODO'>
+    [Zenodo](https://zenodo.org/) is an example of a data repository that allows the upload of research data and creates DOIs. Its popularity among the research community is due to its simplified interface, support of community curation, and feature that enables researchers to deposit diverse types of research outputs; from datasets and reports to publications, software, multimedia content.
+  </Definition>
+  <Definition title='DATAVERSE'>
+    [The Dataverse Project](https://dataverse.org/) is an open source online application to share, preserve, cite, explore, and analyze research data, available to researchers of all disciplines worldwide for free.
+  </Definition>
+  <Definition title='DRYAD'>
+    [The Dryad Digital Repository](https://datadryad.org/) is a curated online resource that makes research data discoverable, freely reusable, and citable. Unlike previously mentioned tools, it operates on a membership scheme for organizations such as research institutions and publishers.
+  </Definition>
+  <Definition title='DATACITE'>
+    [Datacite](https://datacite.org/) is a global non-profit organization that provides DOIs for research data and other research outputs, on a membership basis.
+  </Definition>
+  <Definition title='OSF'>
+    [The Open Science Framework](https://osf.io/) is an open source platform for sharing, managing, and collaborating research.
+  </Definition>
+</Definitions>
 
 Data services and resources for supporting research require robust infrastructure which relies on collaboration. An example of an initiative on the infrastructures of data services comes from the [EUDAT Collaborative Data Infrastructure](https://www.eudat.eu/), a sustained network of more than 20 European research organizations.
 
@@ -171,7 +166,7 @@ The amount of data, repositories, and different policies can be overwhelming. Wh
 
 Explore open repositories to familiarize yourself with their structure and available product information. The most popular repository at the moment is Zenodo. Review the following 4.5-minute video to get an overview of Zenodo and then sign up for an account. You can use your ORCID to sign up if you have one or made one in the previous lesson.
 
-[Watch Video](https://www.youtube.com/watch?v=BPVSErzNtME&embeds_referring_euri=https%3A%2F%2Fopenscience101.org%2F&feature=emb_imp_woyt)
+<Youtube embedUrl="https://www.youtube.com/embed/BPVSErzNtME?si=_RqhOcWjGGYA-ylr"/>
 
 ## Tools to Help with Using and Making Open Data
 
@@ -189,75 +184,83 @@ The formats that are considered the most interoperable against the criteria abov
 
 Modern data formats allow the storage of much more than mere data points. Once one adopts these standards (e.g. NetCDF), the discovery of the contents on each file can be aided by a variety of tools which together help map primary data and/or display the associated metadata. Several tools exist for inspecting data, too numerous for all to be mentioned here. Notable tools to start with include:
 
-**CSV, XML, JSON** -
-These files can all be opened with most common text editors. There are some tools that can create views of the files that are more user-friendly, such as:
-- csv: Microsoft Excel and Google Sheets
-- xml: Most internet browsers and with any text editor like Notepad or Microsoft Word or Google Docs
-- json: [http://json.parser.online.fr/](http://json.parser.online.fr/) and [https://jsonformatter.org/json-pretty-print](https://jsonformatter.org/json-pretty-print)
+<CustomTabs>
+    <Tab eventKey="one" title="CSV, XML, JSON">
+      These files can all be opened with most common text editors. There are some tools that can create views of the files that are more user-friendly, such as:
 
-**NetCDF, HDF, FITS** -
-These files require special software tools to view their contents. Many of these tools will also visualize the data as well.
-- NetCDF and HDF: Most files are easily viewed using the [Xarray](https://docs.xarray.dev/en/stable/) open-source software library in Python or the [ncdf4](https://cran.r-project.org/web/packages/ncdf4/index.html) library in R.
-- FITS: There are many options, a list is provided at [https://fits.gsfc.nasa.gov/fits_viewer.html](https://fits.gsfc.nasa.gov/fits_viewer.html)
-
-**ZARR, COG, PARQUET** -
-These files require special software tools to view their contents. Many of these tools will also visualize the data as well.
-- Zarr: Files are easily viewed using the [Xarray](https://docs.xarray.dev/en/stable/) open-source software library in Python or the [Pizzar](https://github.com/keller-mark/pizzarr) library in R.
-- COG: Files are viewed using the [rioXarray](https://corteva.github.io/rioxarray/html/index.html) open-source software library in Python or the [terra](https://cran.r-project.org/web/packages/terra/index.html) library in R.
-- Parquet: Files are viewed using the [Pandas](https://pandas.pydata.org/) open-source software library in Python or the [Arrow](https://arrow.apache.org/docs/r/reference/read_parquet.html) library in R.
+      - csv: Microsoft Excel and Google Sheets
+      - xml: Most internet browsers and with any text editor like Notepad or Microsoft Word or Google Docs
+      - json: [http://json.parser.online.fr/](http://json.parser.online.fr/) and [https://jsonformatter.org/json-pretty-print](https://jsonformatter.org/json-pretty-print)
+    </Tab>
+    <Tab eventKey="two" title="NetCDF, HDF, FITS">
+      These files require special software tools to view their contents. Many of these tools will also visualize the data as well.
+      
+      - NetCDF and HDF: Most files are easily viewed using the [Xarray](https://docs.xarray.dev/en/stable/) open-source software library in Python or the [ncdf4](https://cran.r-project.org/web/packages/ncdf4/index.html) library in R.
+      - FITS: There are many options, a list is provided at [https://fits.gsfc.nasa.gov/fits_viewer.html](https://fits.gsfc.nasa.gov/fits_viewer.html)
+    </Tab>
+    <Tab eventKey="three" title="ZARR, COG, PARQUET">
+      These files require special software tools to view their contents. Many of these tools will also visualize the data as well.
+      
+      - Zarr: Files are easily viewed using the [Xarray](https://docs.xarray.dev/en/stable/) open-source software library in Python or the [Pizzar](https://github.com/keller-mark/pizzarr) library in R.
+      - COG: Files are viewed using the [rioXarray](https://corteva.github.io/rioxarray/html/index.html) open-source software library in Python or the [terra](https://cran.r-project.org/web/packages/terra/index.html) library in R.
+      - Parquet: Files are viewed using the [Pandas](https://pandas.pydata.org/) open-source software library in Python or the [Arrow](https://arrow.apache.org/docs/r/reference/read_parquet.html) library in R.
+    </Tab>
+</CustomTabs>
 
 ### FAIR Assessment
 
 How 'FAIR' is your data? Two groups - [ FAIRsharing.org](https://fairsharing.org/) and the Research Data Alliance ([RDA](https://www.rd-alliance.org/)) - have developed the [ FAIR Metrics](https://www.nature.com/articles/sdata2018118) and [ FAIR Data Maturity Model](https://www.rd-alliance.org/group/fair-data-maturity-model-wg/outcomes/fair-data-maturity-model-specification-and-guidelines-0) to help assess the 'FAIR'-ness of a dataset. There are open-source tools that help researchers assess their data:
 
-**AUSTRALIAN RESEARCH DATA COMMONS (ARDC)**
+<CustomTabs>
+    <Tab eventKey="one" title="AUSTRALIAN RESEARCH DATA COMMONS (ARDC)">
+      Online questionnaire (manual) 
+      
+      Best for:
 
-Online questionnaire (manual) Best for:
+      - Triggering discussions at the initial stages of considering FAIR implementation
+      - Identifying areas for improvement
 
-- Triggering discussions at the initial stages of considering FAIR implementation
-- Identifying areas for improvement
+      Outputs include:
 
-Outputs include:
+      - Progress bar for each FAIR principle
+      - Aggregate bar for all
+    </Tab>
+    <Tab eventKey="two" title="FAIR-CHECKER">
+      Automated via website or API
 
-- Progress bar for each FAIR principle
-- Aggregate bar for all
+      Best for:
 
-**FAIR-CHECKER**
+      - Scalability to many datasets
+      - Identifying areas for improvement
 
-Automated via website or API 
+      Outputs include:
 
-Best for:
+      - A chart with scores and details
+    </Tab>
+    <Tab eventKey="three" title="F-UJI">
+      Automated via website or API 
 
-- Scalability to many datasets 
-- Identifying areas for improvement
+      Best for:
 
-Outputs include:
-- A chart with scores and details
+      - Scalability to many datasets 
+      - Detailed documentation of tool
 
-**F-UJI**
+      Outputs include:
+      - A report and chart with scores and details
+    </Tab>
+    <Tab eventKey="four" title="FAIR EVALUATION SERVICES">
+      Automated via website or API 
 
-Automated via website or API 
+      Best for:
 
-Best for:
+      - Scalability to many datasets
+      - To generate a custom assessment
 
-- Scalability to many datasets 
-- Detailed documentation of tool
+      Outputs include:
 
-Outputs include:
-- A report and chart with scores and details
-
-**FAIR EVALUATION SERVICES**
-
-Automated via website or API 
-
-Best for:
-
-- Scalability to many datasets
-- To generate a custom assessment
-
-Outputs include:
-
-- A detailed report and chart
+      - A detailed report and chart
+    </Tab>
+</CustomTabs>
 
 ## Lesson 3: Summary
 
@@ -271,40 +274,29 @@ In this lesson you learned:
 
 Answer the following questions to test what you have learned so far.
 
-*Question*
-
-**01/03** 
-
-Choose the FAIR Principles from the list below. Select all that apply.
-
-- Reproducible
-- Reusable
-- Responsible
-- Findable
-- Interactive
-- Interoperable
-- Interspersed
-- Accessible
-- Authorizable
-
-*Question*
-
-**02/03** 
-
-Which of the following can help make your data FAIR? Select all that apply.
-- Get a license for your data
-- Make your metadata accessible only as long as your data is available
-- Obtain a PID for your data
-
-*Question*
-
-**03/03** 
-
-Which of the following are examples of repositories? Select all that apply.
-
-- Zenodo
-- Dataverse
-- Dryad
-- Google
+<SimpleQuiz>
+  <MultipleChoice question='Choose the FAIR Principles from the list below.'>
+    <MultipleAnswer text='Reproducible' id='answer-1' isAnswer='false'/>
+    <MultipleAnswer text='Reusable' id='answer-2' isAnswer='true'/>
+    <MultipleAnswer text='Responsible' id='answer-3' isAnswer='false'/>
+    <MultipleAnswer text='Findable' id='answer-4' isAnswer='true'/>
+    <MultipleAnswer text='Interactive' id='answer-5' isAnswer='false'/>
+    <MultipleAnswer text='Interoperable' id='answer-6' isAnswer='true'/>
+    <MultipleAnswer text='Interspersed' id='answer-7' isAnswer='false'/>
+    <MultipleAnswer text='Accessible' id='answer-8' isAnswer='true'/>
+    <MultipleAnswer text='Authorizable' id='answer-9' isAnswer='false'/>
+  </MultipleChoice>
+  <MultipleChoice question='Which of the following can help make your data FAIR? Select all that apply.'>
+    <MultipleAnswer text='Get a license for your data' id='answer-1' isAnswer='true'/>
+    <MultipleAnswer text='Make your metadata accessible only as long as your data is available' id='answer-2' isAnswer='false'/>
+    <MultipleAnswer text='Obtain a PID for your data' id='answer-3' isAnswer='true'/>
+  </MultipleChoice>
+  <MultipleChoice question='Which of the following are examples of repositories?'>
+    <MultipleAnswer text='Zenodo' id='answer-1' isAnswer='true'/>
+    <MultipleAnswer text='Dataverse' id='answer-2' isAnswer='true'/>
+    <MultipleAnswer text='Dryad' id='answer-3' isAnswer='true'/>
+    <MultipleAnswer text='Google' id='answer-4' isAnswer='false'/>
+  </MultipleChoice>
+</SimpleQuiz>
 
 <CompletionDocked/>
