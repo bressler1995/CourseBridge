@@ -126,6 +126,11 @@
         position: relative;
     }
 
+    .os101_simpleSingleFigure.thumb .os101_simpleSingleFigure_imageContainer {
+        max-width: 150px;
+        margin: 0 auto;
+    }
+
     .os101_simpleSingleFigure.small .os101_simpleSingleFigure_imageContainer {
         max-width: 350px;
     }
@@ -188,6 +193,11 @@
         position: absolute;
     }
 
+    .os101_simpleSingleFigure.thumb .os101_simpleSingleFigure_imageContainer {
+        max-width: 150px;
+        margin: 0 auto;
+    }
+
     .os101_simpleSingleFigure.small .os101_simpleSingleFigure_imageContainer {
         max-width: 350px;
     }
@@ -217,6 +227,11 @@
 
     .os101_simpleQuoteImage .os101_simpleQuoteImage_content {
         position: absolute;
+    }
+
+    .os101_simpleSingleFigure.thumb .os101_simpleSingleFigure_imageContainer {
+        max-width: 150px;
+        margin: 0 auto;
     }
 
     .os101_simpleSingleFigure.small .os101_simpleSingleFigure_imageContainer {

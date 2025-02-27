@@ -8,6 +8,7 @@ import Module2 from '../../../../content/clone/Module_2/readme.mdx';
 import Module3 from '../../../../content/clone/Module_3/readme.mdx';
 import Module4 from '../../../../content/clone/Module_4/readme.mdx';
 import Module5 from '../../../../content/clone/Module_5/readme.mdx';
+import Module6 from '../../../../content/clone/README.mdx';
 
 import Banner from '../../../../components/Simple/Banner.jsx';
 import Definitions from '../../../../components/Simple/Definitions/Definitions.jsx';
@@ -26,6 +27,8 @@ import MultipleMatchable from '../../../Simple/Quiz/MultipleMatch/MultipleMatcha
 import FillBlank from '../../../Simple/Quiz/FillBlank/FillBlank.jsx';
 import Blank from '../../../Simple/Quiz/FillBlank/Blank.jsx';
 import Tab from 'react-bootstrap/Tab';
+import Button from 'react-bootstrap/Button';
+import LearnButton from '../../../../components/Simple/LearnButton/LearnButton.jsx';
 import CustomTabs from '../../../../components/Simple/CustomTabs/CustomTabs.jsx';
 import CompletionDocked from '../../../../components/Simple/Completion/CompletionDocked.jsx';
 import QuoteImage from '../../../../components/Simple/Images/QuoteImage.jsx';
@@ -45,7 +48,8 @@ const modules = {
   2: Module2,
   3: Module3,
   4: Module4,
-  5: Module5
+  5: Module5,
+  6: Module6
 }
 
 function SimpleModule() {
@@ -59,7 +63,7 @@ function SimpleModule() {
 
         return createElement(
           modules[child.id],
-          { className: '', components: {Banner, Definitions, Definition, Table, SimpleQuiz, SingleChoice, SingleAnswer, MultipleChoice, MultipleAnswer, Match, Matchable, MultipleMatch, MultipleMatchable, FillBlank, Blank, Tab, CustomTabs, CompletionDocked, QuoteImage, SingleFigure, DoubleFigure, TripleFigure, SimpleSlider, MultiSlider, SliderItem, Youtube, InfoBox, Resources, Resource } }
+          { className: '', components: {Banner, Definitions, Definition, Table, SimpleQuiz, SingleChoice, SingleAnswer, MultipleChoice, MultipleAnswer, Match, Matchable, MultipleMatch, MultipleMatchable, FillBlank, Blank, Tab, Button, LearnButton, CustomTabs, CompletionDocked, QuoteImage, SingleFigure, DoubleFigure, TripleFigure, SimpleSlider, MultiSlider, SliderItem, Youtube, InfoBox, Resources, Resource } }
         );
       }
     })

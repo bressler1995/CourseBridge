@@ -1,5 +1,3 @@
-import CompletionDocked from '../../../../components/Simple/Completion/CompletionDocked.jsx';
-
 # Lesson 4: Sharing Open Code
 
 ## Overview
@@ -18,8 +16,7 @@ After completing this lesson, you should be able to:
 
 ## Planning to Share Your Code
 
-<img src="./images/clone/Module_4/image540.png" style={{width: 350, height: 'auto'}} />
-
+<SingleFigure size='small' src="./images/clone/Module_4/image540.png" />
 
 "I've been working on code, and now a new collaborator wants to use the code. Awesome! What is the best way to share the code? By email? When should I share the code, and what should I include to ensure the colleague can easily use it?"
 
@@ -49,62 +46,65 @@ In contrast, if the software was created with external (government) funding, som
 
 Remember the parts of the Software Management Plan? What do we need to consider when it comes to sharing?
 
-- **What:** Description of management, preservation, and release of software.
-- **When:** The schedule for code archiving and sharing.
-- **Where:** Location where software will be shared and archived over the long-term.
-- **How:** Enable reuse of software through assigning a DOI, license, contribution guidelines, etc.
-- **Who:** Roles and responsibilities of the team members.
+<MultiSlider>
+  <SliderItem type="multi">
+    ### What:
+    
+    Description of management, preservation, and release of software.
+  </SliderItem>
+  <SliderItem type="multi">
+    ### When:
+    
+    The schedule for code archiving and sharing.
+  </SliderItem>
+  <SliderItem type="multi">
+    ### Where:
+    
+    Location where software will be shared and archived over the long-term.
+  </SliderItem>
+  <SliderItem type="multi">
+    ### How:
+    
+    Enable reuse of software through assigning a DOI, license, contribution guidelines, etc.
+  </SliderItem>
+  <SliderItem type="multi">
+    ### Who:
+    
+    Roles and responsibilities of the team members.
+  </SliderItem>
+</MultiSlider>
 
 ## Legal and Security Concerns
 
-<table>
-  <thead>
-    <tr>
-        <th>LEGAL CONCERNS &#9745;</th>
-        <th>SECURITY CONCERNS</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={2}>
-            <p>Anyone writing research code and software should familiarize themselves with their organization's policies on sharing and publishing software. Funding agencies, government or private, may have strict software openness requirements. In other cases, sharing software may not be allowed by the organization.</p>
-            <p>Legal concerns can include questions such as:</p>
-            <ul>
-                <li>Does a developer or institution own the software?</li>
-                <li>Does sharing (or not sharing) the software violate the funding agency’s policies?</li>
-                <li>Are there any local laws or regulations in your area that govern the sharing of intellectual property?</li>
-                <li>What software license is required?</li>
-            </ul>
-            <p><strong>Once you decide to participate in or begin a new open software project, familiarize yourself with your organization’s policies and practices.</strong></p>
-            <p>Find out more about the legal concerns <a href="https://opensource.guide/legal/">here</a>.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
+<CustomTabs>
+    <Tab eventKey="one" title="LEGAL CONCERNS">
+      Anyone writing research code and software should familiarize themselves with their organization's policies on sharing and publishing software. Funding agencies, government or private, may have strict software openness requirements. In other cases, sharing software may not be allowed by the organization.
+      
+      Legal concerns can include questions such as:
 
-<table>
-  <thead>
-    <tr>
-        <th>LEGAL CONCERNS</th>
-        <th>SECURITY CONCERNS &#9745;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-        <td colSpan={2}>
-            <p>Security is a concern when sharing software. Bad actors can attach malicious code to software in an attempt to infiltrate computer systems through security vulnerabilities, potentially exposing sensitive and proprietary information that can lead to great financial loss for users. Security risks must be considered when sharing software.</p>
-            <p>Security concerns can include:</p>
-            <ul>
-                <li>Does your organization’s Information Technology (IT) policy allow you to checkout the code you want to use on your machine?</li>
-                <li>Is the repository you want to contribute to reputable?</li>
-                <li>Are there any open security-related issues with the code?</li>
-            </ul>
-            <p><strong>Once you decide to participate in or begin a new open software project, familiarize yourself with your organization's IT policies.</strong></p>
-            <p>Find out more about the security concerns <a href="https://opensciency.github.io/sprint-content/open-software/lesson2-pros-cons.html#security-concerns">here</a>.</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
+      - Does a developer or institution own the software?
+      - Does sharing (or not sharing) the software violate the funding agency's policies?
+      - Are there any local laws or regulations in your area that govern the sharing of intellectual property?
+      - What software license is required?
+       
+       <strong>Once you decide to participate in or begin a new open software project, familiarize yourself with your organization's policies and practices.</strong>
+
+       Find out more about the legal concerns <a href="https://opensource.guide/legal/">here</a>.
+    </Tab>
+    <Tab eventKey="two" title="SECURITY CONCERNS">
+      Security is a concern when sharing software. Bad actors can attach malicious code to software in an attempt to infiltrate computer systems through security vulnerabilities, potentially exposing sensitive and proprietary information that can lead to great financial loss for users. Security risks must be considered when sharing software.
+      
+      Security concerns can include:
+      
+      - Does your organization's Information Technology (IT) policy allow you to checkout the code you want to use on your machine?
+      - Is the repository you want to contribute to reputable?
+      - Are there any open security-related issues with the code?
+      
+      <strong>Once you decide to participate in or begin a new open software project, familiarize yourself with your organization's IT policies.</strong>
+      
+      Find out more about the security concerns <a href="https://opensciency.github.io/sprint-content/open-software/lesson2-pros-cons.html#security-concerns">here</a>.
+    </Tab>
+</CustomTabs>
 
 ### Sharing Software Created with US Agency Funding
 
@@ -118,7 +118,7 @@ Are you funded by a grant? Read the original grant call to see if publishing you
 
 ### Activity 4.1: Find Your Organization’s Software Release Policies
 
-<img style={{width: 350, height: 'auto'}} src="./images/clone/Module_4/lightbulb.png" />
+<SingleFigure size='small' src="./images/clone/Module_4/lightbulb.png" />
 
 Assume you want to start a new open-source project:
 
@@ -140,9 +140,7 @@ As an example, what does NASA say?
 
 If you are writing scientific software for a project funded by the NASA Science Mission Directorate then:
 
-"Scientific software needed to validate the scientific conclusions of peer-reviewed manuscripts resulting from SMD-funded scientific activities shall become publicly available no later than the publication date of the corresponding peer-reviewed article. This includes software required to derive the findings communicated in figures, maps, and tables, as well as scientifically useful software from models and simulations."
-
-\- [**Open-Source Science Guidance**](https://smd-cms.nasa.gov/wp-content/uploads/2023/07/smd-open-source-science-guidance-v2-20230407.pdf)
+<QuoteImage quote='"Scientific software needed to validate the scientific conclusions of peer-reviewed manuscripts resulting from SMD-funded scientific activities shall become publicly available no later than the publication date of the corresponding peer-reviewed article. This includes software required to derive the findings communicated in figures, maps, and tables, as well as scientifically useful software from models and simulations."' byWho="Open-Source Science Guidance" byWhoLink="https://smd-cms.nasa.gov/wp-content/uploads/2023/07/smd-open-source-science-guidance-v2-20230407.pdf" bgImage="./images/clone/Module_4/codebg.jpg" />
 
 Other organizations may have different guidance, so it is always best to check what the funding agency or organization requires.
 
@@ -150,8 +148,7 @@ Other organizations may have different guidance, so it is always best to check w
 
 ### General Considerations
 
-<img src="./images/clone/Module_4/image197.png" style={{width: '100%', height: 'auto'}} />
-
+<SingleFigure size='medium' src="./images/clone/Module_4/image197.png" />
 
 Like data, code can be shared in many ways, for example over email or on a personal website, but these methods are not recommended. So, where should you share your Open Code?
 
@@ -165,8 +162,7 @@ First, consider your institutional or funding agency policies that may dictate w
 
 #### Is your code a substantial software package and of interest to a significant number of users from various disciplines? Where else can your open code be shared?
 
-<img src="./images/clone/Module_4/image332.png" style={{width: 350, height: 'auto'}} />
-
+<SingleFigure size='small' src="./images/clone/Module_4/image332.png" />
 
 - Develop your software on a public repository such as GitHub.
 - Publish to a software repository used by common package managers to make the software easy for users to install (ex. Anaconda, CRAN, PyPI).
@@ -176,14 +172,13 @@ First, consider your institutional or funding agency policies that may dictate w
 
 #### To share my code, I can just add it to GitHub, right?
 
-Not necessarily. Sharing on a repository is encouraged, but a researcher’s funding organization may require a DOI from an archival repository, such as Zenodo, for long-term preservation of your code at the time of publication or version releases.
+Not necessarily. Sharing on a repository is encouraged, but a researcher's funding organization may require a DOI from an archival repository, such as Zenodo, for long-term preservation of your code at the time of publication or version releases.
 
-<img src="./images/clone/Module_4/image425.png" style={{width: 350, height: 'auto'}} />
-
+<SingleFigure size='small' src="./images/clone/Module_4/image425.png" />
 
 ## How: How to Enable Reuse of Code
 
-Now that you have shared your code in the appropriate way, it’s important to consider if you’ve made it easy for others (or your future self) to reuse your code.
+Now that you have shared your code in the appropriate way, it's important to consider if you've made it easy for others (or your future self) to reuse your code.
 
 ### Assigning a License
 
@@ -193,8 +188,7 @@ As an example, here's how you'd assign a license to a GitHub repository:
 
 Choose the appropriate software sharing license that meets your organization requirements. To create a license template in GitHub, add a new file and type "LICENSE" in the name field, then the "Choose a license template" option will appear.
 
-<img src="./images/clone/Module_4/image78.jpg" style={{width: 350, height: 'auto'}} />
-
+<SingleFigure size='small' src="./images/clone/Module_4/image78.jpg" />
 
 Make sure that your GitHub repository is public, making it searchable by anyone.
 
@@ -214,49 +208,28 @@ Steps for this activity:
 
 **Part 1: Create a test public GitHub repository.**
 
-1. Navigate to the login page for [GitHub](https://github.com/) and login. If you haven’t already, create a free user account.
+1. Navigate to the login page for [GitHub](https://github.com/) and login. If you haven't already, create a free user account.
 2. Create a new repository with this [link](https://github.com/new).
 3. Type a short, memorable name for your repository. For example, "os-test".
 4. Set the repository visibility 'Public' by selecting this option below the repository description.
 5. In the following section 'Initialize this repository with:' select 'Add a README file'.
-6.  Select any license.
-7.  Click 'Create repository'.
-8.  You will be automatically directed to your new repository webpage.
-9.  Now we will get a DOI from the Zenodo application. Note that we are going to use [https://sandbox.zenodo.org/](https://sandbox.zenodo.org/) to do this. This offers all the same capabilities as [https://zenodo.org](https://zenodo.org/) but is a testing site! Create a free account if you have not already.
+6. Select any license.
+7. Click 'Create repository'.
+8. You will be automatically directed to your new repository webpage.
+9. Now we will get a DOI from the Zenodo application. Note that we are going to use [https://sandbox.zenodo.org/](https://sandbox.zenodo.org/) to do this. This offers all the same capabilities as [https://zenodo.org](https://zenodo.org/) but is a testing site! Create a free account if you have not already.
 
 **Part 2: Create an archived repository and affiliated DOI.**
 
-1.  Navigate to the [Zenodo GitHub page](https://sandbox.zenodo.org/account/settings/github/). Click on the button 'Connect' to allow Zenodo to access your GitHub repositories.
-
-<img src="./images/clone/Module_4/zenododoi1.jpg" style={{width: '100%', height: 'auto'}} />
-
-
+1. Navigate to the [Zenodo GitHub page](https://sandbox.zenodo.org/account/settings/github/). Click on the button 'Connect' to allow Zenodo to access your GitHub repositories.<br></br><SingleFigure size='large' src="./images/clone/Module_4/zenododoi1.jpg" />
 2. Review the information about access permissions, then click 'Authorize Zenodo'.
-3. Sync your GitHub with Zenodo by clicking 'Sync now' in the upper right corner.
-
-<img src="./images/clone/Module_4/zenododoi3.jpg" style={{width: '100%', height: 'auto'}} />
-
-
+3. Sync your GitHub with Zenodo by clicking 'Sync now' in the upper right corner. <br></br> <SingleFigure size='large' src="./images/clone/Module_4/zenododoi3.jpg" />
 4. To the right of the name of the repository you want to archive ('os-test'), toggle the button to On.
 5. Click on the name of the repository.
-6. Click the big green button that has 'username/os-test'
-
-<img src="./images/clone/Module_4/zenododoi6.jpg" style={{width: '100%', height: 'auto'}} />
-
-
+6. Click the big green button that has 'username/os-test' <br></br> <SingleFigure size='large' src="./images/clone/Module_4/zenododoi6.jpg" />
 7. Add a tag 'test'. You may have to create a new tag for 'test' if prompted.
-8. Scroll down and click the green 'publish release' button
-
-<img src="./images/clone/Module_4/zenododoi8.jpg" style={{width: '100%', height: 'auto'}} />
-
-
+8. Scroll down and click the green 'publish release' button <br></br> <SingleFigure size='medium' src="./images/clone/Module_4/zenododoi8.jpg" />
 9. Navigate to the [Zenodo GitHub page](https://sandbox.zenodo.org/account/settings/github/) and see the DOI for 'os-test'
-10. Share your DOI below.
-
-<img src="./images/clone/Module_4/zenododoi10.jpg" style={{width: '100%', height: 'auto'}} />
-
-
-Zenodo archives your repository and issues a new DOI each time you create a new GitHub [release](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases). Follow the steps at "[Managing releases in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)" to create a new one.
+10. Share your DOI below.<br></br><SingleFigure size='medium' src="./images/clone/Module_4/zenododoi10.jpg"/><br></br>Zenodo archives your repository and issues a new DOI each time you create a new GitHub [release](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases). Follow the steps at "[Managing releases in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)" to create a new one.
 
 ### Making it Easy to Cite Your Code
 
@@ -268,7 +241,7 @@ CITATION files are a means to make citation information easily accessible in ope
 
 ### Adding Contributor Guidelines
 
-<img src="./images/clone/Module_4/image419.png" style={{width: '100%', height: 'auto'}} />
+<SingleFigure size='medium' src="./images/clone/Module_4/image419.png"/>
 
 
 If you are hoping for community input on your software, it is a best practice to include CONTRIBUTING and CODE_OF_CONDUCT files in your repository that outline expectations for member interactions.
@@ -281,23 +254,23 @@ When writing a SMP, it's important to include a plan for the roles and responsib
 
 Some roles might include:
 
-**Who will add the code to a public repository?**
-- Uploading the code
-- Assigning a license
-
-**Who will take care of code documentation**
-- Writing a README
-- Adding explanatory comments to the code
-
-**Who will help with code reuse?**
-
-Adding CITATION, CONTRIBUTING, and CODE_OF_CONDUCT files
-
-**Who will maintain the software (if applicable)?**
-- Who will respond to community input (e.g. via GitHub issues)?
-- Who will be responsible for making decisions about which code to add/update from other contributors? (e.g. via GitHub pull requests)
-
----
+<Definitions>
+  <Definition title='Who will add the code to a public repository?'>
+    - Uploading the code
+    - Assigning a license
+  </Definition>
+  <Definition title='Who will take care of code documentation'>
+    - Writing a README
+    - Adding explanatory comments to the code
+  </Definition>
+  <Definition title='Who will help with code reuse?'>
+    Adding CITATION, CONTRIBUTING, and CODE_OF_CONDUCT files
+  </Definition>
+  <Definition title='Who will maintain the software (if applicable)?'>
+    - Who will respond to community input (e.g. via GitHub issues)?
+    - Who will be responsible for making decisions about which code to add/update from other contributors? (e.g. via GitHub pull requests)
+  </Definition>
+</Definitions>
 
 All of these roles may or may not be needed, depending on the size of your project. Have a transparent process for assigning any roles to community members.
 
@@ -326,69 +299,34 @@ In this lesson, you learned the key steps in sharing open software:
 
 Answer the following questions to test what you have learned so far.
 
-*Question*
-
-**01/06**
-
-Read the statement and decide whether it's true or false:
-
-*I don’t need to share my code if I don't plan to continue developing it.*
-
-- True
-- False
-
-*Question*
-
-**02/06**
-
-Read the statement and decide whether it's true or false:
-
-*Adding code to a GitHub repository is sufficient for archiving my code.*
-
-- True
-- False
-
-*Question*
-
-**03/06**
-
-Read the statement and decide whether it's true or false:
-
-*Organization and government software-sharing policies follow a standard practice.*
-
-- True
-- False
-
-*Question*
-
-**04/06**
-
-Read the statement and decide whether it's true or false:
-
-*Publishing your software to a software repository used by common package managers makes it easier for users to install your software.*
-
-- True
-- False
-
-*Question*
-
-**05/06**
-
-Which, if any, of the following are ways you can help others to reuse your code? Select all that apply.
-
-- Assign an appropriate license
-- Add a file named "CONTRIBUTING" with contributor guidelines
-- Add a "CITATION" file with citation information
-
-*Question*
-
-**06/06**
-
-Which of the following are roles that you should plan for when writing a SMP? Select all that apply.
-
-- Who will help maintain the software
-- Who will create the repository and add the necessary files
-- Who will contribute to the software after it is shared
-- Who will add documentation to the software
+<SimpleQuiz>
+  <SingleChoice question="I don't need to share my code if I don't plan to continue developing it." answer='answer-2' isBool="true">
+    <SingleAnswer text='True' id='answer-1'/>
+    <SingleAnswer text='False' id='answer-2'/>
+  </SingleChoice>
+  <SingleChoice question="Adding code to a GitHub repository is sufficient for archiving my code." answer='answer-2' isBool="true">
+    <SingleAnswer text='True' id='answer-1'/>
+    <SingleAnswer text='False' id='answer-2'/>
+  </SingleChoice>
+  <SingleChoice question="Organization and government software-sharing policies follow a standard practice." answer='answer-2' isBool="true">
+    <SingleAnswer text='True' id='answer-1'/>
+    <SingleAnswer text='False' id='answer-2'/>
+  </SingleChoice>
+  <SingleChoice question="Publishing your software to a software repository used by common package managers makes it easier for users to install your software." answer='answer-1' isBool="true">
+    <SingleAnswer text='True' id='answer-1'/>
+    <SingleAnswer text='False' id='answer-2'/>
+  </SingleChoice>
+  <MultipleChoice question='Which, if any, of the following are ways you can help others to reuse your code?'>
+    <MultipleAnswer text='Assign an appropriate license' id='answer-1' isAnswer='true'/>
+    <MultipleAnswer text='Add a file named "CONTRIBUTING" with contributor guidelines' id='answer-2' isAnswer='true'/>
+    <MultipleAnswer text='Add a "CITATION" file with citation information' id='answer-3' isAnswer='true'/>
+  </MultipleChoice>
+  <MultipleChoice question='Which of the following are roles that you should plan for when writing a SMP?'>
+    <MultipleAnswer text='Who will help maintain the software' id='answer-1' isAnswer='true'/>
+    <MultipleAnswer text='Who will create the repository and add the necessary files' id='answer-2' isAnswer='true'/>
+    <MultipleAnswer text='Who will contribute to the software after it is shared' id='answer-3' isAnswer='false'/>
+    <MultipleAnswer text='Who will add documentation to the software' id='answer-4' isAnswer='true'/>
+  </MultipleChoice>
+</SimpleQuiz>
 
 <CompletionDocked/>

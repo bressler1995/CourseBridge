@@ -1,5 +1,3 @@
-import CompletionDocked from '../../../../components/Simple/Completion/CompletionDocked.jsx';
-
 # Lesson 2: Using Open Code
 
 ## Overview
@@ -21,11 +19,17 @@ Many people discover code through discussions with their colleagues or by readin
 
 What other ways can someone search for open code? As a first step, look for code that already exists because chances are that someone else has already had a similar problem and published their code online. A common way to search for existing code is with a general search engine. Search engines offer one indicator of a code’s relevancy, how recently it was updated, and how frequently others reference it.
 
-|  |  |
-|---|---|
-| Example | I'm a new graduate student starting to work on modeling turbulence in the Southern Ocean to better understand sea surface temperature (or ocean heat uptake) and climate change. Is there some software available to model how eddies in the ocean affect sea-surface temperature? |
-| Exercise | General Search on the term "Software for ocean turbulence modeling" |
-| Result | General Ocean Turbulence Model (GOTM) |
+<Definitions>
+  <Definition title='Example'>
+    I'm a new graduate student starting to work on modeling turbulence in the Southern Ocean to better understand sea surface temperature (or ocean heat uptake) and climate change. Is there some software available to model how eddies in the ocean affect sea-surface temperature?
+  </Definition>
+  <Definition title='Exercise'>
+    General Search on the term "Software for ocean turbulence modeling"
+  </Definition>
+  <Definition title='Result'>
+    General Ocean Turbulence Model (GOTM)
+  </Definition>
+</Definitions>
 
 This successful search is predicated on the developers of GOTM making their code open.
 
@@ -53,8 +57,7 @@ The open software ecosystem is vast, organic, multifaceted, and highly distribut
 
 If you are looking for scientific software, community standards increasingly require code to be published and linked to scientific papers.
 
-<img src="./images/clone/Module_4/image333.jpg" style={{width: 350, height: 'auto'}} />
-
+<SingleFigure size='medium' src="./images/clone/Module_4/image333.jpg" />
 
 Thus, the scientific literature and its ancillary code archives are increasingly a great place to look for scientific open code.
 
@@ -66,59 +69,32 @@ There are several popular search engines for code snippets. First, you can simpl
 
 #### Examples of code repositories:
 
-<table>
-<colgroup>
-    <col style={{width: "33%"}} />
-    <col style={{width: "33%"}} />
-    <col style={{width: "33%"}} />
-</colgroup>
-<tbody>
-    <tr>
-        <td><img style={{width: '98%'}} src="./images/clone/Module_4/examplecoderepo1.png" />
-</td>
-        <td><img style={{width: '98%'}} src="./images/clone/Module_4/examplecoderepo2.png" />
-</td>
-        <td><img style={{width: '98%'}} src="./images/clone/Module_4/examplecoderepo3.png" />
-</td>
-    </tr>
-    <tr>
-        <td>GitHub</td>
-        <td>GitLab</td>
-        <td>Bitbucket</td>
-    </tr>
-</tbody>
-</table>
+<TripleFigure>
+  <SingleFigure src='./images/clone/Module_4/examplecoderepo1.png' caption='GitHub'/>
+  <SingleFigure src='./images/clone/Module_4/examplecoderepo2.png' caption='GitLab'/>
+  <SingleFigure src='./images/clone/Module_4/examplecoderepo3.png' caption='Bitbucket'/>
+</TripleFigure>
 
-**Example - GitHub Code Search**
+<Definitions>
+  <Definition title='GitHub Code Search'>
+    In this example, we will practice searching for open access code on GitHub. Let's work through a scenario in which you would like to search for the Lomb and Scargle method for estimating a power spectrum.
+  </Definition>
+  <Definition title='Example background'>
+    GitHub enables users to collaborate on a shared project and track their changes with version control. Users can create a repository and grant others access, or make it open access. GitHub involves a large community of open access users who make their code available for free.
+  </Definition>
+  <Definition title='Example instruction'>
+    Begin by visiting the GitHub website to search for openly available software packages. You will need to create a free account for this action. Navigate to the Search Code page to begin your search and access tutorials on the interface and capabilities of the search portal. Alternatively, you can simply input your search terms in the search bar while on your profile page. Next, input the related keywords into the search bar. Search for "Lomb Scargle" and find several repositories with relevant code in various languages, along with thousands of related snippets of code. Congratulations! You have begun your open access software journey and can now view the work of thousands of others who once were where you are now. Upwards and onwards!
+  </Definition>
+</Definitions>
 
-In this example, we will practice searching for open access code on GitHub. Let's work through a scenario in which you would like to search for the Lomb and Scargle method for estimating a power spectrum.
-
-**Example background**
-
-GitHub enables users to collaborate on a shared project and track their changes with version control. Users can create a repository and grant others access, or make it open access. GitHub involves a large community of open access users who make their code available for free.
-
-**Example instruction**
-
-Begin by visiting the GitHub website to search for openly available software packages. You will need to create a free account for this action. Navigate to the Search Code page to begin your search and access tutorials on the interface and capabilities of the search portal. Alternatively, you can simply input your search terms in the search bar while on your profile page. Next, input the related keywords into the search bar. Search for "Lomb Scargle" and find several repositories with relevant code in various languages, along with thousands of related snippets of code. Congratulations! You have begun your open access software journey and can now view the work of thousands of others who once were where you are now. Upwards and onwards!
-
-<img src="./images/clone/Module_4/image335.jpg" style={{width: '100%', height: 'auto'}} />
-
-
-Screenshot of the repositories returned from our search
-
-<img src="./images/clone/Module_4/image496.jpg" style={{width: '100%', height: 'auto'}} />
-
-
-Screenshot of the code snippets returned from our search
-
----
+<SingleFigure size='large' src="./images/clone/Module_4/image335.jpg" caption="Screenshot of the repositories returned from our search"/>
+<SingleFigure size='large' src="./images/clone/Module_4/image496.jpg" caption="Screenshot of the code snippets returned from our search" />
 
 With open software, knowing where to search and what to search for can be a challenging problem. You can always start with a Google Search. However, it can be valuable to think through some of the questions that guide the discovery process. If the user lacks relevant experience, it can also be helpful to engage experienced colleagues at this stage.
 
 Review the flow chart that illustrates how the search follows the definition of the need.
 
-<img src="./images/clone/Module_4/image128.jpg" style={{width: '6.23514in', height: '3.24979in'}} />
-
+<SingleFigure size='large' src="./images/clone/Module_4/image128.jpg" />
 
 ### Open Software is Aggregated and Searchable in Repositories
 
@@ -132,54 +108,16 @@ Most research code should be open source software, which is stored in code repos
 
 #### Examples of software repositories are:
 
-<table>
-<colgroup>
-    <col style={{width: "50%"}} />
-    <col style={{width: "50%"}} />
-</colgroup>
-<tbody>
-    <tr>
-        <td><img style={{width: '98%'}} src="./images/clone/Module_4/softwarerepo1.png" />
-</td>
-        <td><img style={{width: '98%'}} src="./images/clone/Module_4/softwarerepo2.png" />
-</td>
-    </tr>
-    <tr>
-        <td>Software Heritage</td>
-        <td>Open Source Development Network (OSDN)</td>
-    </tr>
-    <tr>
-        <td><img style={{width: '98%'}} src="./images/clone/Module_4/softwarerepo3.png" />
-</td>
-        <td><img style={{width: '98%'}} src="./images/clone/Module_4/softwarerepo4.png" />
-</td>
-    </tr>
-    <tr>
-        <td>SourceForge</td>
-        <td>Free and Open-Source Software Hub (FOSSHUB)</td>
-    </tr>
-    <tr>
-        <td><img style={{width: '98%'}} src="./images/clone/Module_4/softwarerepo5.png" />
-</td>
-        <td><img style={{width: '98%'}} src="./images/clone/Module_4/softwarerepo6.png" />
-</td>
-    </tr>
-    <tr>
-        <td>Googlecode</td>
-        <td>Comprehensive Perl Archive Network</td>
-    </tr>
-    <tr>
-        <td><img style={{width: '98%'}} src="./images/clone/Module_4/softwarerepo7.png" />
-</td>
-        <td><img style={{width: '98%'}} src="./images/clone/Module_4/softwarerepo8.jpg" />
-</td>
-    </tr>
-    <tr>
-        <td>PyPl</td>
-        <td>CRAN</td>
-    </tr>
-</tbody>
-</table>
+<TripleFigure>
+  <SingleFigure src='./images/clone/Module_4/softwarerepo1.png' caption='Software Heritage'/>
+  <SingleFigure src='./images/clone/Module_4/softwarerepo2.png' caption='Open Source Development Network (OSDN)'/>
+  <SingleFigure src='./images/clone/Module_4/softwarerepo3.png' caption='SourceForge'/>
+  <SingleFigure src='./images/clone/Module_4/softwarerepo4.png' caption='Free and Open-Source Software Hub (FOSSHUB)'/>
+  <SingleFigure src='./images/clone/Module_4/softwarerepo5.png' caption='Googlecode'/>
+  <SingleFigure src='./images/clone/Module_4/softwarerepo6.png' caption='Comprehensive Perl Archive Network'/>
+  <SingleFigure src='./images/clone/Module_4/softwarerepo7.png' caption='PyPl'/>
+  <SingleFigure src='./images/clone/Module_4/softwarerepo8.jpg' caption='CRAN'/>
+</TripleFigure>
 
 **NASA Resources for Discovering Open Software**
 
@@ -207,39 +145,56 @@ Software assessment criteria are similar, for any level of openness:
 
 ### Functionality: Assessing Scientific Utility
 
-#### Does the software meet your scientific needs?
+<SimpleSlider>
+  <SliderItem>
 
-- Does it address your specific science question? 
-- Do studies similar to yours use it?
-- What papers cite it and how do they use it?
-- Talk to your advisors or colleagues that might have experience with it.
+    #### Does the software meet your scientific needs?
 
-#### Testing the scientific compatibility
+    - Does it address your specific science question? 
+    - Do studies similar to yours use it?
+    - What papers cite it and how do they use it?
+    - Talk to your advisors or colleagues that might have experience with it.
+  </SliderItem>
+  <SliderItem>
 
-- Does the software contain scientific test cases? If so, reproduce a case that is applicable to your problem; make sure the results are as expected.
-- If you’ve done similar scientific analysis/modeling previously, reproduce your prior results with the new software. Are the results consistent?
-- Incrementally modify a given test case to address new scientific questions. Alternatively, develop your own case, if necessary, following relevant examples.
+    #### Testing the scientific compatibility
+
+    - Does the software contain scientific test cases? If so, reproduce a case that is applicable to your problem; make sure the results are as expected.
+    - If you've done similar scientific analysis/modeling previously, reproduce your prior results with the new software. Are the results consistent?
+    - Incrementally modify a given test case to address new scientific questions. Alternatively, develop your own case, if necessary, following relevant examples.
+  </SliderItem>
+  
+</SimpleSlider>
 
 ### Interoperability: Ease of Use
 
-#### Is the code written in a language that you are familiar with?
+<SimpleSlider>
+  <SliderItem>
 
-It can be easier to use coding languages that you are familiar with, then import the code into existing software rather than try to use a new language. On the other hand, the use of existing packages and executables can accelerate your work.
+    #### Is the code written in a language that you are familiar with?
 
-#### Check for good documentation
+    It can be easier to use coding languages that you are familiar with, then import the code into existing software rather than try to use a new language. On the other hand, the use of existing packages and executables can accelerate your work.
+  </SliderItem>
+  <SliderItem>
 
-Read the README file. Does the software meet your functional requirements? Are the environmental dependencies well-defined and reasonable?
+    #### Check for good documentation
 
-#### Check the evidence of interoperability with other projects and codes
+    Read the README file. Does the software meet your functional requirements? Are the environmental dependencies well-defined and reasonable?
+  </SliderItem>
+  <SliderItem>
 
-It is a good sign if you can find evidence that the code has been used successfully by other users that have similar scientific or technical needs.
+    #### Check the evidence of interoperability with other projects and codes
+
+    It is a good sign if you can find evidence that the code has been used successfully by other users that have similar scientific or technical needs.
+  </SliderItem>
+  
+</SimpleSlider>
 
 ### Factors for assessing the quality of open source software
 
-To quickly assess the community usage and quality of software repository, use the tools from the repository where you found it. GitHub, for example, permits a quick scan of development activity as evidenced by the number of times the code has been downloaded or ‘forked’ in GitHub parlance. You can also view the amount of activity in a community. GitHub also provides insights into the quality of the software.
+To quickly assess the community usage and quality of software repository, use the tools from the repository where you found it. GitHub, for example, permits a quick scan of development activity as evidenced by the number of times the code has been downloaded or 'forked' in GitHub parlance. You can also view the amount of activity in a community. GitHub also provides insights into the quality of the software.
 
-<img src="./images/clone/Module_4/image291.jpg" style={{width: '100%', height: 'auto'}} />
-
+<SingleFigure size='medium' src="./images/clone/Module_4/image291.jpg" />
 
 ### The Importance of the README File
 
@@ -282,11 +237,23 @@ If you simply intend to reuse a code snippet, continuously test that your select
 
 Consider the following when selecting among multiple versions of open source software.
 
-|  |  |
-|---|---|
-| Use the latest stable release when possible | Just like software updates to your phone or computer’s operating system or apps, it is important to use the latest stable release. Developers often release developmental versions that include new features or bug fixes that are not fully tested. For this reason, using a developmental release is generally not recommended. |
-| Determine the origin of the version you intend to use | Determine whether the version you intend to use comes from a modified open-source project or from its original source project. With this information, determine which source is more appropriate for your project. |
-| Check for issues and bugs | Check for any known issues or bugs with your selected version that could cause problems. Find current information on issues or bugs by checking release notes, issue trackers, and developer forums. |
+<MultiSlider infinite={false}>
+  <SliderItem type="multi">
+    ### Use the latest stable release when possible
+    
+    Just like software updates to your phone or computer's operating system or apps, it is important to use the latest stable release. Developers often release developmental versions that include new features or bug fixes that are not fully tested. For this reason, using a developmental release is generally not recommended.
+  </SliderItem>
+  <SliderItem type="multi">
+    ### Determine the origin of the version you intend to use
+    
+    Determine whether the version you intend to use comes from a modified open-source project or from its original source project. With this information, determine which source is more appropriate for your project.
+  </SliderItem>
+  <SliderItem type="multi">
+    ### Check for issues and bugs
+    
+    Check for any known issues or bugs with your selected version that could cause problems. Find current information on issues or bugs by checking release notes, issue trackers, and developer forums.
+  </SliderItem>
+</MultiSlider>
 
 ### Resolve Problems in Reusing Software
 
@@ -298,39 +265,30 @@ Consider the following when selecting among multiple versions of open source sof
 ### Activity 2.1: Ways to Get Help Using Open Software
 In this activity, you are asked to select from a list of ways you can resolve some common problems that arise when using open software.
 
-#### Exercise 1
-
-Select how you can resolve this problem when using open software: Difficulty finding open software that meets your needs.
-
-Select all that apply.
-- Reach out to expert colleagues
-- Read related peer reviewed literature
-- Conduct a search of various popular repositories
-- Read the README file
-- Read the license file
-
-#### Exercise 2
-
-Select how you can resolve the problem when using open software: installation difficulties. 
-
-Select all that apply.
-- Reach out to the developers on a public forum
-- Read related peer reviewed literature
-- Conduct a search of various popular repositories
-- Read the README file
-- Read the license file
-
-#### Exercise 3
-
-Select how you can resolve the problem when using open software: software is not working as expected. 
-
-Select all that apply.
-- Reach out to the developers on a public forum
-- Read related peer reviewed literature
-- Conduct a search of various popular repositories
-- Read the README file
-- Read the license file
-- Consult the release notes, issue trackers, and public forums
+<SimpleQuiz>
+  <MultipleChoice question='Exercise 1 - Select how you can resolve this problem when using open software: Difficulty finding open software that meets your needs.'>
+    <MultipleAnswer text='Reach out to expert colleagues' id='answer-1' isAnswer='true'/>
+    <MultipleAnswer text='Read related peer reviewed literature' id='answer-2' isAnswer='true'/>
+    <MultipleAnswer text='Conduct a search of various popular repositories' id='answer-3' isAnswer='true'/>
+    <MultipleAnswer text='Read the README file' id='answer-4' isAnswer='false'/>
+    <MultipleAnswer text='Read the license file' id='answer-5' isAnswer='false'/>
+  </MultipleChoice>
+  <MultipleChoice question='Exercise 2 - Select how you can resolve the problem when using open software: installation difficulties.'>
+    <MultipleAnswer text='Reach out to the developers on a public forum' id='answer-1' isAnswer='true'/>
+    <MultipleAnswer text='Read related peer reviewed literature' id='answer-2' isAnswer='false'/>
+    <MultipleAnswer text='Conduct a search of various popular repositories' id='answer-3' isAnswer='false'/>
+    <MultipleAnswer text='Read the README file' id='answer-4' isAnswer='true'/>
+    <MultipleAnswer text='Read the license file' id='answer-5' isAnswer='false'/>
+  </MultipleChoice>
+  <MultipleChoice question='Exercise 3 - Select how you can resolve the problem when using open software: software is not working as expected.'>
+    <MultipleAnswer text='Reach out to the developers on a public forum' id='answer-1' isAnswer='true'/>
+    <MultipleAnswer text='Read related peer reviewed literature' id='answer-2' isAnswer='false'/>
+    <MultipleAnswer text='Conduct a search of various popular repositories' id='answer-3' isAnswer='false'/>
+    <MultipleAnswer text='Read the README file' id='answer-4' isAnswer='true'/>
+    <MultipleAnswer text='Read the license file' id='answer-5' isAnswer='false'/>
+    <MultipleAnswer text='Consult the release notes, issue trackers, and public forums' id='answer-6' isAnswer='true'/>
+  </MultipleChoice>
+</SimpleQuiz>
 
 #### Exercise 4
 
@@ -338,37 +296,44 @@ After answering the questions above, work through some specific examples of how 
 
 ## Citing and Acknowledging Open Code Use
 
-Imagine that you’ve used Open Code pulled from the web and it made a big difference for your project research paper. How should you provide due credit for the open access code that contributed to your research?
+Imagine that you've used Open Code pulled from the web and it made a big difference for your project research paper. How should you provide due credit for the open access code that contributed to your research?
 
 **Example:** You managed to implement GOTM to learn something new about ocean turbulence in the Southern Ocean, or you managed to compute a Lomb-Scargle periodogram using astropy. Here are some questions to consider:
 
-### Should you cite the Open Code?
+<SimpleSlider>
+  <SliderItem>
 
-Cite any code that you view as having contributed to your research: 
+    ### Should you cite the Open Code?
 
-- Did the code play a critical part in your research?
-- Did the code provide something novel?
+    Cite any code that you view as having contributed to your research: 
 
-In most cases, a code snippet on Stack Overflow does not constitute a citable research contribution. However, an author can still decide to cite it if they choose.
+    - Did the code play a critical part in your research?
+    - Did the code provide something novel?
 
-Instances when shared code directly impacts the scientific results and requires a detailed description include:
+    In most cases, a code snippet on Stack Overflow does not constitute a citable research contribution. However, an author can still decide to cite it if they choose.
 
-- Numerical modeling or simulation
-- Automated analysis, such as image processing or optical recognition
+    Instances when shared code directly impacts the scientific results and requires a detailed description include:
 
-See the journal where you are publishing if they have any specific instructions on how to cite software (e.g., [AAS Software Citation Suggestions](https://journals.aas.org/news/software-citation-suggestions/)).
+    - Numerical modeling or simulation
+    - Automated analysis, such as image processing or optical recognition
 
-In some cases, a software’s licensing terms and conditions require acknowledgment or citation in the references or bibliography of any publications based on research that made use of the software.
+    See the journal where you are publishing if they have any specific instructions on how to cite software (e.g., [AAS Software Citation Suggestions](https://journals.aas.org/news/software-citation-suggestions/)).
 
-### How to cite?
+    In some cases, a software's licensing terms and conditions require acknowledgment or citation in the references or bibliography of any publications based on research that made use of the software.
+  </SliderItem>
+  <SliderItem>
 
-Ideally, use and cite code that is archived in a long-term repository with a persistent DOI. Follow the guidance about the preferred citation format, which is provided in the long-term repository and may appear in a README or a CITATION file.
+    ### How to cite?
 
-DOIs provide a persistent identifier/link for research outputs. Thus, it is preferable to cite code in long-term repositories linked to a DOI. URLs (e.g., Stack Overflow) and active repositories (e.g., on GitHub) are mutable but can be used if there is no alternative.
+    Ideally, use and cite code that is archived in a long-term repository with a persistent DOI. Follow the guidance about the preferred citation format, which is provided in the long-term repository and may appear in a README or a CITATION file.
 
-Packages may provide a way to cite individual versions as well. For reproducibility, cite both the overall package and the version that is used in your work. As functionality of a package may evolve with the release of new versions, this helps provide a specific description of your work.
+    DOIs provide a persistent identifier/link for research outputs. Thus, it is preferable to cite code in long-term repositories linked to a DOI. URLs (e.g., Stack Overflow) and active repositories (e.g., on GitHub) are mutable but can be used if there is no alternative.
 
-If you are writing software, you can also cite in the comments and documentation of the software that you have used.
+    Packages may provide a way to cite individual versions as well. For reproducibility, cite both the overall package and the version that is used in your work. As functionality of a package may evolve with the release of new versions, this helps provide a specific description of your work.
+
+    If you are writing software, you can also cite in the comments and documentation of the software that you have used.
+  </SliderItem>
+</SimpleSlider>
 
 ## Lesson 2: Summary
 
@@ -384,37 +349,21 @@ In this lesson, you learned that:
 
 Answer the following questions to test what you have learned so far.
 
-*Question*
-
-**01/03**
-
-Discovering open software successfully depends on which of the following:
-
-Select all that apply.
-
-- Well-defined requirements
-- Knowing where to search
-- FAIR open software exists to meet your needs
-- All of the above
-
-*Question*
-
-**02/03**
-
-Read the statement and decide whether it's true or false:
-
-*It is best to reach out to the developers of open access software via private communication if you run into problems.*
-
-- True
-- False
-
-*Question*
-
-**03/03**
-
-When citing Open Code, it is best practice to cite:
-
-- The primary working repository, e.g. on GitHub. It has the most recent version of the code, including any updates since your paper was written.
-- A long-term code repository linked to a DOI, e.g. on Zenodo. This repository contains a persistent version of the code that you used.
+<SimpleQuiz>
+  <MultipleChoice question='Discovering open software successfully depends on which of the following:'>
+    <MultipleAnswer text='Well-defined requirements' id='answer-1' isAnswer='false'/>
+    <MultipleAnswer text='Knowing where to search' id='answer-2' isAnswer='false'/>
+    <MultipleAnswer text='FAIR open software exists to meet your needs' id='answer-3' isAnswer='false'/>
+    <MultipleAnswer text='All of the above' id='answer-4' isAnswer='true'/>
+  </MultipleChoice>
+  <SingleChoice question="It is best to reach out to the developers of open access software via private communication if you run into problems." answer='answer-2' isBool="true">
+    <SingleAnswer text='True' id='answer-1'/>
+    <SingleAnswer text='False' id='answer-2'/>
+  </SingleChoice>
+  <SingleChoice question="When citing Open Code, it is best practice to cite:" answer='answer-2'>
+    <SingleAnswer text='The primary working repository, e.g. on GitHub. It has the most recent version of the code, including any updates since your paper was written.' id='answer-1'/>
+    <SingleAnswer text='A long-term code repository linked to a DOI, e.g. on Zenodo. This repository contains a persistent version of the code that you used.' id='answer-2'/>
+  </SingleChoice>
+</SimpleQuiz>
 
 <CompletionDocked/>

@@ -2,7 +2,13 @@ import './SimpleSlider.css';
 import Slider from "react-slick";
 import ArrowButton from '../ArrowButton/ArrowButton.jsx';
 
-function SimpleSlider({children}) {
+function SimpleSlider({children, align=""}) {
+
+  let sliderClasses = "os101_simpleSlider singleSlider";
+
+  if(align == "center") {
+    sliderClasses = sliderClasses + " " + align;
+  }
 
     var settings = {
         arrows: true,
@@ -33,7 +39,7 @@ function SimpleSlider({children}) {
     };
     
     return (
-        <div className="os101_simpleSlider">
+        <div className={sliderClasses}>
           <div className="os101_simpleSlider_inner">
             <Slider {...settings}>
               {children}

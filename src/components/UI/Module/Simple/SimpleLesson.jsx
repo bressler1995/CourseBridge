@@ -50,6 +50,8 @@ import MultipleMatchable from '../../../Simple/Quiz/MultipleMatch/MultipleMatcha
 import FillBlank from '../../../Simple/Quiz/FillBlank/FillBlank.jsx';
 import Blank from '../../../Simple/Quiz/FillBlank/Blank.jsx';
 import Tab from 'react-bootstrap/Tab';
+import Button from 'react-bootstrap/Button';
+import LearnButton from '../../../../components/Simple/LearnButton/LearnButton.jsx';
 import CustomTabs from '../../../../components/Simple/CustomTabs/CustomTabs.jsx';
 import CompletionDocked from '../../../../components/Simple/Completion/CompletionDocked.jsx';
 import QuoteImage from '../../../../components/Simple/Images/QuoteImage.jsx';
@@ -141,7 +143,7 @@ function SimpleLesson() {
 
                 return createElement(
                   lessontouse[lesson_id],
-                    { className: '', components: {Banner, Definitions, Definition, Table, SimpleQuiz, SingleChoice, SingleAnswer, MultipleChoice, MultipleAnswer, Match, Matchable, MultipleMatch, MultipleMatchable, FillBlank, Blank, Tab, CustomTabs, CompletionDocked, QuoteImage, SingleFigure, DoubleFigure, TripleFigure, SimpleSlider, MultiSlider, SliderItem, Youtube, InfoBox, Resources, Resource } }
+                    { className: '', components: {Banner, Definitions, Definition, Table, SimpleQuiz, SingleChoice, SingleAnswer, MultipleChoice, MultipleAnswer, Match, Matchable, MultipleMatch, MultipleMatchable, FillBlank, Blank, Tab, Button, LearnButton, CustomTabs, CompletionDocked, QuoteImage, SingleFigure, DoubleFigure, TripleFigure, SimpleSlider, MultiSlider, SliderItem, Youtube, InfoBox, Resources, Resource } }
                   );
               }
             }

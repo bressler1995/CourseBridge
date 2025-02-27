@@ -1,7 +1,7 @@
 import './Images.css';
 
-function QuoteImage({quote = 'This is a Beautiful Default Quote', byWho = 'Default Quote Person', byWhoLink="", bgImage=''}) {
- console.log(bgImage)
+function QuoteImage({quote = 'This is a Beautiful Default Quote', byWho = '', byWhoLink="", bgImage=''}) {
+ // console.log(bgImage)
   return (
     <div className='os101_simpleQuoteImage' style={{ backgroundImage: "url(" + bgImage + ")" }}>
         <div className='os101_simpleQuoteImage_overlay'></div>
@@ -9,7 +9,7 @@ function QuoteImage({quote = 'This is a Beautiful Default Quote', byWho = 'Defau
           <h4>
             {quote}
           </h4>
-          <p>{byWhoLink == "" ? "-" + byWho : <a href={byWhoLink} target="_blank">{"-" + byWho}</a>}</p>
+          {byWho == "" ? null : byWho != "" && byWhoLink == "" ? <p>{"-" + byWho}</p> : byWho != "" && byWhoLink != "" ? <p><a href={byWhoLink} target="_blank">{"-" + byWho}</a></p> : null}
         </div>
     </div>
   );

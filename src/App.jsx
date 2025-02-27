@@ -175,21 +175,6 @@ function App() {
                 </div>
             }>
             </Route>
-            <Route path='/Horizontal/:id' element={
-              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
-              <Content isMinimal={true}>
-                    <Module/>
-              </Content>
-              </modeContext.Provider>
-            }>
-            </Route>
-            <Route path='/Minimal/:id' element={
-              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
-              <Content isMinimal={true}>
-                    <Module/>
-              </Content>
-              </modeContext.Provider>
-            }></Route>
             <Route path='/Simple/:id' element={
               <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
                 <Content isSimple={true}>
@@ -200,6 +185,20 @@ function App() {
             <Route path='/Simple/:id/:lid' element={
               <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
                 <Content isSimple={true}>
+                      <SimpleLesson/>
+                </Content>
+              </modeContext.Provider>
+            }></Route>
+             <Route path='/Canvas/:id' element={
+              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
+                <Content isCanvas={true}>
+                      <SimpleModule/>
+                </Content>
+              </modeContext.Provider>
+            }></Route>
+            <Route path='/Canvas/:id/:lid' element={
+              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
+                <Content isCanvas={true}>
                       <SimpleLesson/>
                 </Content>
               </modeContext.Provider>

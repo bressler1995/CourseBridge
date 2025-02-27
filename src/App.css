@@ -168,12 +168,7 @@ button.btn:disabled {
     min-height: auto;
 }
 
-.os101Content.horizontalContent .slide {
-    height: 800px;
-    min-height: auto;
-}
-
-.os101Content.simpleContent {
+.os101Content.simpleContent:not(.canvasContent) {
     display: flex;
     position: fixed;
     width: 100%;
@@ -183,6 +178,14 @@ button.btn:disabled {
     box-sizing: border-box;
     top: 0;
     left: 0;
+}
+
+.os101Content.simpleContent.canvasContent {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
 }
 
 .slide .slideContent {

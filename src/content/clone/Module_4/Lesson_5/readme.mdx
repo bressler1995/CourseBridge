@@ -1,5 +1,3 @@
-import CompletionDocked from '../../../../components/Simple/Completion/CompletionDocked.jsx';
-
 # Lesson 5: From Theory to Practice
 
 ## Overview
@@ -15,14 +13,7 @@ After completing this lesson, you should be able to:
 
 ## Open Science and Data Management Plans
 
-<img style={{width: '100%', height: 'auto'}} src="./images/clone/Module_4/codebg.jpg" />
-
-
-"A NASA Open Science and Data Management Plan (OSDMP) describes how the scientific information that will be produced from NASA-funded scientific activities will be managed and made openly available. The OSDMP should include sections on data management, software management, and publication sharing."
-
-**[https://science.nasa.gov/researchers/sara/faqs/](https://science.nasa.gov/researchers/sara/faqs/)**
-
----
+<QuoteImage quote='"A NASA Open Science and Data Management Plan (OSDMP) describes how the scientific information that will be produced from NASA-funded scientific activities will be managed and made openly available. The OSDMP should include sections on data management, software management, and publication sharing."' byWho="https://science.nasa.gov/researchers/sara/faqs/" byWhoLink="https://science.nasa.gov/researchers/sara/faqs/" bgImage="./images/clone/Module_4/codebg.jpg" />
 
 Example sections to include in an OSDMP:
 
@@ -34,25 +25,46 @@ Example sections to include in an OSDMP:
 
 #### Recall the steps for an SMP from the previous lessons
 
-- **What:** Description of management, preservation, and release of software.
-- **When:** The schedule for software archiving and sharing.
-- **Where:** Location where software will be shared and archived over the long-term.
-- **How:** Enable reuse of software through assigning a DOI, license, contribution guidelines, etc.
-- **Who:** Roles and responsibilities of the team members.
+<Definitions>
+  <Definition title='Who will add the code to a public repository?'>
+    - **What:** Description of management, preservation, and release of software.
+    - **When:** The schedule for software archiving and sharing.
+    - **Where:** Location where software will be shared and archived over the long-term.
+    - **How:** Enable reuse of software through assigning a DOI, license, contribution guidelines, etc.
+    - **Who:** Roles and responsibilities of the team members.
 
-<img style={{width: 350, height: 'auto'}} src="./images/clone/Module_4/recallsteps.jpg" />
-
+    <SingleFigure size='small' src="./images/clone/Module_4/recallsteps.jpg" />
+  </Definition>
+</Definitions>
 
 ## How Do We Plan for Making our Code Open?
 
 ### Should a Software or Data Management Plan be Written?
 
-If you are planning a project that requires a data management plan, writing that plan is a good first step. There is a threshold above which you should write a software/data management plan. “Software” here means scientifically or technically relevant computer programs as both source code and executable software.
+If you are planning a project that requires a data management plan, writing that plan is a good first step. There is a threshold above which you should write a software/data management plan. "Software" here means scientifically or technically relevant computer programs as both source code and executable software.
 
-|  |  |
-|---|---|
-| SMP is required | You need a SMP to: <ul><li>Propose for funding (e.g., NASA, NSF, and likely everywhere soon)</li><li>Collaborate on a team that intends to release code to the public</li><li>Successfully manage any large mission or project</li></ul> |
-| SMP is not required | You probably don't need a SMP if you are working on: <ul><li>A paper by yourself (or with a very small group of collaborators)</li><li>The initial exploration of ideas or experimentation with analysis code</li><li>Education-focused activities</li></ul> |
+<Table>
+<colgroup>
+    <col style={{width: "50%"}} />
+    <col style={{width: "50%"}} />
+</colgroup>
+<thead>
+    <tr>
+        <th>SMP is required</th>
+        <th>SMP is not required</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>
+            You need a SMP to: <ul><li>Propose for funding (e.g., NASA, NSF, and likely everywhere soon)</li><li>Collaborate on a team that intends to release code to the public</li><li>Successfully manage any large mission or project</li></ul>
+        </td>
+        <td>
+            You probably don't need a SMP if you are working on: <ul><li>A paper by yourself (or with a very small group of collaborators)</li><li>The initial exploration of ideas or experimentation with analysis code</li><li>Education-focused activities</li></ul>
+        </td>
+    </tr>
+</tbody>
+</Table>
 
 Perhaps your project does not fit into these categories. For example, if your aim is for your results to be reproduced by others then writing a SMP is your discretion.
 
@@ -62,19 +74,21 @@ The following material assumes that you have met the threshold and are writing a
 
 If you are applying for funding, it is almost guaranteed that there will be specific data management requirements detailed in the funding opportunity. For example, the funder may require a certain license or use of a specific repository. Make sure to cross-reference your plan with these requirements.
 
-**Examples of Software Management Plans**
+<Definitions>
+  <Definition title='Examples of Software Management Plans'>
+    - [software.ac.uk/resources/guides/software-management-plans](https://www.software.ac.uk/resources/guides/software-management-plans)
+    - [software.ac.uk/software-management-plans](https://www.software.ac.uk/resources/guides/software-management-plans)
+    - [esciencecenter.nl/national-guidelines-for-software-management-plans/](https://www.esciencecenter.nl/national-guidelines-for-software-management-plans/)
+    - [https://zenodo.org/record/7589725](https://zenodo.org/record/7589725)
+  </Definition>
+  <Definition title='Policies'>
+    What are the policies for a SMP? (what does the funding agency say to do?)
 
-- [software.ac.uk/resources/guides/software-management-plans](https://www.software.ac.uk/resources/guides/software-management-plans)
-- [software.ac.uk/software-management-plans](https://www.software.ac.uk/resources/guides/software-management-plans)
-- [esciencecenter.nl/national-guidelines-for-software-management-plans/](https://www.esciencecenter.nl/national-guidelines-for-software-management-plans/)
-- [https://zenodo.org/record/7589725](https://zenodo.org/record/7589725)
-
-**Policies**
-
-What are the policies for a SMP? (what does the funding agency say to do?) 
-- Data formats
-- Plan for data/code archival/preservation 
-- Roles and responsibilities
+    - Data formats
+    - Plan for data/code archival/preservation 
+    - Roles and responsibilities
+  </Definition>
+</Definitions>
 
 ### Funding Agencies
 
@@ -108,25 +122,23 @@ In this activity, review the SMP below and think about these questions:
 
 #### Example Software Management Plan
 
-**1. Expected Software Types**
-
-We will use established simulation models to conduct initial simulations for this work. These simulation models are written in Fortran and developed over the last decade. While not publicly available, they are available for the project to use (private communication). The simulation models will lead to the generation of output files as described in the Data Management Plan (DMP). We will develop analysis software in Python to analyze the model output files, which will enable the development of derived data products, maps, and figures. Development of the Python analysis software will be shared on a GitHub repository.
-
-**2. Development of Analysis Software**
-
-All new development of Python code will be conducted openly on GitHub by members of this project. We will post and follow the established Code of Conduct for software development for our research project, which includes guidelines for contributions by additional members of the scientific community.
-
-**3. Repositories and Timeline for Sharing Software**
-
-This work will support the development of two peer-reviewed journal articles. All source code developed in Python to support each article will be archived on Zenodo no later than the article’s publication date. The software will be made available under a permissive Apache License 2.0. Zenodo will assign a DOI to the archived software when it is archived.
-
-**4. Software Sharing Exemptions**
-
-This work does not support further development of the existing Fortran simulation models, which are maintained independently. We do not have permission to publicly share the Fortran source code for the simulation models.
-
-**5. Roles and Responsibilities**
-
-Initial simulation modeling and the development of Python analysis software will be completed by PhD students and postdocs. The PI of this project holds overall responsibility for the execution of this plan.
+<Definitions>
+  <Definition title='1. Expected Software Types'>
+    We will use established simulation models to conduct initial simulations for this work. These simulation models are written in Fortran and developed over the last decade. While not publicly available, they are available for the project to use (private communication). The simulation models will lead to the generation of output files as described in the Data Management Plan (DMP). We will develop analysis software in Python to analyze the model output files, which will enable the development of derived data products, maps, and figures. Development of the Python analysis software will be shared on a GitHub repository.
+  </Definition>
+  <Definition title='2. Development of Analysis Software'>
+    All new development of Python code will be conducted openly on GitHub by members of this project. We will post and follow the established Code of Conduct for software development for our research project, which includes guidelines for contributions by additional members of the scientific community.
+  </Definition>
+  <Definition title='3. Repositories and Timeline for Sharing Software'>
+    This work will support the development of two peer-reviewed journal articles. All source code developed in Python to support each article will be archived on Zenodo no later than the article's publication date. The software will be made available under a permissive Apache License 2.0. Zenodo will assign a DOI to the archived software when it is archived.
+  </Definition>
+  <Definition title='4. Software Sharing Exemptions'>
+    This work does not support further development of the existing Fortran simulation models, which are maintained independently. We do not have permission to publicly share the Fortran source code for the simulation models.
+  </Definition>
+  <Definition title='5. Roles and Responsibilities'>
+    Initial simulation modeling and the development of Python analysis software will be completed by PhD students and postdocs. The PI of this project holds overall responsibility for the execution of this plan.
+  </Definition>
+</Definitions>
 
 ## Engage and Build Communities
 
@@ -162,12 +174,11 @@ Subscribe to and/or participate in forums (e.g., GitHub discussions, Stack Overf
 
 **Hit the button to find out more information on building a community.**
 
-[CLICK TO LEARN](https://the-turing-way.netlify.app/collaboration/new-community.html)
+<LearnButton href="https://the-turing-way.netlify.app/collaboration/new-community.html" text="CLICK TO LEARN"/>
 
 ### Activity 5.2: Browse Through Some of the Communities of Practice
 
-<img style={{width: 350, height: 'auto'}} src="./images/clone/Module_4/lightbulb.png" />
-
+<SingleFigure size='small' src="./images/clone/Module_4/lightbulb.png" />
 
 - Find and browse through the websites associated with two communities of practice listed on the previous section "Connecting with Communities".
 - Identify at least two points of entry for engagement, e.g., an upcoming event (virtual or in person), how you could contribute, forums, etc.
@@ -183,16 +194,32 @@ Contributing to open software provides many advantages and opens doors to a numb
 
 There are several types of contributing to open software. Not all of them require writing actual code:
 
-|  |  |
-|---|---|
-| **Add New Features** | The most obvious case for contributing to open software is enhancing its usability by adding new features. |
-| **Fix Bugs** | Alternatively, you can reply to an already opened issue by fixing it. |
-| **Report Issues and Make Suggestions About Improving Code** | Reporting an issue is a valuable contribution even if you don't know how to fix it. For example, you might be using a different browser in which the software has not been tested yet, have discovered a particularly uninformative error message, or be unable to feed a valuable user experience back to the developers that can help to improve the overall usability of the software. |
-| **Improving and Contributing to Documentation** | Contributing to documentation constitutes a great starting point to contributing to open source software and is often overlooked in its importance. Writing documentations allows you to familiarize yourself with the use of the software, while helping to teach others. |
-| **Create Tutorials, Use Cases, or Visuals** | Another way to contribute is to make your experience and use of the software publicly available. For example, you could create a tutorial based on your use of the software, summarize a use case or provide a summary of your use in a graphic. This part of contribution is particularly appealing as it does not create much extra work to just publish what you have used the software for. |
-| **Improve Layout, Automatization, Structure of Code** | Apart from creating new code, a good way to contribute to open source software can also be to improve, restructure or automatize existing code. This is called refactoring and helps to make the software project more effective and stable. |
-| **Organize and Attend a Community Meet-Up** | Another way to contribute to open source software is via community building. Many software products and toolboxes have a lively community of users that meet on a regular basis in person and online to discuss and improve the software and its use. Participating or even organizing such a meetup can be a good way to improve your knowledge of the software, get to know its community, and contribute to open source projects. |
-| **Code Review** | Requests to integrate new contributions into the main code base usually require a review of the contribution by at least one other user. Similar to peer review, code review entails writing a short summary about the quality of the code and making suggestions about improvements. |
+<Definitions>
+  <Definition title='Add New Features'>
+    The most obvious case for contributing to open software is enhancing its usability by adding new features.
+  </Definition>
+  <Definition title='Fix Bugs'>
+    Alternatively, you can reply to an already opened issue by fixing it.
+  </Definition>
+  <Definition title='Report Issues and Make Suggestions About Improving Code'>
+    Reporting an issue is a valuable contribution even if you don't know how to fix it. For example, you might be using a different browser in which the software has not been tested yet, have discovered a particularly uninformative error message, or be unable to feed a valuable user experience back to the developers that can help to improve the overall usability of the software.
+  </Definition>
+  <Definition title='Improving and Contributing to Documentation'>
+    Contributing to documentation constitutes a great starting point to contributing to open source software and is often overlooked in its importance. Writing documentations allows you to familiarize yourself with the use of the software, while helping to teach others.
+  </Definition>
+  <Definition title='Create Tutorials, Use Cases, or Visuals'>
+    Another way to contribute is to make your experience and use of the software publicly available. For example, you could create a tutorial based on your use of the software, summarize a use case or provide a summary of your use in a graphic. This part of contribution is particularly appealing as it does not create much extra work to just publish what you have used the software for.
+  </Definition>
+  <Definition title='Improve Layout, Automatization, Structure of Code'>
+    Apart from creating new code, a good way to contribute to open source software can also be to improve, restructure or automatize existing code. This is called refactoring and helps to make the software project more effective and stable.
+  </Definition>
+  <Definition title='Organize and Attend a Community Meet-Up'>
+    Another way to contribute to open source software is via community building. Many software products and toolboxes have a lively community of users that meet on a regular basis in person and online to discuss and improve the software and its use. Participating or even organizing such a meetup can be a good way to improve your knowledge of the software, get to know its community, and contribute to open source projects.
+  </Definition>
+  <Definition title='Code Review'>
+    Requests to integrate new contributions into the main code base usually require a review of the contribution by at least one other user. Similar to peer review, code review entails writing a short summary about the quality of the code and making suggestions about improvements.
+  </Definition>
+</Definitions>
 
 ## Additional Resources
 
@@ -240,28 +267,19 @@ In this lesson, you learned:
 
 Answer the following questions to test what you have learned so far.
 
-*Question*
-
-**01/02**
-
-Read the statement and decide whether it's true or false:
-
-*Community engagement with open software is non-hierarchical; all members of the community should be treated the same.*
-
-- True
-- False
-
-*Question*
-
-**02/02**
-
-Select the beneficial way(s) to contribute to open sources software.
-
-- Add new features
-- Fix bugs
-- Document your work
-- Refactoring
-- All of the above
+<SimpleQuiz>
+  <SingleChoice question="Community engagement with open software is non-hierarchical; all members of the community should be treated the same." answer='answer-1' isBool="true">
+    <SingleAnswer text='True' id='answer-1'/>
+    <SingleAnswer text='False' id='answer-2'/>
+  </SingleChoice>
+  <MultipleChoice question='Select the beneficial way(s) to contribute to open sources software.'>
+    <MultipleAnswer text='Add new features' id='answer-1' isAnswer='false'/>
+    <MultipleAnswer text='Fix bugs' id='answer-2' isAnswer='false'/>
+    <MultipleAnswer text='Document your work' id='answer-3' isAnswer='false'/>
+    <MultipleAnswer text='Refactoring' id='answer-4' isAnswer='false'/>
+    <MultipleAnswer text='All of the above' id='answer-5' isAnswer='true'/>
+  </MultipleChoice>
+</SimpleQuiz>
 
 ## Open Code Summary
 

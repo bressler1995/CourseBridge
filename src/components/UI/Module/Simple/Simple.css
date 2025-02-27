@@ -298,7 +298,7 @@ body {
     width: auto;
 }
 
-.os101Content.simpleContent .simpleContent_wrapper {
+.os101Content.simpleContent .simpleContent_wrapper:not(.canvasContent_wrapper) {
     display: block;
     height: 100%;
     box-sizing: border-box;
@@ -306,6 +306,15 @@ body {
     padding-right: 30px;
     overflow-y: auto;
     z-index: 5;
+}
+
+.os101Content.canvasContent .simpleContent_wrapper.canvasContent_wrapper {
+    display: block;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .os101Content.simpleContent .os101Content_container img {
@@ -334,7 +343,7 @@ body {
         top: 0;
     }
 
-    .os101Content.simpleContent .simpleContent_wrapper {
+    .os101Content.simpleContent .simpleContent_wrapper:not(.canvasContent_wrapper) {
         width: 100%;
     }
 }
@@ -344,7 +353,7 @@ body {
         position: relative;
     }
 
-    .os101Content.simpleContent .simpleContent_wrapper {
+    .os101Content.simpleContent .simpleContent_wrapper:not(.canvasContent_wrapper) {
         width: calc(100% - 300px);
     }
 }

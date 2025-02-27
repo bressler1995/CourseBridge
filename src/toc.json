@@ -39,5 +39,8 @@
         {"id": "4", "name":"Lesson 4"},
         {"id": "5", "name":"Lesson 5"},
         {"id": "Complete", "name":"Complete Course!"}
+    ]},
+    {"id": "6", "name":"Hidden Module", "lessons":[
+        {"id": "welcome", "name":"Welcome"}
     ]}
 ]

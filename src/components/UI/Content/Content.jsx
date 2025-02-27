@@ -4,7 +4,7 @@ import './Content.css';
 import SimpleSidebar from '../Module/Simple/SimpleSidebar';
 import { modeContext } from '../../../App';
 
-function Content({children, isMinimal = false, isHorizontal = false, isSimple = false, show}) {
+function Content({children, isMinimal = false, isSimple = false, isCanvas = false, show}) {
 
   const params = useParams();
   let idParam = params.id;
@@ -48,6 +48,7 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
     const elements = contentRef.current;
     let tables = elements.getElementsByTagName("table");
     let titles = elements.getElementsByTagName("h2");
+    let links = elements.getElementsByTagName("a");
     let simpleContent_wrapper = document.getElementById("simpleContent_wrapper");;
 
     if(simpleContent_wrapper != null) {
@@ -73,6 +74,19 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
       setContentElements(0);
     }
 
+    console.log("");
+    console.log("LINKS");
+
+    if(links != null) {
+      for(let i = 0; i < links.length; i++) {
+        
+        if(links[i].className == null || links[i].className == '') {
+          links[i].target = "_blank";
+          console.log(links[i]);
+        }
+      }
+    }
+
   }, [idParam, lidParam]);
 
 
@@ -80,22 +94,25 @@ function Content({children, isMinimal = false, isHorizontal = false, isSimple = 
     contentClasses = contentClasses + ' ' + 'minimalContent';
   }
 
-  if(isHorizontal == true) {
-    contentClasses = contentClasses + ' ' + 'horizontalContent';
-  }
-
   if(isSimple == true) {
     contentClasses = contentClasses + ' ' + 'simpleContent';
   }
 
+  if(isCanvas == true) {
+    contentClasses = contentClasses + ' ' + 'simpleContent canvasContent';
+  }
 
   if(show == false) {
     contentClasses = contentClasses + ' ' + 'hide';
   }
 
+  let simpleRender = <><SimpleSidebar content={contentElements}/><div id="simpleContent_wrapper" className='simpleContent_wrapper' onScroll={handleScroll} onResize={handleScroll}><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></>;
+  let canvasRender = <><div id="simpleContent_wrapper" className='simpleContent_wrapper canvasContent_wrapper' onScroll={handleScroll} onResize={handleScroll}><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></>;
+  let miscRender = <div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div>;
+
   return (
     <div id='os101Content' className={contentClasses}>
-      {isSimple == true ? <><SimpleSidebar content={contentElements}/><div id="simpleContent_wrapper" className='simpleContent_wrapper' onScroll={handleScroll} onResize={handleScroll}><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></> : <div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div>}
+      {isSimple == true ? simpleRender : isCanvas == true ? canvasRender : miscRender}
     </div>
   )
 }
