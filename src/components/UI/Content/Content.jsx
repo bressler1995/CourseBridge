@@ -1,4 +1,4 @@
-import { useRef, useState, useLayoutEffect, useEffect, useContext } from 'react';
+import { useRef, useState, useEffect, useContext } from 'react';
 import {useParams} from 'react-router-dom';
 import './Content.css';
 import SimpleSidebar from '../Module/Simple/SimpleSidebar';
@@ -11,20 +11,10 @@ function Content({children, isMinimal = false, isSimple = false, isCanvas = fals
   let lidParam = params.lid;
   let contentClasses = 'os101Content';
 
-  const [courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion] = useContext(modeContext);
+  const [courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion, handleSaveDom, savedDom, unparsedDom] = useContext(modeContext);
   const contentRef = useRef(null);
   const [contentElements, setContentElements] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
-
-  const handleScroll = (e) => {
-      // let scrolledH2 = e.target.getElementsByTagName("h2");
-      // console.log(scrolledH2);
-      // const { scrollTop, scrollHeight, clientHeight } = e.target;
-      // const position = Math.ceil(
-      //     (scrollTop / (scrollHeight - clientHeight)) * 100
-      // );
-      // console.log("Scrolling Content: " + position);
-  };
 
   const applyObserver = (el) => {
 
@@ -74,15 +64,15 @@ function Content({children, isMinimal = false, isSimple = false, isCanvas = fals
       setContentElements(0);
     }
 
-    console.log("");
-    console.log("LINKS");
+    // console.log("");
+    // console.log("LINKS");
 
     if(links != null) {
       for(let i = 0; i < links.length; i++) {
         
         if(links[i].className == null || links[i].className == '') {
           links[i].target = "_blank";
-          console.log(links[i]);
+          // console.log(links[i]);
         }
       }
     }
@@ -106,8 +96,8 @@ function Content({children, isMinimal = false, isSimple = false, isCanvas = fals
     contentClasses = contentClasses + ' ' + 'hide';
   }
 
-  let simpleRender = <><SimpleSidebar content={contentElements}/><div id="simpleContent_wrapper" className='simpleContent_wrapper' onScroll={handleScroll} onResize={handleScroll}><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></>;
-  let canvasRender = <><div id="simpleContent_wrapper" className='simpleContent_wrapper canvasContent_wrapper' onScroll={handleScroll} onResize={handleScroll}><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></>;
+  let simpleRender = <><SimpleSidebar content={contentElements}/><div id="simpleContent_wrapper" className='simpleContent_wrapper'><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></>;
+  let canvasRender = <><div id="simpleContent_wrapper" className='simpleContent_wrapper canvasContent_wrapper'><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></>;
   let miscRender = <div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div>;
 
   return (

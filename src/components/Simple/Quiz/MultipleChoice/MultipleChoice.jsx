@@ -32,7 +32,7 @@ function MultipleChoice({children, index = -1, question = 'Is this a unique ques
   //console.log(initialChoices);
   const [choices, setChoices] = useState(initialChoices);
   const [correctChoices, setCorrectChoices] = useState([]);
-  const [correct, handleCorrect] = useContext(quizContext);
+  const [correct, handleCorrect, parent] = useContext(quizContext);
 
   const handleChoices = (e) => {
     let elementChecked = '';

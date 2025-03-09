@@ -30,7 +30,7 @@ function Match({children, index = -1, question = 'Is this a unique question?'}) 
 
   const [dropChild, setDropChild] = useState(defaultDrop);
   const [score, setScore] = useState(defaultScore);
-  const [correct, handleCorrect] = useContext(quizContext);
+  const [correct, handleCorrect, parent] = useContext(quizContext);
 
   const draggable_ids = Children.map(children, (child) => {
     let childID = child.props.id;

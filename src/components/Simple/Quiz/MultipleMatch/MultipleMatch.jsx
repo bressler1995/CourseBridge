@@ -30,7 +30,7 @@ function MultipleMatch({children, index = -1, question = 'Is this a unique quest
 
   const [dropChild, setDropChild] = useState(defaultDrop);
   const [score, setScore] = useState(defaultScore);
-  const [correct, handleCorrect] = useContext(quizContext);
+  const [correct, handleCorrect, parent] = useContext(quizContext);
 
   const draggable_objs = Children.map(children, (child) => {
     let childID = child.props.id;

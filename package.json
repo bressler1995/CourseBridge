@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://bressler1995.github.io/os101-dev-preview/",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
@@ -26,12 +25,13 @@
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.2.0",
     "react-full-screen": "^1.1.1",
-    "react-horizontal-scrolling-menu": "^7.1.1",
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.23.1",
     "react-slick": "^0.30.3",
     "react-to-pdf": "^1.0.1",
-    "slick-carousel": "^1.8.1"
+    "react-visibility-sensor": "^5.1.1",
+    "slick-carousel": "^1.8.1",
+    "yet-another-react-lightbox": "^3.21.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
@@ -43,6 +43,10 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "gh-pages": "^6.2.0",
     "sass": "^1.77.1",
-    "vite": "^5.2.0"
+    "sharp": "^0.33.5",
+    "svgo": "^3.3.2",
+    "vite": "^5.2.0",
+    "vite-plugin-image-optimizer": "^1.1.8",
+    "vite-plugin-singlefile": "^2.1.0"
   }
 }

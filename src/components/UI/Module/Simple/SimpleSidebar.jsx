@@ -7,7 +7,7 @@ import './Simple.css';
 function SimpleSidebar({content}) {
 
   //console.log(content)
-  const [courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion] = useContext(modeContext);
+  const [courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion, handleSaveDom, savedDom, unparsedDom] = useContext(modeContext);
 
   const params = useParams();
   let idParam = params.id;

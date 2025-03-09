@@ -9,6 +9,23 @@
     text-transform: capitalize;
 }
 
+.os101_simpleSingleChoice img {
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    display: block;
+    width: 100%;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.os101_simpleSingleChoice img:hover, .os101_simpleSingleChoice img:active, .os101_simpleSingleChoice img:focus {
+    opacity: 0.65;
+}
+
 .os101_simpleSingleChoice form {
     box-sizing: border-box;
     background-color: #E1E1E1;

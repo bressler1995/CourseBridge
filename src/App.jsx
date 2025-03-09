@@ -41,6 +41,16 @@ function App() {
 
   });
 
+  const initialSavedDom = toc.map((child) => {
+    const lessons = child.lessons;
+    const lessonCompletion = lessons.map((child_two) => {
+      return {id: child_two.id, elements: []};
+    });
+
+    return lessonCompletion;
+
+  });
+
   //console.log(initialCompletion);
 
   const [sidebarShow, setSidebarShow] = useState(true);
@@ -49,15 +59,58 @@ function App() {
   const [showNotification, setShowNotication] = useState([false, '', '', '']);
   const [completion, setCompletion] = useState(initialCompletion);
   const [lessonCompletion, setLessonCompletion] = useState([]);
+  const [parentInitalized, setParentInitalized] = useState(false);
+  const [savedDom, setSavedDom] = useState(initialSavedDom);
+  const [unparsedDom, setUnparsedDom] = useState("[os101-quiz]" + JSON.stringify(initialSavedDom));
 
   useEffect(() => {
     function onFullscreenChange() {
       setIsFullScreen(Boolean(document.fullscreenElement));
     }
+
+    function receiveMessage(event) {
+      console.log("Receiving from parent: " + event.origin);
+        if(event.origin!=="https://nasastem.instructure.com")
+        return;
+        
+        if(event.data.includes("[os101-completion]")) {
+          console.log(event.data);
+
+          if(event.data == "[os101-completion]Empty") {
+            setCompletion(initialCompletion);
+          } else {
+            let parsedData = JSON.parse(event.data.replace("[os101-completion]", ""));
+            console.log(parsedData);
+            setCompletion(parsedData);
+          }
+        } else if(event.data.includes("[os101-quiz]")) {
+          console.log(event.data);
+
+          if(event.data == "[os101-quiz]Empty") {
+            setUnparsedDom("[os101-quiz]" + JSON.stringify(initialSavedDom));
+            setSavedDom(initialSavedDom);
+          } else {
+            let parsedData = JSON.parse(event.data.replace("[os101-quiz]", ""));
+            console.log(parsedData);
+            setUnparsedDom(event.data);
+            setSavedDom(parsedData);
+          }
+        }
+
+    }
           
     document.addEventListener('fullscreenchange', onFullscreenChange);
+    window.addEventListener('message', receiveMessage, false);
+
+    if(parentInitalized == false) {
+      window.parent.postMessage("[os101]initialized", "*");
+      setParentInitalized(true);
+    }
   
-    return () => document.removeEventListener('fullscreenchange', onFullscreenChange);
+    return () => {
+      document.removeEventListener('fullscreenchange', onFullscreenChange)
+      window.removeEventListener('message', receiveMessage, false);
+    };
   }, []);
 
   const handleFullScreen = () => {
@@ -118,6 +171,7 @@ function App() {
     });
 
     console.log(changed);
+    window.parent.postMessage("[os101-completion]" + JSON.stringify(changed), "*");
     setCompletion(changed);
   };
 
@@ -129,6 +183,41 @@ function App() {
     setLessonCompletion(lessonCompletion => [...lessonCompletion, result]);
     
   };
+
+  const handleSaveDom = (module, lesson, qid, percentage) => {
+
+    const changed = savedDom.map((child, index) => {
+
+      const current_lesson = child.map((child_two, index_two) => {
+        let lesson_id = child_two.id;
+        let elements = child_two.elements;
+
+        if((module - 1) == index && lesson == lesson_id) {
+
+            let changed_elements = elements;
+            const elementIndex = changed_elements.findIndex(el => el.qid === qid);
+            if (elementIndex !== -1) {
+              changed_elements[elementIndex].percentage = percentage;
+            } else {
+              changed_elements.push({qid: qid, percentage: percentage});
+            }
+
+            elements = changed_elements;
+          
+        }
+
+        return {id: child_two.id, elements: elements};
+      });
+  
+      return current_lesson;
+  
+    });
+
+    console.log(changed);
+    window.parent.postMessage("[os101-quiz]" + JSON.stringify(changed), "*");
+    setSavedDom(changed);
+
+  }
 
   return (
     
@@ -147,7 +236,7 @@ function App() {
                   }  
                   </ul>
                   </Sidebar>
-                  <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
+                  <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion, handleSaveDom, savedDom, unparsedDom]}>
                   <Content show={sidebarShow}/>
                   </modeContext.Provider>
                   <Notification handleNotification={handleNotification} showNotification={showNotification}/>
@@ -166,7 +255,7 @@ function App() {
                   }  
                   </ul>
                   </Sidebar>
-                  <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
+                  <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion, handleSaveDom, savedDom, unparsedDom]}>
                   <Content show={sidebarShow}>
                     <Module/>
                   </Content>
@@ -176,28 +265,28 @@ function App() {
             }>
             </Route>
             <Route path='/Simple/:id' element={
-              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
+              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion, handleSaveDom, savedDom, unparsedDom]}>
                 <Content isSimple={true}>
                       <SimpleModule/>
                 </Content>
               </modeContext.Provider>
             }></Route>
             <Route path='/Simple/:id/:lid' element={
-              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
+              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion, handleSaveDom, savedDom, unparsedDom]}>
                 <Content isSimple={true}>
                       <SimpleLesson/>
                 </Content>
               </modeContext.Provider>
             }></Route>
              <Route path='/Canvas/:id' element={
-              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
+              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion, handleSaveDom, savedDom, unparsedDom]}>
                 <Content isCanvas={true}>
                       <SimpleModule/>
                 </Content>
               </modeContext.Provider>
             }></Route>
             <Route path='/Canvas/:id/:lid' element={
-              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion]}>
+              <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion, handleSaveDom, savedDom, unparsedDom]}>
                 <Content isCanvas={true}>
                       <SimpleLesson/>
                 </Content>

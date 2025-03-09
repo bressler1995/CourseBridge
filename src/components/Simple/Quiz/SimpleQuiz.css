@@ -16,6 +16,10 @@
     overflow: hidden;
 }
 
+.os101_simpleQuiz .hiddenPercentage {
+    display: none;
+}
+
 .os101_simpleQuiz .os101_simpleQuiz_submit {
     display: block;
     width: 100%;
@@ -34,6 +38,10 @@
 }
 
 .os101_simpleQuiz .os101_simpleQuiz_container.showGrade {
+    display: none;
+}
+
+.os101_simpleQuiz .os101_simpleQuiz_container.showTempGrade {
     display: none;
 }
 
@@ -59,6 +67,10 @@
 }
 
 .os101_simpleQuiz_grade.hideGrade {
+    display: none;
+}
+
+.os101_simpleQuiz_grade.hideTempGrade {
     display: none;
 }
 

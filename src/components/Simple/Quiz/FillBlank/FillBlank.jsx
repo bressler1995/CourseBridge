@@ -8,7 +8,7 @@ export const fillBlankContext = createContext();
 
 function FillBlank({children, index = -1, question = 'Is this a unique question?', answer = ''}) {
 
-  const [correct, handleCorrect] = useContext(quizContext);
+  const [correct, handleCorrect, parent] = useContext(quizContext);
 
   const slugify = (str) => {
     return str
@@ -37,7 +37,7 @@ function FillBlank({children, index = -1, question = 'Is this a unique question?
         <h3>{question}</h3>
         <p>Fill in the blank below.</p>
         <div className='os101_simpleFillBlank_interactive'>
-          <fillBlankContext.Provider value={[handleCheck]}>
+          <fillBlankContext.Provider value={[handleCheck, answer]}>
           {children}
           </fillBlankContext.Provider>
         </div>
