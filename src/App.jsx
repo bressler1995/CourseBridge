@@ -225,53 +225,59 @@ function App() {
         <ScrollToAnchor/>
         <Routes>
             <Route exact path='/' element={
-                <div className='app'>
-                  <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} handleNotification={handleNotification} sidebarShow={sidebarShow} isFullScreen={isFullScreen}></TopBar>
-                  <Sidebar handleCourseMode={handleCourseMode} courseMode={courseMode} show={sidebarShow}>
-                  <ul>
-                  {
+                <>
+                  <h1>Course Bridge</h1>
+                  <p>More to come...</p>
+                </>
+            }/>
+            <Route path='Demo'>
+              <Route index element={
+                    <div className='app'>
+                      <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} handleNotification={handleNotification} sidebarShow={sidebarShow} isFullScreen={isFullScreen}></TopBar>
+                      <Sidebar handleCourseMode={handleCourseMode} courseMode={courseMode} show={sidebarShow}>
+                      <ul>
+                      {
+                        toc.map((child, i) => {
+                          return <li><Link to={'/Demo/' + child.id}>{child.name}</Link></li>
+                        })
+                      }  
+                      </ul>
+                      </Sidebar>
+                      <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion, handleSaveDom, savedDom, unparsedDom]}>
+                      <Content show={sidebarShow}/>
+                      </modeContext.Provider>
+                      <Notification handleNotification={handleNotification} showNotification={showNotification}/>
+                    </div>
+                  }/>
+                <Route path=":id" element={
+                  <div className='app'>
+                    <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} handleCourseMode={handleCourseMode} handleNotification={handleNotification} sidebarShow={sidebarShow} isFullScreen={isFullScreen}></TopBar>
+                    <Sidebar handleCourseMode={handleCourseMode} courseMode={courseMode} show={sidebarShow}>
+                    <ul>
+                    {
                     toc.map((child, i) => {
-                      return <li><Link to={'/Module/' + child.id}>{child.name}</Link></li>
+                      return <li><Link to={'/Demo/' + child.id}>{child.name}</Link></li>
                     })
-                  }  
-                  </ul>
-                  </Sidebar>
-                  <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion, handleSaveDom, savedDom, unparsedDom]}>
-                  <Content show={sidebarShow}/>
-                  </modeContext.Provider>
-                  <Notification handleNotification={handleNotification} showNotification={showNotification}/>
-                </div>
-            }>
+                    }  
+                    </ul>
+                    </Sidebar>
+                    <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion, handleSaveDom, savedDom, unparsedDom]}>
+                    <Content show={sidebarShow}>
+                      <Module/>
+                    </Content>
+                    </modeContext.Provider>
+                    <Notification handleNotification={handleNotification} showNotification={showNotification}/>
+                  </div>
+                } />
             </Route>
-            <Route path='/Module/:id' element={
-                <div className='app'>
-                  <TopBar handleHide={handleHide} handleFullScreen={handleFullScreen} handleCourseMode={handleCourseMode} handleNotification={handleNotification} sidebarShow={sidebarShow} isFullScreen={isFullScreen}></TopBar>
-                  <Sidebar handleCourseMode={handleCourseMode} courseMode={courseMode} show={sidebarShow}>
-                  <ul>
-                  {
-                   toc.map((child, i) => {
-                    return <li><Link to={'/Module/' + child.id}>{child.name}</Link></li>
-                  })
-                  }  
-                  </ul>
-                  </Sidebar>
-                  <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion, handleSaveDom, savedDom, unparsedDom]}>
-                  <Content show={sidebarShow}>
-                    <Module/>
-                  </Content>
-                  </modeContext.Provider>
-                  <Notification handleNotification={handleNotification} showNotification={showNotification}/>
-                </div>
-            }>
-            </Route>
-            <Route path='/Simple/:id' element={
+            <Route path='/:id' element={
               <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion, handleSaveDom, savedDom, unparsedDom]}>
                 <Content isSimple={true}>
                       <SimpleModule/>
                 </Content>
               </modeContext.Provider>
             }></Route>
-            <Route path='/Simple/:id/:lid' element={
+            <Route path='/:id/:lid' element={
               <modeContext.Provider value={[courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion, handleSaveDom, savedDom, unparsedDom]}>
                 <Content isSimple={true}>
                       <SimpleLesson/>

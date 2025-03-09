@@ -70,7 +70,7 @@ const DEFAULT_OPTIONS = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/',
+  base: '/CourseBridge/',
   plugins: [
     {enforce: 'pre', ...mdx(/* jsxImportSource: …, otherOptions… */)},
     react({include: /\.(jsx|js|mdx|md|tsx|ts)$/}),

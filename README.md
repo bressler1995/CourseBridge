@@ -1,3 +1,3 @@
-# Open Science 101
+# Course Bridge
 
-This is a test repository intended to demonstrate advanced markdown formats.
+More to come...
