@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://bressler1995.github.io/CourseBridge/",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",

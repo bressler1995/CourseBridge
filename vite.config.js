@@ -1,7 +1,6 @@
 import mdx from '@mdx-js/rollup';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { viteSingleFile } from "vite-plugin-singlefile";
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 const DEFAULT_OPTIONS = {
@@ -70,11 +69,10 @@ const DEFAULT_OPTIONS = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/CourseBridge/',
+  base: '/',
   plugins: [
     {enforce: 'pre', ...mdx(/* jsxImportSource: …, otherOptions… */)},
-    react({include: /\.(jsx|js|mdx|md|tsx|ts)$/}),
-    ViteImageOptimizer(DEFAULT_OPTIONS)
+    react({include: /\.(jsx|js|mdx|md|tsx|ts)$/})
   ],
   server: {
     port: 3000,
