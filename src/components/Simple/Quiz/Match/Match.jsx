@@ -1,13 +1,15 @@
 import './Match.css';
-import React, {useState, Children, createContext, useEffect, useRef} from 'react';
+import React, {useState, Children, createContext, useRef} from 'react';
 import {useContext} from 'react';
 import {DndContext} from '@dnd-kit/core';
 import { quizContext } from '../SimpleQuiz';
 import { GoCheckCircleFill } from "react-icons/go";
+import { GoXCircleFill } from "react-icons/go";
+import Button from 'react-bootstrap/Button';
 
 export const matchContext = createContext();
 
-function Match({children, index = -1, question = 'Is this a unique question?'}) {
+function Match({children, index = -1, question = 'Is this a unique question?', correctExplanation = '', incorrectExplanation = ''}) {
   const selfRef = useRef(null);
 
   const defaultDrop = Children.map(children, (child) => {
@@ -28,9 +30,12 @@ function Match({children, index = -1, question = 'Is this a unique question?'}) 
     }
   });
 
+  const initialExplain = 'No answer selected.';
   const [dropChild, setDropChild] = useState(defaultDrop);
   const [score, setScore] = useState(defaultScore);
   const [correct, handleCorrect, parent] = useContext(quizContext);
+  const [check, setCheck] = useState(false);
+  const [explain, setExplain] = useState(initialExplain);
 
   const draggable_ids = Children.map(children, (child) => {
     let childID = child.props.id;
@@ -60,6 +65,7 @@ function Match({children, index = -1, question = 'Is this a unique question?'}) 
     //Droppable
     let over = event.over;
     let correctCount = 0;
+    let hasAnswers = false;
 
     if(active != null && over != null) {
       // console.log("Active: " + active.id);
@@ -98,8 +104,32 @@ function Match({children, index = -1, question = 'Is this a unique question?'}) 
       });
 
       // console.log(result);
+      // console.log(scoreResult);
+      setCheck(false);
       setDropChild(result);
       setScore(scoreResult);
+
+      if(result != null && result.length > 0) {
+        let nullCount = 0;
+
+        for(let i = 0; i < result.length; i++) {
+          let splitChild = result[i].split("::");
+          let splitID = splitChild[0];
+          let splitVal = splitChild[1];
+
+          if(splitVal == 'null') {
+            nullCount++;
+          }
+        }
+
+        // console.log("Null count: " + nullCount);
+
+        if(nullCount == result.length) {
+          hasAnswers = false;
+        } else {
+          hasAnswers = true;
+        }
+      }
     } else if(active != null && over == null) {
       // console.log("Active: " + active.id);
       // console.log("Over: " + "Nothing");
@@ -132,14 +162,50 @@ function Match({children, index = -1, question = 'Is this a unique question?'}) 
       });
 
       // console.log(result);
+      // console.log(scoreResult);
+      setCheck(false);
       setDropChild(result);
       setScore(scoreResult);
+
+      if(result != null && result.length > 0) {
+        let nullCount = 0;
+
+        for(let i = 0; i < result.length; i++) {
+          let splitChild = result[i].split("::");
+          let splitID = splitChild[0];
+          let splitVal = splitChild[1];
+
+          if(splitVal == 'null') {
+            nullCount++;
+          }
+        }
+
+        // console.log("Null count: " + nullCount);
+
+        if(nullCount == result.length) {
+          hasAnswers = false;
+        } else {
+          hasAnswers = true;
+        }
+      }
     }
 
     if(correctCount == score.length) {
       handleCorrect(index, 'true');
+
+      if(hasAnswers == true) {
+        setExplain(correctExplanation);
+      } else {
+        setExplain(initialExplain);
+      }
     } else {
       handleCorrect(index, 'false');
+
+      if(hasAnswers == true) {
+        setExplain(incorrectExplanation);
+      } else {
+        setExplain(initialExplain);
+      }
     }
 
   };
@@ -188,7 +254,8 @@ function Match({children, index = -1, question = 'Is this a unique question?'}) 
         </matchContext.Provider>
       </DndContext>
     </div>
-    {correct[index].split('::')[1] == 'true' ? <span className='os101_simpleQuiz_questionStat' style={{backgroundColor: 'green', color: 'white'}}><GoCheckCircleFill /> Correct</span> : null}
+    {correct[index].split('::')[1] == 'true' ? <span className='os101_simpleQuiz_questionStat' style={{display: check == true ? 'block' : 'none', backgroundColor: 'green', color: 'white'}}><GoCheckCircleFill /> <strong>Correct</strong>{explain != '' ? ': ' + explain : null}</span> : <span className='os101_simpleQuiz_questionStat' style={{display: check == true ? 'block' : 'none', backgroundColor: 'red', color: 'white'}}><GoCheckCircleFill /> <strong>Incorrect</strong>{explain != '' ? ': ' + explain : null}</span>}
+    <div className="os101_simpleQuiz_checkAnswer"><Button disabled={check} type="button" onClick={() => setCheck(true)} variant="primary">Check Answer</Button></div>
     </>
   );
 

@@ -1,0 +1,9 @@
+.os101_simpleSingleCredit {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #e1e1e1;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding: 25px 15px;
+}

@@ -11,6 +11,9 @@ function Droppable(props) {
     id: props.id,
   });
   const style = {
+    display: 'flex',
+    flexFlow: 'column wrap',
+    justifyContent: 'center',
     background: isOver ? "rgba(0, 0, 0, 0.1)" : "none",
     borderRadius: "5px"
   };

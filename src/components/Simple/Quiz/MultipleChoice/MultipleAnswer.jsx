@@ -3,7 +3,7 @@ import './MultipleChoice.css';
 import Button from 'react-bootstrap/Button';
 import { multipleChoiceContext } from './MultipleChoice';
 
-function MultipleAnswer({text = 'This is a unique answer.', id = '', isAnswer='false'}) {
+function MultipleAnswer({text = 'This is a unique answer.', id = '', isAnswer='false', explanation=''}) {
 
   const [slug, handleChoices, choices] = useContext(multipleChoiceContext);
   let uniqueId = slug + '-' + id;

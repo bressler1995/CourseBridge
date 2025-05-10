@@ -66,6 +66,7 @@ body {
     color: #666;
     font-size: 16px;
     line-height: 1.6rem;
+    font-weight: 400;
 }
 
 .os101Content.simpleContent .os101Content_container p {
@@ -107,6 +108,7 @@ body {
     background-color: var(--bg-dark);
     color: #FFF;
     border-right: 1px solid #CCC;
+    font-weight: 700;
 }
 
 .os101Content.simpleContent .os101Content_container table tr th:last-of-type {
@@ -133,6 +135,7 @@ body {
     filter: initial;
     opacity: 0.65;
     background-color: var(--primary-button-bg);
+    border-color: var(--primary-button-bg);
 }
 
 .os101Content.simpleContent a:not(.btn), .os101Content.simpleContent .os101Content_container p a:not(.btn), .os101Content.simpleContent .os101Content_container div a:not(.btn), .os101Content.simpleContent .os101Content_container li a:not(.btn), .os101Content.simpleContent .os101Content_container table a:not(.btn) {
@@ -144,7 +147,7 @@ body {
 }
 
 .os101Content.simpleContent a:not(.btn) {
-    word-break: break-all;
+    word-break: break-word;
 }
 
 .os101Content.simpleContent .os101Content_container {
@@ -178,10 +181,10 @@ body {
 .os101Content.simpleContent .os101SimpleSideBar .os101SimpleSideBar_navigation {
     display: block;
     width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-top: 45px;
-    padding-bottom: 50px;
+    padding-bottom: 45px;
     box-sizing: border-box;
 }
 
@@ -302,8 +305,6 @@ body {
     display: block;
     height: 100%;
     box-sizing: border-box;
-    padding-left: 30px;
-    padding-right: 30px;
     overflow-y: auto;
     z-index: 5;
 }
@@ -313,8 +314,6 @@ body {
     height: auto;
     width: 100%;
     box-sizing: border-box;
-    padding-left: 30px;
-    padding-right: 30px;
 }
 
 .os101Content.simpleContent .os101Content_container img {
@@ -336,6 +335,20 @@ body {
     max-width: 450px;
 }
 
+@media(max-width: 767.9px) {
+    .os101Content.simpleContent .simpleContent_wrapper {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media(min-width: 768px) {
+    .os101Content.simpleContent .simpleContent_wrapper {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+
 @media(max-width: 991.9px) {
     .os101Content.simpleContent .os101SimpleSideBar {
         position: fixed;
@@ -355,5 +368,10 @@ body {
 
     .os101Content.simpleContent .simpleContent_wrapper:not(.canvasContent_wrapper) {
         width: calc(100% - 300px);
+    }
+
+    .os101Content.simpleContent .simpleContent_wrapper {
+        padding-left: 65px;
+        padding-right: 65px;
     }
 }

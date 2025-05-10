@@ -12,9 +12,6 @@
 .os101_simpleMultipleChoice form {
     box-sizing: border-box;
     background-color: #E1E1E1;
-    padding: 15px;
-    padding-top: 25px;
-    padding-bottom: 25px;
     border-radius: 5px;
     margin-bottom: 24px;
     border: 1px solid #CCC;
@@ -42,4 +39,16 @@
     width: calc(100% - 15px);
     box-sizing: border-box;
     padding-left: 7px;
+}
+
+@media(max-width: 767.9px) {
+    .os101_simpleMultipleChoice form {
+        padding: 25px 7.5px;
+    }
+}
+
+@media(min-width: 768px) {
+    .os101_simpleMultipleChoice form {
+        padding: 25px 15px;
+    }
 }

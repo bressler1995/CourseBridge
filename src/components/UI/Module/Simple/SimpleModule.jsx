@@ -42,6 +42,14 @@ import Youtube from '../../../../components/Simple/Video/Youtube.jsx';
 import InfoBox from '../../../../components/Simple/InfoBox/InfoBox.jsx';
 import Resources from '../../../../components/Simple/Resources/Resources.jsx';
 import Resource from '../../../../components/Simple/Resources/Resource.jsx';
+import ModuleStart from '../../../../components/Simple/ModuleStart/ModuleStart.jsx';
+import Module from '../../../../components/Simple/ModuleStart/Module.jsx';
+import ContentSlider from '../../../../components/Simple/ContentSlider/ContentSlider.jsx';
+import Range from '../../../../components/Simple/ContentSlider/Range.jsx';
+import RangeText from '../../../../components/Simple/ContentSlider/RangeText.jsx';
+import SpectrumImage from '../../../../components/Simple/Images/SpectrumImage/SpectrumImage.jsx';
+import SpectrumDot from '../../../../components/Simple/Images/SpectrumImage/SpectrumDot.jsx';
+import Credit from '../../../../components/Simple/Credit/Credit.jsx';
 
 const modules = {
   1: Module1,
@@ -63,7 +71,7 @@ function SimpleModule() {
 
         return createElement(
           modules[child.id],
-          { className: '', components: {Banner, Definitions, Definition, Table, SimpleQuiz, SingleChoice, SingleAnswer, MultipleChoice, MultipleAnswer, Match, Matchable, MultipleMatch, MultipleMatchable, FillBlank, Blank, Tab, Button, LearnButton, CustomTabs, CompletionDocked, QuoteImage, SingleFigure, DoubleFigure, TripleFigure, SimpleSlider, MultiSlider, SliderItem, Youtube, InfoBox, Resources, Resource } }
+          { className: '', components: {Banner, Definitions, Definition, Table, SimpleQuiz, SingleChoice, SingleAnswer, MultipleChoice, MultipleAnswer, Match, Matchable, MultipleMatch, MultipleMatchable, FillBlank, Blank, Tab, Button, LearnButton, CustomTabs, CompletionDocked, QuoteImage, SingleFigure, DoubleFigure, TripleFigure, SimpleSlider, MultiSlider, SliderItem, Youtube, InfoBox, Resources, Resource, ModuleStart, Module, ContentSlider, Range, RangeText, SpectrumImage, SpectrumDot, Credit } }
         );
       }
     })

@@ -3,14 +3,14 @@ import './SingleChoice.css';
 import Button from 'react-bootstrap/Button';
 import { singleChoiceContext } from './SingleChoice';
 
-function SingleAnswer({text = 'This is a unique answer.', id = ''}) {
+function SingleAnswer({text = 'This is a unique answer.', id = '', explanation = ''}) {
 
   const [slug, handleAnswer, currentAnswer] = useContext(singleChoiceContext);
   let uniqueId = slug + '-' + id;
 
   return (
     <div className='os101_simpleSingleAnswer'>
-    <input name={slug} type='radio' id={uniqueId} value={uniqueId} checked={currentAnswer == uniqueId} onChange={handleAnswer}/>
+    <input name={slug} type='radio' id={uniqueId} value={uniqueId} checked={currentAnswer == uniqueId} onChange={handleAnswer} data-explanation={explanation} data-id={uniqueId}/>
     <label htmlFor={uniqueId}>{text}</label>
     </div>
   );

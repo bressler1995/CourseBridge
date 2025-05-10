@@ -1,50 +1,87 @@
 .os101_simpleQuoteImage {
-    display: block;
-    position: relative;
+    display: flex;
     width: 100%;
-    background-color: #000;
     border-radius: 5px;
     overflow: hidden;
     height: auto;
-    background-size: cover;
-    background-position: center center;
     margin-bottom: 30px;
+    flex-flow: column wrap;
 }
 
-.os101_simpleQuoteImage .os101_simpleQuoteImage_overlay {
+.os101_simpleQuoteImage .os101_simpleQuoteImage_imageContainer {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+}
+
+.os101_simpleQuoteImage.decorative .os101_simpleQuoteImage_imageContainer {
+    background-color: var(--bg-dark);
+    background-size: 50px auto;
+    background-position: center center;
+}
+
+.os101_simpleQuoteImage:not(.decorative) .os101_simpleQuoteImage_imageContainer {
+    background-color: #000;
+    background-size: cover;
+    background-position: center center;
+}
+
+.os101_simpleQuoteImage .os101_simpleQuoteImage_imageContainer .os101_simpleQuoteImage_overlay {
     display: block;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #000;
-    opacity: 0.65;
     z-index: 2;
 }
 
-.os101_simpleQuoteImage .os101_simpleQuoteImage_content {
+.os101_simpleQuoteImage.decorative .os101_simpleQuoteImage_imageContainer .os101_simpleQuoteImage_overlay {
+    opacity: 0.7;
+    background-color: var(--bg-dark);
+}
+
+.os101_simpleQuoteImage:not(.decorative) .os101_simpleQuoteImage_imageContainer .os101_simpleQuoteImage_overlay {
+    opacity: 0.95;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.80) 50%, rgba(0,0,0,0.1) 90%);
+}
+
+.os101_simpleQuoteImage .os101_simpleQuoteImage_imageContainer .os101_simpleQuoteImage_content {
     display: block;
+    position: relative;
     width: 100%;
     height: auto;
     box-sizing: border-box;
-    padding: 25px;
     bottom: 0;
     left: 0;
     z-index: 3;
 }
 
-.os101_simpleQuoteImage .os101_simpleQuoteImage_content h4 {
+.os101_simpleQuoteImage .os101_simpleQuoteImage_imageContainer .os101_simpleQuoteImage_content h3 {
   color: #FFF !important;
 }
 
-.os101_simpleQuoteImage .os101_simpleQuoteImage_content p {
-    margin-bottom: 0 !important;
-    color: #FFF !important;
-    opacity: 0.8;
+.os101_simpleQuoteImage .os101_simpleQuoteImage_imageContainer .os101_simpleQuoteImage_content h3 span {
+    font-family: var(--font-title);
 }
 
-.os101_simpleQuoteImage .os101_simpleQuoteImage_content p a {
+.os101_simpleQuoteImage .os101_simpleQuoteImage_imageContainer .os101_simpleQuoteImage_content h3.notitlediv:after {
+    display: none;
+}
+
+.os101_simpleQuoteImage .os101_simpleQuoteImage_imageContainer .os101_simpleQuoteImage_content h3.notitlediv {
+    margin-bottom: 0;
+}
+
+.os101_simpleQuoteImage .os101_simpleQuoteImage_imageContainer .os101_simpleQuoteImage_content p {
+    margin-bottom: 0 !important;
+    color: #FFF !important;
+}
+
+.os101_simpleQuoteImage .os101_simpleQuoteImage_imageContainer .os101_simpleQuoteImage_content p a {
     color: #FFF !important;
 }
 
@@ -76,19 +113,21 @@
     border-bottom-right-radius: 0 !important;
 }
 
-.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer {
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer, .os101_simpleQuoteImage .os101_simpleQuoteImage_captionContainer {
     display: flex;
+    position: relative;
     width: 100%;
     height: auto;
-    padding: 15px;
+    padding: 25px 15px;
     background-color: var(--bg-dark);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     flex-flow: row wrap;
     align-items: center;
+    z-index: 4;
 }
 
-.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption {
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption, .os101_simpleQuoteImage .os101_simpleQuoteImage_captionContainer .os101_simpleQuoteImage_caption {
     display: block;  
     height: auto;
     background-color: transparent;
@@ -97,11 +136,33 @@
     padding: 0;
     font-size: 16px;
     line-height: 1.6rem;
-    font-weight: 400;
+    font-weight: 500;
     white-space: pre-wrap;
+    word-break: break-word;
 }
 
-.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_link {
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption a, .os101_simpleQuoteImage .os101_simpleQuoteImage_captionContainer .os101_simpleQuoteImage_caption a {
+    font-weight: 700;
+}
+
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption p,
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption .os101_simpleSpectrumDot_text ul,
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption li,
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption ol,
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption span,
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption label,
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption div,
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption strong,
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption h1,
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption h2,
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption h3,
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption h4,
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption h5,
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption h6 {
+    color: #FFF;
+}
+
+.os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_link, .os101_simpleQuoteImage .os101_simpleQuoteImage_captionContainer .os101_simpleQuoteImage_link {
     display: block;
     box-sizing: border-box;
 }
@@ -120,10 +181,6 @@
     .os101_simpleQuoteImage {
         min-height: initial;
         height: auto;
-    }
-
-    .os101_simpleQuoteImage .os101_simpleQuoteImage_content {
-        position: relative;
     }
 
     .os101_simpleSingleFigure.thumb .os101_simpleSingleFigure_imageContainer {
@@ -157,6 +214,16 @@
         margin-top: 15px;
     }
 
+    .os101_simpleQuoteImage .os101_simpleQuoteImage_captionContainer .os101_simpleQuoteImage_caption {
+        width: 100%;
+    }
+
+    .os101_simpleQuoteImage_captionContainer .os101_simpleQuoteImage_link {
+        width: 100%;
+        text-align: left;
+        margin-top: 15px;
+    }
+
     .os101_simpleDoubleFigure .os101_simpleDoubleFigure_column {
         width: 100%;
         margin-right: 0;
@@ -166,31 +233,68 @@
         width: 100%;
         margin-right: 0;
     }
+
+    .os101_simpleQuoteImage .os101_simpleQuoteImage_imageContainer .os101_simpleQuoteImage_content {
+        padding: 45px 15px;
+    }
 }
 
 @media(min-width: 768px) {
-    .os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption {
-        width: calc(100% - 80px);
+    .os101_simpleSingleFigure:not(.small) .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption {
+        width: calc(100% - 125px);
+        padding-right: 15px;
     }
     
-    .os101_simpleSingleFigure .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_link {
-        width: 80px;
+    .os101_simpleSingleFigure:not(.small) .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_link {
+        width: 125px;
         text-align: right;
+    }
+
+    .os101_simpleSingleFigure:not(.small) .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_link a {
+        margin-top: 0;
+    }
+
+    .os101_simpleSingleFigure.small .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_caption {
+        width: 100%;
+    }
+    
+    .os101_simpleSingleFigure.small .os101_simpleSingleFigure_imageContainer .os101_simpleSingleFigure_captionContainer .os101_simpleSingleFigure_link {
+        width: 100%;
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .os101_simpleQuoteImage .os101_simpleQuoteImage_captionContainer .os101_simpleQuoteImage_caption {
+        width: calc(100% - 125px);
+        padding-right: 15px;
+    }
+
+    .os101_simpleQuoteImage_captionContainer .os101_simpleQuoteImage_link {
+        width: 125px;
+        text-align: right;
+    }
+
+    .os101_simpleQuoteImage_captionContainer .os101_simpleQuoteImage_link a {
+        margin-top: 0;
     }
 
     .os101_simpleDoubleFigure .os101_simpleDoubleFigure_column {
         width: calc(50% - 15px);
         margin-right: 15px;
     }
+
+    .os101_simpleQuoteImage .os101_simpleQuoteImage_imageContainer .os101_simpleQuoteImage_content {
+        padding: 45px 25px;
+    }
 }
 
 @media(min-width: 768px) and (max-width: 991.9px) {
-    .os101_simpleQuoteImage {
+    .os101_simpleQuoteImage .os101_simpleQuoteImage_imageContainer {
         min-height: 350px;
     }
 
-    .os101_simpleQuoteImage .os101_simpleQuoteImage_content {
-        position: absolute;
+    .os101_simpleQuoteImage.decorative .os101_simpleQuoteImage_imageContainer {
+        min-height: 250px;
     }
 
     .os101_simpleSingleFigure.thumb .os101_simpleSingleFigure_imageContainer {
@@ -221,12 +325,12 @@
 }
 
 @media(min-width: 992px) {
-    .os101_simpleQuoteImage {
+    .os101_simpleQuoteImage .os101_simpleQuoteImage_imageContainer {
         min-height: 400px;
     }
 
-    .os101_simpleQuoteImage .os101_simpleQuoteImage_content {
-        position: absolute;
+    .os101_simpleQuoteImage.decorative .os101_simpleQuoteImage_imageContainer {
+        min-height: 300px;
     }
 
     .os101_simpleSingleFigure.thumb .os101_simpleSingleFigure_imageContainer {

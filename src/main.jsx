@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'react-circular-progressbar/dist/styles.css';
 import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/captions.css";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

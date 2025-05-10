@@ -9,7 +9,7 @@ import { modeContext } from '../../../App';
 
 export const quizContext = createContext();
 
-function SimpleQuiz({children, id}) {
+function SimpleQuiz({children, id, enableScore = false}) {
 
   const initialQuestion = Children.map(children, (child, index) => {
     let result = 'noshow';
@@ -158,11 +158,23 @@ function SimpleQuiz({children, id}) {
             console.log(currentDom);
             let quizPercentage = quiz.percentage;
             setTempPercent(quizPercentage);
-            setTempGrade('showTempGrade');
+            handleTempGrade('showTempGrade');
             break;
           }
         }
       }
+    }
+  }
+
+  const handleGrade = (val) => {
+    if(enableScore == true) {
+      setGrade(val);
+    }
+  }
+
+  const handleTempGrade = (val) => {
+    if(enableScore == true) {
+      setTempGrade(val);
     }
   }
 
@@ -185,7 +197,7 @@ function SimpleQuiz({children, id}) {
           </quizContext.Provider>
           <Button title='Previous Question' disabled={currentQuestion[0] == 'show'} className='os101_simpleQuiz_nav left' onClick={goPrev} variant="primary"><GoChevronLeft/></Button>
           <Button title='Next Question' disabled={currentQuestion[currentQuestion.length - 1] == 'show'} className='os101_simpleQuiz_nav right' onClick={goNext} variant="primary"><GoChevronRight/></Button>
-          {getStateIndex() == currentQuestion.length -1 ? <div className='os101_simpleQuiz_submit'><Button type="button" onClick={() => setGrade('showGrade')} variant="primary">Get Score</Button></div> : null }
+          {getStateIndex() == currentQuestion.length -1 ? <div style={{display: enableScore == true ? 'block' : 'none'}} className='os101_simpleQuiz_submit'><Button type="button" onClick={() => handleGrade('showGrade')} variant="primary">Get Score</Button></div> : null }
         </div>
         <div className={'os101_simpleQuiz_grade ' + grade}>
           <h3>Your Score</h3>
@@ -225,7 +237,7 @@ function SimpleQuiz({children, id}) {
               }}
             </VisibilitySensor>
           </div>
-          <div className='os101_simpleQuiz_submit'><Button type="button" onClick={() => setGrade('hideGrade')} variant="primary">Try Again</Button></div>
+          <div className='os101_simpleQuiz_submit'><Button type="button" onClick={() => handleGrade('hideGrade')} variant="primary">Try Again</Button></div>
         </div>
         <div className={'os101_simpleQuiz_grade ' + tempGrade}>
           <h3>Your Score</h3>
@@ -264,7 +276,7 @@ function SimpleQuiz({children, id}) {
               }}
             </VisibilitySensor>
           </div>
-          <div className='os101_simpleQuiz_submit'><Button type="button" onClick={() => setTempGrade('hideTempGrade')} variant="primary">Try Again</Button></div>
+          <div className='os101_simpleQuiz_submit'><Button type="button" onClick={() => handleTempGrade('hideTempGrade')} variant="primary">Try Again</Button></div>
         </div>
     </div>
   );

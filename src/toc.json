@@ -37,8 +37,7 @@
         {"id": "2", "name":"Lesson 2"},
         {"id": "3", "name":"Lesson 3"},
         {"id": "4", "name":"Lesson 4"},
-        {"id": "5", "name":"Lesson 5"},
-        {"id": "Complete", "name":"Complete Course!"}
+        {"id": "5", "name":"Lesson 5"}
     ]},
     {"id": "6", "name":"Hidden Module", "lessons":[
         {"id": "welcome", "name":"Welcome"}

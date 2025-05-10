@@ -3,9 +3,6 @@
 }
 
 .os101_simpleSlider.os101_multiSlider .slick-slide div div.os101_simpleSlider_item:not(.multi) {
-    padding: 25px;
-    padding-top: 30px;
-    padding-bottom: 30px;
     background-color: #FFF;
     box-sizing: border-box;
     border-radius: 5px;
@@ -21,21 +18,10 @@
     max-width: 992px;
 }
 
-.os101_simpleSlider.os101_multiSlider .os101_simpleArrowButton.left {
-    left: -50px;
-}
-
-.os101_simpleSlider.os101_multiSlider .os101_simpleArrowButton.right {
-    right: -50px;
-}
-
 .os101_simpleSlider.os101_multiSlider div div.os101_simpleSlider_item .os101_multiSlider_holder {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 25px;
-    padding-top: 30px;
-    padding-bottom: 30px;
     background-color: #FFF;
     box-sizing: border-box;
     border-radius: 5px;
@@ -76,6 +62,18 @@
     .os101_simpleSlider.os101_multiSlider .os101_simpleSlider_inner {
         padding: 0px;
     }
+
+    .os101_simpleSlider.os101_multiSlider .os101_simpleArrowButton.left {
+        left: -20px;
+    }
+    
+    .os101_simpleSlider.os101_multiSlider .os101_simpleArrowButton.right {
+        right: -20px;
+    }
+
+    .os101_simpleSlider.os101_multiSlider .slick-slide div div.os101_simpleSlider_item:not(.multi), .os101_simpleSlider.os101_multiSlider div div.os101_simpleSlider_item .os101_multiSlider_holder {
+        padding: 25px 35px;
+    }
 }
 
 @media(min-width: 768px) {
@@ -84,6 +82,18 @@
     }
 
     .os101_simpleSlider.os101_multiSlider .os101_simpleSlider_inner {
+        padding: 25px;
+    }
+
+    .os101_simpleSlider.os101_multiSlider .os101_simpleArrowButton.left {
+        left: -45px;
+    }
+    
+    .os101_simpleSlider.os101_multiSlider .os101_simpleArrowButton.right {
+        right: -45px;
+    }
+
+    .os101_simpleSlider.os101_multiSlider .slick-slide div div.os101_simpleSlider_item:not(.multi), .os101_simpleSlider.os101_multiSlider div div.os101_simpleSlider_item .os101_multiSlider_holder {
         padding: 25px;
     }
 }

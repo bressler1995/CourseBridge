@@ -27,7 +27,7 @@ function MultiSlider({children, infinite = true}) {
             {
               breakpoint: 768,
               settings: {
-                arrows: false,
+                arrows: true,
                 dots: true,
                 slidesToShow: 1,
                 slidesToScroll: 1

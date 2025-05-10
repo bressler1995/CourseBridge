@@ -4,6 +4,8 @@ import {useContext} from 'react';
 import {DndContext} from '@dnd-kit/core';
 import { quizContext } from '../SimpleQuiz';
 import { GoCheckCircleFill } from "react-icons/go";
+import { GoXCircleFill } from "react-icons/go";
+import Button from 'react-bootstrap/Button';
 
 export const matchContext = createContext();
 
@@ -31,6 +33,7 @@ function MultipleMatch({children, index = -1, question = 'Is this a unique quest
   const [dropChild, setDropChild] = useState(defaultDrop);
   const [score, setScore] = useState(defaultScore);
   const [correct, handleCorrect, parent] = useContext(quizContext);
+  const [check, setCheck] = useState(false);
 
   const draggable_objs = Children.map(children, (child) => {
     let childID = child.props.id;
@@ -154,6 +157,7 @@ function MultipleMatch({children, index = -1, question = 'Is this a unique quest
 
         console.log(scoreResult);
       
+        setCheck(false);
         setDropChild(result);
         setScore(scoreResult);
     } else if(active != null && over == null) {
@@ -231,6 +235,7 @@ function MultipleMatch({children, index = -1, question = 'Is this a unique quest
 
         console.log(scoreResult);
         
+        setCheck(false);
         setDropChild(result);
         setScore(scoreResult);
     }
@@ -293,7 +298,8 @@ function MultipleMatch({children, index = -1, question = 'Is this a unique quest
         </matchContext.Provider>
       </DndContext>
     </div>
-    {correct[index].split('::')[1] == 'true' ? <span className='os101_simpleQuiz_questionStat' style={{backgroundColor: 'green', color: 'white'}}><GoCheckCircleFill /> Correct</span> : null}
+    {correct[index].split('::')[1] == 'true' ? <span className='os101_simpleQuiz_questionStat' style={{display: check == true ? 'block' : 'none', backgroundColor: 'green', color: 'white'}}><GoCheckCircleFill /> <strong>Correct</strong></span> : <span className='os101_simpleQuiz_questionStat' style={{display: check == true ? 'block' : 'none', backgroundColor: 'red', color: 'white'}}><GoXCircleFill /> <strong>Incorrect</strong></span>}
+    <div className="os101_simpleQuiz_checkAnswer"><Button disabled={check} type="button" onClick={() => setCheck(true)} variant="primary">Check Answer</Button></div>
     </>
   );
 

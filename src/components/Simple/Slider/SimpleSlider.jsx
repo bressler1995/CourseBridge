@@ -31,7 +31,7 @@ function SimpleSlider({children, align=""}) {
             {
               breakpoint: 768,
               settings: {
-                arrows: false,
+                arrows: true,
                 dots: true
               }
             }

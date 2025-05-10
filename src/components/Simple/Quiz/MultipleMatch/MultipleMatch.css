@@ -8,9 +8,6 @@
     max-width: 768px;
     border-radius: 5px;
     box-sizing: border-box;
-    padding: 15px;
-    padding-top: 25px;
-    padding-bottom: 25px;
     -webkit-box-shadow: inset 3px 3px 6px 0px rgba(0,0,0,0.15);
     -moz-box-shadow: inset 3px 3px 6px 0px rgba(0,0,0,0.15);
     box-shadow: inset 3px 3px 6px 0px rgba(0,0,0,0.15);
@@ -24,10 +21,7 @@
 
 .os101_simpleMultipleMatch .os101_simpleMultipleMatchable {
     display: block;
-    width: 50%;
-    padding: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 5px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -43,9 +37,7 @@
     flex-flow: column wrap;
     border: none;
     border-radius: 5px;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px 5px;
     width: 100%;
     height: auto;
     min-height: 100%;
@@ -56,12 +48,12 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin: 5px;
 }
 
 .os101_simpleMultipleMatch .os101_simpleMultipleMatchable button {
     background-color: var(--primary-button-bg);
     color: #FFF;
+    touch-action: none;
 }
 
 .os101_simpleMultipleMatch .os101_simpleMultipleMatchable div.os101_simpleMultipleMatch_dropInner {
@@ -88,9 +80,7 @@
     align-items: center;
     border: none;
     border-radius: 5px;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px 5px;
     width: 100%;
     max-width: 300px;
     font-family: var(--font-title);
@@ -101,5 +91,33 @@
     color: #222;
     text-align: center;
     border: 1px dashed #AAA;
-    margin: 4px;
+    margin: 4px 0px;
+}
+
+.os101_simpleMultipleMatch .os101_simpleMultipleMatchable div.os101_simpleMultipleMatch_dropInner .os101_simpleMultipleMatch_dropDraggables button {
+    margin-bottom: 5px;
+}
+
+.os101_simpleMultipleMatch .os101_simpleMultipleMatchable div.os101_simpleMultipleMatch_dropInner .os101_simpleMultipleMatch_dropDraggables button:last-of-type {
+    margin-bottom: 0;
+}
+
+@media(max-width: 767.9px) {
+    .os101_simpleMultipleMatch .os101_simpleMultipleMatchable {
+        width: 100%;
+    }
+
+    .os101_simpleMultipleMatch {
+        padding: 25px 7.5px;
+    }
+}
+
+@media(min-width: 768px) {
+    .os101_simpleMultipleMatch .os101_simpleMultipleMatchable {
+        width: 50%;
+    }
+
+    .os101_simpleMultipleMatch {
+        padding: 25px 15px;
+    }
 }

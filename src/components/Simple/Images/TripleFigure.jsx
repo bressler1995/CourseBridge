@@ -1,5 +1,4 @@
 import './Images.css';
-import SingleFigure from './SingleFigure.jsx';
 import { Children, cloneElement } from 'react';
 
 function TripleFigure({children, maxWidth="100%"}) {
@@ -10,7 +9,7 @@ function TripleFigure({children, maxWidth="100%"}) {
 
   return (
     <div style={{maxWidth: maxWidth}} className='os101_simpleTripleFigure'>
-    {clonedChildren.map((child) => {return <div className="os101_simpleTripleFigure_column">{child}</div>})}
+      {clonedChildren.map((child) => {return <div className="os101_simpleTripleFigure_column">{child}</div>})}
     </div>
   );
   

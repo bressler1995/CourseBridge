@@ -22,9 +22,9 @@
 }
 
 .os101_simpleTabs .tab-content {
-    padding: 25px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     box-sizing: border-box;
 }
 
@@ -62,8 +62,6 @@
     line-height: 17.5px;
     font-weight: 700;
     padding: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
     width: 200px;
     min-height: 100%;
     white-space: normal;

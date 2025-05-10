@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { modeContext } from '../../../../App';
 import './Simple.css';
 
-function SimpleSidebar({content}) {
+function SimpleSidebar({content, isCanvas = false}) {
 
   //console.log(content)
   const [courseMode, handleCompletion, completion, handleLessonCompletion, lessonCompletion, handleSaveDom, savedDom, unparsedDom] = useContext(modeContext);
@@ -30,7 +30,7 @@ function SimpleSidebar({content}) {
             }
           }
 
-          return <li className={lesson_complete_class} key={index}><Link to={'/' + idParam + '/' + lidParam + '/#' + child[1]}><span className="os101Simple_ProgressIndicator"></span>{truncateString(child[0], 50)}</Link></li>
+          return <li className={lesson_complete_class} key={index}><Link to={'/Simple/' + idParam + '/' + lidParam + '/#' + child[1]}><span className="os101Simple_ProgressIndicator"></span>{truncateString(child[0], 50)}</Link></li>
         } else {
           let lesson_complete_class = '';
           
@@ -44,7 +44,7 @@ function SimpleSidebar({content}) {
             }
           }
           
-          return <li className={lesson_complete_class} key={index}><Link to={'/' + idParam + '/#' + child[1]}><span className="os101Simple_ProgressIndicator"></span>{truncateString(child[0], 50)}</Link></li>
+          return <li className={lesson_complete_class} key={index}><Link to={'/Simple/' + idParam + '/#' + child[1]}><span className="os101Simple_ProgressIndicator"></span>{truncateString(child[0], 50)}</Link></li>
         }
         
       });
@@ -109,9 +109,9 @@ function SimpleSidebar({content}) {
               }
 
               if(child[0] == 'welcome') {
-                return <li className={idParam != null && lidParam == null ? 'active' + complete_class : complete_class.replace(' ', '')} key={index}><Link to={'/' + idParam}><span className="os101Simple_ProgressIndicator"></span>{child[1]}</Link></li>
+                return <li className={idParam != null && lidParam == null ? 'active' + complete_class : complete_class.replace(' ', '')} key={index}><Link to={'/Simple/' + idParam}><span className="os101Simple_ProgressIndicator"></span>{child[1]}</Link></li>
               } else {
-                return <li className={idParam != null && lidParam != null && lidParam == child[0] ? 'active' + complete_class : complete_class.replace(' ', '')} key={index}><Link to={'/' + idParam + '/' + child[0]}><span className="os101Simple_ProgressIndicator"></span>{child[1]}</Link></li>
+                return <li className={idParam != null && lidParam != null && lidParam == child[0] ? 'active' + complete_class : complete_class.replace(' ', '')} key={index}><Link to={'/Simple/' + idParam + '/' + child[0]}><span className="os101Simple_ProgressIndicator"></span>{child[1]}</Link></li>
               }
               
             })

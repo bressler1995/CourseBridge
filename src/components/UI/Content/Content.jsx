@@ -39,7 +39,7 @@ function Content({children, isMinimal = false, isSimple = false, isCanvas = fals
     let tables = elements.getElementsByTagName("table");
     let titles = elements.getElementsByTagName("h2");
     let links = elements.getElementsByTagName("a");
-    let simpleContent_wrapper = document.getElementById("simpleContent_wrapper");;
+    let simpleContent_wrapper = document.getElementById("simpleContent_wrapper");
 
     if(simpleContent_wrapper != null) {
       simpleContent_wrapper.scrollTop = 0;
@@ -52,9 +52,13 @@ function Content({children, isMinimal = false, isSimple = false, isCanvas = fals
         let current_class = titles[i].className;
 
         if(current_class != 'accordion-header') {
-          titles[i].id = current_slug;
-          result.push([current_title, current_slug, current_class]);
-          applyObserver(titles[i]);
+          if(isCanvas == false && idParam == 6 && current_title == 'Navigation') {
+            //Nothing
+          } else {
+            titles[i].id = current_slug;
+            result.push([current_title, current_slug, current_class]);
+            applyObserver(titles[i]);
+          }
         }
         
       }
@@ -96,7 +100,7 @@ function Content({children, isMinimal = false, isSimple = false, isCanvas = fals
     contentClasses = contentClasses + ' ' + 'hide';
   }
 
-  let simpleRender = <><SimpleSidebar content={contentElements}/><div id="simpleContent_wrapper" className='simpleContent_wrapper'><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></>;
+  let simpleRender = <><SimpleSidebar content={contentElements} isCanvas={isCanvas}/><div id="simpleContent_wrapper" className='simpleContent_wrapper'><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></>;
   let canvasRender = <><div id="simpleContent_wrapper" className='simpleContent_wrapper canvasContent_wrapper'><div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div></div></>;
   let miscRender = <div ref={contentRef} id='os101Content_container' className='os101Content_container'>{children}</div>;
 
